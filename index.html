@@ -74,8 +74,12 @@
 
 	  <!-- Wrapper for slides -->
 	  <div class="carousel-inner">
-		<div class="item active">
-		  <img src="images/slider.jpg" alt="Abovebits" style="width:100%">
+		<div class="item active embed-responsive embed-responsive-16by9">
+			<video autoplay loop poster="video/Working-Space.jpg">>
+				<source src="video/Working-Space.mp4" type="video/mp4" />Your browser does not support the video tag. I suggest you upgrade your browser.
+				<source src="video/Working-Space.webm" type="video/webm" />Your browser does not support the video tag. I suggest you upgrade your browser.
+			</video>
+		  <!--<img src="images/slider.jpg" alt="Abovebits" style="width:100%">-->
 		  <div class="carousel-caption">
 			<h1 class="text-uppercase"><b>Global Software Design Agency With Hundreds of Satisfied Clients Since 2003.</b></h1>
 			<p>We'll transform your idea into a beautiful and practical reality.</p>
@@ -88,15 +92,15 @@
 		<div class="container">
 			<h1><b>DESIGN, DEVELOPMENT AND IDEAS</b></h1>
 			<div class="row about">
-				<div class="col-md-6 col-sm-6 col-xs-12">
+				<div class="col-md-6 col-sm-6 col-xs-12 wow bounceInLeft">
 					<p>We’re one of the top development studios in LA! We create pixel perfect designs, websites, apps and software for clients like you. Whether you need a simple template based design or a completely platform, we have the experience and personal service to make sure it gets done exactly the way you need it. We aren’t a startup or a fledgling freelance group. We have hundreds of satisfied clients whose organizations span a diverse range of industries and missions.</p>
 				</div>
-				<div class="col-md-6 col-sm-6 col-xs-12">
+				<div class="col-md-6 col-sm-6 col-xs-12 wow bounceInRight">
 					<p>Our team is proud to have worked with well known organizations such as the State of Maryland, Frito Lay, NBC, Animal Planet, Costco and Nissan as well as long standing and distinguished educational institutions such as Rutgers, Pasadena City College and Touro University. Our e-commerce sites process milti-millions in sales every month, and our print/graphic designs have appeared on Television, national advertising campaigns, well-known product packaging, and billboards in Times Square.</p>
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-md-4 col-sm-12 col-xs-12">
+				<div class="col-md-4 col-sm-12 col-xs-12 wow bounceInLeft">
 					<div class="col-md-3 col-sm-2 col-xs-3">
 						<img src="images/experienced.png" alt="Abovebits EXPERIENCED" />
 					</div>
@@ -105,7 +109,7 @@
 						<p>We have a solid track record of on-time and on-budget delivery for hundreds of projects spanning a multinational client base, and a portfolio of projects that across all areas of industry and academia.</p>
 					</div>
 				</div>
-				<div class="col-md-4 col-sm-12 col-xs-12">
+				<div class="col-md-4 col-sm-12 col-xs-12 wow bounceInUp">
 					<div class="col-md-3 col-sm-2 col-xs-3">
 						<img src="images/focused.png" alt="Abovebits"/>
 					</div>
@@ -114,7 +118,7 @@
 						<p>A dedicated team of managers, designers and developers focus exclusively on you and the best possible implementation of your vision.</p>
 					</div>
 				</div>
-				<div class="col-md-4 col-sm-12 col-xs-12">
+				<div class="col-md-4 col-sm-12 col-xs-12 wow bounceInRight">
 					<div class="col-md-3 col-sm-2 col-xs-3">
 						<img src="images/creative.png" alt="Abovebits"/>
 					</div>
@@ -3180,26 +3184,29 @@
 			</div>
 			<div id="frmContact">
 				<div id="mail-status"></div>
+				<canvas id="canvas"></canvas>
 					<form id="contact-form" action="//formspree.io/service@abovebits.com" method="post">
 						<div class="row">
-							<div class="col-md-4 col-sm-4 col-xs-12">
+							<div class="col-md-6 col-sm-6 col-xs-12">
 								<input type="text" id="userName" name="Name" placeholder="NAME"/>
 								<br/><span id="userName-info" class="info"></span>
 							</div>					
-							<div class="col-md-4 col-sm-4 col-xs-12">
+							<div class="col-md-6 col-sm-6 col-xs-12">
 								<input type="email" id="userEmail" name="Email" placeholder="EMAIL"/>
 								<br/><span id="userEmail-info" class="info"></span>
 							</div>					
-							<div class="col-md-4 col-sm-4 col-xs-12">
+							<div class="col-md-12 col-sm-12 col-xs-12">
 								<input type="text" id="subject" name="_subject"  placeholder="SUBJECT"/>
 								<br/><span id="subject-info" class="info"></span>
 							</div>					
 							<div class="col-md-12 col-sm-12 col-xs-12">
-								<input type="text" id="content" name="Message" placeholder="MESSAGE"/>
+								<textarea rows="5" id="content" name="Message" placeholder="MESSAGE"></textarea>
+							</div>
+							<div class="col-md-12 col-sm-12 col-xs-12">
+								<input type="submit" class="btnAction" value="SEND"/>
 							</div>
 						</div>
-						<input class="is-hidden" type="text" name="_gotcha" style="display:none;">
-						<input type="submit" class="btnAction" onClick="sendContact();" value="SEND"/>
+						<input class="is-hidden" type="text" name="_gotcha" style="display:none;">	
 					</form>
 			</div>
 		</div>
@@ -3247,6 +3254,7 @@
 	<link rel="stylesheet" href="css/owl/owl.carousel.min.css">
 	<link rel="stylesheet" href="css/owl/owl.theme.default.min.css">
 	<link rel="stylesheet" href="css/owl/owl.theme.default.min.css">
+	<link href="css/animate.css" rel="stylesheet">
 	<link href="css/style.css" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/lightbox.min.css" />
     
@@ -3260,9 +3268,9 @@
 	<script src="js/owl.carousel.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
 	<script src="js/agency.min.js"></script>
+	<script src="js/custom.js"></script>
+	<script src="js/wow.min.js"></script>
 	<script src="js/abovebits.js"></script>
-	<script>
-		
-	</script>
-  </body>
+	<script src="js/form_script.js"></script>
+</body>
 </html>

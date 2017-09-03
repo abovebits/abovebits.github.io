@@ -125,7 +125,7 @@ body, p {font-family: Montserrat; font-size: 18px;}
  z-index:10000;
 }*/
 /*#works .owl-carousel .owl-stage-outer {padding-top: 100px;}*/
-#contact {padding: 50px 0; background-color: #21c967; background-image: url('../images/bg_contacts.png');  -webkit-background-size: cover;
+#contact {padding-top: 50px; background-color: #21c967; background-image: url('../images/bg_contacts.png');  -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;}
@@ -134,24 +134,34 @@ body, p {font-family: Montserrat; font-size: 18px;}
 #contact h3 {margin: 0; margin-top: -7px;line-height: 50px; font-size: 24px;padding-top:25px;}
 //#contact iframe .gm-style .place-card-large {display: none !important;}
 #contact .map_text {background-color: #1ed66b; color: white; text-align: center; height: 150px;}
-#contact #frmContact {margin-top: 25px;}
-#contact #frmContact input {margin-top: 50px;}
+#contact #frmContact {margin-top: 25px; position: relative; padding-bottom: 50px;}
+#contact #frmContact textarea, #contact #frmContact input {margin-top: 25px;}
 #contact #frmContact input[type=text],
-#contact #frmContact input[type=email] {background: none; border: none; border-bottom: 1px solid #39e581; color: white; font-size: 14px; width: 100%; line-height: 40px;}
+#contact #frmContact textarea,
+#contact #frmContact input[type=email] {padding-left: 5px; background: #29d772; border: none; border-bottom: 1px solid #39e581; color: white; font-size: 14px; width: 100%; line-height: 40px;}
+#contact #frmContact textarea {line-height: 25px;}
+#contact #frmContact textarea::-webkit-input-placeholder,
 #contact #frmContact input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
  color: white; font-size: 14px;
 }
+#contact #frmContact textarea::-moz-placeholder,
 #contact #frmContact input::-moz-placeholder { /* Firefox 19+ */
   color: white; font-size: 14px;
 }
+#contact #frmContact textarea:-ms-input-placeholder,
 #contact #frmContact input:-ms-input-placeholder { /* IE 10+ */
   color: white; font-size: 14px;
 }
+#contact #frmContact textarea:-moz-placeholder,
 #contact #frmContact input:-moz-placeholder { /* Firefox 18- */
   color: white; font-size: 14px;
 }
 #contact #frmContact input[type=submit]{border:none;font-size: 14px; line-height: 50px; padding: 0 20px;}
-
+canvas{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
 .demoInputBox{padding:10px; border:#F0F0F0 1px solid; border-radius:4px;}
 .error{background-color: #FF6600;border:#AA4502 1px solid;padding: 5px 10px;color: #FFFFFF;border-radius:4px;}
 .success{background-color: #12CC1A;border:#0FA015 1px solid;padding: 5px 10px;color: #FFFFFF;border-radius:4px;}
@@ -331,13 +341,16 @@ body, p {font-family: Montserrat; font-size: 18px;}
 		float: none;
 	}
 	.navbar-brand img{
-		width: 65%;
+		width: 45%;
 		padding-left: 10px;
 	}
 }
 @media (max-width: 320px) {
 	body, p {
 		font-size: 14px;
+	}
+	.navbar-brand img{
+		width: 65%;
 	}
 }
 @media (min-width: 1400px) {

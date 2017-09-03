@@ -7,3 +7,4 @@ $(document).ready( function() {
 		autoWidth:true
 	});
 });
+new WOW().init();
