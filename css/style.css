@@ -139,7 +139,7 @@ body, p {font-family: Montserrat; font-size: 18px;}
 #contact #frmContact textarea, #contact #frmContact input {margin-top: 25px;}
 #contact #frmContact input[type=text],
 #contact #frmContact textarea,
-#contact #frmContact input[type=email] {padding-left: 5px; background: #29d772; border: none; border-bottom: 1px solid #39e581; color: white; font-size: 14px; width: 100%; line-height: 40px;}
+#contact #frmContact input[type=email] {padding-left: 5px; background: #29d772; border: none; border-bottom: 1px solid #39e581; color: white; font-size: 14px; width: 100%; line-height: 40px; border-radius: 0;}
 #contact #frmContact textarea {line-height: 25px;}
 #contact #frmContact textarea::-webkit-input-placeholder,
 #contact #frmContact input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
@@ -157,7 +157,7 @@ body, p {font-family: Montserrat; font-size: 18px;}
 #contact #frmContact input:-moz-placeholder { /* Firefox 18- */
   color: white; font-size: 14px;
 }
-#contact #frmContact input[type=submit]{border:none;font-size: 14px; line-height: 50px; padding: 0 20px;}
+#contact #frmContact input[type=submit]{border:none;font-size: 14px; line-height: 50px; padding: 0 20px; background:#dddddd; border-radius: 0;}
 canvas{
   position: absolute;
   width: 100%;
