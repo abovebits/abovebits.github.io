@@ -89,7 +89,7 @@
 						<div class="col-md-6 col-sm-6 col-xs-12">
 							<p>Please confirm and pay by credit card below.</p>
 							
-							<div id="paymentNote">
+							<div id="paymentNote" hidden>
 								<ul>
 									<li>Payment Amount:</li>
 									<li class="amount"></li>
@@ -128,12 +128,10 @@
 	<div id="about">
 		<div class="container">
 			<h1>Thank you for your business!</h1>
+           		<p>We truly value you as a client and can't wait to work on the next big project. Please do not hestitate to <a href="/index.html#contact">Contact Us</a> with any questions or concerns.</p>
 		</div>
 	</div>	
 	
-
-
-
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="fonts/font-awesome/css/font-awesome.min.css">
@@ -180,6 +178,7 @@
 		if(isNaN(amount)){
 			var paymentNote = document.getElementById("paymentNote");
     			paymentNote.innerHTML= "<b>Invalid payment amount.</b>";
+			form.removeAttribute('hidden');
 		 }else{
 			//Stripe Callback Handler  
 			if (window.location.hash) {
@@ -191,6 +190,7 @@
 				//Confirm amount text
 				var paymentNote = document.getElementById("paymentNote");
     				paymentNote.innerHTML= "Payment Amount: <b>$"+amount+"</b>";
+				paymentNote.removeAttribute('hidden');
 				
 			    	// Show payment button
 				var formamount = amount * 100;
