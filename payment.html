@@ -168,34 +168,25 @@
 		var amount = $_GET['amount'];
 		var paymentNote = document.getElementById("paymentNote");
 		
-		 if(isNaN(amount)){
-    			paymentNote.innerHTML= "<b>Invalid payment amount.</b>";
+		//Stripe Callback Handler  
+		if (window.location.hash) {
+			paymentNote.innerHTML= "<b>"+window.location.hash.substr(1)+"</b>";
 			paymentNote.removeAttribute('hidden');
-		 } else {
-			//Stripe Callback Handler  
-			if (window.location.hash) {
-				paymentNote.innerHTML= "<b>"+window.location.hash.substr(1)+"</b>";
-				paymentNote.removeAttribute('hidden');
-			}
-			else {
-				//Confirm amount text
-    				paymentNote.innerHTML= "Payment Amount: <b>$"+amount+"</b>";
-				paymentNote.removeAttribute('hidden');
-				
-			    	// Update and show payment form
-				var formamount = amount * 100;  //Stripe requires no decimal
-				var form = document.getElementById("paymentForm");
-				
-				//Set test/live mode
-				if ($_GET['test']!==undefined)
-					form.setAttribute("data-key", "pk_test_kyr8RHNddt7tlIshFrNleHIN");				
-				else
-					form.setAttribute("data-key", "pk_live_ecF631qooFIv4qqeGEp18Kdb");
-				 
-				form.setAttribute("data-amount", formamount);
-				form.setAttribute("action", "https://wt-b596c2b9eb1e3b94e05ca11398bac11a-0.run.webtask.io/stripe-payment/payment?amount="+formamount);
-				form.removeAttribute('hidden');
-			}			 	
+		} else if(isNaN(amount)){
+			paymentNote.innerHTML= "<b>Invalid payment amount.</b>";
+			paymentNote.removeAttribute('hidden');
+		} else {
+			//Confirm amount text
+			paymentNote.innerHTML= "Payment Amount: <b>$"+amount+"</b>";
+			paymentNote.removeAttribute('hidden');
+
+			// Update and show payment form
+			var formamount = amount * 100;  //Stripe requires no decimal
+			var form = document.getElementById("paymentForm");
+
+			form.setAttribute("data-amount", formamount);
+			form.setAttribute("action", "https://wt-b596c2b9eb1e3b94e05ca11398bac11a-0.run.webtask.io/stripe-payment/payment?amount="+formamount);
+			form.removeAttribute('hidden');			 	
 		 }
 
 	  </script>
