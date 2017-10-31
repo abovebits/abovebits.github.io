@@ -166,20 +166,19 @@
 		}
 		//Validate Payment Amount
 		var amount = $_GET['amount'];
-		if(isNaN(amount)){
-			var paymentNote = document.getElementById("paymentNote");
+		var paymentNote = document.getElementById("paymentNote");
+		
+		 if(isNaN(amount)){
     			paymentNote.innerHTML= "<b>Invalid payment amount.</b>";
-		 }else{
+			paymentNote.removeAttribute('hidden');
+		 } else {
 			//Stripe Callback Handler  
 			if (window.location.hash) {
-				var paymentNote = document.getElementById("paymentNote");
-				paymentNote.innerHTML= "Payment Result: <b>$"+window.location.hash.substr(1)+"</b>";
+				paymentNote.innerHTML= "<b>"+window.location.hash.substr(1)+"</b>";
 				paymentNote.removeAttribute('hidden');
-				var paymentNote = document.getElementById("paymentNote");
 			}
 			else {
 				//Confirm amount text
-				var paymentNote = document.getElementById("paymentNote");
     				paymentNote.innerHTML= "Payment Amount: <b>$"+amount+"</b>";
 				paymentNote.removeAttribute('hidden');
 				
