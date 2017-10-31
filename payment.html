@@ -103,7 +103,7 @@
 							<form id="paymentForm" action="" method="POST" hidden>
 								<script
 								  src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-								  data-key="pk_live_ecF631qooFIv4qqeGEp18Kdb"
+								  data-key=""
 								  data-amount=""
 								  data-name="Stripe.com"
 								  data-description="AboveBits Payment"
@@ -192,10 +192,18 @@
     				paymentNote.innerHTML= "Payment Amount: <b>$"+amount+"</b>";
 				paymentNote.removeAttribute('hidden');
 				
-			    	// Show payment button
-				var formamount = amount * 100;
+			    	// Update and show payment form
+				var formamount = amount * 100;  //Stripe requires no decimal
 				var form = document.getElementById("paymentForm");
-				form.setAttribute("action", "https://wt-b596c2b9eb1e3b94e05ca11398bac11a-0.run.webtask.io/stripe-payment?amount="+formamount);				
+				
+				//Set test/live mode
+				if ($_GET['test']!==undefined)
+					form.setAttribute("data-key", "pk_test_kyr8RHNddt7tlIshFrNleHIN");				
+				else
+					form.setAttribute("data-key", "pk_live_ecF631qooFIv4qqeGEp18Kdb");
+				 
+				form.setAttribute("data-amount", formamount);
+				form.setAttribute("action", "https://wt-b596c2b9eb1e3b94e05ca11398bac11a-0.run.webtask.io/stripe-payment?amount="+formamount);
 				form.removeAttribute('hidden');
 			}			 	
 		 }
