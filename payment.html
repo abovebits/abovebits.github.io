@@ -90,14 +90,6 @@
 							<p>Please confirm and pay by credit card below.</p>
 							
 							<div id="paymentNote" hidden>
-								<ul>
-									<li>Payment Amount:</li>
-									<li class="amount"></li>
-								</ul>
-							</div>
-							
-							<div id="paymentResult" hidden>
-								<strong id="hash"></strong>
 							</div>
 					
 							<form id="paymentForm" action="" method="POST" hidden>
@@ -177,13 +169,13 @@
 		if(isNaN(amount)){
 			var paymentNote = document.getElementById("paymentNote");
     			paymentNote.innerHTML= "<b>Invalid payment amount.</b>";
-			form.removeAttribute('hidden');
 		 }else{
 			//Stripe Callback Handler  
 			if (window.location.hash) {
-				// This is a callback from Stripe Webtask, results are in the URL hash
-				document.getElementById('hash').innerHTML = window.location.hash;
-				document.getElementById('result').removeAttribute('hidden');
+				var paymentNote = document.getElementById("paymentNote");
+				paymentNote.innerHTML= "Payment Result: <b>$"+window.location.hash.substr(1)+"</b>";
+				paymentNote.removeAttribute('hidden');
+				var paymentNote = document.getElementById("paymentNote");
 			}
 			else {
 				//Confirm amount text
