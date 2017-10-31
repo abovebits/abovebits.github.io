@@ -71,14 +71,13 @@
 		</nav>
 
   	
-	<div id="payment">
+	<div id="works">
 		<div class="container">
 			<div class="row head_block">
 				<div class="col-md-5 col-sm-12 col-xs-12">	
 					<h1><b>PAYMENT</b></h1>
 				</div>			
-				<div class="col-md-7 col-sm-12 col-xs-12">	
-					<p>Thank you for your business! Please pay by credit card below.</p>
+				<div class="col-md-7 col-sm-12 col-xs-12">
 				</div>
 			</div>
 			<div class="row">
@@ -87,31 +86,35 @@
 				</div>			
 				<div class="col-md-12 green_body">
 					<div class="row">
-						<div class="col-md-6 col-sm-6 col-xs-12" id="paymentNote">	
-							<div class="paymentNote"
-							<ul>
-								<li>Payment Amount:</li>
-								<li class="amount"></li>
-							</ul>
+						<div class="col-md-6 col-sm-6 col-xs-12" id="paymentNote">
+							<p>Thank you for your business! Please confirm and pay by credit card below.</p>
+							
+							<div class="paymentNote">
+								<ul>
+									<li>Payment Amount:</li>
+									<li class="amount"></li>
+								</ul>
 							</div>
+							
 							<div id="paymentResult" hidden>
 								<strong id="hash"></strong>
 							</div>
+					
+							<form id="paymentForm" action="" method="POST" hidden>
+								<script
+								  src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+								  data-key="pk_live_ecF631qooFIv4qqeGEp18Kdb"
+								  data-amount=""
+								  data-name="Stripe.com"
+								  data-description="AboveBits Payment"
+								  data-image="/img/documentation/checkout/marketplace.png"
+								  data-locale="auto">
+								</script>
+						      </form>
 						</div>	
 						<div class="visible-xs clearfix"></div>
 						<div class="col-md-6 col-sm-6 col-xs-12">
-						
-							<form id="paymentForm" action="" method="POST" hidden>
-							<script
-							  src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-							  data-key="pk_live_ecF631qooFIv4qqeGEp18Kdb"
-							  data-amount=""
-							  data-name="Stripe.com"
-							  data-description="AboveBits Payment"
-							  data-image="/img/documentation/checkout/marketplace.png"
-							  data-locale="auto">
-							</script>
-						      </form>
+							<p></p>
 						</div>
 						
 					</div>
