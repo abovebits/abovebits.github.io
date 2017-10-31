@@ -170,7 +170,7 @@
 		
 		//Stripe Callback Handler  
 		if (window.location.hash) {
-			paymentNote.innerHTML= "<b>"+window.location.hash.substr(1)+"</b>";
+			paymentNote.innerHTML= "<p>"+window.location.hash.substr(1)+"</p>";
 			paymentNote.removeAttribute('hidden');
 		} else if(isNaN(amount)){
 			paymentNote.innerHTML= "<b>Invalid payment amount.</b>";
