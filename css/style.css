@@ -133,6 +133,7 @@ body, p {font-family: Montserrat; font-size: 18px;}
 #contact .head_block p {color: #94ffc1;}
 #contact h1 {color:white;  font-size: 48px; margin-top: 0; margin-bottom: 50px;}
 #contact h3 {margin: 0; margin-top: -7px;line-height: 50px; font-size: 24px;padding-top:25px;}
+#contact .map-margin {padding-top: 15px; padding-bottom: 15px;}
 //#contact iframe .gm-style .place-card-large {display: none !important;}
 #contact .map_text {background-color: #1ed66b; color: white; text-align: center; height: 150px;}
 #contact #frmContact {margin-top: 25px; position: relative; padding-bottom: 50px;}
