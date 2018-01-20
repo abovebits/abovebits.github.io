@@ -5,6 +5,12 @@
   src: local('Open Sans'), local('Montserrat-Regular'), url("fonts/Montserrat-Regular.ttf") format('ttf');
 }*/
 @font-face {
+	font-family: hollowpoint;
+	font-style: normal;
+	font-weight: 400;
+	src: url(../fonts/hollowpoint.ttf);
+}
+@font-face {
 	font-family: Montserrat;
 	font-style: normal;
 	font-weight: 400;
@@ -27,14 +33,14 @@ body, p {font-family: Montserrat; font-size: 18px;}
 	border: none;
 }
 .navbar-default{
-	background-color: white;
+	background-color: #eeeff3;
 }
 .navbar-nav li a {
-    line-height: 60px; 
+    line-height: 55px; 
 	padding-left: 25px;
 	padding-right: 35px;
-	color: black !important;
-	font-size: 18px;
+	font-size: 33px;
+	font-family: hollowpoint;
 }
 .navbar-nav li a:hover{
 	color: #149dd4 !important;
@@ -52,7 +58,7 @@ body, p {font-family: Montserrat; font-size: 18px;}
 }
 .navbar .navbar-nav {
     display: inline-block;
-    float: none;
+    float: right;
 }
 
 .navbar .navbar-collapse {
@@ -64,17 +70,20 @@ body, p {font-family: Montserrat; font-size: 18px;}
 .container {
 	max-width: 1060px;
 }
+/*#myCarousel{
+	margin-top: 84px;
+}*/
 .carousel-caption{
-	top: 45%;
+	top: 20%;
 	text-align: left;
 }
 .carousel-caption h1{
-	text-shadow: none;
+	/*text-shadow: none;*/
 	font-size: 60px;
 }
 .carousel-caption p{
 	color: #ffffff;
-	text-shadow: none;
+	/*text-shadow: none;*/
 	font-size: 24px;
 }
 .carousel-inner .embed-responsive video{height: auto;}
@@ -110,7 +119,7 @@ body, p {font-family: Montserrat; font-size: 18px;}
 }
 #works .owl-carousel .owl-item img {
     display: block;
-    width: 340px;
+    width: 440px;
     padding: 10px;
 	padding-bottom: 10px;
     padding-top: 10px;
@@ -169,15 +178,48 @@ canvas{
 .success{background-color: #12CC1A;border:#0FA015 1px solid;padding: 5px 10px;color: #FFFFFF;border-radius:4px;}
 .info{font-size:.8em;color: #FF6600;letter-spacing:2px;padding-left:5px;}
 /*.btnAction{background-color:#2FC332;border:0;padding:10px 40px;color:#FFF;border:#F0F0F0 1px solid; border-radius:4px;}*/
-.carousel-caption {left: 22%; right:22%;}
-
+.carousel-caption {left: 10%; right:22%; color: #149dd5}
+@media (max-width: 1840px) {
+	.carousel-caption{
+		right:14%;
+	}
+}
+@media (max-width: 1660px) {
+	.carousel-caption{
+		right:10%;
+	}
+	.carousel-caption h1{
+		font-size:57px;
+	}
+}
+@media (max-width: 1500px) {
+	.carousel-caption h1{
+		font-size:55px;
+	}
+}
+@media (max-width: 1445px) {
+	.carousel-caption h1{
+		font-size:53px;
+	}
+}
+@media (max-width: 1400px) {
+	.carousel-caption h1{
+		font-size:48px;
+	}
+}
+@media (max-width: 1262px) {
+	.carousel-caption h1{
+		font-size:42px;
+	}
+}
 /*start of ISOMETRIC*/
 
 .owl-stage{
 	margin-top: 100px;
 }
 .owl-carousel.owl-drag .owl-item{
-	height: 680px;
+	height: 700px;     
+	/*width: 600px !important;*/	
 }
 .scene {
 
@@ -190,8 +232,8 @@ canvas{
 }
 .skew{
   float:left;
-  width: 340px;
-  height: 250px;
+  width: 415px;
+  height: 325px;
   transform: rotateZ(-45deg);
 }
 .slide {
@@ -259,9 +301,9 @@ canvas{
 
 @media (max-width: 1440px) {
 	#myCarousel	.carousel-caption{
-		top: 40%;
+		top: 20%;
 	}
-	.carousel-caption {left: 10%; right:10%;}
+	/*.carousel-caption {left: 10%; right:10%;}*/
 }
 @media (max-width: 1200px) {
 	.navbar-nav li a {
@@ -272,7 +314,7 @@ canvas{
 		padding-left: 5px;
 		padding-right: 10px;
 	}
-	#myCarousel	.carousel-caption {top: 35%;}
+	#myCarousel	.carousel-caption {top: 20%;}
 	#myCarousel	.carousel-caption h1{
 		font-size: 38px !important;
 	}
@@ -280,7 +322,6 @@ canvas{
 }
 @media (max-width: 960px) {
 	.navbar-nav li a {
-		font-size: 16px;
 		padding-left: 10px;
 		padding-right: 10px;
 	}
@@ -293,7 +334,7 @@ canvas{
 		padding-left: 5px;
 		padding-right: 10px;
 	}
-	#myCarousel	.carousel-caption {top: 40%;}
+	#myCarousel	.carousel-caption {top: 15%;}
 	#myCarousel	.carousel-caption h1{
 		font-size: 28px !important;
 	}
@@ -301,7 +342,7 @@ canvas{
 @media (max-width: 768px) {
 	.navbar .navbar-nav {
 		/*display: block;*/
-		margin-top: 10px;
+		/*margin-top: 10px;*/
 	}
 	.navbar-nav li a {
 		line-height: 50px; 
@@ -312,7 +353,7 @@ canvas{
 		top: 0;
 	}
 	#myCarousel	.carousel-caption{
-		top: 35%;
+		top: 15%;
 	}
 	#myCarousel	.carousel-caption h1{
 		font-size: 26px !important;
@@ -327,6 +368,7 @@ canvas{
 	.navbar .navbar-nav {
 		display: block;
 		margin-top: 0;
+		float: none;
 	}
 	#skills .row img {
 		margin-right: 0;

@@ -4,7 +4,8 @@ $(document).ready( function() {
 		loop:true,
 		autoplay: 2000,
 		autoplaySpeed: 3000,
-		autoWidth:true
+		autoWidth:true,
+		margin:125,
 	});
 });
 new WOW().init();
