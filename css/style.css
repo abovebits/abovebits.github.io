@@ -76,12 +76,17 @@ line-height: 55px;
 	margin-top: 84px;
 }*/
 .carousel-caption{
-	top: 20%;
+	top: 50%;
 	text-align: left;
 }
 .carousel-caption h1{
-	/*text-shadow: none;*/
 	font-size: 60px;
+    color: #fff;
+}
+.carousel-caption h2{
+	text-align:left;
+    color: #fff;
+    text-align: right;
 }
 .carousel-caption p{
 	color: #ffffff;
@@ -93,12 +98,12 @@ line-height: 55px;
 	background-image: url('../images/bg_about.jpg');
 	background-repeat: no-repeat;
     background-color: #149dd3;
-	/*padding: 45px 0;*/
-	padding: 0 0 45px 0;
-	color: #c2eeff;
+    padding: 45px 0 45px 0;
+    color: #c2eeff;
+    border-top: 15px solid #acd6ea;
 }
 .carousel-inner>.item.active, .carousel-inner>.item.next.left, .carousel-inner>.item.prev.right {margin-top:-12%;}
-#about h1, #about h3 {color: white;}
+#about h1, #about h2, #about h3 {color: white;}
 #about h1 {font-size: 48px; margin: 30px 0;}
 #about .about {margin-bottom: 50px;}
 #about h3 {margin-top: 0;}

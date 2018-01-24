@@ -7,5 +7,11 @@ $(document).ready( function() {
 		autoWidth:true,
 		margin:125,
 	});
+    
+    $('.txt').html(function(i, html) {
+      var chars = $.trim(html).split("");
+      return '<span>' + chars.join('</span><span>') + '</span>';
+    });
+ 
 });
 new WOW().init();
