@@ -19,7 +19,7 @@
 .anim-text-flow span,
 .anim-text-flow-hover:hover span {
   animation-name: anim-text-flow-keys;
-  animation-duration: 50s;
+  animation-duration: 200s;
   animation-iteration-count: infinite;
   animation-direction: alternate;
   animation-fill-mode: forwards;

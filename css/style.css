@@ -76,7 +76,7 @@ line-height: 55px;
 	margin-top: 84px;
 }*/
 .carousel-caption{
-	top: 50%;
+	top: 20%;
 	text-align: left;
 }
 .carousel-caption h1{
@@ -102,7 +102,6 @@ line-height: 55px;
     background-color: #149dd3;
     padding: 45px 0 45px 0;
     color: #c2eeff;
-    border-top: 15px solid #acd6ea;
 }
 .carousel-inner>.item.active, .carousel-inner>.item.next.left, .carousel-inner>.item.prev.right {margin-top:-12%;}
 #about h1, #about h2, #about h3 {color: white;}
@@ -359,7 +358,7 @@ canvas{
 		padding-right: 10px;
 	}
 	.carousel-caption {
-		top: 0;
+		top: 12%;
 	}
 	#myCarousel	.carousel-caption{
 		top: 15%;
@@ -387,8 +386,12 @@ canvas{
 	#myCarousel	.carousel-caption{
 		top: 20%; padding: 0;
 	}
-	#myCarousel	.carousel-caption h1{
+	.carousel-caption h1,
+	.carousel-caption h2{
 		font-size: 20px !important;
+	}
+	#about{
+		padding: 0;
 	}
 	.navbar-brand {
 		float: none;
