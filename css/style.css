@@ -16,7 +16,10 @@
 	font-weight: 400;
 	src: url(../fonts/Montserrat-Regular.ttf);
 }
-body, p {font-family: Montserrat; font-size: 18px;}
+body, p {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; 
+    font-size: 18px;
+}
 .navbar {
 	height:85px;
 	border: none;
@@ -33,14 +36,13 @@ body, p {font-family: Montserrat; font-size: 18px;}
 	border: none;
 }
 .navbar-default{
-	background-color: #eeeff3;
+	background-color: #000;
 }
 .navbar-nav li a {
-    line-height: 55px; 
-	padding-left: 25px;
-	padding-right: 35px;
-	font-size: 33px;
-	font-family: hollowpoint;
+line-height: 55px;
+    padding-left: 25px;
+    font-size: 18px;
+    font-family: Montserrat;
 }
 .navbar-nav li a:hover{
 	color: #149dd4 !important;
