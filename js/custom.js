@@ -61,7 +61,7 @@ function validateContact() {
 	return valid;
 }
 
-var green_animationjello = 'jello';
+/*var green_animationjello = 'jello';
 var blue_animationswing = 'swing';
 var green_animationshake = 'shake';
 var blue_animationflip = 'flip';
@@ -85,4 +85,4 @@ $('.blue_body.flip p').mouseover(function(){
 	$(this).addClass('animated ' + blue_animationflip).one(animationEnd, function() {
 		$(this).removeClass('animated ' + blue_animationflip);
 	});
-});
+});*/

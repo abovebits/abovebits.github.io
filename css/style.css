@@ -38,6 +38,7 @@ body, p {
 .navbar-default{
 	background-color: #eeeff3;
 }
+#page-top nav.top_navbar {z-index: 1000; box-shadow: 0 1px 5px rgba(0,0,0,.6); border-radius: 0;}
 .navbar-nav li a {
 line-height: 55px;
     padding-left: 25px;
@@ -106,18 +107,73 @@ line-height: 55px;
 .carousel-inner>.item.active, .carousel-inner>.item.next.left, .carousel-inner>.item.prev.right {margin-top:-12%;}
 #about h1, #about h2, #about h3 {color: white;}
 #about h1 {font-size: 48px; margin: 30px 0;}
+#about h1 + h2 {margin-bottom: 20px;}
 #about .about {margin-bottom: 50px;}
 #about h3 {margin-top: 0;}
 
-#skills {padding: 30px 0;}
+#skills {padding: 30px 0 80px 0; background: #f1f1f1;}
+#skills .navbar {height: auto; padding: 0;}
+#skills .navbar-header{height: 50px;}
+#skills .navbar-toggle{margin-top: 10px;}
+#skills .navbar .navbar-nav{float:none;}
+#skills .navbar-brand {margin-top: 25px; padding: 0px 15px;line-height: 0;}
+#skills .nav-tabs {margin-bottom: 20px; margin-top: 20px;}
 #skills .head_block p {color: #8a8a8a}
 #skills h1 {font-size: 48px; margin-top: 0;}
-#skills h3 {font-size: 30px; margin-top: 25px; margin-bottom: 25px;}
+#skills h3 {font-size: 22px; margin-top: 25px; margin-bottom: 25px;}
 #skills .green_body {color: #21c967;}
 #skills .blue_body {color: #149dd2;}
 #skills .row img {margin-right: 15px;}
+#skills button {border: none; background: none;color: #8a8a8a;}
+#skills button.button.is-checked{color: #149dd2}
+#skills button:hover {color: #149dd2}
+#skills button:focus {outline: none;}
+@media (min-width: 767px) {
+	#skills .navbar-brand {display:none;}
+	#skills input#quicksearch { float: right; margin:22px;}
+	#skills h3.border-left {border-left: 1px solid #bbb; padding-left: 13px;}
+}
+#skills .design,
+#skills .mobile,
+#skills .web,
+#skills .code{width: 100%;}
+#skills ul.brands {padding-top: 25px; text-align: center; padding-left: 0;}
+#skills ul.brands li{
+	float: left; 
+	list-style-type: none; 
+	/*width: 201px; 
+	padding-bottom: 35px;*/
+	width: 184px;
+    background: white;
+    margin: 11px;
+    padding: 10px;
+    border: 1px solid #bbb;
+	-moz-box-shadow: 0px 0px 2px 1px rgba(0,0,0,0.05);
+    -webkit-box-shadow: 0px 0px 2px 1px rgba(0,0,0,0.05);
+    box-shadow: 0px 0px 2px 1px rgba(0,0,0,0.05);
+}
+#skills ul.brands li:
+@media (max-width: 992px) {
+	#skills li:last-child { float: none;}
+	#skills input#quicksearch { float: none; margin:0 0 20px 0;}
+}
+@media (max-width: 767px) {
+	#skills .navbar{padding:0; height: 50px;}
+	#skills ul.brands li{width: 22%; padding: 5px;margin: 5px;}
+	#skills ul.brands img {width: 100%}
+}
+@media (max-width: 468px) {
+	#skills ul.brands li{width: 29%;}
+	#skills .button-group {border-bottom: 1px solid #bbb;}
+	#skills .button-group h3{margin-bottom: 5px; margin-top: 15px;font-size: 20px;}
+}
+#responsive {padding: 50px 0; }
+#responsive .row {text-align: center; }
+#responsive .row .img-responsive{margin: 0 auto; }
+#responsive p{font-size: 29px; margin-bottom: 30px;}
 
-#works {padding: 50px 0; background-color: #f1f1f1; background-image: url('../images/bg_cont_dots.png'); background-position: -50px; background-repeat: no-repeat;}
+
+#works {padding: 50px 0; background-color: #f1f1f1; background-image: url('../images/bg_cont_dots.png'); background-position: -50px; background-repeat: no-repeat;background-size: cover;}
 
 #works .head_block p {color: #8a8a8a}
 #works h1 {font-size: 48px; margin-top: 0;}
@@ -133,6 +189,255 @@ line-height: 55px;
     padding-top: 10px;
     height: 250px;
 }
+
+#works .home_gallery {margin: 50px auto;  max-width: 1510px;}
+@media (max-width: 620px) {
+	#works .home_gallery {max-width: 316px;}
+}
+#works .gallery_more {text-align: center; margin: 50px 0;}
+#works .gallery_more a {padding: 15px 50px; background: #bbb; margin: 25px; color: white;}
+#works .gallery_more a:hover {color: #149dd5;text-decoration: none;}
+
+/*3D Effect*/
+.view {
+	width: 316px;
+	height: 241px;
+	margin: 30px;
+	float: left;
+	position: relative;
+	border: 8px solid #fff;
+	box-shadow: 1px 1px 2px rgba(0,0,0,0.05);
+	background: #333;
+	-webkit-perspective: 500px;
+	-moz-perspective: 500px;
+	-o-perspective: 500px;
+	-ms-perspective: 500px;
+	perspective: 500px;
+}
+@media (max-width: 767px) {
+	.view {margin: 15px;}
+}
+@media (max-width: 700px) {
+	.view {margin: 8px;}
+}
+@media (max-width: 468px) {
+	.view {margin: 10px;}
+}
+@media (max-width: 400px) {
+	.view {margin: 5px 0px;}
+}
+
+.view .slice{
+	width: 60px;
+	height: 100%;
+	z-index: 100;
+	
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	-o-transform-style: preserve-3d;
+	-ms-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	
+	-webkit-transform-origin: left center;
+	-moz-transform-origin: left center;
+	-o-transform-origin: left center;
+	-ms-transform-origin: left center;
+	transform-origin: left center;
+	
+	-webkit-transition: -webkit-transform 150ms ease-in-out;
+	-moz-transition: -moz-transform 150ms ease-in-out;
+	-o-transition: -o-transform 150ms ease-in-out;
+	-ms-transition: -ms-transform 150ms ease-in-out;
+	transition: transform 150ms ease-in-out;
+
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	-o-backface-visibility: hidden;
+	-ms-backface-visibility: hidden;
+	backface-visibility: hidden;
+		
+}
+
+.view div.view-back{
+	width: 50%;
+	height: 100%;
+	position: absolute;
+	right: 0;
+	background: #666;
+	z-index: 0;
+}
+
+.view-back span {
+	display: block;
+	float: right;
+	padding: 5px 0;
+	width: 100%;
+	text-align: right;
+	font-size: 16px;
+	color: rgba(255,255,255,0.6);
+}
+.view-back span img{
+	width: 42%;
+    background: white;
+    margin: 5px;
+    padding: 3px;
+    border: 1px solid #bbb;
+	-moz-box-shadow: 0px 0px 2px 1px rgba(0,0,0,0.05);
+    -webkit-box-shadow: 0px 0px 2px 1px rgba(0,0,0,0.05);
+    box-shadow: 0px 0px 2px 1px rgba(0,0,0,0.05);
+}
+
+.view-back span:first-child {
+	padding-top: 20px;
+}
+
+.view-back a {
+	display: bock;
+	font-size: 18px;
+	color: rgba(255,255,255,0.4);
+	position: absolute;
+	right: 15px;
+	bottom: 15px;
+	border: 2px solid rgba(255,255,255,0.3);
+	border-radius: 50%;
+	width: 30px;
+	height: 30px;
+	line-height: 22px;
+	text-align: center;
+	font-weight: 700;
+}
+
+.view-back a:hover {
+	color: #fff;
+	border-color: #fff;
+}
+
+.view-back span[data-icon]:before {
+    content: attr(data-icon);
+    font-family: 'icons';
+    color: #aaa;
+	color: rgba(255,255,255,0.2);
+	text-shadow: 0 0 1px rgba(255,255,255,0.2);
+	padding-right: 5px;
+}
+
+.view .s2, 
+.view .s3, 
+.view .s4, 
+.view .s5 {
+	-webkit-transform: translate3d(60px,0,0);
+	-moz-transform: translate3d(60px,0,0);
+	-o-transform: translate3d(60px,0,0);
+	-ms-transform: translate3d(60px,0,0);
+	transform: translate3d(60px,0,0);
+}
+.view .s1 {
+	background-position: 0px 0px; background-size: cover;
+}
+.view .s2 {
+	background-position: -60px 0px; background-size: cover;
+}
+.view .s3 {
+	background-position: -120px 0px; background-size: cover;
+}
+.view .s4 {
+	background-position: -180px 0px; background-size: cover;
+}
+.view .s5 {
+	background-position: -240px 0px; background-size: cover;
+}
+
+.view .overlay {
+	width: 60px;
+	height: 100%;
+	opacity: 0;
+	position: absolute;
+	-webkit-transition: opacity 150ms ease-in-out;
+	-moz-transition: opacity 150ms ease-in-out;
+	-o-transition: opacity 150ms ease-in-out;
+	-ms-transition: opacity 150ms ease-in-out;
+	transition: opacity 150ms ease-in-out;
+}
+
+.view:hover .overlay {
+	opacity: 1;
+}
+
+.view img {
+	/*position: absolute;*/
+	z-index: 0;
+	-webkit-transition: left 0.3s ease-in-out;
+	-o-transition: left 0.3s ease-in-out;
+	-moz-transition: left 0.3s ease-in-out;
+	-ms-transition: left 0.3s ease-in-out;
+	transition: left 0.3s ease-in-out;
+}
+
+.view:hover .s2{
+	-webkit-transform: translate3d(59px,0,0) rotate3d(0,1,0,-45deg);
+	-moz-transform: translate3d(59px,0,0) rotate3d(0,1,0,-45deg);
+	-o-transform: translate3d(59px,0,0) rotate3d(0,1,0,-45deg);
+	-ms-transform: translate3d(59px,0,0) rotate3d(0,1,0,-45deg);
+	transform: translate3d(59px,0,0) rotate3d(0,1,0,-45deg);
+}
+.view:hover .s3, 
+.view:hover .s5{
+	-webkit-transform: translate3d(59px,0,0) rotate3d(0,1,0,90deg);
+	-moz-transform: translate3d(59px,0,0) rotate3d(0,1,0,90deg);
+	-o-transform: translate3d(59px,0,0) rotate3d(0,1,0,90deg);
+	-ms-transform: translate3d(59px,0,0) rotate3d(0,1,0,90deg);
+	transform: translate3d(59px,0,0) rotate3d(0,1,0,90deg);
+}
+.view:hover .s4{
+	-webkit-transform: translate3d(59px,0,0) rotate3d(0,1,0,-90deg);
+	-moz-transform: translate3d(59px,0,0) rotate3d(0,1,0,-90deg);
+	-o-transform: translate3d(59px,0,0) rotate3d(0,1,0,-90deg);
+	-ms-transform: translate3d(59px,0,0) rotate3d(0,1,0,-90deg);
+	transform: translate3d(59px,0,0) rotate3d(0,1,0,-90deg);
+}
+
+.view .s1 > .overlay {
+	background: -moz-linear-gradient(right, rgba(0,0,0,0.05) 0%, rgba(0,0,0,0) 100%);
+	background: -webkit-linear-gradient(right, rgba(0,0,0,0.05) 0%,rgba(0,0,0,0) 100%);
+	background: -o-linear-gradient(right, rgba(0,0,0,0.05) 0%,rgba(0,0,0,0) 100%);
+	background: -ms-linear-gradient(right, rgba(0,0,0,0.05) 0%,rgba(0,0,0,0) 100%);
+	background: linear-gradient(right, rgba(0,0,0,0.05) 0%,rgba(0,0,0,0) 100%);
+}
+
+.view .s2 > .overlay {
+	background: -moz-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255, 255, 255, 0.2) 100%);
+	background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255, 255, 255, 0.2) 100%);
+	background: -o-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255, 255, 255, 0.2) 100%);
+	background: -ms-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255, 255, 255, 0.2) 100%);
+	background: linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255, 255, 255, 0.2) 100%);
+}
+
+.view .s3 > .overlay {
+	background: -moz-linear-gradient(right, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 100%);
+	background: -webkit-linear-gradient(right, rgba(0,0,0,0.8) 0%,rgba(0,0,0,0.2) 100%);
+	background: -o-linear-gradient(right, rgba(0,0,0,0.8) 0%,rgba(0,0,0,0.2) 100%);
+	background: -ms-linear-gradient(right, rgba(0,0,0,0.8) 0%,rgba(0,0,0,0.2) 100%);
+	background: linear-gradient(right, rgba(0,0,0,0.8) 0%,rgba(0,0,0,0.2) 100%);
+}
+
+.view .s4 > .overlay {
+	background: -moz-linear-gradient(left, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%);
+	background: -webkit-linear-gradient(left, rgba(0,0,0,0.8) 0%,rgba(0,0,0,0) 100%);
+	background: -o-linear-gradient(left, rgba(0,0,0,0.8) 0%,rgba(0,0,0,0) 100%);
+	background: -ms-linear-gradient(left, rgba(0,0,0,0.8) 0%,rgba(0,0,0,0) 100%);
+	background: linear-gradient(left, rgba(0,0,0,0.8) 0%,rgba(0,0,0,0) 100%);
+}
+
+.view .s5 > .overlay {
+	background: -moz-linear-gradient(left, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0) 100%);
+	background: -webkit-linear-gradient(left, rgba(0,0,0,0.3) 0%,rgba(0,0,0,0) 100%);
+	background: -o-linear-gradient(left, rgba(0,0,0,0.3) 0%,rgba(0,0,0,0) 100%);
+	background: -ms-linear-gradient(left, rgba(0,0,0,0.3) 0%,rgba(0,0,0,0) 100%);
+	background: linear-gradient(left, rgba(0,0,0,0.3) 0%,rgba(0,0,0,0) 100%);
+}
+
+/*END of 3D Effect*/
+
 /*#works .owl-carousel .owl-item .item{
 	margin-left: 20px; margin-bottom: 15px;
 	margin-right: 50px;
@@ -147,11 +452,20 @@ line-height: 55px;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;}
+#contact #map {width: 100%; height: 500px;}
+#contact #map .jvectormap-container, #contact #map .jvectormap-container svg {touch-action: auto;}
+@media (max-width: 767px) {
+	#contact #map {width: 100%; height: 250px;}
+}
+@media (max-width: 468px) {
+	#contact #map {width: 100%; height: 150px;}
+}
 #contact .head_block p {color: #94ffc1;}
 #contact h1 {color:white;  font-size: 48px; margin-top: 0; margin-bottom: 50px;}
 #contact h3 {margin: 0; margin-top: -7px;line-height: 50px; font-size: 24px;padding-top:25px;}
 #contact .map-margin {padding-top: 15px; padding-bottom: 15px;}
 //#contact iframe .gm-style .place-card-large {display: none !important;}
+.jvectormap-tip {background: #149dd5; font-size: 16px; pointer-events:none; padding:10px;}
 #contact .map_text {background-color: #1ed66b; color: white; text-align: center; height: 150px;}
 #contact #frmContact {margin-top: 25px; position: relative; padding-bottom: 50px;}
 #contact #frmContact textarea, #contact #frmContact input {margin-top: 25px;}
@@ -307,6 +621,7 @@ canvas{
 }
 /*END of ISOMETRIC*/
 
+.jvectormap-zoomin, .jvectormap-zoomout {display:none;}
 @media (max-width: 1440px) {
 	#myCarousel	.carousel-caption{
 		top: 20%;
