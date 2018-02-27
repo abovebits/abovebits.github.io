@@ -1,12 +1,12 @@
 $(document).ready( function() {
 	 // executes when complete page is fully loaded, including all frames, objects and images
-	var owl = jQuery('.owl-carousel').owlCarousel({
+	/*var owl = jQuery('.owl-carousel').owlCarousel({
 		loop:true,
 		autoplay: 2000,
 		autoplaySpeed: 3000,
 		autoWidth:true,
 		margin:125,
-	});
+	});*/
     
     $('.txt').html(function(i, html) {
       var chars = $.trim(html).split("");
@@ -52,7 +52,43 @@ $(document).ready( function() {
 		]
 	});
 	
-
+/*See More button*/
+	var i=0;
+	 $('#seemore').click(function (e) { 
+		 e.preventDefault();
+	 var displayResources = $('#home_gallery');
+	 
+	 //displayResources.text('Loading data from JSON source...');
+	 var d= new Date();
+	 $.ajax({
+		 type: "POST",
+		 url: "images/abovebits_skills/gallery.json",
+		 success: function(result)
+		 {	var n=0;
+			//console.log(result);
+			for ( n = 0; n < 4; n++){
+				var output='<div class="view"><div class="view-back">';
+				if (i < result.length){
+					if (result[i].skill1 != '')output+='<span><img src="'+result[i].skill1+'"/></span>';
+					if (result[i].skill2 != '')output+='<span><img src="'+result[i].skill2+'"/></span>';
+					if (result[i].skill3 != '')output+='<span><img src="'+result[i].skill3+'"/></span>';
+					if (result[i].skill4 != '')output+='<span><img src="'+result[i].skill4+'"/></span></div>';
+					output+='</div>';
+					output+='<div class="slice s1" style="background-image: url('+result[i].img+');"><span class="overlay"></span><div class="slice s2" style="background-image: url('+result[i].img+');"><span class="overlay"></span><div class="slice s3" style="background-image: url('+result[i].img+');"><span class="overlay"></span><div class="slice s4" style="background-image: url('+result[i].img+');"><span class="overlay"></span><div class="slice s5" style="background-image: url('+result[i].img+');"><span class="overlay"></span></div></div></div></div></div>';
+					output += '</div>';
+					i++;
+					displayResources.append(output);
+					if ( i+3 >= result.length) $( ".gallery_more" ).remove();
+				 } else $( ".gallery_more" ).remove();
+			}
+		 },
+		 error: function(data){
+			 console.log(data);
+		 }
+	 });
+ 
+	 });
+/*End of see more button*/
 	
 });
 new WOW().init();

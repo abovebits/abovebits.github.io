@@ -40,18 +40,19 @@ body, p {
 }
 #page-top nav.top_navbar {z-index: 1000; box-shadow: 0 1px 5px rgba(0,0,0,.6); border-radius: 0;}
 .navbar-nav li a {
-line-height: 55px;
+	line-height: 55px;
     padding-left: 25px;
-    font-size: 18px;
+    font-size: 22px;
     font-family: Montserrat;
 }
-.navbar-nav li a:hover{
+.navbar-nav li a:hover span{
 	color: #149dd4 !important;
 }
 .navbar-right li a{
 	padding-left: 15px;
 	padding-right: 15px;
 }
+
 .navbar-toggle {
 	margin-top: 25px;
 	color: black;
@@ -113,14 +114,16 @@ line-height: 55px;
 
 #skills {padding: 30px 0 80px 0; background: #f1f1f1;}
 #skills .navbar {height: auto; padding: 0;}
+#skills .navbar .navbar-collapse {width:100%;}
 #skills .navbar-header{height: 50px;}
 #skills .navbar-toggle{margin-top: 10px;}
 #skills .navbar .navbar-nav{float:none;}
-#skills .navbar-brand {margin-top: 25px; padding: 0px 15px;line-height: 0;}
+#skills .navbar-brand {margin-top: 25px; padding: 0px 15px;line-height: 0; font-size: 20px; font-weight: bold;}
 #skills .nav-tabs {margin-bottom: 20px; margin-top: 20px;}
+#skills .navbar-default .navbar-nav>li>a {padding:0;}
 #skills .head_block p {color: #8a8a8a}
 #skills h1 {font-size: 48px; margin-top: 0;}
-#skills h3 {font-size: 22px; margin-top: 25px; margin-bottom: 25px;}
+#skills h3 {font-size: 16px; margin-top: 25px; margin-bottom: 25px;}
 #skills .green_body {color: #21c967;}
 #skills .blue_body {color: #149dd2;}
 #skills .row img {margin-right: 15px;}
@@ -130,8 +133,19 @@ line-height: 55px;
 #skills button:focus {outline: none;}
 @media (min-width: 767px) {
 	#skills .navbar-brand {display:none;}
-	#skills input#quicksearch { float: right; margin:22px;}
-	#skills h3.border-left {border-left: 1px solid #bbb; padding-left: 13px;}
+	#skills input#quicksearch { float: right; margin:18px 10px; padding-left: 5px;}
+	#skills h3.border-left {border-left: 1px solid #bbb; padding-left: 10px;}
+}
+@media (max-width: 1200px) {
+	#skills input#quicksearch { margin:10px 0px; text-align: center;float: none;}
+	#skills .search-field {width:100%; float: none; clear: both;}
+}
+@media (max-width: 991px) {
+	#skills input#quicksearch { margin:18px 10px;}	
+}
+@media (max-width: 768px) {
+	#skills h3.border-left {padding-left: 4px;}
+	#skills input#quicksearch {margin-top: 10px;}
 }
 #skills .design,
 #skills .mobile,
@@ -196,7 +210,7 @@ line-height: 55px;
 }
 #works .gallery_more {text-align: center; margin: 50px 0;}
 #works .gallery_more a {padding: 15px 50px; background: #bbb; margin: 25px; color: white;}
-#works .gallery_more a:hover {color: #149dd5;text-decoration: none;}
+#works .gallery_more a:hover {color: #149dd5;text-decoration: none;cursor:pointer;}
 
 /*3D Effect*/
 .view {
@@ -630,8 +644,8 @@ canvas{
 }
 @media (max-width: 1200px) {
 	.navbar-nav li a {
-		padding-left: 25px;
-		padding-right: 25px;
+		padding-left: 20px;
+		padding-right: 20px;
 	}
 	.navbar-right li a{
 		padding-left: 5px;
@@ -645,6 +659,7 @@ canvas{
 }
 @media (max-width: 960px) {
 	.navbar-nav li a {
+		font-size: 18px;
 		padding-left: 10px;
 		padding-right: 10px;
 	}
@@ -668,7 +683,7 @@ canvas{
 		/*margin-top: 10px;*/
 	}
 	.navbar-nav li a {
-		line-height: 50px; 
+		line-height: 48px; 
 		padding-left: 5px;
 		padding-right: 10px;
 	}
