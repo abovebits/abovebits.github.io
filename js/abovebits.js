@@ -61,7 +61,7 @@ $(document).ready( function() {
 	 //displayResources.text('Loading data from JSON source...');
 	 var d= new Date();
 	 $.ajax({
-		 type: "POST",
+		 type: "GET",
 		 url: "images/abovebits_skills/gallery.json",
 		 success: function(result)
 		 {	var n=0;
