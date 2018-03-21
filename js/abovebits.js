@@ -54,42 +54,65 @@ $(document).ready( function() {
 	
 /*See More button*/
 	var i=0;
-	 $('#seemore').click(function (e) { 
-		 e.preventDefault();
-	 var displayResources = $('#home_gallery');
+	function gallery(){
+		var screenWidth = document.documentElement.clientWidth;
+		var galleryCount = Math.floor(screenWidth/376);
+			if (galleryCount == 0) galleryCount = 1;
+			if (screenWidth == 1024 || screenWidth == 1366) galleryCount = Math.floor(screenWidth/316);
+		//console.log("width: "+screenWidth+"px");
+		//console.log("count: "+galleryCount);
+		var displayResources = $('#home_gallery');
+		
+		 //displayResources.text('Loading data from JSON source...');
+		 
+		 var d= new Date();
+		 $.ajax({
+			 type: "GET",
+			 url: "images/abovebits_skills/gallery.json?v="+d.getTime(),
+			 success: function(result)
+			 {	var n=0;
+				//console.log(result);
+				for ( n = 0; n < galleryCount*2; n++){
+					var output='<div class="view">';
+					if (i < result.length){
+						if (result[i].mockup != '')output+='<a class="fullblock_fancybox" href="'+result[i].mockup+'" data-fancybox="gallery_full"></a>';
+						output+='<div class="view-back">';
+						if (result[i].skill1 != '')output+='<span><img src="'+result[i].skill1+'"/></span>';
+						if (result[i].skill2 != '')output+='<span><img src="'+result[i].skill2+'"/></span>';
+						if (result[i].skill3 != '')output+='<span><img src="'+result[i].skill3+'"/></span>';
+						if (result[i].skill4 != '')output+='<span><img src="'+result[i].skill4+'"/></span>';
+						if (result[i].mockup != '')output+='<a href="'+result[i].mockup+'" data-fancybox="gallery">→</a>';
+						output+='</div>';
+						output+='<div class="slice s1" style="background-image: url('+result[i].img+');"><span class="overlay"></span><div class="slice s2" style="background-image: url('+result[i].img+');"><span class="overlay"></span><div class="slice s3" style="background-image: url('+result[i].img+');"><span class="overlay"></span><div class="slice s4" style="background-image: url('+result[i].img+');"><span class="overlay"></span><div class="slice s5" style="background-image: url('+result[i].img+');"><span class="overlay"></span></div></div></div></div></div>';
+						output += '</div>';
+						i++;
+						displayResources.append(output);
+						if ( i+1 >= result.length) $( ".gallery_more" ).remove();
+					 } else $( ".gallery_more" ).remove();
+				}
+				$(".view").slideDown("slow");
+				if ("ontouchstart" in document.documentElement)
+				{
+					//alert("your device is a touch screen device.");
+					$('#works a.fullblock_fancybox').css({'display':'none'});
+				}
+			 },
+			 error: function(data){
+				 //console.log(data);
+			 }
+		 });
+	}
+	 gallery();
 	 
-	 //displayResources.text('Loading data from JSON source...');
-	 var d= new Date();
-	 $.ajax({
-		 type: "GET",
-		 url: "images/abovebits_skills/gallery.json",
-		 success: function(result)
-		 {	var n=0;
-			//console.log(result);
-			for ( n = 0; n < 4; n++){
-				var output='<div class="view"><div class="view-back">';
-				if (i < result.length){
-					if (result[i].skill1 != '')output+='<span><img src="'+result[i].skill1+'"/></span>';
-					if (result[i].skill2 != '')output+='<span><img src="'+result[i].skill2+'"/></span>';
-					if (result[i].skill3 != '')output+='<span><img src="'+result[i].skill3+'"/></span>';
-					if (result[i].skill4 != '')output+='<span><img src="'+result[i].skill4+'"/></span></div>';
-					output+='</div>';
-					output+='<div class="slice s1" style="background-image: url('+result[i].img+');"><span class="overlay"></span><div class="slice s2" style="background-image: url('+result[i].img+');"><span class="overlay"></span><div class="slice s3" style="background-image: url('+result[i].img+');"><span class="overlay"></span><div class="slice s4" style="background-image: url('+result[i].img+');"><span class="overlay"></span><div class="slice s5" style="background-image: url('+result[i].img+');"><span class="overlay"></span></div></div></div></div></div>';
-					output += '</div>';
-					i++;
-					displayResources.append(output);
-					if ( i+3 >= result.length) $( ".gallery_more" ).remove();
-				 } else $( ".gallery_more" ).remove();
-			}
-		 },
-		 error: function(data){
-			 console.log(data);
-		 }
+	 $('#seemore').click(function (e) {
+		 e.preventDefault();
+		 gallery();
+		 
 	 });
- 
-	 });
+
+
 /*End of see more button*/
-	
+
 });
 new WOW().init();
 

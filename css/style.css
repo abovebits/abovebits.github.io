@@ -40,7 +40,8 @@ body, p {
 }
 #page-top nav.top_navbar {z-index: 1000; box-shadow: 0 1px 5px rgba(0,0,0,.6); border-radius: 0;}
 .navbar-nav li a {
-	line-height: 55px;
+	/*line-height: 55px;*/
+	padding-top: 30px;
     padding-left: 25px;
     font-size: 22px;
     font-family: Montserrat;
@@ -102,6 +103,7 @@ body, p {
 	background-image: url('../images/bg_about.jpg');
 	background-repeat: no-repeat;
     background-color: #149dd3;
+	background-size: cover;
     padding: 45px 0 45px 0;
     color: #c2eeff;
 }
@@ -124,6 +126,7 @@ body, p {
 #skills .head_block p {color: #8a8a8a}
 #skills h1 {font-size: 48px; margin-top: 0;}
 #skills h3 {font-size: 16px; margin-top: 25px; margin-bottom: 25px;}
+#skills .search-field input{border-radius:0;}
 #skills .green_body {color: #21c967;}
 #skills .blue_body {color: #149dd2;}
 #skills .row img {margin-right: 15px;}
@@ -139,11 +142,14 @@ body, p {
 @media (max-width: 1200px) {
 	#skills input#quicksearch { margin:10px 0px; text-align: center;float: none;}
 	#skills .search-field {width:100%; float: none; clear: both;}
+	#skills button {padding: 5px;}
 }
 @media (max-width: 991px) {
-	#skills input#quicksearch { margin:18px 10px;}	
+	#skills input#quicksearch { margin:10px 10px;}
+	#skills li h3 {font-size: 14px; margin-top: 15px; margin-bottom: 15px;}
 }
 @media (max-width: 768px) {
+	#skills li h3 { margin-top: 15px;   margin-bottom: 10px;}
 	#skills h3.border-left {padding-left: 4px;}
 	#skills input#quicksearch {margin-top: 10px;}
 }
@@ -152,34 +158,48 @@ body, p {
 #skills .web,
 #skills .code{width: 100%;}
 #skills ul.brands {padding-top: 25px; text-align: center; padding-left: 0;}
+#skills .container_gallery{margin: 0 auto; width:85%}
 #skills ul.brands li{
 	float: left; 
 	list-style-type: none; 
 	/*width: 201px; 
 	padding-bottom: 35px;*/
-	width: 184px;
+	width: 15%;
     background: white;
-    margin: 11px;
-    padding: 10px;
+    margin: 7px 0.5%;
+    padding: 10px 0;
     border: 1px solid #bbb;
 	-moz-box-shadow: 0px 0px 2px 1px rgba(0,0,0,0.05);
     -webkit-box-shadow: 0px 0px 2px 1px rgba(0,0,0,0.05);
     box-shadow: 0px 0px 2px 1px rgba(0,0,0,0.05);
 }
-#skills ul.brands li:
+#skills ul.brands li img{display:initial; /*height: 65px;*/}
+@media (max-width: 1840px) {
+	#skills ul.brands li{width: 15.25%;}
+}
+@media (max-width: 1500px) {
+	#skills ul.brands li img{height:auto;}
+}
+@media (max-width: 1100px) {
+	#skills ul.brands li{width: 15%; padding-left: 5px; padding-right: 5px;}
+}
 @media (max-width: 992px) {
+	#skills ul.brands li{width: 14.75%;}
 	#skills li:last-child { float: none;}
 	#skills input#quicksearch { float: none; margin:0 0 20px 0;}
 }
 @media (max-width: 767px) {
 	#skills .navbar{padding:0; height: 50px;}
-	#skills ul.brands li{width: 22%; padding: 5px;margin: 5px;}
+	#skills ul.brands li{width: 22%; padding: 5px; margin: 6px;}
 	#skills ul.brands img {width: 100%}
 }
 @media (max-width: 468px) {
-	#skills ul.brands li{width: 29%;}
+	#skills ul.brands li{width: 30%; margin: 5px;}
 	#skills .button-group {border-bottom: 1px solid #bbb;}
-	#skills .button-group h3{margin-bottom: 5px; margin-top: 15px;font-size: 20px;}
+	#skills .button-group h3{margin-bottom: 5px; margin-top: 15px;font-size: 16px;}
+}
+@media (max-width: 350px) {
+	#skills ul.brands li{width: 29%;margin: 4px;}
 }
 #responsive {padding: 50px 0; }
 #responsive .row {text-align: center; }
@@ -204,7 +224,7 @@ body, p {
     height: 250px;
 }
 
-#works .home_gallery {margin: 50px auto;  max-width: 1510px;}
+#works .home_gallery {margin: 50px auto;  /*max-width: 1510px;*/}
 @media (max-width: 620px) {
 	#works .home_gallery {max-width: 316px;}
 }
@@ -212,8 +232,12 @@ body, p {
 #works .gallery_more a {padding: 15px 50px; background: #bbb; margin: 25px; color: white;}
 #works .gallery_more a:hover {color: #149dd5;text-decoration: none;cursor:pointer;}
 
+#works a.fullblock_fancybox {width: 310px; height: 241px; z-index: 1000;  position: absolute;}
+#works a.fullblock_fancybox:focus {outline:none;}
+
 /*3D Effect*/
 .view {
+	display:none;
 	width: 316px;
 	height: 241px;
 	margin: 30px;
@@ -227,6 +251,9 @@ body, p {
 	-o-perspective: 500px;
 	-ms-perspective: 500px;
 	perspective: 500px;
+}
+@media (width: 1024px), (width: 1366px) {
+	.view {margin: 11px;}
 }
 @media (max-width: 767px) {
 	.view {margin: 15px;}
@@ -245,6 +272,7 @@ body, p {
 	width: 60px;
 	height: 100%;
 	z-index: 100;
+	background: no-repeat;
 	
 	-webkit-transform-style: preserve-3d;
 	-moz-transform-style: preserve-3d;
@@ -302,7 +330,7 @@ body, p {
 }
 
 .view-back span:first-child {
-	padding-top: 20px;
+	padding-top: 8px;
 }
 
 .view-back a {
@@ -311,7 +339,7 @@ body, p {
 	color: rgba(255,255,255,0.4);
 	position: absolute;
 	right: 15px;
-	bottom: 15px;
+	bottom: 7px;
 	border: 2px solid rgba(255,255,255,0.3);
 	border-radius: 50%;
 	width: 30px;
@@ -324,6 +352,7 @@ body, p {
 .view-back a:hover {
 	color: #fff;
 	border-color: #fff;
+	text-decoration: none;
 }
 
 .view-back span[data-icon]:before {
@@ -346,19 +375,19 @@ body, p {
 	transform: translate3d(60px,0,0);
 }
 .view .s1 {
-	background-position: 0px 0px; background-size: cover;
+	background-position: 0px 0px; background-size: cover, auto;
 }
 .view .s2 {
-	background-position: -60px 0px; background-size: cover;
+	background-position: -60px 0px; background-size: cover, auto;
 }
 .view .s3 {
-	background-position: -120px 0px; background-size: cover;
+	background-position: -120px 0px; background-size: cover, auto;
 }
 .view .s4 {
-	background-position: -180px 0px; background-size: cover;
+	background-position: -180px 0px; background-size: cover, auto;
 }
 .view .s5 {
-	background-position: -240px 0px; background-size: cover;
+	background-position: -240px 0px; background-size: cover, auto;
 }
 
 .view .overlay {
@@ -509,6 +538,7 @@ canvas{
   width: 100%;
   height: 100%;
 }
+footer {background:#eeeff3; color: #777; padding: 15px 0; text-align: center;}
 .demoInputBox{padding:10px; border:#F0F0F0 1px solid; border-radius:4px;}
 .error{background-color: #FF6600;border:#AA4502 1px solid;padding: 5px 10px;color: #FFFFFF;border-radius:4px;}
 .success{background-color: #12CC1A;border:#0FA015 1px solid;padding: 5px 10px;color: #FFFFFF;border-radius:4px;}
@@ -549,13 +579,12 @@ canvas{
 	}
 }
 /*start of ISOMETRIC*/
-
+/*
 .owl-stage{
 	margin-top: 100px;
 }
 .owl-carousel.owl-drag .owl-item{
 	height: 700px;     
-	/*width: 600px !important;*/	
 }
 .scene {
 
@@ -592,7 +621,6 @@ canvas{
 }
 .slide:hover .slide__layer.bottom {
   transform: translateZ(40px);
-  /* Show the shadow */
 }
 .slide:hover .slide__layer.bottom1 {
   transform: translateZ(39px);
@@ -616,7 +644,6 @@ canvas{
 }
 .slide__layer.bottom {
   z-index: 2;
-  /* Shadow */
 }
 .slide__layer.bottom1 {
   z-index: 1;
@@ -632,7 +659,7 @@ canvas{
   -webkit-box-shadow: 10px 10px 60px 0px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 10px 10px 60px 0px rgba(0, 0, 0, 0.75);
   box-shadow: 10px 10px 60px 0px rgba(0, 0, 0, 0.75);
-}
+}*/
 /*END of ISOMETRIC*/
 
 .jvectormap-zoomin, .jvectormap-zoomout {display:none;}
@@ -644,6 +671,7 @@ canvas{
 }
 @media (max-width: 1200px) {
 	.navbar-nav li a {
+		line-height: 17px;
 		padding-left: 20px;
 		padding-right: 20px;
 	}
@@ -683,7 +711,7 @@ canvas{
 		/*margin-top: 10px;*/
 	}
 	.navbar-nav li a {
-		line-height: 48px; 
+		/*line-height: 48px; */
 		padding-left: 5px;
 		padding-right: 10px;
 	}
@@ -721,7 +749,7 @@ canvas{
 		font-size: 20px !important;
 	}
 	#about{
-		padding: 0;
+		padding-top: 0;
 	}
 	.navbar-brand {
 		float: none;
@@ -747,4 +775,32 @@ canvas{
 		padding: 0 60px;
 	}
 
+}
+@media (min-width: 1921px) {
+
+	body, p, #skills h3, .navbar-nav li a, #contact #frmContact input[type=text], #contact #frmContact textarea, #contact #frmContact input[type=email] {
+		font-size: 1vw;
+	}
+	.top_navbar .navbar-brand img{
+		width: 11vw;
+	}
+	.top_navbar .navbar-nav li a{
+		padding-top: 1vw;
+	}
+	h3, h2{font-size: 1.3vw;}
+	#about h1, #skills h1, #works h1, #contact h1 {
+		font-size: 2vw;
+	}
+	.top_navbar.navbar{
+		height:3vw;
+	}
+	.container {
+		max-width:60%;
+		width: 60%;
+	}
+	#contact #map {width: 100%; height: 30vw;}
+	#contact #frmContact input[type=submit]{
+		line-height: inherit;
+		font-size: 1vw;
+	}
 }
