@@ -76,6 +76,7 @@ $(document).ready( function() {
 					var output='<div class="view">';
 					if (i < result.length){
 						if (result[i].mockup != '')output+='<a class="fullblock_fancybox" href="'+result[i].mockup+'" data-fancybox="gallery_full"></a>';
+						output+='<img class="ios_touch"/>';
 						output+='<div class="view-back">';
 						if (result[i].skill1 != '')output+='<span><img src="'+result[i].skill1+'"/></span>';
 						if (result[i].skill2 != '')output+='<span><img src="'+result[i].skill2+'"/></span>';

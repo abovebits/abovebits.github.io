@@ -405,6 +405,7 @@ body, p {
 .view:hover .overlay {
 	opacity: 1;
 }
+.view:hover a{z-index:100}
 
 .view img {
 	/*position: absolute;*/
@@ -415,7 +416,8 @@ body, p {
 	-ms-transition: left 0.3s ease-in-out;
 	transition: left 0.3s ease-in-out;
 }
-
+.view img.ios_touch{width:100%; height:100%; opacity:0;position: absolute;z-index: 99;}
+.view:hover img.ios_touch{z-index:0}
 .view:hover .s2{
 	-webkit-transform: translate3d(59px,0,0) rotate3d(0,1,0,-45deg);
 	-moz-transform: translate3d(59px,0,0) rotate3d(0,1,0,-45deg);
@@ -709,6 +711,9 @@ footer {background:#eeeff3; color: #777; padding: 15px 0; text-align: center;}
 	.navbar .navbar-nav {
 		/*display: block;*/
 		/*margin-top: 10px;*/
+	}
+	.top_navbar .navbar-nav li a {
+		line-height: 10px;
 	}
 	.navbar-nav li a {
 		/*line-height: 48px; */
