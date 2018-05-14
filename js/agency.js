@@ -21,7 +21,7 @@
     // Closes the Responsive Menu on Menu Item Click
     $('.navbar-collapse ul li a').click(function(){ 
             $(this).closest('.navbar-toggle:visible').click();
-			$(this).closest('.navbar-collapse').collapse('toggle');
+			$(this).closest('.navbar-collapse').collapse('hide');
     });
 
     // Offset for Main Navigation
