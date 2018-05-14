@@ -10,7 +10,7 @@
  "skill1": "images/abovebits_skills/Magento.png",
  "skill2": "images/abovebits_skills/HTML_CSS.png",
  "skill3": "images/abovebits_skills/JavaScript.png",
- "skill4": "",
+ "skill4": "images/abovebits_skills/PHP.png",
  "mockup": "images/works/muscle.jpg"
 },{
  "img": "images/works/home_thumb/cyclebaby.jpg",
@@ -43,8 +43,8 @@
 },{
  "img": "images/works/home_thumb/infinitys.jpg",
  "skill1": "images/abovebits_skills/Wordpress.png",
- "skill2": "",
- "skill3": "",
+ "skill2": "images/abovebits_skills/PHP.png",
+ "skill3": "images/abovebits_skills/JavaScript.png",
  "skill4": "",
  "mockup": "images/works/infinitys.jpg"
 },{
@@ -85,8 +85,8 @@
 },{
  "img": "images/works/home_thumb/EcoCaribe.jpg",
  "skill1": "images/abovebits_skills/ps.png",
- "skill2": "",
- "skill3": "",
+ "skill2": "images/abovebits_skills/FatFreeFramework.png",
+ "skill3": "images/abovebits_skills/PHP.png",
  "skill4": "",
  "mockup":"images/works/EcoCaribe.jpg"
 },{
@@ -218,16 +218,16 @@
 },{
  "img": "images/works/home_thumb/TorahLive.jpg",
  "skill1": "images/abovebits_skills/ps.png",
- "skill2": "",
- "skill3": "",
- "skill4": "",
+ "skill2": "images/abovebits_skills/Wordpress.png",
+ "skill3": "images/abovebits_skills/PHP.png",
+ "skill4": "images/abovebits_skills/JavaScript.png",
  "mockup": "images/works/TorahLive.jpg"
 },{
  "img": "images/works/home_thumb/TrademarkCarts.jpg",
  "skill1": "images/abovebits_skills/ps.png",
- "skill2": "",
- "skill3": "",
- "skill4": "",
+ "skill2": "images/abovebits_skills/OSCommerce.png",
+ "skill3": "images/abovebits_skills/PHP.png",
+ "skill4": "images/abovebits_skills/JavaScript.png",
  "mockup": "images/works/TrademarkCarts.jpg"
 },{
  "img": "images/works/home_thumb/Trickomatics.jpg",
@@ -253,7 +253,7 @@
 },{
  "img": "images/works/home_thumb/26h.jpg",
  "skill1": "images/abovebits_skills/ps.png",
- "skill2": "",
+ "skill2": "images/abovebits_skills/Magento.png",
  "skill3": "",
  "skill4": "",
  "mockup": "images/works/26h.jpg"
@@ -281,7 +281,7 @@
 },{
  "img": "images/works/home_thumb/alice.jpg",
  "skill1": "images/abovebits_skills/ps.png",
- "skill2": "",
+ "skill2": "images/abovebits_skills/Joomla.png",
  "skill3": "",
  "skill4": "",
  "mockup": "images/works/alice.jpg"

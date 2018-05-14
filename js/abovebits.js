@@ -59,6 +59,7 @@ $(document).ready( function() {
 		var galleryCount = Math.floor(screenWidth/376);
 			if (galleryCount == 0) galleryCount = 1;
 			if (screenWidth == 1024 || screenWidth == 1366) galleryCount = Math.floor(screenWidth/316);
+			if (screenWidth <= 1142) galleryCount = Math.floor(screenWidth/338);
 		//console.log("width: "+screenWidth+"px");
 		//console.log("count: "+galleryCount);
 		var displayResources = $('#home_gallery');

@@ -20,7 +20,8 @@
 
     // Closes the Responsive Menu on Menu Item Click
     $('.navbar-collapse ul li a').click(function(){ 
-            $('.navbar-toggle:visible').click();
+            $(this).closest('.navbar-toggle:visible').click();
+			$(this).closest('.navbar-collapse').collapse('toggle');
     });
 
     // Offset for Main Navigation
