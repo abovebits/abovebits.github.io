@@ -60,6 +60,7 @@ $(document).ready( function() {
 			if (galleryCount == 0) galleryCount = 1;
 			if (screenWidth == 1024 || screenWidth == 1366) galleryCount = Math.floor(screenWidth/316);
 			if (screenWidth <= 1142) galleryCount = Math.floor(screenWidth/338);
+			if (screenWidth <= 340) galleryCount = Math.floor(screenWidth/320);
 		//console.log("width: "+screenWidth+"px");
 		//console.log("count: "+galleryCount);
 		var displayResources = $('#home_gallery');
@@ -114,9 +115,29 @@ $(document).ready( function() {
 
 
 /*End of see more button*/
-
+	new WOW({
+		mobile : false
+	}).init();
+	
+	/*Back to TOP*/
+	// Show or hide the sticky footer button
+			$(window).scroll(function() {
+				if ($(this).scrollTop() > 200) {
+					$('.go-top').fadeIn(200);
+				} else {
+					$('.go-top').fadeOut(200);
+				}
+			});
+			
+			// Animate the scroll to top
+			$('.go-top').click(function(event) {
+				event.preventDefault();
+				
+				$('html, body').animate({scrollTop: 0}, 300);
+			})
+	/* End of Back to TOP*/		
 });
-new WOW().init();
+
 
 $(window).load( function() {
 	

@@ -48,6 +48,8 @@
     
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="js/jquery.min.js"></script>
+	<script src="js/jquery.parallax.min.js"></script>
+	<script src="js/particles.min.js"></script>
     <script src="js/jquery-jvectormap-2.0.3.min.js"></script>
     <script src="js/jquery-jvectormap-world-mill.js"></script>
     <script src="js/modernizr.custom.js"></script>
@@ -84,7 +86,7 @@
 			  <ul class="nav navbar-nav navbar-center text-uppercase">
 				<li><a class="page-scroll" href="#skills"><span data-hover="Skills">Skills</span></a></li>
 				<li><a class="page-scroll" href="#works"><span data-hover="Projects">Projects</span></a></li>
-				<li><a class="page-scroll" href="https://billing.abovebits.com/order/main/packages/servers/?group_id=1"><span data-hover="Hosting">Hosting</span></a></li>
+				<li><a href="https://billing.abovebits.com/order/main/packages/servers/?group_id=1"><span data-hover="Hosting">Hosting</span></a></li>
 				<li><a class="page-scroll" href="#contact"><span data-hover="Contact">Contact</span></a></li>
 				<!--<li><a class="page-scroll" href="#"><img class="img-responsive" src="images/magento_developer.png" style="height:100%"/></a></li>-->
 			  </ul>
@@ -94,11 +96,11 @@
 
 		</nav>
 		<div class="carousel-inner">
-			<div class="item active embed-responsive embed-responsive-16by9">
-				<img class="img-responsive magento_logo" src="images/magento_developer.png"/>
-				<video autoplay loop poster="video/Working-Space.jpg">
+			<div class="item active embed-responsive embed-responsive-16by9" data-src="video/Working-Space.jpg" data-pos-x="left" data-excludeAgents="true" data-parallax>
+				<img class="img-responsive magento_logo" src="images/magento_developer.png" alt="Magento certification"/>
+				<!--<video autoplay loop poster="video/Working-Space.jpg">
 
-				</video>
+				</video>-->
 			  <!--<img src="images/slider.jpg" alt="Abovebits" style="width:100%">-->
 			  <div class="carousel-caption">
 				<!--<h1 class="text-uppercase txt anim-text-flow">DESIGN, DEVELOPMENT AND IDEAS</h1>-->
@@ -112,27 +114,33 @@
 
 
 	<div id="about">
+		<div id="particles-js"></div>
+		<script>
+			particlesJS.load('particles-js', 'particles.json', function() {
+			  //console.log('particles.js loaded - callback');
+			});
+		</script>
 		<div class="container">
-            <h1><b>Mobile Apps, E-Commerce and Websites</b> </h1>
-            <h2><b>Your Team to Design + Code + Host + Maintain</b></h2>
+            <h1>Mobile Apps, E-Commerce and Websites</h1>
+            <h2>Your Team to Design + Code + Host + Maintain</h2>
 			<div class="row about">
-				<div class="col-md-6 col-sm-6 col-xs-12 wow bounceInLeft">
+				<div class="col-md-6 col-sm-6 col-xs-12 wow bounceInLeft text-justify">
 					<p>We’re an exciting and diverse independent development studio in LA! We create pixel perfect designs, websites, apps and software for clients like you. Whether you need a simple template based design or a completely custom platform, we have the experience and personal service to make sure it gets done exactly the way you need it. We aren’t a startup or a fledgling freelance group. We have hundreds of satisfied clients whose organizations span a diverse range of industries and missions.</p>
 				</div>
-				<div class="col-md-6 col-sm-6 col-xs-12 wow bounceInRight">
+				<div class="col-md-6 col-sm-6 col-xs-12 wow bounceInRight text-justify">
 					<p>Our team is is ready to work for you to develop the technology and style you need for your project, within your budget. We're proud to have worked with many small independent authors and entrepreneurs all the way up to well known organizations such as the State of Maryland, Frito Lay, NBC, Animal Planet and Costco as well as long standing and distinguished educational institutions such as Rutgers, Pasadena City College and Touro University. Our e-commerce sites process multi-millions in sales every month, and our print/graphic designs have appeared on Television, national advertising campaigns, well-known product packaging, and billboards in Times Square.</p>
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-md-4 col-sm-12 col-xs-12 wow bounceInLeft">
+				<div class="col-md-4 col-sm-12 col-xs-12 wow bounceInLeft text-justify">
 					<h3>EXPERIENCED</h3>
 					<p>We have a solid track record of on-time and on-budget delivery for hundreds of projects spanning a multinational client base, and a portfolio of projects that covers small personal projects, all the way to top tier industry and academia.</p>
 				</div>
-				<div class="col-md-4 col-sm-12 col-xs-12 wow bounceInUp">
+				<div class="col-md-4 col-sm-12 col-xs-12 wow bounceInUp text-justify">
 					<h3>FOCUSED</h3>
 					<p>A dedicated team of managers, designers and developers focus exclusively on you and the best possible implementation of your vision.</p>
 				</div>
-				<div class="col-md-4 col-sm-12 col-xs-12 wow bounceInRight">
+				<div class="col-md-4 col-sm-12 col-xs-12 wow bounceInRight text-justify">
 					<h3>CREATIVE</h3>
 					<p>Our extensive experience and out-of-the-box thinking allows us to enhance our clients' projects, and often, reduce development time and costs.</p>
 				</div>
@@ -144,7 +152,7 @@
 		<div class="container">
 			<div class="row head_block">
 				<div class="col-md-5 col-sm-12 col-xs-12">	
-					<h1><b>SKILLS</b></h1>
+					<h1>SKILLS</h1>
 				</div>			
 				<div class="col-md-7 col-sm-12 col-xs-12">	
 					<p>Our talented and diverse team has years of experience in a wide array of technologies and software.</p>
@@ -169,14 +177,14 @@
 
 					<div class="button-group filters-button-group">
 						<ul class="nav navbar-nav navbar-center text-uppercase">
-							<li><a><button class="button full-width-button is-checked" data-filter="*"><h3><b><span data-hover="ALL">ALL</span></b></h3></button></a></li>
-							<li><a><button class="button full-width-button" data-filter=".code"><h3 class="border-left"><b><span data-hover="FRAMEWORKS">FRAMEWORKS</span></b></h3></button></a></li>
-							<li><a><button class="button full-width-button" data-filter=".web"><h3 class="border-left"><b><span data-hover="CODE">CODE</span></b></h3></button></a></li>
-							<li><a><button class="button full-width-button" data-filter=".crmcms"><h3 class="border-left"><b><span data-hover="CRM/CMS">CRM/CMS</span></b></h3></button></a></li>
-							<li><a><button class="button full-width-button" data-filter=".e-commerce"><h3 class="border-left"><b><span data-hover="E-COMMERCE">E-COMMERCE</span></b></h3></button></a></li>
-							<li><a><button class="button full-width-button" data-filter=".mobile"><h3 class="border-left"><b><span data-hover="MOBILE">MOBILE</span></b></h3></button></a></li>
-							<li><a><button class="button full-width-button" data-filter=".design"><h3 class="border-left"><b><span data-hover="DESIGN">DESIGN</span></b></h3></button></a></li>
-							<li><a><button class="button full-width-button" data-filter=".api"><h3 class="border-left"><b><span data-hover="API">API</span></b></h3></button></a></li>
+							<li><h3><button class="button full-width-button is-checked" data-filter="*"><b><span data-hover="ALL">ALL</span></b></button></h3></li>
+							<li><h3 class="border-left"><button class="button full-width-button" data-filter=".code"><b><span data-hover="FRAMEWORKS">FRAMEWORKS</span></b></button></h3></li>
+							<li><h3 class="border-left"><button class="button full-width-button" data-filter=".web"><b><span data-hover="CODE">CODE</span></b></button></h3></li>
+							<li><h3 class="border-left"><button class="button full-width-button" data-filter=".crmcms"><b><span data-hover="CRM/CMS">CRM/CMS</span></b></button></h3></li>
+							<li><h3 class="border-left"><button class="button full-width-button" data-filter=".e-commerce"><b><span data-hover="E-COMMERCE">E-COMMERCE</span></b></button></h3></li>
+							<li><h3 class="border-left"><button class="button full-width-button" data-filter=".mobile"><b><span data-hover="MOBILE">MOBILE</span></b></button></h3></li>
+							<li><h3 class="border-left"><button class="button full-width-button" data-filter=".design"><b><span data-hover="DESIGN">DESIGN</span></b></button></h3></li>
+							<li><h3 class="border-left"><button class="button full-width-button" data-filter=".api"><b><span data-hover="API">API</span></b></button></h3></li>
 							<li class="search-field"><input type="text" id="quicksearch" placeholder="Search" /></li>
 						</ul>
 					</div>
@@ -202,10 +210,16 @@
 				<li class="element-item crmcms"><img class="img-responsive" src="images/abovebits_skills/Wordpress.png" alt="Wordpress" title="Wordpress"/><span style="display:none">Wordpress</span></li>
 				<li class="element-item e-commerce"><img class="img-responsive" src="images/abovebits_skills/PrestaShop.png" alt="PrestaShop" title="PrestaShop"/><span style="display:none">PrestaShop</span></li>
 				<li class="element-item e-commerce"><img class="img-responsive" src="images/abovebits_skills/OSCommerce.png" alt="OSCommerce" title="OSCommerce"/><span style="display:none">OSCommerce</span></li>
+				<li class="element-item e-commerce"><img class="img-responsive" src="images/abovebits_skills/magento-go.png" alt="Magento GO" title="Magento GO"/><span style="display:none">Magento GO</span></li>
 				<li class="element-item crmcms"><img class="img-responsive" src="images/abovebits_skills/Amember.png" alt="Amember" title="Amember"/><span style="display:none">Amember</span></li>
-				<li class="element-item e-commerce card"><img class="img-responsive front" src="images/abovebits_skills/Magento.png" alt="Magento" title="Magento"/><img class="img-responsive back" src="images/abovebits_skills/magento-cert.png" alt="Magento" title="Magento"/><span style="display:none">Magento</span></li>
+				<li class="element-item e-commerce card">
+					<img class="img-responsive front" src="images/abovebits_skills/Magento.png" alt="Magento" title="Magento"/>
+					<img class="img-responsive back" src="images/abovebits_skills/magento-cert.png" alt="Magento" title="Magento"/>
+					<span style="display:none">Magento</span>
+				</li>
 				<li class="element-item crmcms"><img class="img-responsive" src="images/abovebits_skills/Modx.png" alt="Modx" title="Modx"/><span style="display:none">Modx</span></li>
 				<li class="element-item crmcms"><img class="img-responsive" src="images/abovebits_skills/Drupal.png" alt="Drupal" title="Drupal"/><span style="display:none">Drupal</span></li>
+				<li class="element-item crmcms"><img class="img-responsive" src="images/abovebits_skills/whmcs.png" alt="WHMCS" title="WHMCS"/><span style="display:none">WHMCS</span></li>
 				<li class="element-item code"><img class="img-responsive" src="images/abovebits_skills/FatFreeFramework.png" alt="FatFreeFramework" title="FatFreeFramework"/><span style="display:none">FatFreeFramework</span></li>
 				<li class="element-item e-commerce"><img class="img-responsive" src="images/abovebits_skills/Shopify.png" alt="Shopify" title="Shopify"/><span style="display:none">Shopify</span></li>
 				<li class="element-item e-commerce"><img class="img-responsive" src="images/abovebits_skills/Bigcommerce.png" alt="Bigcommerce" title="Bigcommerce"/><span style="display:none">Bigcommerce</span></li>
@@ -274,23 +288,19 @@
 			</ul>
 			</div>
 			<div style="clear:both;"></div>
-			
-			
 		</div>
 		
-	</div>
-	</div>
 
 	<div id="responsive">
 		<div class="container">
 			<div class="row head_block">			
 				<div class="col-md-6 col-sm-6 col-xs-12">
 					<p>Refined for every browser</p>
-					<p><img class="img-responsive" src="images/responsive/browsers.png"/></p>
+					<p><img class="img-responsive" src="images/responsive/browsers.png" alt="Every Browser"/></p>
 				</div>			
 				<div class="col-md-6 col-sm-6 col-xs-12">
 					<p>Optimized for every device</p>				
-					<img class="img-responsive" src="images/responsive/devices.png"/>
+					<img class="img-responsive" src="images/responsive/devices.png" alt="Every Device"/>
 				</div>
 			</div>
 		</div>
@@ -300,7 +310,7 @@
 		<div class="container">
 			<div class="row head_block">
 				<div class="col-md-5 col-sm-12 col-xs-12">	
-					<h1><b>PROJECTS</b></h1>
+					<h1>PROJECTS</h1>
 				</div>			
 				<div class="col-md-7 col-sm-12 col-xs-12">	
 					<p>A small sample from our portfolio.</p>
@@ -340,7 +350,7 @@
 		<div class="container">
 			<div class="row head_block">
 				<div class="col-md-5 col-sm-12 col-xs-12">	
-					<h1><b>CONTACT</b></h1>
+					<h1>CONTACT</h1>
 				</div>			
 				<div class="col-md-7 col-sm-12 col-xs-12">	
 					<p>Lets talk about your project and how we can help you quickly and cost-effectively.</p>
@@ -380,8 +390,13 @@
 
 	<footer>
 		<div class="container">
-			<p>Copyright ©2003-2018 Above Bits, LLC</p>
+			<div class="row">
+				<div class="col-md-6">
+					<p>Copyright ©2003-2018 Above Bits, LLC</p>
+				</div>
+			</div>
 		</div>
+		<a href="#" class="go-top">Go Top</a>
 	</footer>
 
     <!-- Include all compiled plugins (below), or include individual files as needed -->
@@ -393,7 +408,7 @@
 	<script src="js/agency.js"></script>
 	<script src="js/isotope.pkgd.min.js"></script>
 	<script src="js/custom.js"></script>
-	<script src="js/wow.min.js"></script>
+	<script src="js/wow.js"></script>
 	<script src="js/abovebits.js"></script>
 	<script src="js/form_script.js"></script>
 	

@@ -154,18 +154,60 @@ startAnimation();
 
 window.onresize = resize;
 
-document.getElementById("frmContact").onkeyup = function(event){
+/*document.getElementById("frmContact").onkeyup = function(event){
 	keys_down[event.keyCode] = false;
-}
+}*/
 
-document.getElementById("frmContact").onkeydown = function(event){
+var alreadyInputed = [];
+
+jQuery( "#frmContact input, #frmContact textarea" ).on('keydown touchend', function(e) { //console.log('up');
+	var myString = jQuery( this ).val().toLowerCase();
+	
+	if (myString.length>0){
+		var symbol = myString[myString.length - 1];
+		var keyCode = symbol.charCodeAt(0)-32;
+		//console.log(findS(keyCode)+444);
+		//console.log(findS(keyCode));
+		if (findS(keyCode)){ 
+			keys_down[keyCode] = false;
+		}
+	}
+});
+
+jQuery( "#frmContact input, #frmContact textarea" ).on('keyup', function(e) {
+
+	var myString = jQuery( this ).val().toLowerCase();
+	
+	//console.log(myString.length+"down");
+	if (myString.length>0){
+		var symbol = myString[myString.length - 1];
+	
+		//console.log(symbol);
+		var keyCode = symbol.charCodeAt(0)-32;
+		//console.log(keyCode);
+		if(keyCode == 91 && keyCode == 224){
+			keys_down = [];
+		}
+		else if(keyCode >= 65 && keyCode <= 90 || keyCode >= 48 && keyCode <= 57){
+			//if (findS(keyCode))
+				keys_down[keyCode] = true;
+			setTimeout(function(){
+			  keys_down[keyCode] = false;
+			}, 500);
+		}
+	}
+	
+});
+
+
+/*document.getElementById("frmContact").onkeydown = function(event){ //alert(event.which);
   if(event.keyCode == 91 && event.keyCode == 224){
     keys_down = [];
   }
 	else if(event.keyCode >= 65 && event.keyCode <= 90 || event.keyCode >= 48 && event.keyCode <= 57){
 		keys_down[event.keyCode] = true;
 	}
-}
+}*/
 
 document.getElementById("frmContact").focus();
 
