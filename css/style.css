@@ -948,6 +948,9 @@ footer a {line-height: inherit !important;}
 	display: none;
 	z-index: 100;
 }
+@media(max-width: 576px){
+	.go-top {bottom: 4em;}
+}
 
 .go-top:hover {
 	color: white;

@@ -27,13 +27,6 @@
  "skill4": "",
  "mockup": "images/works/des1.jpg"
 },{
- "img": "images/works/home_thumb/f2r.jpg",
- "skill1": "images/abovebits_skills/Joomla.png",
- "skill2": "images/abovebits_skills/HTML_CSS.png",
- "skill3": "images/abovebits_skills/JavaScript.png",
- "skill4": "",
- "mockup": "images/works/f2r.jpg"
-},{
  "img": "images/works/home_thumb/grad.jpg",
  "skill1": "images/abovebits_skills/Magento.png",
  "skill2": "images/abovebits_skills/HTML_CSS.png",
@@ -103,6 +96,13 @@
  "skill3": "",
  "skill4": "",
  "mockup": "images/works/ElegantEvent.jpg"
+},{
+ "img": "images/works/home_thumb/f2r.jpg",
+ "skill1": "images/abovebits_skills/Joomla.png",
+ "skill2": "images/abovebits_skills/HTML_CSS.png",
+ "skill3": "images/abovebits_skills/JavaScript.png",
+ "skill4": "",
+ "mockup": "images/works/f2r.jpg"
 },{
  "img": "images/works/home_thumb/Essen.jpg",
  "skill1": "images/abovebits_skills/ps.png",
