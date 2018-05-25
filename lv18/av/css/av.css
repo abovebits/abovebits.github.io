@@ -1,0 +1,272 @@
+html {
+	/*background: linear-gradient(#191923, #15151d);*/
+	/*background: linear-gradient(#15151d, rgba(25,25,35,0.58));*/
+	background:#515157;
+}
+@font-face {
+    font-family: ProximaNova;
+	src: url('../fonts/ProximaNova-Reg.woff') format('woff');
+    font-weight: normal;
+}
+@font-face {
+    font-family: ProximaNova;
+	src: url('../fonts/ProximaNova-Bold.woff') format('woff');
+    font-weight: bold;
+}
+body {background-color: transparent; background: url('../images/figure_dark.png') -10980% -19% no-repeat, url('../images/figure_dark.png') 17901% 9% no-repeat, url('../images/figure_dark.png') 14201% 112% no-repeat;}
+@media (max-width: 1800px){
+	body {background-color: transparent; background: url('../images/figure_dark.png') -380% -19% no-repeat, url('../images/figure_dark.png') 625% 9% no-repeat, url('../images/figure_dark.png') 14201% 112% no-repeat;}
+}
+@media (max-width: 1600px){
+	body {background-color: transparent; background: url('../images/figure_dark.png') -294% -19% no-repeat, url('../images/figure_dark.png') 415% 9% no-repeat, url('../images/figure_dark.png') 14201% 112% no-repeat;}
+}
+@media (max-width: 1500px){
+	body {background-color: transparent; background: url('../images/figure_dark.png') -220% -19% no-repeat, url('../images/figure_dark.png') 320% 9% no-repeat, url('../images/figure_dark.png') 14201% 112% no-repeat;}
+}
+
+
+body, h1, h2, h3, h4, p {font-family: ProximaNova; color: #ffffff;}
+/* display this row with flex and use wrap (= respect columns' widths) */
+
+.row-flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+table td[class*=col-] {height: auto;}
+@media (max-width: 767px) {
+	table td[class*=col-] {display: inline-block;}
+}
+
+.content {
+  height: 100%;
+}
+.pb20 {padding-bottom:20px;}
+.pb45 {padding-bottom:45px;}
+
+
+.inside-full-height {
+  height: 100%;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.row-height table {
+	height: 100%; margin-bottom: 0;
+}
+.row table {height: 100%;}
+
+@media (min-width: 768px) {
+  .row-sm-height {
+    display: table;
+    table-layout: fixed;
+    height: 100%;
+    width: 100%;
+  }
+  .col-sm-height {
+    display: table-cell;
+    float: none;
+    height: 100%;
+  }
+  .col-sm-top {
+    vertical-align: top;
+  }
+  .col-sm-middle {
+    vertical-align: middle;
+  }
+  .col-sm-bottom {
+    vertical-align: bottom;
+  }
+}
+
+/*end row with flex*/
+.container {max-width: 1420px;}
+@media (min-width: 1470px){
+	.container {
+		width: 1420px;
+	}
+}
+.header-container, .footer-container {max-width: 1024px; margin: 0 auto; margin-top: 200px;}
+.header-container img, .footer-container img {margin:0 auto;}
+.header_text {margin-top: 55px;font-size: 42pt; font-weight: 600; line-height: 1.2;}
+.header-container .arrow-devider {margin-top: 120px; margin-bottom: 50px;}
+.header-container h3 a {color: #41a2d8;}
+.cms-name h2 {margin-top: 60px;margin-bottom:90px; font-size: 38pt; font-weight: 600; line-height: 1.2;}
+.thumbnail {
+	background: #1e1e29;
+	-webkit-box-shadow: 0px 0px 20px 3px rgba(40,40,40,0.3);
+	-moz-box-shadow: 0px 0px 20px 3px rgba(40,40,40,0.3);
+	box-shadow: 0px 0px 20px 3px rgba(40,40,40,0.3);
+}
+.thumbnail, .thumbnail .caption {padding: 0; border: none; border-radius:0;}
+.thumbnail .caption {padding: 0 45px; border: none; border-radius:0;}
+.thumbnail img {margin: 0; width: 100%;}
+.thumbnail .bg_zoom {position: relative;}
+/*.thumbnail .bg_zoom .back {position: absolute; top:0; padding-top:50%; display: none;}
+.thumbnail .bg_zoom .back a {background: #fff; padding:10px; color: #8d8d8d; font-size: 20px;}
+.thumbnail .bg_zoom:hover .back{display: block;background:rgba(0,0,0,0.5);height:100%; width: 100%;}*/
+.thumbnail h3 {font-size: 24px; font-weight:600; line-height: 1;color:#ccc;}
+.thumbnail .price {color:#eee; font-weight: 600;}
+.thumbnail p {font-size: 16px; line-height: 2; margin-bottom: 20px; color:#ccc;}
+.thumbnail a {color:#359bd5;font-weight:600; margin-top: 20px;}
+.footer-container{margin-top: 50px;margin-bottom: 150px;}
+.footer-container h3 {margin-bottom: 50px; color: #ccc;}
+.footer-container img {margin-bottom: 60px; max-width: 300px;}
+.footer-container p {font-size: 12pt;}
+.footer-container a {color: #41a2d8;}
+.footer-container h3 a {color: #41a2d8;}
+.footer-container .footer_text {color:#ccc;}
+
+.background_elements {
+	background-color: transparent; 
+	background: 
+			url('../images/camera.png') -21% 4% no-repeat, 
+			url('../images/headphones.png') 120% 17% no-repeat, 
+			url('../images/band.png') -64% 69% no-repeat, 
+			url('../images/lancard.png') 127% 91% no-repeat;
+}
+@media (max-width: 1800px){
+	.background_elements {
+		background: 
+			url('../images/camera.png') -33% 0% no-repeat, 
+			url('../images/headphones.png') 125% 19% no-repeat, 
+			url('../images/band.png') -64% 73% no-repeat, 
+			url('../images/lancard.png') 129% 91% no-repeat;
+	}
+}
+@media (min-width: 1024px)and (max-width: 1400px){
+	.background_elements {
+		background: 
+			url('../images/camera.png') -57% -7% no-repeat, 
+			url('../images/headphones.png') 143% 23% no-repeat, 
+			url('../images/band.png') -161% 73% no-repeat, 
+			url('../images/lancard.png') 174% 91% no-repeat;
+	}
+}
+@media (max-width: 1024px){
+	.background_elements {
+		background: 
+			url('../images/camera.png') -18% -2% no-repeat, 
+			url('../images/headphones.png') 122% 22% no-repeat, 
+			url('../images/band.png') -21% 60% no-repeat, 
+			url('../images/lancard.png') 124% 90% no-repeat;
+			background-size: 33%;
+	}
+	body {
+		background-color: transparent; 
+		background: 
+			url('../images/figure_dark.png') -53% -19% no-repeat, 
+			url('../images/figure_dark.png') 193% 9% no-repeat, 
+			url('../images/figure_dark.png') 14201% 112% no-repeat;
+	}
+	.thumbnail .caption {padding: 20px 12px;}
+	.header_text {font-size: 32pt;}
+	.cms-name h2 {font-size: 28pt;}
+	.header-container {margin-top: 80px;}
+	.header-container .arrow-devider {margin-top: 30px; margin-bottom: 30px;}
+	.footer-container {margin-bottom: 50px;}
+}
+@media (max-width: 900px){
+	.background_elements {
+		background: 
+			url('../images/camera.png') -18% -2% no-repeat, 
+			url('../images/headphones.png') 122% 22% no-repeat, 
+			url('../images/band.png') -21% 60% no-repeat, 
+			url('../images/lancard.png') 124% 90% no-repeat;
+			background-size: 33%;
+	}
+	.header-container {margin-top: 80px;}
+}
+@media (max-width: 768px){
+	.background_elements {
+		background: 
+			url('../images/camera.png') -18% -2% no-repeat, 
+			url('../images/headphones.png') 122% 22% no-repeat, 
+			url('../images/band.png') -21% 60% no-repeat, 
+			url('../images/lancard.png') 124% 90% no-repeat;
+			background-size: 33%;
+	}
+	body {
+		background-color: transparent; 
+		background: 
+			url('../images/figure_dark.png') -53% -19% no-repeat, 
+			url('../images/figure_dark.png') 129% 9% no-repeat, 
+			url('../images/figure_dark.png') 14201% 112% no-repeat;
+	}
+	.header-container{max-width: 650px;}
+	.footer-container{margin-top: 50px;margin-bottom: 50px;}	
+	.cms-name h2 {margin-top: 30px; margin-bottom: 60px;}
+}
+@media (max-width: 767px){
+	.background_elements {
+		background: 
+			url('../images/camera.png') -18% -1% no-repeat, 
+			url('../images/headphones.png') 122% 7% no-repeat, 
+			url('../images/band.png') -21% 52.5% no-repeat, 
+			url('../images/lancard.png') 124% 96% no-repeat;
+			background-size: 33%;
+	}
+	.header-container a img{max-width: 387px;}
+	.header_text {font-size: 22pt; margin-top:35px;}
+}
+@media (max-width: 680px){
+	.background_elements {
+		background: 
+			url('../images/camera.png') -18% -1% no-repeat, 
+			url('../images/headphones.png') 122% 7% no-repeat, 
+			url('../images/band.png') -21% 52.5% no-repeat, 
+			url('../images/lancard.png') 124% 96% no-repeat;
+			background-size: 33%;
+	}
+}
+@media (max-width: 568px){
+	.background_elements {
+		background: 
+			url('../images/camera.png') -18% -1% no-repeat, 
+			url('../images/headphones.png') 122% 8% no-repeat, 
+			url('../images/band.png') -21% 53% no-repeat, 
+			url('../images/lancard.png') 124% 95% no-repeat;
+			background-size: 33%;
+	}
+}
+@media (max-width: 480px){
+	.header-container {margin-top: 80px; max-width: 300px;}
+	.header-container h3 {max-width: 278px; line-height: 1.5; font-size: 12pt;}
+	.header-container a img{max-width: 187px;}
+	.header-container .arrow-devider {margin-top: 30px; margin-bottom: 30px;}
+}
+@media (max-width: 450px){
+	.footer-container img {max-width: 360px;}
+}
+@media (max-width: 414px){
+	.background_elements {
+		background: 
+			url('../images/camera.png') -36% -1% no-repeat, 
+			url('../images/headphones.png') 137% 9% no-repeat, 
+			url('../images/band.png') -40% 53% no-repeat, 
+			url('../images/lancard.png') 140% 93% no-repeat;
+			background-size: 50%;
+	}
+}
+@media (max-width: 375px){
+	.background_elements {
+		background: 
+			url('../images/camera.png') -36% -1% no-repeat, 
+			url('../images/headphones.png') 137% 10% no-repeat, 
+			url('../images/band.png') -40% 53% no-repeat, 
+			url('../images/lancard.png') 140% 93% no-repeat;
+			background-size: 50%;
+	}
+	.footer-container img {max-width: 280px;}
+}
+@media (max-width: 320px){
+	.background_elements {
+		background: 
+			url('../images/camera.png') -36% -1% no-repeat, 
+			url('../images/headphones.png') 147% 10.5% no-repeat, 
+			url('../images/band.png') -40% 53% no-repeat, 
+			url('../images/lancard.png') 140% 93% no-repeat;
+			background-size: 50%;
+	}
+	.footer_text{font-size: 16px;}
+}

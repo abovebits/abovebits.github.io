@@ -43,6 +43,7 @@ $(document).ready( function() {
 		}]},*/
 		backgroundColor: 'none',
 		markers: [
+		  {latLng: [31.48, 34.29], name: 'Israel (Field office)'},
 		  {latLng: [50.01, 36.18], name: 'Kharkiv, Ukraine (Field office)'},
 		  {latLng: [50.45, 30.52], name: 'Kiyv, Ukraine (Field office)'},
 		  {latLng: [53.90, 27.56], name: 'Minsk, Belarus (Field office)'},
