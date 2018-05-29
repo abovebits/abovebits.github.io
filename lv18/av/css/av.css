@@ -116,7 +116,27 @@ table td[class*=col-] {height: auto;}
 .footer-container a {color: #41a2d8;}
 .footer-container h3 a {color: #41a2d8;}
 .footer-container .footer_text {color:#ccc;}
-
+	
+.magento_logo {
+		position: fixed;
+		right: 15px;
+		width: 90px;
+		bottom: 10px;
+	-webkit-box-shadow: 1px 55px 40px -13px rgba(0,0,0,0.27);
+	-moz-box-shadow: 1px 55px 40px -13px rgba(0,0,0,0.27);
+	box-shadow: 1px 55px 40px -13px rgba(0,0,0,0.27);
+	}
+.magento_logo.m_specialist{right: 120px;}
+@media (max-width: 600px){
+	.magento_logo{width:20%}
+	.magento_logo.m_specialist{right: 30%;}
+}
+@media (max-width: 767px){
+	.magento_logo {display: none;}
+}
+@media (width: 768px){
+	.footer-container .footer_text {margin: 0 169px;}
+}
 .background_elements {
 	background-color: transparent; 
 	background: 
@@ -163,6 +183,7 @@ table td[class*=col-] {height: auto;}
 	.header_text {font-size: 32pt;}
 	.cms-name h2 {font-size: 28pt;}
 	.header-container {margin-top: 80px;}
+	.header-container h3 {line-height: 2; font-weight: 400; font-size: 23px;}
 	.header-container .arrow-devider {margin-top: 30px; margin-bottom: 30px;}
 	.footer-container {margin-bottom: 50px;}
 }
@@ -181,7 +202,7 @@ table td[class*=col-] {height: auto;}
 	.background_elements {
 		background: 
 			url('../images/camera.png') -18% -2% no-repeat, 
-			url('../images/headphones.png') 122% 22% no-repeat, 
+			url('../images/headphones.png') 122% 24% no-repeat, 
 			url('../images/band.png') -21% 60% no-repeat, 
 			url('../images/lancard.png') 124% 90% no-repeat;
 			background-size: 33%;
@@ -270,3 +291,60 @@ table td[class*=col-] {height: auto;}
 	}
 	.footer_text{font-size: 16px;}
 }
+
+/* Arrow effect */
+@-moz-keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -moz-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40% {
+    -moz-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+  60% {
+    -moz-transform: translateY(-15px);
+    transform: translateY(-15px);
+  }
+}
+@-webkit-keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40% {
+    -webkit-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+  60% {
+    -webkit-transform: translateY(-15px);
+    transform: translateY(-15px);
+  }
+}
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40% {
+    -moz-transform: translateY(-30px);
+    -ms-transform: translateY(-30px);
+    -webkit-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+  60% {
+    -moz-transform: translateY(-15px);
+    -ms-transform: translateY(-15px);
+    -webkit-transform: translateY(-15px);
+    transform: translateY(-15px);
+  }
+}
+
+.bounce {
+  -moz-animation: bounce 2s infinite;
+  -webkit-animation: bounce 2s infinite;
+  animation: bounce 2s infinite;
+}
+/* End of arrow effect */

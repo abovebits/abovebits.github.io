@@ -112,6 +112,31 @@ table td[class*=col-] {height: auto;}
 .footer-container img {margin-bottom: 60px;}
 .footer-container p {font-size: 12pt;}
 .footer-container .footer_text {color:#4b666e;}
+.footer-container img {
+    margin-bottom: 60px;
+    max-width: 300px;
+}
+
+.magento_logo {
+		position: fixed;
+		right: 15px;
+		width: 90px;
+		bottom: 10px;
+	-webkit-box-shadow: 1px 55px 40px -13px rgba(0,0,0,0.27);
+	-moz-box-shadow: 1px 55px 40px -13px rgba(0,0,0,0.27);
+	box-shadow: 1px 55px 40px -13px rgba(0,0,0,0.27);
+	}
+.magento_logo.m_specialist{right: 120px;}
+@media (max-width: 600px){
+	.magento_logo{width:20%}
+	.magento_logo.m_specialist{right: 30%;}
+}
+@media (max-width: 767px){
+	.magento_logo {display: none;}
+}
+@media (width: 768px){
+	.footer-container .footer_text {margin: 0 169px;}
+}
 
 .background_elements {
 	background-color: transparent; 
@@ -200,7 +225,7 @@ table td[class*=col-] {height: auto;}
 		background: 
 			url('../images/jeweler-top-left.png') -13% 12px no-repeat, 
 			url('../images/jeweler-top-right.png') 118% 12px no-repeat, 
-			url('../images/jeweler-bottom-left.png') -2% 6% no-repeat, 
+			url('../images/jeweler-bottom-left.png') -2% 7.2% no-repeat, 
 			url('../images/jeweler-bottom-right.png') 121% 6% no-repeat;
 		background-size: 34%;
 	}
@@ -229,7 +254,7 @@ table td[class*=col-] {height: auto;}
 		background: 
 			url('../images/jeweler-top-left.png') -13% 12px no-repeat, 
 			url('../images/jeweler-top-right.png') 118% 12px no-repeat, 
-			url('../images/jeweler-bottom-left.png') -2% 13.5% no-repeat, 
+			url('../images/jeweler-bottom-left.png') -2% 12.8% no-repeat, 
 			url('../images/jeweler-bottom-right.png') 112% 8.5% no-repeat;
 		background-size: 34%;
 	} 
@@ -239,7 +264,7 @@ table td[class*=col-] {height: auto;}
 		background: 
 			url('../images/jeweler-top-left.png') -13% 12px no-repeat, 
 			url('../images/jeweler-top-right.png') 118% 12px no-repeat, 
-			url('../images/jeweler-bottom-left.png') -2% 14.2% no-repeat, 
+			url('../images/jeweler-bottom-left.png') -2% 13.3% no-repeat, 
 			url('../images/jeweler-bottom-right.png') 121% 9% no-repeat;
 		background-size: 34%;
 	}
@@ -251,9 +276,66 @@ table td[class*=col-] {height: auto;}
 		background: 
 			url('../images/jeweler-top-left.png') -13% 12px no-repeat, 
 			url('../images/jeweler-top-right.png') 118% 12px no-repeat, 
-			url('../images/jeweler-bottom-left.png') -2% 14% no-repeat, 
-			url('../images/jeweler-bottom-right.png') 131% 9% no-repeat;
+			url('../images/jeweler-bottom-left.png') -2% 15% no-repeat, 
+			url('../images/jeweler-bottom-right.png') 131% 10% no-repeat;
 		background-size: 40%;
 	}
 	.footer_text{font-size: 16px;}
 }
+
+/* Arrow effect */
+@-moz-keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -moz-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40% {
+    -moz-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+  60% {
+    -moz-transform: translateY(-15px);
+    transform: translateY(-15px);
+  }
+}
+@-webkit-keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40% {
+    -webkit-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+  60% {
+    -webkit-transform: translateY(-15px);
+    transform: translateY(-15px);
+  }
+}
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40% {
+    -moz-transform: translateY(-30px);
+    -ms-transform: translateY(-30px);
+    -webkit-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+  60% {
+    -moz-transform: translateY(-15px);
+    -ms-transform: translateY(-15px);
+    -webkit-transform: translateY(-15px);
+    transform: translateY(-15px);
+  }
+}
+
+.bounce {
+  -moz-animation: bounce 2s infinite;
+  -webkit-animation: bounce 2s infinite;
+  animation: bounce 2s infinite;
+}
+/* End of arrow effect */
