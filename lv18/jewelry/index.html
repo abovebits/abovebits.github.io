@@ -61,7 +61,11 @@
 		<div class="container">
 			<div class="header-container text-center">
 				<a href="/"><img src="images/logo_header.png" class="text-center img-responsive" alt="Above Bits"/></a>
-				<h1 class="header_text">Staying on the cutting edge of today's ecommerce business</h1>
+				<div class="fade-slider">
+					<h1 class="header_text">Staying on the cutting edge of today's ecommerce business</h1>
+					<h1 class="header_text">Harnessing the skill set to envision, build and support your online presence</h1>
+					<h1 class="header_text">Shaping the future of online</h1>
+				</div>
 				<a href="#standard" class="page-scroll"><img src="images/arrow_down.png" class="arrow-devider text-center img-responsive bounce" alt="Above Bits"/></a>
 				<h3>Out of a <a href="https://abovebits.com/index.html#skills" onClick="ga('send', 'event', 'LV 2018 Jewelry', 'Click', 'few dozen - link to skill', '1');">few dozen</a> technologies that we encompass, we picked out these gems to give you a sense of what we could do for you</h3>
 			</div>
@@ -329,6 +333,20 @@
 				event.preventDefault();
 			});
 		})(jQuery); // End of use strict
+		
+		fadeContent();
+
+		function fadeContent() {
+			//$('.static-loader').animate({'width':'100%'},2000);
+			$(".fade-slider h1:hidden:first-child").fadeIn(3500,function(){
+			   //$('.static-loader').width('0%');
+			   $(this).fadeOut(2000, function () {
+				  $(this).appendTo($(this).parent());
+				  fadeContent();           
+			   }); 
+			});
+		}
+
 	</script>
 
 </body>
