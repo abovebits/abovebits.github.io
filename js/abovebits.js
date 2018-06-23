@@ -48,7 +48,7 @@ $(document).ready( function() {
 		  {latLng: [50.45, 30.52], name: 'Kiyv, Ukraine (Field office)'},
 		  {latLng: [53.90, 27.56], name: 'Minsk, Belarus (Field office)'},
 		  {latLng: [40.71, -74.00], name: 'New York, USA (Field office)'},
-		  {latLng: [40.43,  -79.99], name: 'Pittsburgh, USA (Field office)'},
+		  //{latLng: [40.43,  -79.99], name: 'Pittsburgh, USA (Field office)'},
 		  {latLng: [34.05, -118.24], name: 'Los Angeles, USA (Head office)', style: {r: 10, /*fill: 'red', image: 'images/favicon/icon_agency64х64.png'*/}},
 		]
 	});

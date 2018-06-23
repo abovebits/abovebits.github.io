@@ -86,7 +86,7 @@ table td[class*=col-] {height: auto;}
 }
 .header-container, .footer-container {max-width: 1024px; margin: 0 auto; margin-top: 200px;}
 .header-container img, .footer-container img {margin:0 auto;}
-.fade-slider {min-height: 140px;}
+.fade-slider {min-height: 200px;}
 .fade-slider h1 { text-align: middle;
     display: none;
 }
