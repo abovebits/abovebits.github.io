@@ -157,6 +157,7 @@
 				   .replace(/^.*?\?/, '')
 				   // and remove any existing hash string (thanks, @vrijdenker)
 				   .replace(/#.*$/, '')
+		                   .replace(/%20/g, ' ')
 				   .split('&');
 
 		    for(var i=0, l=query.length; i<l; i++) {
