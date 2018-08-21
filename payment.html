@@ -181,7 +181,7 @@
 			paymentNote.removeAttribute('hidden');
 
 			// Update and show payment form
-			var formamount = amount * 100;  //Stripe requires no decimal
+			var formamount = Math.round(amount * 100);  //Stripe requires no decimal
 			var form = document.getElementById("paymentForm");
 
 			form.setAttribute("data-amount", formamount);
