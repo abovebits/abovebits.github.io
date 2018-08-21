@@ -157,7 +157,6 @@
 				   .replace(/^.*?\?/, '')
 				   // and remove any existing hash string (thanks, @vrijdenker)
 				   .replace(/#.*$/, '')
-		                   .replace(/%20/g, ' ')
 				   .split('&');
 
 		    for(var i=0, l=query.length; i<l; i++) {
@@ -171,7 +170,7 @@
 		
 		//Stripe Callback Handler  
 		if (window.location.hash) {
-			paymentNote.innerHTML= "<p>"+window.location.hash.substr(1)+"</p>";
+			paymentNote.innerHTML= "<p>"+window.location.hash.substr(1).replace(/%20/g, ' ')+"</p>";
 			paymentNote.removeAttribute('hidden');
 		} else if(isNaN(amount)){
 			paymentNote.innerHTML= "<b>Invalid payment amount.</b>";
