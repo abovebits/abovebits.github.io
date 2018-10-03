@@ -5,11 +5,14 @@
 
     // jQuery for page scrolling feature - requires jQuery Easing plugin
     $('a.page-scroll').bind('click', function(event) {
-        var $anchor = $(this);
-        $('html, body').stop().animate({
-            scrollTop: ($($anchor.attr('href')).offset().top - 50)
-        }, 1250, 'easeInOutExpo');
+        scrollWindowToTarget($(this));
         event.preventDefault();
+    });
+
+    $('a.scroll-change').bind('click', function (e) {
+        e.preventDefault();
+        scrollWindowToTarget($(this));
+        if (typeof MarkersSwitcher !== 'undefined') MarkersSwitcher.changeState($(this).attr('data-target'));
     });
 
     // Highlight the top nav as scrolling occurs
@@ -33,6 +36,12 @@
         offset: {
             top: 100
         }
-    })
+    });
+
+    function scrollWindowToTarget (element) {
+        $('html, body').stop().animate({
+            scrollTop: ($(element.attr('href')).offset().top - 50)
+        }, 1250, 'easeInOutExpo');
+    }
 
 })(jQuery); // End of use strict
