@@ -6,9 +6,8 @@ var _markers = {
 		{latLng: [31.48, 34.29], name: 'Israel (Field office)'},
 		{latLng: [50.01, 36.18], name: 'Kharkiv, Ukraine (Field office)'},
 		{latLng: [50.45, 30.52], name: 'Kiyv, Ukraine (Field office)'},
-		{latLng: [53.90, 27.56], name: 'Minsk, Belarus (Field office)'},
+		{latLng: [59.32, 17.84], name: 'Stockholm, Sweden (Field office)'},
 		{latLng: [40.71, -74.00], name: 'New York, USA (Field office)'},
-		//{latLng: [40.43,  -79.99], name: 'Pittsburgh, USA (Field office)'},
 		{latLng: [34.05, -118.24], name: 'Los Angeles, USA (Head office)', style: {r: 10, /*fill: 'red', image: 'images/favicon/icon_agency64х64.png'*/}},
 	],
 	"clients": [
@@ -85,9 +84,11 @@ $(document).ready( function() {
 		loop:true,
 		//autoplay: 2000,
 		autoplaySpeed: 3000,
-		//autoWidth:true,
-		 //responsiveClass:true,
-		//margin:20,
+		mouseDrag: true,
+		nav: true,
+		navElement: 'div',
+		//navClass: ['owl-prev', 'owl-next'],
+		navText: ['<i class="fa fa-chevron-circle-left"></i>','<i class="fa fa-chevron-circle-right"></i>'],
 		responsive:{
 			0:{
 				items:1
