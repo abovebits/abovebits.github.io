@@ -1,12 +1,106 @@
+/**
+ * Markers for map
+ */
+var _markers = {
+	"offices": [
+		{latLng: [31.48, 34.29], name: 'Israel (Field office)'},
+		{latLng: [50.01, 36.18], name: 'Kharkiv, Ukraine (Field office)'},
+		{latLng: [50.45, 30.52], name: 'Kiyv, Ukraine (Field office)'},
+		{latLng: [59.32, 17.84], name: 'Stockholm, Sweden (Field office)'},
+		{latLng: [40.71, -74.00], name: 'New York, USA (Field office)'},
+		{latLng: [34.05, -118.24], name: 'Los Angeles, USA (Head office)', style: {r: 10, /*fill: 'red', image: 'images/favicon/icon_agency64х64.png'*/}},
+	],
+	"clients": [
+		{latLng: [31.48, 34.29], name: 'Israel (Field office)'},
+		{latLng: [53.90, 27.56], name: 'Minsk, Belarus (Field office)'},
+		{latLng: [40.71, -74.00], name: 'New York, USA (Field office)'},
+		{latLng: [34.05, -118.24], name: 'Los Angeles, USA (Head office)', style: {r: 10}},
+	]
+};
+
+/**
+ * Switcher markers contact map 
+ */
+//
+var MarkersSwitcher = Object.create(function () {
+	return {
+		initialization: function (options) {
+			this.blockElement = $(options.block);
+			this.mapBlock = options.mapBlock;
+			this.defaultState = options.defaultState || 'offices';
+			this.activeState = this.defaultState;
+			this.links = this.blockElement.find('a');
+			this.markersStore = options.markersStore;
+			this.changeStateCallback = options.onChangeState || null;
+
+			this.init();
+		},
+
+		init: function () {
+			var self = this;
+			this.links.on('click', function (e) {
+					e.preventDefault();
+					self.changeState($(this).attr('data-state'));
+			});
+		},
+
+		changeState: function (newState) {
+			var oldState = this.activeState;
+			if (oldState !== newState) {
+				this.changeMapMarkers(newState);
+				this.changeActiveLink(newState);
+			} 
+		},
+
+		changeMapMarkers: function (newState) {
+			var oldState = this.activeState,
+				_mapObject = $(this.mapBlock).find('.jvectormap-container').data('mapObject');
+			if (_mapObject) {
+					_mapObject.removeAllMarkers();
+					_mapObject.addMarkers(this.markersStore[newState]);
+					this.activeState = newState;
+
+					if (typeof this.changeStateCallback === 'function') {
+							this.changeStateCallback(oldState, newState);
+					}
+			}
+			else{
+					throw "Map object isn't found";
+			}
+		},
+
+		changeActiveLink: function (newState) {
+			this.links.removeClass('active');
+			this.links.each(function () {
+				if ($(this).attr('data-state') === newState) $(this).addClass('active');
+			});
+		}
+	}
+}());
+
 $(document).ready( function() {
 	 // executes when complete page is fully loaded, including all frames, objects and images
-	/*var owl = jQuery('.owl-carousel').owlCarousel({
+	var owl = jQuery('.owl-carousel').owlCarousel({
 		loop:true,
-		autoplay: 2000,
+		//autoplay: 2000,
 		autoplaySpeed: 3000,
-		autoWidth:true,
-		margin:125,
-	});*/
+		mouseDrag: true,
+		nav: true,
+		navElement: 'div',
+		//navClass: ['owl-prev', 'owl-next'],
+		navText: ['<i class="fa fa-chevron-circle-left"></i>','<i class="fa fa-chevron-circle-right"></i>'],
+		responsive:{
+			0:{
+				items:1
+			},
+			600:{
+				items:3
+			},
+			1000:{
+				items:5
+			}
+		}
+	});
     
     $('.txt').html(function(i, html) {
       var chars = $.trim(html).split("");
@@ -42,19 +136,11 @@ $(document).ready( function() {
 			},
 		}]},*/
 		backgroundColor: 'none',
-		markers: [
-		  {latLng: [31.48, 34.29], name: 'Israel (Field office)'},
-		  {latLng: [50.01, 36.18], name: 'Kharkiv, Ukraine (Field office)'},
-		  {latLng: [50.45, 30.52], name: 'Kiyv, Ukraine (Field office)'},
-		  {latLng: [40.71, -74.00], name: 'New York, USA (Field office)'},
-		  {latLng: [59.32, 17.84], name: 'Stockholm, Sweden (Field office)'},
-		  //{latLng: [40.43,  -79.99], name: 'Pittsburgh, USA (Field office)'},
-		  {latLng: [34.05, -118.24], name: 'Los Angeles, USA (Head office)', style: {r: 10, /*fill: 'red', image: 'images/favicon/icon_agency64х64.png'*/}},
-		]
+		markers: _markers.offices
 	});
 	
 /*See More button*/
-	var i=0;
+	/*var i=0;
 	function gallery(){
 		var screenWidth = document.documentElement.clientWidth;
 		var galleryCount = Math.floor(screenWidth/376);
@@ -105,14 +191,14 @@ $(document).ready( function() {
 				 //console.log(data);
 			 }
 		 });
-	}
-	 gallery();
+	}*/
+	 //gallery();
 	 
-	 $('#seemore').click(function (e) {
+	 /*$('#seemore').click(function (e) {
 		 e.preventDefault();
 		 gallery();
 		 
-	 });
+	 });*/
 
 
 /*End of see more button*/
@@ -136,7 +222,29 @@ $(document).ready( function() {
 				
 				$('html, body').animate({scrollTop: 0}, 300);
 			})
-	/* End of Back to TOP*/		
+	/* End of Back to TOP*/	
+	
+	//
+	var _portfolio = new PortfolioModel("images/abovebits_skills/gallery.json"),
+			_gallery = new PortfolioPresenter({
+				block: "#home_gallery",
+				searchField: '#gallery_search'
+			}, _portfolio);		
+			
+			$('#seemore').click(function (e) {
+				e.preventDefault();
+				_gallery.showNextItems();	
+			});		
+
+			$('#filter_gallery ul li button').on('click', function () {
+				_gallery.clearBlock();
+				_gallery.filterItems($(this).attr('data-state'));	
+			});
+
+			/*$('#filter_gallery ul li input').on('keyup', function (e) {
+				_gallery.clearBlock();
+				_gallery.filterItems($(this).val());
+			});*/
 });
 
 
@@ -210,5 +318,11 @@ $(window).load( function() {
 		$buttonGroup.find('.is-checked').removeClass('is-checked');
 		$( this ).addClass('is-checked');
 	  });
+	});
+
+	MarkersSwitcher.initialization({
+		block: '.contact-switcher',
+		mapBlock: '#map',
+		markersStore: _markers 
 	});
 });

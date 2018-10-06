@@ -38,8 +38,8 @@
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="fonts/font-awesome/css/font-awesome.min.css">
-	<!--<link rel="stylesheet" href="css/owl/owl.carousel.min.css">
-	<link rel="stylesheet" href="css/owl/owl.theme.default.min.css">-->
+	<link rel="stylesheet" href="css/owl/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/owl/owl.theme.default.min.css">
 	<link href="css/animate.css" rel="stylesheet">
 	<link href="css/color.css" rel="stylesheet">
 	<link href="css/jquery-jvectormap-2.0.3.css" rel="stylesheet">
@@ -88,7 +88,8 @@
 				<li><a class="page-scroll" href="#skills"><span data-hover="Skills">Skills</span></a></li>
 				<li><a class="page-scroll" href="#works"><span data-hover="Projects">Projects</span></a></li>
 				<li><a href="https://billing.abovebits.com/order/main/packages/servers/?group_id=1"><span data-hover="Hosting">Hosting</span></a></li>
-				<li><a class="page-scroll" href="#contact"><span data-hover="Contact">Contact</span></a></li>
+				<li><a class="scroll-change" href="#contact" data-target="offices"><span data-hover="Contact">Contact</span></a></li>
+				<li><a class="scroll-change" href="#contact" data-target="clients"><span data-hover="Clients">Clients</span></a></li>
 				<!--<li><a class="page-scroll" href="#"><img class="img-responsive" src="images/magento_developer.png" style="height:100%"/></a></li>-->
 			  </ul>
 			</div><!-- /.navbar-collapse -->
@@ -98,6 +99,7 @@
 		</nav>
 		<div class="carousel-inner">
 			<div class="item active embed-responsive embed-responsive-16by9" data-src="video/Working-Space.jpg" data-pos-x="left" data-excludeAgents="true" data-parallax>
+				<a class="call-to-action-slider page-scroll" href="#contact">NEED A QUOTE?</a>
 				<img class="img-responsive magento_logo" src="images/magento_developer.png" alt="Magento developer certification"/>
 				<img class="img-responsive magento_logo m_specialist" src="images/magento-ss.png" alt="Magento solution specialist"/>
 			</div>
@@ -312,6 +314,41 @@
 				</div>
 			</div>
 		</div>
+
+		<nav class="navbar navbar-default page-scroll">
+			<div class="navbar top-menu">
+			  
+			  <div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#filter_gallery" aria-expanded="false" aria-controls="filter_gallery">
+				  <span class="sr-only">Toggle navigation</span>
+				  <span class="icon-bar"></span>
+				  <span class="icon-bar"></span>
+				  <span class="icon-bar"></span>
+				</button>
+				<!--<p class="navbar-brand">Skills</p>-->
+			  </div>
+
+			  
+			  <div class="collapse navbar-collapse" id="filter_gallery">
+
+				  <div class="button-group filters-button-group">
+					  <ul class="nav navbar-nav navbar-center text-uppercase">
+						  <li><h3><button class="button full-width-button is-checked" data-state="*"><b><span data-hover="ALL">ALL</span></b></button></h3></li>
+						  <li><h3 class="border-left"><button class="button full-width-button" data-state="php"><b><span data-hover="PHP">PHP</span></b></button></h3></li>
+						  <li><h3 class="border-left"><button class="button full-width-button" data-state="magento"><b><span data-hover="MAGENTO">MAGENTO</span></b></button></h3></li>
+						  <li><h3 class="border-left"><button class="button full-width-button" data-state="wordpress"><b><span data-hover="WORDPRESS">WORDPRESS</span></b></button></h3></li>
+						  <li><h3 class="border-left"><button class="button full-width-button" data-state="javascript"><b><span data-hover="JAVASCRIPT">JAVASCRIPT</span></b></button></h3></li>
+						  <li><h3 class="border-left"><button class="button full-width-button" data-state="html"><b><span data-hover="HTML5/CSS3">HTML5/CSS3</span></b></button></h3></li>
+						  <li><h3 class="border-left"><button class="button full-width-button" data-state="ps"><b><span data-hover="PHOTOSHOP">PHOTOSHOP</span></b></button></h3></li>
+						  <!--<li><h3 class="border-left"><button class="button full-width-button" data-state=".api"><b><span data-hover="API">API</span></b></button></h3></li>-->
+						  <li class="search-field"><input type="text" id="gallery_search" placeholder="Search" /></li>
+					  </ul>
+				  </div>
+				  
+			  </div>
+			</div>
+		</nav>
+		
 		<div id="home_gallery" class="home_gallery">
 			<!--<div class="view">
 				<a class="fullblock_fancybox" href="images/works/ASPCC.jpg" data-fancybox="gallery_full"></a>
@@ -339,15 +376,419 @@
 		<div class="clearfix"></div>
 		<div class="gallery_more"><a id="seemore" onClick="ga('send', 'event', 'Main site Projects', 'Click', 'SeeMore', '1');">SEE MORE</a></div>
 	</div>
+
+	<div id="live_demo" class="row-flex">
+		<div class="container">
+			<div class="row head_block">
+				<div class="col-md-5 col-sm-12 col-xs-12">	
+					<h1>LIVE DEMO</h1>
+				</div>			
+				<div class="col-md-7 col-sm-12 col-xs-12">	
+					<p>A small sample from our portfolio.</p>
+					<p>Click for more info.</p>
+				</div>
+			</div>
+		</div>
+			<div class="owl-carousel owl-theme text-center ">
+				
+				<div class="item">
+					<div class="thumbnail content">
+						<div class="inside-full-height ">
+						<table>
+							<tbody>
+								<tr>
+									<td class="col-sm-top">
+										<div class="bg_zoom">
+											<img src="lv18/av/images/flextop.jpg" alt="Demo1"/>
+										</div>
+										<h3>WordPress</h3>
+									</td>
+								</tr>
+								<tr>
+									<td class="col-sm-middle">
+										<div class="caption">
+
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td class="col-sm-bottom pb45">
+										<a href="http://wpav1.abovebits.com/" target="_blank" role="button" onClick="ga('send', 'event', 'HOME PAGE LV 2018 Audio Video WordPress', 'Click', 'HOME PAGE AV/WP Demo 1', '1');">LIVE DEMO</a>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						</div>
+					</div>
+				</div>
+				
+				<div class="item">
+					<div class="thumbnail content">
+						<div class="inside-full-height ">
+							<table>
+								<tbody>
+									<tr>
+										<td class="col-sm-top">
+											<div class="bg_zoom">
+												<img src="lv18/av/images/digi.jpg" class="img-responsive" alt="Demo2"/>
+											</div>
+											<h3>WordPress</h3>
+										</td>
+									</tr>
+									<tr>
+										<td class="col-sm-middle">
+											<div class="caption">
+											
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td class="col-sm-bottom pb45">
+											<a href="http://wpav2.abovebits.com/" target="_blank" role="button" onClick="ga('send', 'event', 'HOME PAGE LV 2018 Audio Video WordPress', 'Click', 'HOME PAGE AV/WP Demo 2', '1');">LIVE DEMO</a>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+				<div class="item">
+					<div class="thumbnail content">
+						<div class="inside-full-height ">
+						<table>
+							<tbody>
+								<tr>
+									<td class="col-sm-top">
+										<div class="bg_zoom">
+											<img src="lv18/av/images/sound.jpg" class="img-responsive" alt="Demo3"/>
+										</div>
+										<h3>WordPress</h3>
+									</td>
+								</tr>
+								<tr>
+									<td class="col-sm-middle">
+										<div class="caption">
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td class="col-sm-bottom pb45">
+										<a href="http://wpav3.abovebits.com/" target="_blank" role="button" onClick="ga('send', 'event', 'HOME PAGE LV 2018 Audio Video WordPress', 'Click', 'HOME PAGE AV/WP Demo 3', '1');">LIVE DEMO</a>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						</div>
+					</div>				
+				</div>
+				<div class="item">
+					<div class="thumbnail content">
+						<div class="inside-full-height ">
+						<table>
+							<tbody>
+								<tr>
+									<td class="col-sm-top">
+										<div class="bg_zoom">
+											<img src="lv18/av/images/paco.jpg" class="img-responsive" alt="Demo1"/>
+										</div>
+										<h3>Magento 2</h3>
+									</td>
+								</tr>
+								<tr>
+									<td class="col-sm-middle">
+										<div class="caption">
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td class="col-sm-bottom pb45">
+										<a href="http://av1.abovebits.com" target="_blank" role="button" onClick="ga('send', 'event', 'HOME PAGE LV 2018 Audio Video Magento', 'Click', 'HOME PAGE AV/M Demo 1', '1');">LIVE DEMO</a>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						</div>
+					</div>				
+				</div>
+				<div class="item">
+					<div class="thumbnail content">
+						<div class="inside-full-height ">
+						<table>
+							<tbody>
+								<tr>
+									<td class="col-sm-top">
+										<div class="bg_zoom">
+											<img src="lv18/av/images/clickboom.jpg" class="img-responsive" alt="Demo2"/>
+										</div>
+										<h3>Magento 2</h3>
+									</td>
+								</tr>
+								<tr>
+									<td class="col-sm-middle">
+										<div class="caption">
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td class="col-sm-bottom pb45">
+										<a href="http://av2.abovebits.com" target="_blank" role="button" onClick="ga('send', 'event', 'HOME PAGE LV 2018 Audio Video Magento', 'Click', 'HOME PAGE AV/M Demo 2', '1');">LIVE DEMO</a>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						</div>
+					</div>				
+				</div>
+				<div class="item">
+					<div class="thumbnail content">
+						<div class="inside-full-height ">
+						<table>
+							<tbody>
+								<tr>
+									<td class="col-sm-top">
+										<div class="bg_zoom">
+											<img src="lv18/av/images/krystal.jpg" class="img-responsive" alt="Demo3"/>
+										</div>
+										<h3>Magento 2</h3>
+									</td>
+								</tr>
+								<tr>
+									<td class="col-sm-middle">
+										<div class="caption">
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td class="col-sm-bottom pb45">
+										<a href="http://av3.abovebits.com" target="_blank" role="button" onClick="ga('send', 'event', 'HOME PAGE LV 2018 Audio Video Magento', 'Click', 'HOME PAGE AV/M Demo 3', '1');">LIVE DEMO</a>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						</div>
+					</div>				
+				</div>
+				<div class="item">
+					<div class="thumbnail content">
+						<div class="inside-full-height ">
+						<table>
+							<tbody>
+								<tr>
+									<td class="col-sm-top">
+										<div class="bg_zoom">
+											<img src="lv18/jewelry/images/nivellia.jpg" class="img-responsive" alt="Demo1"/>
+										</div>
+										<h3>WordPress</h3>
+									</td>
+								</tr>
+								<tr>
+									<td class="col-sm-middle">
+										<div class="caption">
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td class="col-sm-bottom pb45">
+										<a href="http://wpj1.abovebits.com" target="_blank" role="button" onClick="ga('send', 'event', 'HOME PAGE LV 2018 Jewelry WordPress', 'Click', 'J/WP Demo 1', '1');">LIVE DEMO</a>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						</div>
+					</div>				
+				</div>
+				<div class="item">
+					<div class="thumbnail content">
+						<div class="inside-full-height ">
+						<table>
+							<tbody>
+								<tr>
+									<td class="col-sm-top">
+										<div class="bg_zoom">
+											<img src="lv18/jewelry/images/mrbara.jpg" class="img-responsive" alt="Demo2"/>
+										</div>
+										<h3>WordPress</h3>
+									</td>
+								</tr>
+								<tr>
+									<td class="col-sm-middle">
+										<div class="caption">
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td class="col-sm-bottom pb45">
+										<a href="http://wpj2.abovebits.com" target="_blank" role="button" onClick="ga('send', 'event', 'HOME PAGE LV 2018 Jewelry WordPress', 'Click', 'J/WP Demo 2', '1');">LIVE DEMO</a>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						</div>
+					</div>				
+				</div>
+				<div class="item">
+					<div class="thumbnail content">
+						<div class="inside-full-height ">
+						<table>
+							<tbody>
+								<tr>
+									<td class="col-sm-top">
+										<div class="bg_zoom">
+											<img src="lv18/jewelry/images/diamond.jpg" class="img-responsive" alt="Demo3"/>
+										</div>
+										<h3>WordPress</h3>
+									</td>
+								</tr>
+								<tr>
+									<td class="col-sm-middle">
+										<div class="caption">
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td class="col-sm-bottom pb45">
+										<a href="http://wpj3.abovebits.com" target="_blank" role="button" onClick="ga('send', 'event', 'HOME PAGE LV 2018 Jewelry WordPress', 'Click', 'J/WP Demo 3', '1');">LIVE DEMO</a>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						</div>
+					</div>				
+				</div>
+				<div class="item">
+					<div class="thumbnail content">
+						<div class="inside-full-height ">
+						<table>
+							<tbody>
+								<tr>
+									<td class="col-sm-top">
+										<div class="bg_zoom">
+											<img src="lv18/jewelry/images/claue.jpg" class="img-responsive" alt="Demo1"/>
+										</div>
+										<h3>Magento 2</h3>
+									</td>
+								</tr>
+								<tr>
+									<td class="col-sm-middle">
+										<div class="caption">
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td class="col-sm-bottom pb45">
+										<a href="http://j1.abovebits.com" target="_blank" role="button" onClick="ga('send', 'event', 'HOME PAGE LV 2018 Jewelry Magento', 'Click', 'J/M Demo 1', '1');">LIVE DEMO</a>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						</div>
+					</div>				
+				</div>
+				<div class="item">
+					<div class="thumbnail content">
+						<div class="inside-full-height ">
+						<table>
+							<tbody>
+								<tr>
+									<td class="col-sm-top">
+										<div class="bg_zoom">
+											<img src="lv18/jewelry/images/ruby.jpg" class="img-responsive" alt="Demo2"/>
+										</div>
+										<h3>Magento 2</h3>
+									</td>
+								</tr>
+								<tr>
+									<td class="col-sm-middle">
+										<div class="caption">
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td class="col-sm-bottom pb45">
+										<a href="http://j2.abovebits.com" target="_blank" role="button" onClick="ga('send', 'event', 'HOME PAGE LV 2018 Jewelry Magento', 'Click', 'J/M Demo 2', '1');">LIVE DEMO</a>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						</div>
+					</div>				
+				</div>
+				<div class="item">
+					<div class="thumbnail content">
+						<div class="inside-full-height">
+						<table>
+							<tbody>
+								<tr>
+									<td class="col-sm-top">
+										<div class="bg_zoom">
+											<img src="lv18/jewelry/images/scara.jpg" class="img-responsive" alt="Demo3"/>
+										</div>
+										<h3>Magento 2</h3>
+									</td>
+								</tr>
+								<tr>
+									<td class="col-sm-middle">
+										<div class="caption">
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td class="col-sm-bottom pb45">
+										<a href="http://j3.abovebits.com" target="_blank" role="button" onClick="ga('send', 'event', 'HOME PAGE LV 2018 Jewelry Magento', 'Click', 'J/M Demo 3', '1');">LIVE DEMO</a>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						</div>
+					</div>				
+				</div>
+				<div class="item">
+					<div class="thumbnail content">
+						<div class="inside-full-height">
+						<table>
+							<tbody>
+								<tr>
+									<td class="col-sm-top">
+										<div class="bg_zoom">
+											<img src="lv18/jewelry/images/jewelrix.jpg" class="img-responsive" alt="Demo4"/>
+										</div>
+										<h3>Magento 2</h3>
+									</td>
+								</tr>
+								<tr>
+									<td class="col-sm-middle">
+										<div class="caption">
+											
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td class="col-sm-bottom pb45">
+										<a href="http://j4.abovebits.com" target="_blank" role="button" onClick="ga('send', 'event', 'HOME PAGE LV 2018 Jewelry Magento', 'Click', 'J/M Demo 4', '1');">LIVE DEMO</a>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						</div>
+					</div>				
+				</div>
+
+			</div>
+
+	</div>
 	
 	<div id="contact">
 		<div class="container">
 			<div class="row head_block">
 				<div class="col-md-5 col-sm-12 col-xs-12">	
-					<h1>CONTACT</h1>
+					<h1>GEOGRAPHY</h1>
 				</div>			
 				<div class="col-md-7 col-sm-12 col-xs-12">	
 					<p>Lets talk about your project and how we can help you quickly and cost-effectively.</p>
+					<div class="contact-switcher text-center">
+						<a href="#" class="active" data-state="offices">Offices</a>
+						<a href="#" data-state="clients">Clients</a>		
+					</div>
 				</div>
 			</div>
 
@@ -396,13 +837,14 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
 	<!-- Plugin JavaScript -->
     <script src="js/jquery.easing.min.js"></script>
-	<!--<script src="js/lightbox.min.js"></script>
-	<script src="js/owl.carousel.min.js"></script>-->
+	<!--<script src="js/lightbox.min.js"></script>-->
+	<script src="js/owl.carousel.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
 	<script src="js/agency.js"></script>
 	<script src="js/isotope.pkgd.min.js"></script>
 	<script src="js/custom.js"></script>
 	<script src="js/wow.js"></script>
+	<script src="js/portfolio.js"></script>
 	<script src="js/abovebits.js"></script>
 	<script src="js/form_script.js"></script>
 	
