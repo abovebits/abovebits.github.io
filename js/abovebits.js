@@ -12,14 +12,16 @@ var _markers = {
 	],
 	"clients": [
 		{latLng: [41.01, 28.97], name: 'Istanbul, Turkey'},
-		{latLng: [53.90, 27.56], name: 'Minsk, Belarus (Mavitech)'},
-		{latLng: [40.71, -74.00], name: 'New York, USA (UniversalNYC, FreedomCareNY, 14Minds)'},
-		{latLng: [41.90, 12.50], name: 'Rome, Italy (Anstel SRL)'},
-		{latLng: [34.22, -77.94], name: 'Wilmington, USA (Cap3)'},
+		{latLng: [53.90, 27.56], name: 'Minsk, Belarus'},
+		{latLng: [40.71, -74.00], name: 'New York, USA'},
+		{latLng: [45.45, 7.90], name: 'Ivrea, Italy'},
+		{latLng: [34.22, -77.94], name: 'Wilmington, USA'},
 		{latLng: [40.00, -75.28], name: 'Wynnewood, USA'},
-		{latLng: [33.88, -118.30], name: 'Gardena, USA (OxGord)'},
-		{latLng: [-37.90, 145.14], name: 'Notting Hill, Australia (Cosmetics Now)'},
-		{latLng: [41.11, -74.15], name: 'Suffern, USA (CMWindowsAndDoors)'},
+		{latLng: [22.27, 114.17], name: 'Wan Chai, Hong Kong'},
+		{latLng: [41.50, -74.01], name: 'Newburgh, USA'},
+		{latLng: [33.88, -118.30], name: 'Gardena, USA'},
+		{latLng: [-37.90, 145.14], name: 'Notting Hill, Australia'},
+		{latLng: [41.11, -74.15], name: 'Suffern, USA'},
 		{latLng: [34.05, -118.24], name: 'Los Angeles, USA'},
 	]
 };
