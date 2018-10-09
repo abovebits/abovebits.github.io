@@ -16,6 +16,10 @@ var _markers = {
 		{latLng: [40.71, -74.00], name: 'New York, USA (UniversalNYC, FreedomCareNY, 14Minds)'},
 		{latLng: [41.90, 12.50], name: 'Rome, Italy (Anstel SRL)'},
 		{latLng: [34.22, -77.94], name: 'Wilmington, USA (Cap3)'},
+		{latLng: [40.00, -75.28], name: 'Wynnewood, USA'},
+		{latLng: [33.88, -118.30], name: 'Gardena, USA (OxGord)'},
+		{latLng: [-37.90, 145.14], name: 'Notting Hill, Australia (Cosmetics Now)'},
+		{latLng: [41.11, -74.15], name: 'Suffern, USA (CMWindowsAndDoors)'},
 		{latLng: [34.05, -118.24], name: 'Los Angeles, USA'},
 	]
 };
