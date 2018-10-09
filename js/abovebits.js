@@ -11,10 +11,12 @@ var _markers = {
 		{latLng: [34.05, -118.24], name: 'Los Angeles, USA (Head office)', style: {r: 10, /*fill: 'red', image: 'images/favicon/icon_agency64х64.png'*/}},
 	],
 	"clients": [
-		{latLng: [31.48, 34.29], name: 'Israel (Field office)'},
-		{latLng: [53.90, 27.56], name: 'Minsk, Belarus (Field office)'},
-		{latLng: [40.71, -74.00], name: 'New York, USA (Field office)'},
-		{latLng: [34.05, -118.24], name: 'Los Angeles, USA (Head office)', style: {r: 10}},
+		{latLng: [41.01, 28.97], name: 'Istanbul, Turkey'},
+		{latLng: [53.90, 27.56], name: 'Minsk, Belarus (Mavitech)'},
+		{latLng: [40.71, -74.00], name: 'New York, USA (UniversalNYC, FreedomCareNY, 14Minds)'},
+		{latLng: [41.90, 12.50], name: 'Rome, Italy (Anstel SRL)'},
+		{latLng: [34.22, -77.94], name: 'Wilmington, USA (Cap3)'},
+		{latLng: [34.05, -118.24], name: 'Los Angeles, USA'},
 	]
 };
 
