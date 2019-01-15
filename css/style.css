@@ -38,7 +38,8 @@ body, p {
 .navbar-default{
 	background-color: #eeeff3;
 }
-#page-top nav.top_navbar {z-index: 1000; box-shadow: 0 1px 5px rgba(0,0,0,.6); border-radius: 0;height: 100%}
+#page-top nav.top_navbar {z-index: 1000; box-shadow: 0 1px 5px rgba(0,0,0,.6); border-radius: 0;}
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover{background: none;}
 .navbar-nav li a {
 	/*line-height: 55px;*/
 	padding-top: 30px;
