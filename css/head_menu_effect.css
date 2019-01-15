@@ -42,7 +42,7 @@
 }
 
 .cl-effect-2 a:hover span,
-.cl-effect-2 a:focus span {
+.cl-effect-2 .active a:focus span {
 	-webkit-transform: rotateX(90deg) translateY(-22px);
 	-moz-transform: rotateX(90deg) translateY(-22px);
 	transform: rotateX(90deg) translateY(-22px);

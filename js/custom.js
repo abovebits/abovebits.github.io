@@ -60,29 +60,3 @@ function validateContact() {
 	
 	return valid;
 }
-
-/*var green_animationjello = 'jello';
-var blue_animationswing = 'swing';
-var green_animationshake = 'shake';
-var blue_animationflip = 'flip';
-var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
-$('.green_body.jello p').mouseover(function(){
-	$(this).addClass('animated ' + green_animationjello).one(animationEnd, function() {
-		$(this).removeClass('animated ' + green_animationjello);
-	});
-});
-$('.blue_body.swing p').mouseover(function(){
-	$(this).addClass('animated ' + blue_animationswing).one(animationEnd, function() {
-		$(this).removeClass('animated ' + blue_animationswing);
-	});
-});
-$('.green_body.shake p').mouseover(function(){
-	$(this).addClass('animated ' + green_animationshake).one(animationEnd, function() {
-		$(this).removeClass('animated ' + green_animationshake);
-	});
-});
-$('.blue_body.flip p').mouseover(function(){
-	$(this).addClass('animated ' + blue_animationflip).one(animationEnd, function() {
-		$(this).removeClass('animated ' + blue_animationflip);
-	});
-});*/
