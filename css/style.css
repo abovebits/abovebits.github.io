@@ -808,6 +808,7 @@ table td[class*=col-] {height: auto;}
 #contact .map_text {background-color: #1ed66b; color: white; text-align: center; height: 150px;}
 #contact #frmContact {margin-top: 25px; position: relative; padding-bottom: 50px;}
 #contact #frmContact textarea, #contact #frmContact input {margin-top: 25px;}
+#contact #frmContact textarea {resize: none}
 #contact #frmContact input[type=text],
 #contact #frmContact textarea,
 #contact #frmContact input[type=email] {padding-left: 10px; background: #29d772; border: none; border-bottom: 1px solid #39e581; color: white; font-size: 14px; font-weight:600; width: 100%; line-height: 40px; border-radius: 0;}
