@@ -1179,3 +1179,31 @@ footer a {line-height: inherit !important;}
 .search_gallery_list ul li{
 	cursor: pointer;
 }
+/**Header progress bar**/
+.KW_progressContainer {
+	left:0;
+	width: 100%;
+	height: 0.2em;
+	margin-bottom: 0px;
+	position: fixed;
+	/*bottom: 0px;*/
+	overflow: hidden;
+	background-color: #eeeff3;
+	content: "";
+	display: table;
+	table-layout: fixed;
+	z-index: 10000;
+}
+
+.KW_progressBar {
+	width: 0%;
+	float: left;
+	height: 100%;
+	z-index:99;
+	max-width: 100%;
+	background-color:#777777;
+	-webkit-transition: width .6s ease;
+	-o-transition: width .6s ease;
+	transition: width .6s ease;
+}
+/**End of Header progress bar**/
