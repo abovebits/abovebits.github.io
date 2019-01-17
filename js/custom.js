@@ -64,9 +64,9 @@ function validateContact() {
 $(window).load(function(){
     $(window).scroll(function() {
         var wintop = $(window).scrollTop(), docheight = $('body').height(), winheight = $(window).height();
-        console.log(wintop);
+        //console.log(wintop);
         var totalScroll = (wintop/(docheight-winheight))*100;
-        console.log("total scroll" + totalScroll);
+        //console.log("total scroll" + totalScroll);
         $(".KW_progressBar").css("width",totalScroll+"%");
     });
 
