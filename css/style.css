@@ -1154,6 +1154,8 @@ footer a {line-height: inherit !important;}
 	padding: 1em;
 	display: none;
 	z-index: 100;
+    -webkit-transition-duration: 0.4s;
+    -moz-transition-duration: 0.4s; transition-duration: 0.4s;
 }
 @media(max-width: 576px){
 	.go-top {bottom: 4em;}
@@ -1162,7 +1164,7 @@ footer a {line-height: inherit !important;}
 .go-top:hover {
 	color: white;
 	text-decoration: none;
-	background-color: rgba(0, 0, 0, 0.3);
+	background-color: rgba(0, 0, 0, 0.7);
 }
 /*END of Back to top*/
 
