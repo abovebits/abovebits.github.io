@@ -691,6 +691,19 @@ body{cursor:auto !important;}
 #live_demo .owl-carousel .owl-nav .owl-prev{float: left; left:0; position: absolute;margin-top: -340px}
 #live_demo .owl-carousel .owl-nav .owl-next{float: right; right:0; position: absolute;margin-top: -340px}
 #live_demo .owl-carousel .owl-nav .owl-next, #live_demo .owl-carousel .owl-nav .owl-prev{background: none; color: #149DD5; font-size: 50px;}
+/** Hover effect **/
+#live_demo .item > a .thumbnail{
+    transition: all 200ms;
+}
+#live_demo .item > a .thumbnail:hover {
+    -ms-transform: scale(1.05); /* IE 9 */
+    -webkit-transform: scale(1.05); /* Safari 3-8 */
+    transform: scale(1.05);
+}
+#live_demo .item > a:hover {
+    text-decoration: none;
+}
+/** End of Hover effect **/
 .row-flex {
   display: flex;
   flex-wrap: wrap;
