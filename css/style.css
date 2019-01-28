@@ -196,6 +196,8 @@ body{cursor:auto !important;}
 #works h3 {font-size: 16px; margin-top: 25px; margin-bottom: 25px;}
 #skills .search-field input,
 #works .search-field input{border-radius:0;}
+#skills .search-field input:hover,
+#works .search-field input:hover {outline: -webkit-focus-ring-color auto 5px;}
 #skills .green_body {color: #21c967;}
 #skills .blue_body {color: #149dd2;}
 #skills .row img {margin-right: 15px;}
