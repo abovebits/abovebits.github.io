@@ -833,7 +833,7 @@ table td[class*=col-] {height: auto;}
 #contact #frmContact input:-moz-placeholder { /* Firefox 18- */
   color: white; font-size: 14px;font-weight:600;
 }
-#contact #frmContact input[type=submit]{border:none;font-size: 14px; line-height: 50px; padding: 0 20px; background:#dddddd; border-radius: 0;}
+#contact #frmContact input[type=submit]{border:none;font-size: 14px; line-height: 50px; padding: 0 20px; background: #149dd5; color: white; border-radius: 0;}
 canvas{
   position: absolute;
   width: 100%;
