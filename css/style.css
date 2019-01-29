@@ -804,7 +804,11 @@ table td[class*=col-] {height: auto;}
 /*end row with flex*/
 
 
-#contact {padding-top: 50px; background-color: #21c967; background-image: url('../images/bg_contacts.png');  -webkit-background-size: cover;
+#contact {
+	padding-top: 50px;
+	/*background-color: #21c967;
+	background-image: url('../images/bg_contacts.png');  */
+	-webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
@@ -1265,3 +1269,6 @@ footer a {line-height: inherit !important;}
 	transition: width .6s ease;
 }
 /**End of Header progress bar**/
+.parallax-mirror{
+	background: #21c967;
+}
