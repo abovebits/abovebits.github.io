@@ -405,8 +405,15 @@ body{cursor:auto !important;}
 	#works .home_gallery {max-width: 316px;}
 }
 #works .gallery_more {text-align: center; margin: 50px 0;}
-#works .gallery_more a {padding: 15px 50px; background: #bbb; margin: 25px; color: white;}
-#works .gallery_more a:hover {color: #149dd5;text-decoration: none;cursor:pointer;}
+#works .gallery_more a {padding: 15px 50px; background: #bbb; margin: 25px; color: white; transition: all 0.3s linear; border-radius: 5px;}
+#works .gallery_more a:hover {
+	color: #149dd5;
+	text-decoration: none;
+	cursor:pointer;
+	-webkit-box-shadow: 0px 0px 20px 3px rgba(40,40,40,0.3);
+	-moz-box-shadow: 0px 0px 20px 3px rgba(40,40,40,0.3);
+	box-shadow: 0px 0px 20px 3px rgba(40,40,40,0.3);
+}
 
 #works a.fullblock_fancybox {width: 310px; height: 241px; z-index: 1000;  position: absolute;}
 #works a.fullblock_fancybox:focus {outline:none;}
@@ -787,11 +794,15 @@ table td[class*=col-] {height: auto;}
 	color: #ffffff;
 	font-weight: bold;
 	transition: all 0.3s linear;
+	border-radius: 5px;
 }
 #contact .head_block .contact-switcher a:hover,
 #contact .head_block .contact-switcher a:focus {
 	text-decoration: none;
 	background: #29D772;
+	-webkit-box-shadow: 0px 0px 20px 3px rgba(40,40,40,0.3);
+	-moz-box-shadow: 0px 0px 20px 3px rgba(40,40,40,0.3);
+	box-shadow: 0px 0px 20px 3px rgba(40,40,40,0.3);
 }
 #contact .head_block .contact-switcher a:active{
 	text-decoration: none;
@@ -799,6 +810,9 @@ table td[class*=col-] {height: auto;}
 #contact .head_block .contact-switcher a.active {
 	background: #149DD5;
 	color: #ffffff;
+	-webkit-box-shadow: 0px 0px 20px 3px rgba(40,40,40,0.3);
+	-moz-box-shadow: 0px 0px 20px 3px rgba(40,40,40,0.3);
+	box-shadow: 0px 0px 20px 3px rgba(40,40,40,0.3);
 }
 
 #contact h1 {color:white;  font-size: 48px;font-weight:700; margin-top: 0; margin-bottom: 50px;}
@@ -833,7 +847,7 @@ table td[class*=col-] {height: auto;}
 #contact #frmContact input:-moz-placeholder { /* Firefox 18- */
   color: white; font-size: 14px;font-weight:600;
 }
-#contact #frmContact input[type=submit]{border:none;font-size: 14px; line-height: 50px; padding: 0 20px; background:#dddddd; border-radius: 0;}
+#contact #frmContact input[type=submit]{border:none;font-size: 14px; line-height: 50px; padding: 0 20px; background:#dddddd; border-radius: 0;border-radius: 5px; transition: all 0.3s linear;}
 canvas{
   position: absolute;
   width: 100%;
@@ -858,7 +872,12 @@ footer a {line-height: inherit !important;}
 .success{background-color: #12CC1A;border:#0FA015 1px solid;padding: 5px 10px;color: #FFFFFF;border-radius:4px;}
 .info{font-size:.8em; font-weight: 600; color: #ff0500;letter-spacing:2px;padding-left:5px;}
 /*.btnAction{background-color:#2FC332;border:0;padding:10px 40px;color:#FFF;border:#F0F0F0 1px solid; border-radius:4px;}*/
-.btnAction:hover {color: #149dd5;}
+.btnAction:hover {
+	color: #149dd5;
+	-webkit-box-shadow: 0px 0px 20px 3px rgba(40,40,40,0.3);
+	-moz-box-shadow: 0px 0px 20px 3px rgba(40,40,40,0.3);
+	box-shadow: 0px 0px 20px 3px rgba(40,40,40,0.3);
+}
 .carousel-caption {left: 10%; right:22%; color: #149dd5}
 @media (max-width: 1840px) {
 	.carousel-caption{
