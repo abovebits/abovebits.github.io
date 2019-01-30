@@ -727,7 +727,7 @@ body{cursor:auto !important;}
 /** End of Hover effect **/
 #live_demo .owl-carousel .owl-nav .owl-prev{float: left; left:5px; position: absolute;margin-top: -340px}
 #live_demo .owl-carousel .owl-nav .owl-next{float: right; right:5px; position: absolute;margin-top: -340px}
-#live_demo .owl-carousel .owl-nav .owl-next, #live_demo .owl-carousel .owl-nav .owl-prev{background: none; color: #149DD5; font-size: 65px;}
+#live_demo .owl-carousel .owl-nav .owl-next, #live_demo .owl-carousel .owl-nav .owl-prev{background: none; color: #21c967; font-size: 65px;}
 #live_demo .owl-carousel .owl-nav .owl-prev:hover{left:0px;}
 #live_demo .owl-carousel .owl-nav .owl-next:hover{right:0px;}
 .row-flex {
