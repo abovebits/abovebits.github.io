@@ -294,7 +294,7 @@ $(window).load( function() {
 		return searchResult && buttonResult;
 	  }
 	});
-	
+    $grid.isotope('shuffle');
 	/*$('#filters').on( 'click', 'button', function() {
 	  buttonFilter = $( this ).attr('data-filter');
 	  $grid.isotope();
