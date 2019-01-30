@@ -277,6 +277,12 @@ $(document).ready( function() {
 			});*/
 });
 
+//if userAgent = Mobile, we should add green background to Contact block
+var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+if (isMobile) {
+    document.getElementById("contact").classList.add('parallax-mirror');
+}
+//end of userAgent = Mobile
 
 $(window).load( function() {
 	
