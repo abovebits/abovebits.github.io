@@ -3,9 +3,9 @@
 (function($) {
     "use strict"; // Start of use strict
     var h = window.innerHeight;
-    //console.log(h);
+    //console.log(window.outerHeight);
     var tp = document.getElementById("top-parallax");
-    tp.style.height = h+"px";
+    tp.style.height = h + "px";
 
     // jQuery for page scrolling feature - requires jQuery Easing plugin
     $('a.page-scroll').bind('click', function(event) {
