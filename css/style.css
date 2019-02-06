@@ -223,7 +223,7 @@ body{cursor:auto !important;}
 	#skills .navbar-brand,
 	#works .navbar-brand {display:none;}
 	#skills input#quicksearch,
-	#works .search-field input { float: right; margin:18px 10px; padding-left: 5px;}
+	#works .search-field input { float: right; margin:18px 10px; padding-left: 5px;border: 1px solid black;}
 	#skills h3.border-left,
 	#works h3.border-left {border-left: 1px solid #bbb; padding-left: 10px;}
 }
@@ -736,6 +736,7 @@ body{cursor:auto !important;}
 }
 
 table td[class*=col-] {height: auto;}
+#live_demo .owl-carousel  table td[class*=col-] {background: #54545c;}
 @media (max-width: 767px) {
 	table td[class*=col-] {display: inline-block;}
 }
