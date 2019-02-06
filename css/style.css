@@ -223,7 +223,7 @@ body{cursor:auto !important;}
 	#skills .navbar-brand,
 	#works .navbar-brand {display:none;}
 	#skills input#quicksearch,
-	#works .search-field input { float: right; margin:18px 10px; padding-left: 5px;}
+	#works .search-field input { float: right; margin:18px 10px; padding-left: 5px;border: 1px solid black;}
 	#skills h3.border-left,
 	#works h3.border-left {border-left: 1px solid #bbb; padding-left: 10px;}
 }
@@ -275,7 +275,7 @@ body{cursor:auto !important;}
 	-moz-box-shadow: 0px 0px 20px 3px rgba(40,40,40,0.3);
 	box-shadow: 0px 0px 20px 3px rgba(40,40,40,0.3);
 }
-#skills ul.brands li img{display:initial;/*height: 65px;*/}
+#skills ul.brands li img{display:inline;/*height: 65px;*/}
 @media (min-width: 1200px){
 	#skills ul.brands li{min-height:72px;}
 }
@@ -736,6 +736,7 @@ body{cursor:auto !important;}
 }
 
 table td[class*=col-] {height: auto;}
+#live_demo .owl-carousel  table td[class*=col-] {background: #54545c;}
 @media (max-width: 767px) {
 	table td[class*=col-] {display: inline-block;}
 }
@@ -862,7 +863,7 @@ table td[class*=col-] {height: auto;}
 #contact #frmContact textarea {resize: none}
 #contact #frmContact input[type=text],
 #contact #frmContact textarea,
-#contact #frmContact input[type=email] {padding-left: 10px; background: #29d772; border: none; border-bottom: 1px solid #39e581; color: white; font-size: 14px; font-weight:600; width: 100%; line-height: 40px; border-radius: 0;}
+#contact #frmContact input[type=email] {padding-left: 10px; background: #29d772; border: none; border-bottom: 1px solid #39e581; color: white; font-size: 14px; font-weight:600; width: 100%; min-height:40px; line-height: 40px; border-radius: 0;}
 #contact #frmContact input[type=text]:hover,
 #contact #frmContact textarea:hover,
 #contact #frmContact input[type=email]:hover {    outline: -webkit-focus-ring-color auto 5px;}
@@ -1266,6 +1267,29 @@ footer a {line-height: inherit !important;}
 	transition: width .6s ease;
 }
 /**End of Header progress bar**/
-.parallax-mirror{
+/*.parallax-mirror{
 	background-color: #21c967 !important;
+}*/
+#top-parallax {
+	background-image: url("../video/Working-Space_crop.jpg");
+}
+#responsive {
+	background-image: url("../images/responsive/office-space.jpg");
+}
+#contact {
+	background-color: #21c967;
+	background-image: url("../images/bg_contacts_more.png");
+}
+.parallax {
+	width: 100%;
+	background-attachment: fixed;
+	background-position: 50% 0;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+_:-ms-lang(x), .parallax { background-size: auto 130%; }
+@media screen\0 {
+	.parallax {background-size: auto 130%;}
 }
