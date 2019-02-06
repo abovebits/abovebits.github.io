@@ -379,7 +379,7 @@ Math.easeOut = function (t, b, c, d) { t /= d; return -c * t*(t-2) + b; };
         mult = 0, // how fast do we scroll
         dir = 0, // 1 = scroll down, -1 = scroll up
         steps = 50, // how many steps in animation
-        length = 30; // how long to animate
+        length = 60; // how long to animate
     function MouseWheelHandler(e) {
         e.preventDefault(); // prevent default browser scroll
         clearInterval(interval); // cancel previous animation
