@@ -1271,21 +1271,24 @@ footer a {line-height: inherit !important;}
 }*/
 #top-parallax {
 	background-image: url("../video/Working-Space_crop.jpg");
-	background-size: cover;
 }
 #responsive {
 	background-image: url("../images/responsive/office-space.jpg");
-	background-size: cover;
 }
 #contact {
 	background-color: #21c967;
 	background-image: url("../images/bg_contacts_more.png");
-	background-size: cover;
-	zoom: 1;
 }
 .parallax {
 	width: 100%;
 	background-attachment: fixed;
 	background-position: 50% 0;
-	zoom: 1;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+_:-ms-lang(x), .parallax { background-size: auto 130%; }
+@media screen\0 {
+	.parallax {background-size: auto 130%;}
 }

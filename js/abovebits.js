@@ -111,9 +111,9 @@ var MarkersSwitcher = Object.create(function () {
 $(document).ready( function() {
 
 	// parallax effect based on new_parallax.js
-    $('#top-parallax').parallax("50%", 0.3);
-    $('#responsive').parallax("50%", 0.2);
-    $('#contact').parallax("50%", 0.1);
+    $('#top-parallax').parallax("10%", 0.3);
+    $('#responsive').parallax("10%", 0.2);
+    $('#contact').parallax("10%", 0.1);
     // end of parallax effect based on new_parallax.js
 
 	 // executes when complete page is fully loaded, including all frames, objects and images
