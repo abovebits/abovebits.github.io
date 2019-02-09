@@ -122,6 +122,36 @@ body{cursor:auto !important;}
 }
 .call-to-action-slider:focus {text-decoration: none;color: #fff;}
 .call-to-action-slider:hover{background:rgba(255, 255, 255, 0.75); color: #149dd3; text-decoration: none;border-color:#149dd3;}
+@-webkit-keyframes call-to-action_pulse {
+	0% {
+		-webkit-box-shadow: 0 0 0 0 rgba(255,255,255, 0.4);
+	}
+	70% {
+		-webkit-box-shadow: 0 0 0 20px rgba(255,255,255, 0);
+	}
+	100% {
+		-webkit-box-shadow: 0 0 0 0 rgba(255,255,255, 0);
+	}
+}
+@keyframes call-to-action_pulse {
+	0% {
+		-moz-box-shadow: 0 0 0 0 rgba(255,255,255, 0.4);
+		box-shadow: 0 0 0 0 rgba(255,255,255, 0.4);
+	}
+	70% {
+		-moz-box-shadow: 0 0 0 10px rgba(255,255,255, 0);
+		box-shadow: 0 0 0 20px rgba(255,255,255, 0);
+	}
+	100% {
+		-moz-box-shadow: 0 0 0 0 rgba(255,255,255, 0);
+		box-shadow: 0 0 0 0 rgba(255,255,255, 0);
+	}
+}
+.call-to-action_pulse {
+	display: block;
+	box-shadow: 0 0 0 rgba(255,255,255, 0.4);
+	animation: call-to-action_pulse 2s infinite;
+}
 @media (max-width: 1024px){
 	.call-to-action-slider {font-size: 28px; margin-bottom: 50px;}	
 }
