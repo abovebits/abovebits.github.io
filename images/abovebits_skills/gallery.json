@@ -1,18 +1,4 @@
 [{
- "img": "images/works/home_thumb/myfreedomcare.jpg",
- "skill1": "images/abovebits_skills/Wordpress.png",
- "skill2": "",
- "skill3": "",
- "skill4": "",
- "mockup": "images/works/myfreedomcare.jpg"
-},{
- "img": "images/works/home_thumb/fingercheck.jpg",
- "skill1": "images/abovebits_skills/Wordpress.png",
- "skill2": "",
- "skill3": "",
- "skill4": "",
- "mockup": "images/works/fingercheck.jpg"
-},{
  "img": "images/works/home_thumb/mishpacha_abovebits.jpg",
  "skill1": "images/abovebits_skills/Wordpress.png",
  "skill2": "",
@@ -76,12 +62,19 @@
  "skill4": "",
  "mockup": "images/works/rusel-group.jpg"
 },{
- "img": "images/works/home_thumb/cmwindowsanddoors.jpg",
- "skill1": "images/abovebits_skills/Magento.png",
+ "img": "images/works/home_thumb/myfreedomcare.jpg",
+ "skill1": "images/abovebits_skills/Wordpress.png",
  "skill2": "",
  "skill3": "",
  "skill4": "",
- "mockup": "images/works/cmwindowsanddoors.jpg"
+ "mockup": "images/works/myfreedomcare.jpg"
+},{
+ "img": "images/works/home_thumb/fingercheck.jpg",
+ "skill1": "images/abovebits_skills/Wordpress.png",
+ "skill2": "",
+ "skill3": "",
+ "skill4": "",
+ "mockup": "images/works/fingercheck.jpg"
 },{
  "img": "images/works/home_thumb/kidcitystores.jpg",
  "skill1": "images/abovebits_skills/Magento.png",
