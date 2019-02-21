@@ -1,4 +1,137 @@
 [{
+ "img": "images/works/home_thumb/myfreedomcare.jpg",
+ "skill1": "images/abovebits_skills/Wordpress.png",
+ "skill2": "",
+ "skill3": "",
+ "skill4": "",
+ "mockup": "images/works/myfreedomcare.jpg"
+},{
+ "img": "images/works/home_thumb/fingercheck.jpg",
+ "skill1": "images/abovebits_skills/Wordpress.png",
+ "skill2": "",
+ "skill3": "",
+ "skill4": "",
+ "mockup": "images/works/fingercheck.jpg"
+},{
+ "img": "images/works/home_thumb/mishpacha_abovebits.jpg",
+ "skill1": "images/abovebits_skills/Wordpress.png",
+ "skill2": "",
+ "skill3": "",
+ "skill4": "",
+ "mockup": "images/works/mishpacha_abovebits.jpg"
+},{
+ "img": "images/works/home_thumb/neumancommercial.jpg",
+ "skill1": "images/abovebits_skills/Wordpress.png",
+ "skill2": "",
+ "skill3": "",
+ "skill4": "",
+ "mockup": "images/works/neumancommercial.jpg"
+},{
+ "img": "images/works/home_thumb/torahlive_new.jpg",
+ "skill1": "images/abovebits_skills/ps.png",
+ "skill2": "images/abovebits_skills/Wordpress.png",
+ "skill3": "images/abovebits_skills/PHP.png",
+ "skill4": "images/abovebits_skills/JavaScript.png",
+ "mockup": "images/works/torahlive_new.jpg"
+},{
+ "img": "images/works/home_thumb/charmboat.jpg",
+ "skill1": "images/abovebits_skills/Wordpress.png",
+ "skill2": "",
+ "skill3": "",
+ "skill4": "",
+ "mockup": "images/works/charmboat.jpg"
+},{
+ "img": "images/works/home_thumb/charmflats.jpg",
+ "skill1": "images/abovebits_skills/Wordpress.png",
+ "skill2": "",
+ "skill3": "",
+ "skill4": "",
+ "mockup": "images/works/charmflats.jpg"
+},{
+ "img": "images/works/home_thumb/emercury.jpg",
+ "skill1": "images/abovebits_skills/Wordpress.png",
+ "skill2": "",
+ "skill3": "",
+ "skill4": "",
+ "mockup": "images/works/emercury.jpg"
+},{
+ "img": "images/works/home_thumb/admailr.jpg",
+ "skill1": "images/abovebits_skills/Wordpress.png",
+ "skill2": "",
+ "skill3": "",
+ "skill4": "",
+ "mockup": "images/works/admailr.jpg"
+},{
+ "img": "images/works/home_thumb/nimblequote.jpg",
+ "skill1": "images/abovebits_skills/Wordpress.png",
+ "skill2": "",
+ "skill3": "",
+ "skill4": "",
+ "mockup": "images/works/nimblequote.jpg"
+},{
+ "img": "images/works/home_thumb/rusel-group.jpg",
+ "skill1": "images/abovebits_skills/Magento.png",
+ "skill2": "",
+ "skill3": "",
+ "skill4": "",
+ "mockup": "images/works/rusel-group.jpg"
+},{
+ "img": "images/works/home_thumb/cmwindowsanddoors.jpg",
+ "skill1": "images/abovebits_skills/Magento.png",
+ "skill2": "",
+ "skill3": "",
+ "skill4": "",
+ "mockup": "images/works/cmwindowsanddoors.jpg"
+},{
+ "img": "images/works/home_thumb/kidcitystores.jpg",
+ "skill1": "images/abovebits_skills/Magento.png",
+ "skill2": "",
+ "skill3": "",
+ "skill4": "",
+ "mockup": "images/works/kidcitystores.jpg"
+},{
+ "img": "images/works/home_thumb/bufkes.jpg",
+ "skill1": "images/abovebits_skills/Magento.png",
+ "skill2": "",
+ "skill3": "",
+ "skill4": "",
+ "mockup": "images/works/bufkes.jpg"
+},{
+ "img": "images/works/home_thumb/cleanupcarwash.jpg",
+ "skill1": "images/abovebits_skills/Magento.png",
+ "skill2": "",
+ "skill3": "",
+ "skill4": "",
+ "mockup": "images/works/cleanupcarwash.jpg"
+},{
+ "img": "images/works/home_thumb/cosmeticsnow.jpg",
+ "skill1": "images/abovebits_skills/Zen-Cart.png",
+ "skill2": "",
+ "skill3": "",
+ "skill4": "",
+ "mockup": "images/works/cosmeticsnow.jpg"
+},{
+ "img": "images/works/home_thumb/naturemart.jpg",
+ "skill1": "images/abovebits_skills/Zen-Cart.png",
+ "skill2": "",
+ "skill3": "",
+ "skill4": "",
+ "mockup": "images/works/naturemart.jpg"
+},{
+ "img": "images/works/home_thumb/tristatesurgical.jpg",
+ "skill1": "images/abovebits_skills/OSCommerce.png",
+ "skill2": "",
+ "skill3": "",
+ "skill4": "",
+ "mockup": "images/works/tristatesurgical.jpg"
+},{
+ "img": "images/works/home_thumb/htiusa.jpg",
+ "skill1": "images/abovebits_skills/PHP.png",
+ "skill2": "images/abovebits_skills/HTML_CSS.png",
+ "skill3": "",
+ "skill4": "",
+ "mockup": "images/works/htiusa.jpg"
+},{
  "img": "images/works/home_thumb/aspcc.jpg",
  "skill1": "images/abovebits_skills/ps.png",
  "skill2": "",
@@ -215,13 +348,6 @@
  "skill3": "",
  "skill4": "",
  "mockup": "images/works/Theme-John&Sons.jpg"
-},{
- "img": "images/works/home_thumb/TorahLive.jpg",
- "skill1": "images/abovebits_skills/ps.png",
- "skill2": "images/abovebits_skills/Wordpress.png",
- "skill3": "images/abovebits_skills/PHP.png",
- "skill4": "images/abovebits_skills/JavaScript.png",
- "mockup": "images/works/TorahLive.jpg"
 },{
  "img": "images/works/home_thumb/TrademarkCarts.jpg",
  "skill1": "images/abovebits_skills/ps.png",
