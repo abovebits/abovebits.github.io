@@ -1304,10 +1304,7 @@ footer a {line-height: inherit !important;}
 	background-image: url("../video/Working-Space_crop.jpg");
 }
 #responsive {
-	/*background-image: url("../images/responsive/office-space.jpg");*/
-	background-image: url("../images/responsive/office-space.jpg") no-repeat top center fixed;
-	background-size: auto 100vmax;
-	background-size: cover;
+	background-image: url("../images/responsive/office-space.jpg");
 }
 #contact {
 	background-color: #21c967;

@@ -120,6 +120,8 @@ $(document).ready( function() {
     }
     if(isiOs){
         $('#top-parallax').css({'background' : 'url( "../video/Working-Space_crop.jpg"  ) no-repeat top center fixed', 'background-size':'auto 100vmax'});
+        $('#responsive').css({'background' : 'url( "../images/responsive/office-space.jpg"  ) no-repeat top center', 'background-size':'auto 100vmax'});
+        $('#contact').css({'background' : 'url( "../images/bg_contacts_more.png"  ) no-repeat top center', 'background-size':'auto 100vmax'});
 	}
     // end of parallax effect based on new_parallax.js
 
