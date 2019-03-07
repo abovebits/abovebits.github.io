@@ -213,7 +213,7 @@ body{cursor:auto !important;}
 #about h3 {margin-top: 0;}
 
 #skills {padding: 30px 0 80px 0; background: #f1f1f1;position: relative; z-index: 3;}
-#works nav.navbar-default{background: none;}
+#skills nav.navbar-default, #works nav.navbar-default{background: none;}
 #skills .navbar, 
 #works .navbar {height: auto; padding: 0;}
 #skills .navbar .navbar-collapse,
