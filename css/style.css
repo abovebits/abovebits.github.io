@@ -1324,7 +1324,7 @@ _:-ms-lang(x), .parallax { background-size: auto 130%; }
 	.parallax {background-size: auto 130%;}
 }
 /** Safari (7.1+) **/
-_::-webkit-full-page-media, _:future, :root .safari_only {
+/*_::-webkit-full-page-media, _:future, :root .safari_only {
 	#top-parallax {
 		background: url( "../video/Working-Space_crop.jpg"  ) no-repeat top center fixed;
 		background-size: auto 100vmax;
@@ -1360,6 +1360,6 @@ _::-webkit-full-page-media, _:future, :root .safari_only {
 			}
 		}
 	}
-}
+}*/
 
 /**end of safari **/
