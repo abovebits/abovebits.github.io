@@ -1323,3 +1323,43 @@ _:-ms-lang(x), .parallax { background-size: auto 130%; }
 @media screen\0 {
 	.parallax {background-size: auto 130%;}
 }
+/** Safari (7.1+) **/
+/*_::-webkit-full-page-media, _:future, :root .safari_only {
+	#top-parallax {
+		background: url( "../video/Working-Space_crop.jpg"  ) no-repeat top center fixed;
+		background-size: auto 100vmax;
+	}
+	#responsive {
+		background: url( "../images/responsive/office-space.jpg"  ) no-repeat top center fixed;
+		background-size: auto 100vmax;
+		background-size: cover;
+	}
+	#contact {
+		background-color: #21c967;
+		background-image: url("../images/bg_contacts_more.png");
+		background-size: auto 100vmax;
+	}
+}
+
+@media not all and (min-resolution:.001dpcm){
+	@supports (-webkit-appearance:none) and (stroke-color:transparent) {
+		.safari_only {
+			#top-parallax {
+				background: url( "../video/Working-Space_crop.jpg"  ) no-repeat top center fixed;
+				background-size: auto 100vmax;
+			}
+			#responsive {
+				background: url( "../images/responsive/office-space.jpg"  ) no-repeat top center fixed;
+				background-size: auto 100vmax;
+				background-size: cover;
+			}
+			#contact {
+				background-color: #21c967;
+				background-image: url("../images/bg_contacts_more.png");
+				background-size: auto 100vmax;
+			}
+		}
+	}
+}*/
+
+/**end of safari **/
