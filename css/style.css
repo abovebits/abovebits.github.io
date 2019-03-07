@@ -1308,7 +1308,7 @@ footer a {line-height: inherit !important;}
 }
 #contact {
 	background-color: #21c967;
-	background-image: url("../images/bg_contacts_more.png");
+	background: url("../images/bg_contacts_more.png") #21c967;
 }
 .parallax {
 	width: 100%;
