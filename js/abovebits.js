@@ -425,3 +425,20 @@ Math.easeOut = function (t, b, c, d) { t /= d; return -c * t*(t-2) + b; };
         window.addEventListener("DOMMouseScroll", MouseWheelHandler, false);
     }
 })();
+/* About section - show text when inViewport */
+;(function($, win) {
+	$.fn.inViewport = function(cb) {
+		return this.each(function(i,el){
+			function visPx(){
+				var H = $(this).height(),
+					r = el.getBoundingClientRect(), t=r.top, b=r.bottom;
+				return cb.call(el, Math.max(0, t>0? H-t : (b<H?b:H)));
+			} visPx();
+			$(win).on("resize scroll", visPx);
+		});
+	};
+}(jQuery, window));
+
+$("#about").inViewport(function(px){
+	if(px) $('#about .sp-container h2')[0].className = "frame-5";
+});
