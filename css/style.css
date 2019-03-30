@@ -37,9 +37,9 @@ body{cursor:auto !important;}
 	border: none;
 }
 .navbar-default{
-	background-color: #eeeff3;
+	background-color: transparent;
 }
-#page-top nav.top_navbar {z-index: 1000; box-shadow: 0 1px 5px rgba(0,0,0,.6); border-radius: 0;}
+#page-top nav.top_navbar {z-index: 1000; border-radius: 0;}
 .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover{background: none; color: #2195de;}
 .navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover{color: #777;}
 .navbar-nav li a {
