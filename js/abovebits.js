@@ -426,3 +426,22 @@ Math.easeOut = function (t, b, c, d) { t /= d; return -c * t*(t-2) + b; };
     }
 })();
 
+/** Header Menu - change background color on scroll **/
+$(document).ready(function(){
+    $(window).scroll(function(){
+        var scroll = $(window).scrollTop();
+        if (scroll > 100) {
+            $("#page-top nav.top_navbar").css({"background":"#eeeff3", "box-shadow":"0 1px 5px rgba(0,0,0,.6)"});
+        }
+        else{
+            $("#page-top nav.top_navbar").css({
+				"background":"transparent",
+				"box-shadow":"none",
+				"-webkit-transition":"background-color 300ms linear",
+				"-ms-transition":"background-color 300ms linear",
+				"transition":"background-color 300ms linear"
+            });
+        }
+    })
+})
+/** End of Header Menu - change background color on scroll **/
