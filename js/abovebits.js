@@ -75,7 +75,7 @@ var MarkersSwitcher = Object.create(function () {
                 $('#contact-switcher-text').text('We talk, we define, we create.');
 			}
 			var oldState = this.activeState;
-			console.log(oldState);
+			//console.log(oldState);
 			if (oldState !== newState) {
 				this.changeMapMarkers(newState);
 				this.changeActiveLink(newState);
@@ -377,6 +377,10 @@ $(window).load( function() {
 		mapBlock: '#map',
 		markersStore: _markers 
 	});
+	$("#contact_map").on( 'click', function() {
+        $("#clints_click").click();
+	});
+
 });
 
 /** Smooth scroll only for IE **/
