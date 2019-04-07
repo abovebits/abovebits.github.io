@@ -1183,6 +1183,7 @@ footer a {line-height: inherit !important;}
 }
 #responsive {
 	background-image: url("../images/responsive/office-space.jpg");
+	background-size: cover;
 }
 #contact {
 	background-color: #21c967;
@@ -1190,7 +1191,7 @@ footer a {line-height: inherit !important;}
 }
 .parallax {
 	width: 100%;
-	background-attachment: fixed;
+	/*background-attachment: fixed;*/ /* bug for ie, fixed via js*/
 	background-position: 50% 0;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
