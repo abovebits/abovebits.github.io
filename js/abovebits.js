@@ -111,12 +111,18 @@ var MarkersSwitcher = Object.create(function () {
 $(document).ready( function() {
 
 	// parallax effect based on new_parallax.js
+
+    var ua = window.navigator.userAgent;
+    var is_ie = /MSIE|Trident/.test(ua);
+
     var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
     var isiOs = /iPhone|iPad|iPod/i.test(navigator.userAgent);
-    if (!isMobile) {
+    if (!isMobile && !is_ie) {
+        console.log(is_ie);
         $('#top-parallax').parallax("10%", 0.3);
         $('#responsive').parallax("10%", 0.2);
         $('#contact').parallax("10%", 0.1);
+        $('.parallax').css({'background-attachment' : 'fixed'});
     }
     if(isiOs){
         $('#top-parallax').css({'background' : 'url( "../video/Working-Space_crop.jpg"  ) no-repeat top center fixed', 'background-size':'auto 100vmax'});
@@ -380,6 +386,7 @@ $(window).load( function() {
 });
 
 /* Smooth scroll only for IE */
+/*
 Math.easeOut = function (t, b, c, d) { t /= d; return -c * t*(t-2) + b; };
 
 (function() { // do not mess global space
@@ -425,6 +432,7 @@ Math.easeOut = function (t, b, c, d) { t /= d; return -c * t*(t-2) + b; };
         window.addEventListener("DOMMouseScroll", MouseWheelHandler, false);
     }
 })();
+*/
 
 /** Header Menu - change background color on scroll **/
 $(document).ready(function(){
