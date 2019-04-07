@@ -137,19 +137,29 @@ PortfolioPresenter.prototype.buildDefaultPortfolio = function () {
 };
 
 PortfolioPresenter.prototype.itemHTML = function (item) {
-    var _item = '<div class="view">';
-    if (item.mockup != '') _item+='<a class="fullblock_fancybox" href="'+item.mockup+'" data-fancybox="gallery_full"></a>';
-    _item+= '<img class="ios_touch"/>';
-    _item+= '<div class="view-back">';
-    if (item.skill1 != '') _item+= '<span><img src="'+item.skill1+'"/></span>';
-    if (item.skill2 != '') _item+= '<span><img src="'+item.skill2+'"/></span>';
-    if (item.skill3 != '') _item+= '<span><img src="'+item.skill3+'"/></span>';
-    if (item.skill4 != '') _item+= '<span><img src="'+item.skill4+'"/></span>';
-    if (item.mockup != '') _item+= '<a href="'+item.mockup+'" data-fancybox="gallery">→</a>';
-    _item+='</div>';
-    _item+='<div class="slice s1" style="background-image: url('+item.img+');"><span class="overlay"></span><div class="slice s2" style="background-image: url('+item.img+');"><span class="overlay"></span><div class="slice s3" style="background-image: url('+item.img+');"><span class="overlay"></span><div class="slice s4" style="background-image: url('+item.img+');"><span class="overlay"></span><div class="slice s5" style="background-image: url('+item.img+');"><span class="overlay"></span></div></div></div></div></div>';
-    _item += '</div>';
-    return _item;    
+    var ua = window.navigator.userAgent;
+    var is_ie = /MSIE|Trident/.test(ua);
+
+    if ( is_ie ) {//IE specific code goes here
+        var _item = '<div class="view" style="background-image: url('+item.img+');">';
+        if (item.mockup != '') _item+='<a class="fullblock_fancybox" href="'+item.mockup+'" data-fancybox="gallery_full"></a>';
+        _item += '</div>';
+        return _item;
+    } else {
+        var _item = '<div class="view">';
+        if (item.mockup != '') _item += '<a class="fullblock_fancybox" href="' + item.mockup + '" data-fancybox="gallery_full"></a>';
+        _item += '<img class="ios_touch"/>';
+        _item += '<div class="view-back">';
+        if (item.skill1 != '') _item += '<span><img src="' + item.skill1 + '"/></span>';
+        if (item.skill2 != '') _item += '<span><img src="' + item.skill2 + '"/></span>';
+        if (item.skill3 != '') _item += '<span><img src="' + item.skill3 + '"/></span>';
+        if (item.skill4 != '') _item += '<span><img src="' + item.skill4 + '"/></span>';
+        if (item.mockup != '') _item += '<a href="' + item.mockup + '" data-fancybox="gallery">→</a>';
+        _item += '</div>';
+        _item += '<div class="slice s1" style="background-image: url(' + item.img + ');"><span class="overlay"></span><div class="slice s2" style="background-image: url(' + item.img + ');"><span class="overlay"></span><div class="slice s3" style="background-image: url(' + item.img + ');"><span class="overlay"></span><div class="slice s4" style="background-image: url(' + item.img + ');"><span class="overlay"></span><div class="slice s5" style="background-image: url(' + item.img + ');"><span class="overlay"></span></div></div></div></div></div>';
+        _item += '</div>';
+        return _item;
+    }
 };
 
 PortfolioPresenter.prototype.showNextItems = function (offset) {
