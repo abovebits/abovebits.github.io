@@ -499,6 +499,9 @@ body{cursor:auto !important;}
 	#works .home_gallery {width: 676px;}
 }
 
+@media (max-width: 767px) {
+	#works .navbar .navbar-collapse {position: absolute;}
+}
 @media (max-width: 700px) {
 	#works .home_gallery {width: 664px;}
 	.view {margin: 8px;}
