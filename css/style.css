@@ -1204,4 +1204,5 @@ _:-ms-lang(x), .parallax { background-size: auto 130%; }
     #contact #map .jvectormap-container svg{
         position: absolute;
     }
+	.navbar-default .navbar-nav > li > a:hover span{color: #149dd4 !important;}
 }
