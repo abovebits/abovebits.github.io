@@ -711,6 +711,7 @@ input:-moz-placeholder { /* Firefox 18- */
 #live_demo h1 {font-size: 48px;font-weight:700; margin-top: 0; margin-bottom: 50px;}
 /* display this row with flex and use wrap (= respect columns' widths) */
 #live_demo .owl-carousel{min-height:457px;}
+#live_demo .owl-carousel .owl-stage-outer{padding-top: 15px;}
 #live_demo .owl-carousel .bg_zoom{min-height: 228px;}
 #live_demo .owl-carousel .item {padding:15px;}
 /** Hover effect **/
