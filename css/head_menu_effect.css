@@ -46,6 +46,7 @@
 	-webkit-transform: rotateX(90deg) translateY(-22px);
 	-moz-transform: rotateX(90deg) translateY(-22px);
 	transform: rotateX(90deg) translateY(-22px);
+	-ms-transform: none; /* Internet Explorer */
 }
 
 .csstransforms3d .cl-effect-2 a:hover span::before,
