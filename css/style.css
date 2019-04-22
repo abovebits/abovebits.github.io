@@ -166,11 +166,13 @@ body{cursor:auto !important;}
 	filter: brightness(120%) drop-shadow(8px 8px 10px gray);
 }
 
-.freelancer_badget{right: 295px;}
-.magento_logo.m_specialist{right: 162px;}
+.freelancer_badget{right: 270px;}
+.magento_logo.m_specialist{right: 152px;}
+img.magento_logo {height: 20% !important;}
 @media (max-width: 600px){
-	.magento_logo{width:20%}
+	/*.magento_logo{width:20%; height: auto !important;}*/
 	.magento_logo.m_specialist{right: 30%;}
+	.freelancer_badget{right: 12%; bottom: 20%}
 }
 
 #about {
