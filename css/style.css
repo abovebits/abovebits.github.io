@@ -166,6 +166,7 @@ body{cursor:auto !important;}
 	filter: brightness(120%) drop-shadow(8px 8px 10px gray);
 }
 
+.freelancer_badget{right: 295px;}
 .magento_logo.m_specialist{right: 162px;}
 @media (max-width: 600px){
 	.magento_logo{width:20%}
