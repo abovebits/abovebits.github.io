@@ -169,11 +169,29 @@ body{cursor:auto !important;}
 .freelancer_badget{right: 270px;}
 .magento_logo.m_specialist{right: 152px;}
 img.magento_logo {height: 20% !important;}
+@media (width: 812px){
+	.magento_logo.m_specialist{right: 20%;}
+	.freelancer_badget{right: 10%;}
+	.call-to-action-slider{margin-bottom: 20px;}
+}
+
+@media (max-width: 767px){
+	.magento_logo.m_specialist{right: 20%;}
+	.freelancer_badget{right: 10%;}
+}
+
 @media (max-width: 600px){
 	/*.magento_logo{width:20%; height: auto !important;}*/
 	.magento_logo.m_specialist{right: 30%;}
 	.freelancer_badget{right: 12%; bottom: 20%}
 }
+@media (width: 375px){
+	.magento_logo.m_specialist{right: 30%;}
+	.magento_logo{right: 10px;}
+	.freelancer_badget{right: 10%;}
+	.call-to-action-slider{margin-bottom: 20px; font-size: 16px;}
+}
+
 
 #about {
 	background-color: #149dd3;
