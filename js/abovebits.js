@@ -3,7 +3,7 @@
  */
 var _markers = {
 	"offices": [
-		{latLng: [31.48, 34.29], name: 'Israel (Field office)'},
+		{latLng: [31.48, 34.29], name: 'Haifa, Israel (Field office)'},
 		{latLng: [50.01, 36.18], name: 'Kharkiv, Ukraine (Field office)'},
 		{latLng: [50.45, 30.52], name: 'Kiyv, Ukraine (Field office)'},
 		{latLng: [40.71, -74.00], name: 'New York, USA (Field office)'},
