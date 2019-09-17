@@ -165,11 +165,11 @@ body{cursor:auto !important;}
 	-webkit-filter: brightness(120%) drop-shadow(8px 8px 10px gray);/* Safari 6.0 - 9.0 */
 	filter: brightness(120%) drop-shadow(8px 8px 10px gray);
 }
-
-.freelancer_badget{right: 270px;}
-.templatemonster_partner {right: 435px}
-.magento_logo.m_specialist{right: 152px;}
-img.magento_logo {height: 20% !important;}
+.upwork-logo{right: 490px;border-radius: 24px;padding: 12px;}
+.freelancer_badget{right: 355px;}
+.templatemonster_partner {right: 210px}
+.magento_logo.m_specialist{right: 122px;}
+img.magento_logo {height: 17% !important;}
 @media (width: 812px){
 	img.magento_logo{height: 140px !important;}
 	.magento_logo.m_specialist{right: 110px;}
@@ -181,8 +181,9 @@ img.magento_logo {height: 20% !important;}
 @media (max-width: 1024px){
 	img.magento_logo{height: 140px !important;}
 	.magento_logo.m_specialist{right: 110px;}
-	.freelancer_badget{right: 190px;}
-	.templatemonster_partner {right: 305px}
+	.freelancer_badget{right: 315px;}
+	.upwork-logo{right: 430px;}
+	.templatemonster_partner {right: 190px}
 }
 
 @media (max-width: 600px){
@@ -445,7 +446,19 @@ input:-moz-placeholder { /* Firefox 18- */
 #responsive .row {text-align: center; }
 #responsive .row .img-responsive{margin: 0 auto; }
 #responsive p{font-size: 29px; margin-bottom: 30px;}
-
+@media (max-width: 1155px) and (min-width: 1101px) {
+	#skills .container_gallery{height: 275px;}
+}
+@media (max-width: 1100px) and (min-width: 1010px) {
+	#skills .container_gallery{height: 255px;}
+}
+@media (max-width: 1009px) and (min-width: 911px) {
+	#skills .container_gallery{height: 240px;}
+}
+@media (max-width: 910px) and (min-width: 786px) {
+	#skills .container_gallery{height: 225px;}
+}
+#skills .container_gallery{height: 285px;overflow: hidden}
 #works {padding: 50px 0; background-color: #f1f1f1; background-image: url('../images/bg_cont_dots.png'); background-position: -50px; background-repeat: no-repeat;background-size: cover;position: relative; z-index: 1;}
 #works .head_block p {color: #8a8a8a}
 #works h1 {font-size: 48px; margin-top: 0;font-weight:700;}
@@ -462,9 +475,9 @@ input:-moz-placeholder { /* Firefox 18- */
 @media (max-width: 620px) {
 	#works .home_gallery {max-width: 316px;}
 }
-#works .gallery_more {text-align: center; margin: 50px 0;}
-#works .gallery_more a {padding: 15px 50px; background: #bbb; margin: 25px; color: white; transition: all 0.3s linear; border-radius: 5px;}
-#works .gallery_more a:hover {
+#works .gallery_more , .skills_toggle{text-align: center; margin: 50px 0;}
+#works .gallery_more a, .skills_toggle a {padding: 15px 50px; background: #bbb; margin: 25px; color: white; transition: all 0.3s linear; border-radius: 5px;}
+#works .gallery_more a:hover, .skills_toggle a:hover {
 	color: #149dd5;
 	text-decoration: none;
 	cursor:pointer;

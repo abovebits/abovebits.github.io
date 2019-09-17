@@ -274,8 +274,7 @@ $(document).ready( function() {
 				
 				$('html, body').animate({scrollTop: 0}, 300);
 			})
-	/* End of Back to TOP*/	
-	
+	/* End of Back to TOP*/
 	//
 	var _portfolio = new PortfolioModel("images/abovebits_skills/gallery.json"),
 			_gallery = new PortfolioPresenter({
@@ -297,6 +296,52 @@ $(document).ready( function() {
 				_gallery.clearBlock();
 				_gallery.filterItems($(this).val());
 			});*/
+	var gallery = $('#skills .container_gallery');
+
+	$(window).on('resize', function(){
+		var win = $(this);
+		if (win.width() > 1155) {
+			gallery.attr('data-height', '285');
+			gallery.css('height', '285px');
+		} else if (win.width() > 1101 && win.width() < 1155) {
+			gallery.attr('data-height', '275');
+			gallery.css('height', '275px');
+		} else if (win.width() > 1010 && win.width() < 1100) {
+			gallery.attr('data-height', '255');
+			gallery.css('height', '255px');
+		} else if (win.width() > 911 && win.width() < 1009) {
+			gallery.attr('data-height', '240');
+			gallery.css('height', '240px');
+		} else if (win.width() < 910 && win.width() > 768) {
+			gallery.attr('data-height', '225');
+			gallery.css('height', '225px');
+		} else if (win.width() < 768) {
+			gallery.attr('data-height', '210');
+			gallery.css('height', '210px');
+		}
+	});
+
+	$(window).resize();
+
+	$('.skills_toggle').on('click', 'a', function () {
+		var $this = $(this),
+			state = $this.data('state');
+
+		if (state == 'expand') {
+			gallery.css('height', gallery.data('height') + 'px');
+			$this.text('EXPAND');
+
+			$('html, body').animate({
+				scrollTop: $("#skills").offset().top
+			}, 1500);
+
+			$this.data('state', 'collapse');
+		} else if (state == 'collapse'){
+			gallery.css('height', '100%');
+			$this.text('COLLAPSE');
+			$this.data('state', 'expand');
+		}
+	});
 });
 
 //if userAgent = Mobile, we should add green background to Contact block
@@ -307,7 +352,7 @@ if (isMobile) {
 //end of userAgent = Mobile
 
 $(window).load( function() {
-	
+
 	// quick search regex
 	var qsRegex;
 	var buttonFilter;
@@ -376,6 +421,14 @@ $(window).load( function() {
 		$buttonGroup.find('.is-checked').removeClass('is-checked');
 		$( this ).addClass('is-checked');
 	  });
+	});
+
+	$grid.on( 'layoutComplete', function( event, laidOutItems ) {
+		if (laidOutItems.length > 18) {
+			$('.skills_toggle').show();
+		} else {
+			$('.skills_toggle').hide();
+		}
 	});
 
 	MarkersSwitcher.initialization({
