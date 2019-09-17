@@ -329,7 +329,7 @@ $(document).ready( function() {
 
 		if (state == 'expand') {
 			gallery.css('height', gallery.data('height') + 'px');
-			$this.text('EXPAND');
+			$this.text('SEE MORE');
 
 			$('html, body').animate({
 				scrollTop: $("#skills").offset().top
