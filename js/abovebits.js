@@ -296,6 +296,15 @@ $(document).ready( function() {
 				_gallery.clearBlock();
 				_gallery.filterItems($(this).val());
 			});*/
+	$(window).scroll(function(){
+		if ($(window).scrollTop() >= 50) {
+			$('body').addClass('fixed-header');
+		}
+		else {
+			$('body').removeClass('fixed-header');
+		}
+	});
+
 	var gallery = $('#skills .container_gallery');
 
 	$(window).on('resize', function(){
