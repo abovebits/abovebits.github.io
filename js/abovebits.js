@@ -324,9 +324,15 @@ $(document).ready( function() {
 		} else if (win.width() < 910 && win.width() > 768) {
 			gallery.attr('data-height', '235');
 			gallery.css('height', '235px');
-		} else if (win.width() < 768) {
+		} else if (win.width() < 768 && win.width() > 560) {
 			gallery.attr('data-height', '220');
 			gallery.css('height', '220px');
+		} else if (win.width() < 560 && win.width() > 380) {
+			gallery.attr('data-height', '190');
+			gallery.css('height', '190px');
+		} else if (win.width() < 380) {
+			gallery.attr('data-height', '175');
+			gallery.css('height', '175px');
 		}
 	});
 
@@ -441,9 +447,15 @@ $(window).load( function() {
 				position = top[1].split('px;'),
 				width = $(window).width();
 
+			console.log(width)
+
 			if (parseInt(position[0]) < 300 && parseInt(position[0]) > 200 && width > 900) {
 				$(this).attr('data-margin', true)
-			} else if (parseInt(position[0]) < 250 && parseInt(position[0]) > 170 && width < 900) {
+			} else if (parseInt(position[0]) < 250 && parseInt(position[0]) > 200 && width < 900) {
+				$(this).attr('data-margin', true)
+			} else if (parseInt(position[0]) < 200 && parseInt(position[0]) > 170 && width < 800) {
+				$(this).attr('data-margin', true)
+			} else if (parseInt(position[0]) < 180 && parseInt(position[0]) > 150 && width < 600) {
 				$(this).attr('data-margin', true)
 			}
 		});
