@@ -16,18 +16,21 @@ body, p {
 }
 body{cursor:auto !important;}
 .navbar {
-	height:85px;
+	height:105px;
 	border: none;
 	margin-bottom: 0;
 }
 .navbar-brand {
 	padding-top: 5px;
 }
+.navbar-brand img{
+	width:430px;
+}
 .fullwidth{
 	width: 100%;
 }
 .navbar-header {
-	height:85px;
+	height:105px;
 	border: none;
 }
 .navbar-default{
@@ -59,6 +62,7 @@ body{cursor:auto !important;}
 	background-color: white;
 }
 .navbar .navbar-nav {
+	margin-top: 10px;
     display: inline-block;
     float: right;
 }
