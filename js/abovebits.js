@@ -447,15 +447,14 @@ $(window).load( function() {
 				position = top[1].split('px;'),
 				width = $(window).width();
 
-			console.log(width)
 
-			if (parseInt(position[0]) < 300 && parseInt(position[0]) > 200 && width > 900) {
+			console.log(parseInt(position[0]))
+
+			if (parseInt(position[0]) > 250 && parseInt(position[0]) < 320 && width > 1090) {
 				$(this).attr('data-margin', true)
-			} else if (parseInt(position[0]) < 250 && parseInt(position[0]) > 200 && width < 900) {
+			} else if (parseInt(position[0]) > 190 && parseInt(position[0]) < 340 && width < 1090) {
 				$(this).attr('data-margin', true)
-			} else if (parseInt(position[0]) < 200 && parseInt(position[0]) > 170 && width < 800) {
-				$(this).attr('data-margin', true)
-			} else if (parseInt(position[0]) < 180 && parseInt(position[0]) > 150 && width < 600) {
+			} else if (parseInt(position[0]) > 150 && parseInt(position[0]) < 220 && width < 668) {
 				$(this).attr('data-margin', true)
 			}
 		});
