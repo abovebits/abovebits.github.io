@@ -241,11 +241,16 @@ PortfolioPresenter.prototype.showTagsList = function (val) {
         }
         _output += "</ul>";
     }
-    $('.search_gallery_list').html(_output).css({
-        'left': this.searchFieldCoords.left,
-        'top': this.searchFieldCoords.top + this.searchField.height()+15,
-        'width': this.searchField.width()
-    }).show();  
+    if (_output.length) {
+        $('.search_gallery_list').html(_output).css({
+            'left': this.searchFieldCoords.left,
+            'top': this.searchFieldCoords.top + this.searchField.height()+15,
+            'width': this.searchField.width()
+        }).show();
+    } else {
+        $('.search_gallery_list').hide();
+    }
+
 };
 
 PortfolioPresenter.prototype.hideTagsList = function () {
