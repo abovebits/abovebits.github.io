@@ -16,7 +16,6 @@ body, p {
 }
 body{cursor:auto !important;}
 .navbar {
-	height:105px;
 	border: none;
 	margin-bottom: 0;
 }
@@ -26,9 +25,6 @@ body{cursor:auto !important;}
 .navbar-brand {
 	padding-top: 5px;
 }
-.navbar-brand img{
-	width:430px;
-}
 .fixed-header .navbar-brand img{
 	width:100%;
 }
@@ -36,7 +32,7 @@ body{cursor:auto !important;}
 	width: 100%;
 }
 .navbar-header {
-	height:105px;
+	height:85px;
 	border: none;
 }
 .fixed-header .navbar-header {
@@ -74,11 +70,23 @@ body{cursor:auto !important;}
 	margin-top: 0;
 }
 .navbar .navbar-nav {
-	margin-top: 10px;
     display: inline-block;
     float: right;
 }
-
+@media (min-width: 1560px) {
+	.navbar-brand img{
+		width:430px;
+	}
+	.navbar {
+		height:105px;
+	}
+	.navbar-header {
+		height:105px;
+	}
+	.navbar .navbar-nav {
+		margin-top: 10px;
+	}
+}
 .navbar .navbar-collapse {
     text-align: center;
 	position: relative;
