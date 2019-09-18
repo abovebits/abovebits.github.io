@@ -216,7 +216,7 @@ img.magento_logo {height: 17% !important;}
 	img.magento_logo.templatemonster_partner{right: 80px; bottom: 110px; height: 80px !important;}
 	img.magento_logo{height: 100px !important;}
 	.magento_logo.m_specialist{right: 90px;}
-	.upwork-logo{right: 150px;}
+	.upwork-logo{right: 150px;bottom: 110px; height: 80px !important;}
 }
 @media (width: 375px){
 	/*.magento_logo.m_specialist{right: 30%;}
