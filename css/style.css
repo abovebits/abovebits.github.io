@@ -328,7 +328,7 @@ input:-moz-placeholder { /* Firefox 18- */
 #skills .web,
 #skills .code{width: 100%;}
 #skills ul.brands {padding-top: 25px; text-align: center; padding-left: 0;}
-#skills .container_gallery{margin: 0 auto; width:85%}
+#skills .container_gallery{margin: 0 auto; width:83%;padding-right: 1%;padding-left: 1%}
 #skills ul.brands li{
 	float: left; 
 	overflow: hidden;
@@ -1275,4 +1275,7 @@ _:-ms-lang(x), .parallax { background-size: auto 130%; }
         position: absolute;
     }
 	.navbar-default .navbar-nav > li > a:hover span{color: #149dd4 !important;}
+}
+#skills .brands .element-item[data-margin="true"]{
+	margin-top:50px!important;
 }

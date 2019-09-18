@@ -310,23 +310,23 @@ $(document).ready( function() {
 	$(window).on('resize', function(){
 		var win = $(this);
 		if (win.width() > 1155) {
+			gallery.attr('data-height', '300');
+			gallery.css('height', '300px');
+		} else if (win.width() > 1101 && win.width() < 1155) {
 			gallery.attr('data-height', '285');
 			gallery.css('height', '285px');
-		} else if (win.width() > 1101 && win.width() < 1155) {
+		} else if (win.width() > 1010 && win.width() < 1100) {
 			gallery.attr('data-height', '275');
 			gallery.css('height', '275px');
-		} else if (win.width() > 1010 && win.width() < 1100) {
-			gallery.attr('data-height', '255');
-			gallery.css('height', '255px');
 		} else if (win.width() > 911 && win.width() < 1009) {
-			gallery.attr('data-height', '240');
-			gallery.css('height', '240px');
+			gallery.attr('data-height', '250');
+			gallery.css('height', '250px');
 		} else if (win.width() < 910 && win.width() > 768) {
-			gallery.attr('data-height', '225');
-			gallery.css('height', '225px');
+			gallery.attr('data-height', '235');
+			gallery.css('height', '235px');
 		} else if (win.width() < 768) {
-			gallery.attr('data-height', '210');
-			gallery.css('height', '210px');
+			gallery.attr('data-height', '220');
+			gallery.css('height', '220px');
 		}
 	});
 
@@ -339,6 +339,7 @@ $(document).ready( function() {
 		if (state == 'expand') {
 			gallery.css('height', gallery.data('height') + 'px');
 			$this.text('SEE MORE');
+			gallery.find('.brands > li[data-margin="false"]').attr('data-margin', true);
 
 			$('html, body').animate({
 				scrollTop: $("#skills").offset().top
@@ -347,6 +348,7 @@ $(document).ready( function() {
 			$this.data('state', 'collapse');
 		} else if (state == 'collapse'){
 			gallery.css('height', '100%');
+			gallery.find('.brands > li[data-margin="true"]').attr('data-margin', false);
 			$this.text('COLLAPSE');
 			$this.data('state', 'expand');
 		}
@@ -433,6 +435,19 @@ $(window).load( function() {
 	});
 
 	$grid.on( 'layoutComplete', function( event, laidOutItems ) {
+		$.each($('#skills .brands > li'), function () {
+			var style = $(this).attr('style'),
+				top = style.split('top: '),
+				position = top[1].split('px;'),
+				width = $(window).width();
+
+			if (parseInt(position[0]) < 300 && parseInt(position[0]) > 200 && width > 900) {
+				$(this).attr('data-margin', true)
+			} else if (parseInt(position[0]) < 250 && parseInt(position[0]) > 170 && width < 900) {
+				$(this).attr('data-margin', true)
+			}
+		});
+
 		if (laidOutItems.length > 18) {
 			$('.skills_toggle').show();
 		} else {
