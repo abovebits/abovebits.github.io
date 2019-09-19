@@ -343,14 +343,14 @@ $(document).ready( function() {
 				position = top[1].split('px;'),
 				width = win.width();
 
-
-			console.log(parseInt(position[0]))
-
 			if (parseInt(position[0]) > 250 && parseInt(position[0]) < 320 && width > 1090) {
+                console.log('width > 1090')
 				$(this).attr('data-margin', true)
 			} else if (parseInt(position[0]) > 190 && parseInt(position[0]) < 340 && width < 1090) {
+                console.log('width < 1090')
 				$(this).attr('data-margin', true)
 			} else if (parseInt(position[0]) > 150 && parseInt(position[0]) < 220 && width < 668) {
+                console.log('width < 668')
 				$(this).attr('data-margin', true)
 			}
 		});
