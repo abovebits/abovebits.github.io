@@ -467,7 +467,7 @@ $(window).load( function() {
 				width = $(window).width();
 
 
-			console.log(parseInt(position[0]))
+			// console.log(parseInt(position[0]))
 
 			if (parseInt(position[0]) > 250 && parseInt(position[0]) < 320 && width > 1090) {
 				$(this).attr('data-margin', true)

@@ -494,7 +494,7 @@ input:-moz-placeholder { /* Firefox 18- */
     height: 250px;
 }
 
-#works .home_gallery {margin: 0 auto 50px;  min-height: 550px; /*max-width: 1510px;*/}
+#works .home_gallery {margin: 0 auto 50px;  min-height: 550px; display: flex;justify-content: center;flex-wrap: wrap;}
 @media (max-width: 620px) {
 	#works .home_gallery {max-width: 316px;}
 }
@@ -906,7 +906,7 @@ table td[class*=col-] {height: auto;}
 #contact .head_block .contact-switcher a:hover,
 #contact .head_block .contact-switcher a:focus {
 	text-decoration: none;
-	background: #29D772;
+	background: #9dd69c;
 	-webkit-box-shadow: 0px 0px 20px 3px rgba(40,40,40,0.3);
 	-moz-box-shadow: 0px 0px 20px 3px rgba(40,40,40,0.3);
 	box-shadow: 0px 0px 20px 3px rgba(40,40,40,0.3);
@@ -933,7 +933,7 @@ table td[class*=col-] {height: auto;}
 #contact #frmContact textarea {resize: none}
 #contact #frmContact input[type=text],
 #contact #frmContact textarea,
-#contact #frmContact input[type=email] {padding-left: 10px; background: #29d772; border: none; border-bottom: 1px solid #39e581; color: white; font-size: 14px; font-weight:600; width: 100%; min-height:40px; line-height: 40px; border-radius: 0;}
+#contact #frmContact input[type=email] {padding-left: 10px; background: #9dd69c; border: none; border: 1px solid #228B22; color: white; font-size: 14px; font-weight:600; width: 100%; min-height:40px; line-height: 40px; border-radius: 0;}
 #contact #frmContact input[type=text]:hover,
 #contact #frmContact textarea:hover,
 #contact #frmContact input[type=email]:hover {    outline: -webkit-focus-ring-color auto 5px;}
@@ -1255,8 +1255,8 @@ footer a {line-height: inherit !important;}
 	background-size: cover;
 }
 #contact {
-	background-color: #21c967;
-	background-image: url("../images/bg_contacts_more.png");
+	background-color: #9dd69c;
+	background-image: url("../images/bg_contacts_more_gray.png");
 }
 .parallax {
 	width: 100%;
