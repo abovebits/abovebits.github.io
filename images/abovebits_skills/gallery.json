@@ -1,9 +1,9 @@
 [{
  "img": "images/works/home_thumb/neumancommercial.jpg",
  "skill1": "images/abovebits_skills/Wordpress.png",
- "skill2": "",
- "skill3": "",
- "skill4": "",
+ "skill2": "images/abovebits_skills/Speed-Optimization.png",
+ "skill3": "images/abovebits_skills/Theme-Development.png",
+ "skill4": "images/abovebits_skills/Server-Migration.png",
  "mockup": "images/works/neumancommercial.jpg"
 },{
  "img": "images/works/home_thumb/torahlive_new.jpg",
@@ -15,9 +15,9 @@
 },{
  "img": "images/works/home_thumb/charmboat.jpg",
  "skill1": "images/abovebits_skills/Wordpress.png",
- "skill2": "",
- "skill3": "",
- "skill4": "",
+ "skill2": "images/abovebits_skills/SQL-Optimization.png",
+ "skill3": "images/abovebits_skills/Responsiveness-Fixes.png",
+ "skill4": "images/abovebits_skills/Full-Development-From-Scratch.png",
  "mockup": "images/works/charmboat.jpg"
 },{
  "img": "images/works/home_thumb/charmflats.jpg",
