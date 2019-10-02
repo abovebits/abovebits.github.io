@@ -331,53 +331,12 @@ $(document).ready( function() {
 });
 
 $(window).on('resize', function(){
-	var gallery = $('#skills .container_gallery');
-	var win = $(this);
-	if (win.width() > 1155) {
-		gallery.attr('data-height', '300');
-		gallery.css('height', '300px');
-	} else if (win.width() > 1101 && win.width() < 1155) {
-		gallery.attr('data-height', '285');
-		gallery.css('height', '285px');
-	} else if (win.width() > 1010 && win.width() < 1100) {
-		gallery.attr('data-height', '275');
-		gallery.css('height', '275px');
-	} else if (win.width() > 911 && win.width() < 1009) {
-		gallery.attr('data-height', '250');
-		gallery.css('height', '250px');
-	} else if (win.width() < 910 && win.width() > 768) {
-		gallery.attr('data-height', '235');
-		gallery.css('height', '235px');
-	} else if (win.width() < 768 && win.width() > 560) {
-		gallery.attr('data-height', '220');
-		gallery.css('height', '220px');
-	} else if (win.width() < 560 && win.width() > 380) {
-		gallery.attr('data-height', '190');
-		gallery.css('height', '190px');
-	} else if (win.width() < 380) {
-		gallery.attr('data-height', '175');
-		gallery.css('height', '175px');
-	}
-
-	console.log('switch screen');
-
-	$.each($('#skills .brands > li'), function () {
-		var style = $(this).attr('style'),
-			top = style.split('top: '),
-			position = top[1].split('px;'),
-			width = win.width();
-
-		if (parseInt(position[0]) > 250 && parseInt(position[0]) < 320 && width > 1090) {
-			console.log('width > 1090')
-			$(this).attr('data-margin', true)
-		} else if (parseInt(position[0]) > 190 && parseInt(position[0]) < 340 && width < 1090) {
-			console.log('width < 1090')
-			$(this).attr('data-margin', true)
-		} else if (parseInt(position[0]) > 150 && parseInt(position[0]) < 220 && width < 668) {
-			console.log('width < 668')
-			$(this).attr('data-margin', true)
-		}
-	});
+    updateGallery();
+	changePosition();
+});
+$(window).on('orientationchange', function(){
+    updateGallery();
+	changePosition();
 });
 
 //if userAgent = Mobile, we should add green background to Contact block
@@ -460,23 +419,7 @@ $(window).load( function() {
 	});
 
 	$grid.on( 'layoutComplete', function( event, laidOutItems ) {
-		$.each($('#skills .brands > li'), function () {
-			var style = $(this).attr('style'),
-				top = style.split('top: '),
-				position = top[1].split('px;'),
-				width = $(window).width();
-
-
-			// console.log(parseInt(position[0]))
-
-			if (parseInt(position[0]) > 250 && parseInt(position[0]) < 320 && width > 1090) {
-				$(this).attr('data-margin', true)
-			} else if (parseInt(position[0]) > 190 && parseInt(position[0]) < 340 && width < 1090) {
-				$(this).attr('data-margin', true)
-			} else if (parseInt(position[0]) > 150 && parseInt(position[0]) < 220 && width < 668) {
-				$(this).attr('data-margin', true)
-			}
-		});
+		changePosition();
 
 		if (laidOutItems.length > 18) {
 			$('.skills_toggle').show();
@@ -495,6 +438,55 @@ $(window).load( function() {
 	});
 
 });
+
+function changePosition()
+{
+    $.each($('#skills .brands > li'), function () {
+        var style = $(this).attr('style'),
+            top = style.split('top: '),
+            position = top[1].split('px;'),
+            width = $(window).width();
+
+        if (parseInt(position[0]) > 250 && parseInt(position[0]) < 320 && width > 1090) {
+            $(this).attr('data-margin', true)
+        } else if (parseInt(position[0]) > 190 && parseInt(position[0]) < 340 && width < 1090) {
+            $(this).attr('data-margin', true)
+        } else if (parseInt(position[0]) > 150 && parseInt(position[0]) < 220 && width < 668) {
+            $(this).attr('data-margin', true)
+        }
+    });
+}
+
+function updateGallery()
+{
+    var gallery = $('#skills .container_gallery');
+    var win = $(this);
+    if (win.width() > 1155) {
+        gallery.attr('data-height', '300');
+        gallery.css('height', '300px');
+    } else if (win.width() > 1101 && win.width() < 1155) {
+        gallery.attr('data-height', '285');
+        gallery.css('height', '285px');
+    } else if (win.width() > 1010 && win.width() < 1100) {
+        gallery.attr('data-height', '275');
+        gallery.css('height', '275px');
+    } else if (win.width() > 911 && win.width() < 1009) {
+        gallery.attr('data-height', '250');
+        gallery.css('height', '250px');
+    } else if (win.width() < 910 && win.width() > 768) {
+        gallery.attr('data-height', '235');
+        gallery.css('height', '235px');
+    } else if (win.width() < 768 && win.width() > 560) {
+        gallery.attr('data-height', '220');
+        gallery.css('height', '220px');
+    } else if (win.width() < 560 && win.width() > 380) {
+        gallery.attr('data-height', '190');
+        gallery.css('height', '190px');
+    } else if (win.width() < 380) {
+        gallery.attr('data-height', '175');
+        gallery.css('height', '175px');
+    }
+}
 
 /* Smooth scroll only for IE */
 /*
