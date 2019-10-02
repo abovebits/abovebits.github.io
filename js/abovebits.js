@@ -418,7 +418,15 @@ $(window).load( function() {
 	  });
 	});
 
+	function onArrange() {
+		console.log('arrange done');
+	}
+
 	$grid.on( 'layoutComplete', function( event, laidOutItems ) {
+		console.log(event);
+		console.log('complete');
+
+		updateGallery();
 		changePosition();
 
 		if (laidOutItems.length > 18) {
@@ -446,6 +454,8 @@ function changePosition()
             top = style.split('top: '),
             position = top[1].split('px;'),
             width = $(window).width();
+
+		$(this).attr('data-margin', false)
 
         if (parseInt(position[0]) > 250 && parseInt(position[0]) < 320 && width > 1090) {
             $(this).attr('data-margin', true)
