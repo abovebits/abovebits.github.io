@@ -309,23 +309,23 @@ $(document).ready( function() {
 
 	$('.skills_toggle').on('click', 'a', function () {
 		var $this = $(this),
-			state = $this.data('state');
+			state = $this.attr('data-state');
 
 		if (state == 'expand') {
 			gallery.css('height', gallery.data('height') + 'px');
 			$this.text('SEE MORE');
-			gallery.find('.brands > li[data-margin="false"]').attr('data-margin', true);
+			gallery.find('.brands > li[data-hidden="false"]').attr('data-hidden', true);
 
 			$('html, body').animate({
 				scrollTop: $("#skills").offset().top
 			}, 1500);
 
-			$this.data('state', 'collapse');
+			$this.attr('data-state', 'collapse');
 		} else if (state == 'collapse'){
 			gallery.css('height', '100%');
-			gallery.find('.brands > li[data-margin="true"]').attr('data-margin', false);
+			gallery.find('.brands > li[data-hidden="true"]').attr('data-hidden', false);
 			$this.text('COLLAPSE');
-			$this.data('state', 'expand');
+			$this.attr('data-state', 'expand');
 		}
 	});
 });
@@ -418,14 +418,7 @@ $(window).load( function() {
 	  });
 	});
 
-	function onArrange() {
-		console.log('arrange done');
-	}
-
 	$grid.on( 'layoutComplete', function( event, laidOutItems ) {
-		console.log(event);
-		console.log('complete');
-
 		updateGallery();
 		changePosition();
 
@@ -455,14 +448,14 @@ function changePosition()
             position = top[1].split('px;'),
             width = $(window).width();
 
-		$(this).attr('data-margin', false)
+		$(this).attr('data-hidden', '');
 
         if (parseInt(position[0]) > 250 && parseInt(position[0]) < 320 && width > 1090) {
-            $(this).attr('data-margin', true)
+            $(this).attr('data-hidden', true)
         } else if (parseInt(position[0]) > 190 && parseInt(position[0]) < 340 && width < 1090) {
-            $(this).attr('data-margin', true)
+            $(this).attr('data-hidden', true)
         } else if (parseInt(position[0]) > 150 && parseInt(position[0]) < 220 && width < 668) {
-            $(this).attr('data-margin', true)
+            $(this).attr('data-hidden', true)
         }
     });
 }
