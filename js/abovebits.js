@@ -488,18 +488,18 @@ function updateGallery()
         $gallery.attr('data-height', '250');
         $gallery.css('height', '250px');
 		console.log('250')
-    } else if ($win.width() < 910 && $win.width() > 768) {
+    } else if ($win.width() < 910 && $win.width() >= 768) {
         $gallery.attr('data-height', '235');
         $gallery.css('height', '235px');
 		console.log('235')
-    } else if ($win.width() < 768 && $win.width() > 560) {
+    } else if ($win.width() < 767 && $win.width() >= 560) {
         $gallery.attr('data-height', '220');
         $gallery.css('height', '220px');
 		console.log('220')
-    } else if ($win.width() < 560 && $win.width() > 380) {
+    } else if ($win.width() <= 559 && $win.width() > 381) {
         $gallery.attr('data-height', '190');
         $gallery.css('height', '190px');
-    } else if ($win.width() < 380) {
+    } else if ($win.width() <= 380) {
         $gallery.attr('data-height', '175');
         $gallery.css('height', '175px');
     }
