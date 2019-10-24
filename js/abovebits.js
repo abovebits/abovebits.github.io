@@ -472,32 +472,36 @@ function changePosition()
 
 function updateGallery()
 {
-    var gallery = $('body #skills .container_gallery');
-    var win = $(window);
-    if (win.width() > 1155) {
-        gallery.attr('data-height', '300');
-        gallery.css('height', '300px');
-    } else if (win.width() > 1101 && win.width() < 1155) {
-        gallery.attr('data-height', '285');
-        gallery.css('height', '285px');
-    } else if (win.width() > 1010 && win.width() < 1100) {
-        gallery.attr('data-height', '275');
-        gallery.css('height', '275px');
-    } else if (win.width() > 911 && win.width() < 1009) {
-        gallery.attr('data-height', '250');
-        gallery.css('height', '250px');
-    } else if (win.width() < 910 && win.width() > 768) {
-        gallery.attr('data-height', '235');
-        gallery.css('height', '235px');
-    } else if (win.width() < 768 && win.width() > 560) {
-        gallery.attr('data-height', '220');
-        gallery.css('height', '220px');
-    } else if (win.width() < 560 && win.width() > 380) {
-        gallery.attr('data-height', '190');
-        gallery.css('height', '190px');
-    } else if (win.width() < 380) {
-        gallery.attr('data-height', '175');
-        gallery.css('height', '175px');
+    var $gallery = $('body #skills .container_gallery');
+    var $win = $(window);
+	console.log($win.width())
+    if ($win.width() > 1155) {
+        $gallery.attr('data-height', '300');
+        $gallery.css('height', '300px');
+    } else if ($win.width() > 1101 && $win.width() < 1155) {
+        $gallery.attr('data-height', '285');
+        $gallery.css('height', '285px');
+    } else if ($win.width() > 1010 && $win.width() < 1100) {
+        $gallery.attr('data-height', '275');
+        $gallery.css('height', '275px');
+    } else if ($win.width() > 911 && $win.width() < 1009) {
+        $gallery.attr('data-height', '250');
+        $gallery.css('height', '250px');
+		console.log('250')
+    } else if ($win.width() < 910 && $win.width() > 768) {
+        $gallery.attr('data-height', '235');
+        $gallery.css('height', '235px');
+		console.log('235')
+    } else if ($win.width() < 768 && $win.width() > 560) {
+        $gallery.attr('data-height', '220');
+        $gallery.css('height', '220px');
+		console.log('220')
+    } else if ($win.width() < 560 && $win.width() > 380) {
+        $gallery.attr('data-height', '190');
+        $gallery.css('height', '190px');
+    } else if ($win.width() < 380) {
+        $gallery.attr('data-height', '175');
+        $gallery.css('height', '175px');
     }
 }
 
