@@ -305,37 +305,22 @@ $(document).ready( function() {
 		}
 	});
 
-	var gallery = $('#skills .container_gallery');
-
 	$('.skills_toggle').on('click', 'a', function () {
 		var $this = $(this),
 			state = $this.attr('data-state');
 
-		if (state == 'expand') {
-			gallery.css('height', gallery.data('height') + 'px');
-			$this.text('SEE MORE');
-			gallery.find('.brands > li[data-hidden="false"]').attr('data-hidden', true);
-
-			$('html, body').animate({
-				scrollTop: $("#skills").offset().top
-			}, 1500);
-
-			$this.attr('data-state', 'collapse');
-		} else if (state == 'collapse'){
-			gallery.css('height', '100%');
-			gallery.find('.brands > li[data-hidden="true"]').attr('data-hidden', false);
-			$this.text('COLLAPSE');
-			$this.attr('data-state', 'expand');
-		}
+		updateCollapse(state);
 	});
 });
 
 $(window).on('resize', function(){
     updateGallery();
+    updateCollapse('expand');
 	changePosition();
 });
 $(window).on('orientationchange', function(){
     updateGallery();
+    updateCollapse('expand');
 	changePosition();
 });
 
@@ -420,6 +405,7 @@ $(window).load( function() {
 
 	$grid.on( 'layoutComplete', function( event, laidOutItems ) {
 		updateGallery();
+		updateCollapse();
 		changePosition();
 
 		if (laidOutItems.length > 18) {
@@ -439,6 +425,29 @@ $(window).load( function() {
 	});
 
 });
+
+function updateCollapse(state)
+{
+	var $stateBtn = $("a[data-state]"),
+	    gallery = $('#skills .container_gallery');
+
+	if (state == 'expand') {
+		gallery.css('height', gallery.data('height') + 'px');
+		$stateBtn.text('SEE MORE');
+		gallery.find('.brands > li[data-hidden="false"]').attr('data-hidden', true);
+
+		$('html, body').animate({
+			scrollTop: $("#skills").offset().top
+		}, 1500);
+
+		$stateBtn.attr('data-state', 'collapse');
+	} else if (state == 'collapse'){
+		gallery.css('height', '100%');
+		gallery.find('.brands > li[data-hidden="true"]').attr('data-hidden', false);
+		$stateBtn.text('COLLAPSE');
+		$stateBtn.attr('data-state', 'expand');
+	}
+}
 
 function changePosition()
 {
