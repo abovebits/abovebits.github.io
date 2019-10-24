@@ -431,8 +431,8 @@ $(window).load( function() {
 
 function updateCollapse()
 {
-	var $stateBtn = $("a[data-state]"),
-	    gallery = $('#skills .container_gallery');
+	var $stateBtn = $("body a[data-state]"),
+	    gallery = $('body #skills .container_gallery');
 
 	if ($stateBtn.attr('data-state') === 'expand') {
 		gallery.css('height', gallery.data('height') + 'px');
@@ -449,7 +449,7 @@ function updateCollapse()
 
 function changePosition()
 {
-    $.each($('#skills .brands > li'), function () {
+    $.each($('body #skills .brands > li'), function () {
         var style = $(this).attr('style'),
             top = style.split('top: '),
             position = top[1].split('px;'),
@@ -469,7 +469,7 @@ function changePosition()
 
 function updateGallery()
 {
-    var gallery = $('#skills .container_gallery');
+    var gallery = $('body #skills .container_gallery');
     var win = $(this);
     if (win.width() > 1155) {
         gallery.attr('data-height', '300');
