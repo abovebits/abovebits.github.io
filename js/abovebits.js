@@ -473,7 +473,7 @@ function changePosition()
 function updateGallery()
 {
     var gallery = $('body #skills .container_gallery');
-    var win = $(this);
+    var win = $(window);
     if (win.width() > 1155) {
         gallery.attr('data-height', '300');
         gallery.css('height', '300px');
