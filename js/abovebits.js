@@ -307,6 +307,12 @@ $(document).ready( function() {
 
 	$('.skills_toggle').on('click', 'a', function () {
 		updateCollapse();
+
+		if ($(this).attr('data-state') === 'expand') {
+			$('html, body').animate({
+				scrollTop: $("#skills").offset().top
+			}, 1500);
+		}
 	});
 });
 
@@ -432,11 +438,6 @@ function updateCollapse()
 		gallery.css('height', gallery.data('height') + 'px');
 		$stateBtn.text('SEE MORE');
 		gallery.find('.brands > li[data-hidden="false"]').attr('data-hidden', true);
-
-		$('html, body').animate({
-			scrollTop: $("#skills").offset().top
-		}, 1500);
-
 		$stateBtn.attr('data-state', 'collapse');
 	} else if ($stateBtn.attr('data-state') === 'collapse'){
 		gallery.css('height', '100%');
