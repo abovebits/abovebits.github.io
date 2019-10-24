@@ -405,7 +405,7 @@ $(window).load( function() {
 
 	$grid.on( 'layoutComplete', function( event, laidOutItems ) {
 		updateGallery();
-		updateCollapse();
+		updateCollapse('expand');
 		changePosition();
 
 		if (laidOutItems.length > 18) {
