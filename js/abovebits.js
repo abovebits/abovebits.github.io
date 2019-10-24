@@ -306,6 +306,7 @@ $(document).ready( function() {
 	});
 
 	$('.skills_toggle').on('click', 'a', function () {
+		console.log('click')
 		updateCollapse();
 
 		if ($(this).attr('data-state') === 'expand') {
@@ -316,12 +317,13 @@ $(document).ready( function() {
 	});
 });
 
-$(window).on('resize', function(){
-    updateGallery();
-    updateCollapse();
-	changePosition();
-});
+// $(window).on('resize', function(){
+//     updateGallery();
+//     updateCollapse();
+// 	changePosition();
+// });
 $(window).on('orientationchange', function(){
+	console.log('orientationchange')
     updateGallery();
     updateCollapse();
 	changePosition();
@@ -407,6 +409,7 @@ $(window).load( function() {
 	});
 
 	$grid.on( 'layoutComplete', function( event, laidOutItems ) {
+		console.log('layoutComplete')
 		updateGallery();
 		updateCollapse();
 		changePosition();
