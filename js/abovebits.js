@@ -305,21 +305,31 @@ $(document).ready( function() {
 		}
 	});
 
-	$('.skills_toggle').on('click', 'a', function () {
-		updateCollapse();
+	calculateHeight();
 
-		if ($(this).attr('data-state') === 'expand') {
+	$('.skills_toggle').on('click', 'a[data-state]', function () {
+		updateCollapse();
+		var states = {
+				'expand' : {
+					'text' : 'SEE MORE',
+					'attr' : 'collapse',
+				},
+				'collapse' : {
+					'text' : 'COLLAPSE',
+					'attr' : 'expand',
+				}
+			}, $btn = $('a[data-state]'),
+			state = $btn.attr('data-state');
+
+		$btn.attr('data-state', states[state]['attr']);
+		$btn.text(states[state]['text']);
+
+		if (state === 'expand') {
 			$('html, body').animate({
 				scrollTop: $("#skills").offset().top
 			}, 1500);
 		}
 	});
-});
-
-$(window).on('resize', function(){
-    updateGallery();
-    updateCollapse();
-	changePosition();
 });
 
 //if userAgent = Mobile, we should add green background to Contact block
@@ -402,8 +412,6 @@ $(window).load( function() {
 	});
 
 	$grid.on( 'layoutComplete', function( event, laidOutItems ) {
-		console.log('layoutComplete')
-		updateGallery();
 		updateCollapse();
 		changePosition();
 
@@ -425,23 +433,25 @@ $(window).load( function() {
 
 });
 
-function updateCollapse()
-{
-	var $stateBtn = $("body a[data-state]"),
-	    gallery = $('body #skills .container_gallery');
+$(window).on('resize', function(){
+	triggerPosition('resize');
+});
 
-	if ($stateBtn.attr('data-state') === 'expand') {
-		gallery.css('height', gallery.data('height') + 'px');
-		$stateBtn.text('SEE MORE');
-		gallery.find('.brands > li[data-hidden="false"]').attr('data-hidden', true);
-		$stateBtn.attr('data-state', 'collapse');
-	} else if ($stateBtn.attr('data-state') === 'collapse'){
-		gallery.css('height', '100%');
-		gallery.find('.brands > li[data-hidden="true"]').attr('data-hidden', false);
-		$stateBtn.text('COLLAPSE');
-		$stateBtn.attr('data-state', 'expand');
+$(window).on('orientationchange', function(){
+	triggerPosition('orientationchange');
+});
+
+var triggerPosition = function (state) {
+	console.log(state);
+	switch (state) {
+		case 'resize' :
+			calculateHeight();
+			break;
+		case 'orientationchange' :
+			calculateHeight();
+			break;
 	}
-}
+};
 
 function changePosition()
 {
@@ -466,40 +476,70 @@ function changePosition()
     });
 }
 
-function updateGallery()
+function updateCollapse()
 {
-    var $gallery = $('body #skills .container_gallery');
-    var $win = $(window);
+	var $stateBtn = $("body a[data-state]"),
+		gallery = $('body #skills .container_gallery');
 
-    if ($win.width() > 1155) {
-        $gallery.attr('data-height', '300');
-        $gallery.css('height', '300px');
-    } else if ($win.width() > 1101 && $win.width() < 1155) {
-        $gallery.attr('data-height', '285');
-        $gallery.css('height', '285px');
-    } else if ($win.width() > 1010 && $win.width() < 1100) {
-        $gallery.attr('data-height', '275');
-        $gallery.css('height', '275px');
-    } else if ($win.width() > 911 && $win.width() < 1009) {
-        $gallery.attr('data-height', '250');
-        $gallery.css('height', '250px');
-    } else if ($win.width() < 910 && $win.width() >= 768) {
-        $gallery.attr('data-height', '235');
-        $gallery.css('height', '235px');
-    } else if ($win.width() < 767 && $win.width() >= 666) {
-        $gallery.attr('data-height', '230');
-        $gallery.css('height', '230px');
-    }  else if ($win.width() < 665 && $win.width() >= 560) {
-        $gallery.attr('data-height', '225');
-        $gallery.css('height', '225px');
-    } else if ($win.width() <= 559 && $win.width() > 381) {
-        $gallery.attr('data-height', '190');
-        $gallery.css('height', '190px');
-    } else if ($win.width() <= 380) {
-        $gallery.attr('data-height', '175');
-        $gallery.css('height', '175px');
-    }
+	if ($stateBtn.attr('data-state') === 'expand') {
+		gallery.css('height', gallery.data('height') + 'px');
+		gallery.find('.brands > li[data-hidden="false"]').attr('data-hidden', true);
+	} else if ($stateBtn.attr('data-state') === 'collapse'){
+		gallery.css('height', '100%');
+		gallery.find('.brands > li[data-hidden="true"]').attr('data-hidden', false);
+	}
 }
+
+var calculateHeight = function () {
+	var $gallery = $('body #skills .container_gallery'),
+		width = $(window).width(),
+		data = {
+			'data' : 0,
+			'height' : 0,
+		};
+
+	switch (true) {
+		case (width > 1155) :
+			data.data = 300;
+			data.height = '300px';
+			break;
+		case(width > 1101 && width <= 1155) :
+			data.data = 285;
+			data.height = '285px';
+			break;
+		case(width => 1010 && width <= 1100) :
+			data.data = 275;
+			data.height = '275px';
+			break;
+		case(width => 911 && width <= 1009) :
+			data.data = 250;
+			data.height = '250px';
+			break;
+		case(width => 768 && width <= 910) :
+			data.data = 235;
+			data.height = '235px';
+			break;
+		case(width => 666 && width <= 767) :
+			data.data = 230;
+			data.height = '230px';
+			break;
+		case(width => 560 && width <= 665) :
+			data.data = 225;
+			data.height = '225px';
+			break;
+		case(width => 381 && width <= 559) :
+			data.data = 190;
+			data.height = '190px';
+			break;
+		case(width <= 380) :
+			data.data = 175;
+			data.height = '175px';
+			break;
+	}
+
+	$gallery.attr('data-height', data.data);
+	$gallery.css('height', data.height);
+};
 
 /* Smooth scroll only for IE */
 /*
