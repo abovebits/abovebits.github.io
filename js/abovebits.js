@@ -316,7 +316,7 @@ $(document).ready( function() {
 	});
 });
 
-$(window).on('orientationchange', function(){
+$(window).on('resize', function(){
     updateGallery();
     updateCollapse();
 	changePosition();
@@ -449,17 +449,20 @@ function changePosition()
         var style = $(this).attr('style'),
             top = style.split('top: '),
             position = top[1].split('px;'),
+			$stateBtn = $("body a[data-state]"),
             width = $(window).width();
 
 		$(this).attr('data-hidden', '');
 
-        if (parseInt(position[0]) > 250 && parseInt(position[0]) < 320 && width > 1090) {
-            $(this).attr('data-hidden', true)
-        } else if (parseInt(position[0]) > 190 && parseInt(position[0]) < 340 && width < 1090) {
-            $(this).attr('data-hidden', true)
-        } else if (parseInt(position[0]) > 150 && parseInt(position[0]) < 220 && width < 668) {
-            $(this).attr('data-hidden', true)
-        }
+		if ($stateBtn.attr('data-state') === 'collapse') {
+			if (parseInt(position[0]) > 250 && parseInt(position[0]) < 320 && width > 1090) {
+				$(this).attr('data-hidden', true)
+			} else if (parseInt(position[0]) > 190 && parseInt(position[0]) < 340 && width < 1090) {
+				$(this).attr('data-hidden', true)
+			} else if (parseInt(position[0]) > 150 && parseInt(position[0]) < 220 && width < 668) {
+				$(this).attr('data-hidden', true)
+			}
+		}
     });
 }
 
