@@ -557,43 +557,33 @@ var skillsExtension = {
 				'height' : 0,
 			};
 
-		switch (true) {
-			case (width > 1155) :
-				data.data = 300;
-				data.height = '300px';
-				break;
-			case(width > 1101 && width <= 1155) :
-				data.data = 285;
-				data.height = '285px';
-				break;
-			case(width => 1010 && width <= 1100) :
-				data.data = 275;
-				data.height = '275px';
-				break;
-			case(width => 911 && width <= 1009) :
-				data.data = 250;
-				data.height = '250px';
-				break;
-			case(width => 768 && width <= 910) :
-				data.data = 235;
-				data.height = '235px';
-				break;
-			case(width => 666 && width <= 767) :
-				data.data = 230;
-				data.height = '230px';
-				break;
-			case(width => 560 && width <= 665) :
-				data.data = 225;
-				data.height = '225px';
-				break;
-			case(width => 381 && width <= 559) :
-				data.data = 190;
-				data.height = '190px';
-				break;
-			case(width <= 380) :
-				data.data = 175;
-				data.height = '175px';
-				break;
+		if (width > 1155) {
+			data.data = 300;
+			data.height = '300px';
+		} else if (width > 1101 && width <= 1155) {
+			data.data = 285;
+			data.height = '285px';
+		} else if (width => 1010 && width <= 1100) {
+			data.data = 275;
+			data.height = '275px';
+		} else if (width => 911 && width <= 1009) {
+			data.data = 250;
+			data.height = '250px';
+		} else if (width => 768 && width <= 910) {
+			data.data = 235;
+			data.height = '235px';
+		} else if (width => 666 && width <= 767) {
+			data.data = 230;
+			data.height = '230px';
+		} else if (width => 560 && width <= 665) {
+			data.data = 225;
+			data.height = '225px';
+		} else if (width => 381 && width <= 559) {
+			data.data = 190;
+			data.height = '190px';
+		} else {
+			data.data = 175;
+			data.height = '175px';
 		}
 
 		$gallery.attr('data-height', data.data);
