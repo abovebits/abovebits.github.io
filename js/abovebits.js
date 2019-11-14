@@ -43,7 +43,7 @@ var _markers = {
 };
 
 /**
- * Switcher markers contact map 
+ * Switcher markers contact map
  */
 //
 var MarkersSwitcher = Object.create(function () {
@@ -63,39 +63,39 @@ var MarkersSwitcher = Object.create(function () {
 		init: function () {
 			var self = this;
 			this.links.on('click', function (e) {
-					e.preventDefault();
-					self.changeState($(this).attr('data-state'));
+				e.preventDefault();
+				self.changeState($(this).attr('data-state'));
 			});
 		},
 
 		changeState: function (newState) {
 			if(newState == 'offices'){
-                $('#contact-switcher-text').text('Here we are.');
+				$('#contact-switcher-text').text('Here we are.');
 			}else{
-                $('#contact-switcher-text').text('We talk, we define, we create.');
+				$('#contact-switcher-text').text('We talk, we define, we create.');
 			}
 			var oldState = this.activeState;
 			//console.log(oldState);
 			if (oldState !== newState) {
 				this.changeMapMarkers(newState);
 				this.changeActiveLink(newState);
-			} 
+			}
 		},
 
 		changeMapMarkers: function (newState) {
 			var oldState = this.activeState,
 				_mapObject = $(this.mapBlock).find('.jvectormap-container').data('mapObject');
 			if (_mapObject) {
-					_mapObject.removeAllMarkers();
-					_mapObject.addMarkers(this.markersStore[newState]);
-					this.activeState = newState;
+				_mapObject.removeAllMarkers();
+				_mapObject.addMarkers(this.markersStore[newState]);
+				this.activeState = newState;
 
-					if (typeof this.changeStateCallback === 'function') {
-							this.changeStateCallback(oldState, newState);
-					}
+				if (typeof this.changeStateCallback === 'function') {
+					this.changeStateCallback(oldState, newState);
+				}
 			}
 			else{
-					throw "Map object isn't found";
+				throw "Map object isn't found";
 			}
 		},
 
@@ -108,37 +108,37 @@ var MarkersSwitcher = Object.create(function () {
 	}
 }());
 $(window).on('resize', function(){
-	skillsExtension.bindPosition('resize');
+	bindPosition('resize');
 });
 
 $(window).on('orientationchange', function(){
-	skillsExtension.bindPosition('orientationchange');
+	bindPosition('orientationchange');
 });
 
 $(document).ready( function() {
 
 	// parallax effect based on new_parallax.js
 
-    var ua = window.navigator.userAgent;
-    var is_ie = /MSIE|Trident/.test(ua);
+	var ua = window.navigator.userAgent;
+	var is_ie = /MSIE|Trident/.test(ua);
 
-    var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-    var isiOs = /iPhone|iPad|iPod/i.test(navigator.userAgent);
-    if (!isMobile && !is_ie) {
-        console.log(is_ie);
-        $('#top-parallax').parallax("10%", 0.3);
-        $('#responsive').parallax("10%", 0.2);
-        $('#contact').parallax("10%", 0.1);
-        $('.parallax').css({'background-attachment' : 'fixed'});
-    }
-    if(isiOs){
-        $('#top-parallax').css({'background' : 'url( "../video/Working-Space_crop.jpg"  ) no-repeat top center fixed', 'background-size':'auto 100vmax'});
-        $('#responsive').css({'background' : 'url( "../images/responsive/office-space.jpg") 100%'});
-        $('#contact').css({'background' : 'url("../images/bg_contacts_more.png") #21c967'});
+	var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+	var isiOs = /iPhone|iPad|iPod/i.test(navigator.userAgent);
+	if (!isMobile && !is_ie) {
+		console.log(is_ie);
+		$('#top-parallax').parallax("10%", 0.3);
+		$('#responsive').parallax("10%", 0.2);
+		$('#contact').parallax("10%", 0.1);
+		$('.parallax').css({'background-attachment' : 'fixed'});
 	}
-    // end of parallax effect based on new_parallax.js
+	if(isiOs){
+		$('#top-parallax').css({'background' : 'url( "../video/Working-Space_crop.jpg"  ) no-repeat top center fixed', 'background-size':'auto 100vmax'});
+		$('#responsive').css({'background' : 'url( "../images/responsive/office-space.jpg") 100%'});
+		$('#contact').css({'background' : 'url("../images/bg_contacts_more.png") #21c967'});
+	}
+	// end of parallax effect based on new_parallax.js
 
-	 // executes when complete page is fully loaded, including all frames, objects and images
+	// executes when complete page is fully loaded, including all frames, objects and images
 	var owl = jQuery('.owl-carousel').owlCarousel({
 		loop:true,
 		autoplay: 2000,
@@ -160,12 +160,12 @@ $(document).ready( function() {
 			}
 		}
 	});
-    
-    $('.txt').html(function(i, html) {
-      var chars = $.trim(html).split("");
-      return '<span>' + chars.join('</span><span>') + '</span>';
-    });
-	
+
+	$('.txt').html(function(i, html) {
+		var chars = $.trim(html).split("");
+		return '<span>' + chars.join('</span><span>') + '</span>';
+	});
+
 	$('#map').vectorMap({
 		map: 'world_mill',
 		scaleColors: ['#C8EEFF', '#0071A4'],
@@ -174,12 +174,12 @@ $(document).ready( function() {
 		hoverColor: '#149dd5',
 		zoomOnScroll: false,
 		markerStyle: {
-		  initial: {
-			r: 8,
-			fill: '#149dd5',
-			stroke: '#383f47', //149dd5
-			//image: 'images/favicon/icon_agency32х32.png'
-		  }
+			initial: {
+				r: 8,
+				fill: '#149dd5',
+				stroke: '#383f47', //149dd5
+				//image: 'images/favicon/icon_agency32х32.png'
+			}
 		},
 		onMarkerTipShow: function(event, label, index){
 			//console.log(label);
@@ -197,8 +197,8 @@ $(document).ready( function() {
 		backgroundColor: 'none',
 		markers: _markers.offices
 	});
-	
-/*See More button*/
+
+	/*See More button*/
 	/*var i=0;
 	function gallery(){
 		var screenWidth = document.documentElement.clientWidth;
@@ -210,9 +210,9 @@ $(document).ready( function() {
 		//console.log("width: "+screenWidth+"px");
 		//console.log("count: "+galleryCount);
 		var displayResources = $('#home_gallery');
-		
+
 		 //displayResources.text('Loading data from JSON source...');
-		 
+
 		 var d= new Date();
 		 $.ajax({
 			 type: "GET",
@@ -251,58 +251,58 @@ $(document).ready( function() {
 			 }
 		 });
 	}*/
-	 //gallery();
-	 
-	 /*$('#seemore').click(function (e) {
-		 e.preventDefault();
-		 gallery();
-		 
-	 });*/
+	//gallery();
+
+	/*$('#seemore').click(function (e) {
+        e.preventDefault();
+        gallery();
+
+    });*/
 
 
-/*End of see more button*/
+	/*End of see more button*/
 	new WOW({
 		mobile : false
 	}).init();
-	
+
 	/*Back to TOP*/
 	// Show or hide the sticky footer button
-			$(window).scroll(function() {
-				if ($(this).scrollTop() > 200) {
-					$('.go-top').fadeIn(200);
-				} else {
-					$('.go-top').fadeOut(200);
-				}
-			});
-			
-			// Animate the scroll to top
-			$('.go-top').click(function(event) {
-				event.preventDefault();
-				
-				$('html, body').animate({scrollTop: 0}, 300);
-			})
+	$(window).scroll(function() {
+		if ($(this).scrollTop() > 200) {
+			$('.go-top').fadeIn(200);
+		} else {
+			$('.go-top').fadeOut(200);
+		}
+	});
+
+	// Animate the scroll to top
+	$('.go-top').click(function(event) {
+		event.preventDefault();
+
+		$('html, body').animate({scrollTop: 0}, 300);
+	})
 	/* End of Back to TOP*/
 	//
 	var _portfolio = new PortfolioModel("images/abovebits_skills/gallery.json"),
-			_gallery = new PortfolioPresenter({
-				block: "#home_gallery",
-				searchField: '#gallery_search'
-			}, _portfolio);		
-			
-			$('#seemore').click(function (e) {
-				e.preventDefault();
-				_gallery.showNextItems();	
-			});		
+		_gallery = new PortfolioPresenter({
+			block: "#home_gallery",
+			searchField: '#gallery_search'
+		}, _portfolio);
 
-			$('#filter_gallery ul li button').on('click', function () {
-				_gallery.clearBlock();
-				_gallery.filterItems($(this).attr('data-state'));	
-			});
+	$('#seemore').click(function (e) {
+		e.preventDefault();
+		_gallery.showNextItems();
+	});
 
-			/*$('#filter_gallery ul li input').on('keyup', function (e) {
-				_gallery.clearBlock();
-				_gallery.filterItems($(this).val());
-			});*/
+	$('#filter_gallery ul li button').on('click', function () {
+		_gallery.clearBlock();
+		_gallery.filterItems($(this).attr('data-state'));
+	});
+
+	/*$('#filter_gallery ul li input').on('keyup', function (e) {
+        _gallery.clearBlock();
+        _gallery.filterItems($(this).val());
+    });*/
 	$(window).scroll(function(){
 		if ($(window).scrollTop() >= 50) {
 			$('body').addClass('fixed-header');
@@ -346,8 +346,8 @@ $(document).ready( function() {
 		$btn.attr('data-state', states[state]['attr']);
 		$btn.text(states[state]['text']);
 
-		skillsExtension.updateLayout();
-		skillsExtension.isCollapse();
+		updateLayout();
+		isCollapse();
 
 		if (state === 'collapse') {
 			$('html, body').animate({
@@ -360,28 +360,28 @@ $(document).ready( function() {
 //if userAgent = Mobile, we should add green background to Contact block
 var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 if (isMobile) {
-    document.getElementById("contact").classList.add('parallax-mirror');
+	document.getElementById("contact").classList.add('parallax-mirror');
 }
 //end of userAgent = Mobile
 
 $(window).load( function() {
-	skillsExtension.bindPosition('resize');
+	bindPosition('resize');
 
 	// quick search regex
 	var qsRegex;
 	var buttonFilter;
-	
+
 	var $grid = $('.grid').isotope({
-	  itemSelector: '.element-item',
-	  layoutMode: 'fitRows',
-	  filter: function() {
-		var $this = $(this);
-		var searchResult = qsRegex ? $this.text().match( qsRegex ) : true;
-		var buttonResult = buttonFilter ? $this.is( buttonFilter ) : true;
-		return searchResult && buttonResult;
-	  }
+		itemSelector: '.element-item',
+		layoutMode: 'fitRows',
+		filter: function() {
+			var $this = $(this);
+			var searchResult = qsRegex ? $this.text().match( qsRegex ) : true;
+			var buttonResult = buttonFilter ? $this.is( buttonFilter ) : true;
+			return searchResult && buttonResult;
+		}
 	});
-    $grid.isotope('shuffle');
+	$grid.isotope('shuffle');
 	/*$('#filters').on( 'click', 'button', function() {
 	  buttonFilter = $( this ).attr('data-filter');
 	  $grid.isotope();
@@ -389,57 +389,57 @@ $(window).load( function() {
 
 	// filter functions
 	var filterFns = {
-	  // show if number is greater than 50
-	  numberGreaterThan50: function() {
-		var number = $(this).find('.number').text();
-		return parseInt( number, 10 ) > 50;
-	  },
-	  // show if name ends with -ium
-	  ium: function() {
-		var name = $(this).find('.name').text();
-		return name.match( /ium$/ );
-	  }
+		// show if number is greater than 50
+		numberGreaterThan50: function() {
+			var number = $(this).find('.number').text();
+			return parseInt( number, 10 ) > 50;
+		},
+		// show if name ends with -ium
+		ium: function() {
+			var name = $(this).find('.name').text();
+			return name.match( /ium$/ );
+		}
 	};
 	// bind filter button click
 	$('.filters-button-group').on( 'click', 'button', function() {
-	  var filterValue = $( this ).attr('data-filter');
-	  // use filterFn if matches value
-	  filterValue = filterFns[ filterValue ] || filterValue;
-	  $grid.isotope({ filter: filterValue });
+		var filterValue = $( this ).attr('data-filter');
+		// use filterFn if matches value
+		filterValue = filterFns[ filterValue ] || filterValue;
+		$grid.isotope({ filter: filterValue });
 	});
 	// use value of search field to filter
 	var $quicksearch = $('#quicksearch').keyup( debounce( function() {
-	  qsRegex = new RegExp( $quicksearch.val(), 'gi' );
-	  $grid.isotope();
+		qsRegex = new RegExp( $quicksearch.val(), 'gi' );
+		$grid.isotope();
 	}) );
-	
+
 	// debounce so filtering doesn't happen every millisecond
 	function debounce( fn, threshold ) {
-	  var timeout;
-	  return function debounced() {
-		if ( timeout ) {
-		  clearTimeout( timeout );
-		}
-		function delayed() {
-		  fn();
-		  timeout = null;
-		}
-		setTimeout( delayed, threshold || 100 );
-	  };
+		var timeout;
+		return function debounced() {
+			if ( timeout ) {
+				clearTimeout( timeout );
+			}
+			function delayed() {
+				fn();
+				timeout = null;
+			}
+			setTimeout( delayed, threshold || 100 );
+		};
 	}
 
 	// change is-checked class on buttons
 	$('.button-group').each( function( i, buttonGroup ) {
-	  var $buttonGroup = $( buttonGroup );
-	  $buttonGroup.on( 'click', 'button', function() {
-		$buttonGroup.find('.is-checked').removeClass('is-checked');
-		$( this ).addClass('is-checked');
-	  });
+		var $buttonGroup = $( buttonGroup );
+		$buttonGroup.on( 'click', 'button', function() {
+			$buttonGroup.find('.is-checked').removeClass('is-checked');
+			$( this ).addClass('is-checked');
+		});
 	});
 
 	$grid.on( 'layoutComplete', function( event, laidOutItems ) {
-		skillsExtension.updateLayout();
-		skillsExtension.isCollapse();
+		updateLayout();
+		isCollapse();
 
 		if (laidOutItems.length > 18) {
 			$('.skills_toggle').show();
@@ -451,10 +451,10 @@ $(window).load( function() {
 	MarkersSwitcher.initialization({
 		block: '.contact-switcher',
 		mapBlock: '#map',
-		markersStore: _markers 
+		markersStore: _markers
 	});
 	$("#contact_map").on( 'click', function() {
-        $("#clints_click").click();
+		$("#clints_click").click();
 	});
 
 });
@@ -508,85 +508,83 @@ Math.easeOut = function (t, b, c, d) { t /= d; return -c * t*(t-2) + b; };
 })();
 */
 
-var skillsExtension = {
-	'bindPosition' : function (state) {
-		switch (state) {
-			case 'resize' :
-				this.calculateHeight();
-				break;
-			case 'orientationchange' :
-				this.calculateHeight();
-				break;
-		}
-	},
-	'updateLayout' : function () {
-		$.each($('body #skills .brands > li'), function () {
-			var style = $(this).attr('style'),
-				top = style.split('top: '),
-				position = top[1].split('px;'),
-				width = $(window).width();
-
-			$(this).attr('data-hidden', '');
-
-			if (parseInt(position[0]) > 250 && parseInt(position[0]) < 320 && width > 1090) {
-				$(this).attr('data-hidden', true)
-			} else if (parseInt(position[0]) > 190 && parseInt(position[0]) < 340 && width < 1090) {
-				$(this).attr('data-hidden', true)
-			} else if (parseInt(position[0]) > 150 && parseInt(position[0]) < 220 && width < 668) {
-				$(this).attr('data-hidden', true)
-			}
-		});
-	},
-	'isCollapse' : function () {
-		var $stateBtn = $("body a[data-state]"),
-			$gallery = $('body #skills .container_gallery');
-
-		if ($stateBtn.attr('data-state') === 'expand') {
-			$gallery.css('height', $gallery.data('height') + 'px');
-			$gallery.find('.brands > li[data-hidden="false"]').attr('data-hidden', true);
-		} else if ($stateBtn.attr('data-state') === 'collapse'){
-			$gallery.css('height', '100%');
-			$gallery.find('.brands > li[data-hidden="true"]').attr('data-hidden', false);
-		}
-	},
-	'calculateHeight' : function () {
-		var $gallery = $('body #skills .container_gallery'),
-			width = $(window).width(),
-			data = {
-				'data' : 0,
-				'height' : 0,
-			};
-
-		if (width > 1155) {
-			data.data = 300;
-			data.height = '300px';
-		} else if (width > 1101 && width <= 1155) {
-			data.data = 285;
-			data.height = '285px';
-		} else if (width => 1010 && width <= 1100) {
-			data.data = 275;
-			data.height = '275px';
-		} else if (width => 911 && width <= 1009) {
-			data.data = 250;
-			data.height = '250px';
-		} else if (width => 768 && width <= 910) {
-			data.data = 235;
-			data.height = '235px';
-		} else if (width => 666 && width <= 767) {
-			data.data = 230;
-			data.height = '230px';
-		} else if (width => 560 && width <= 665) {
-			data.data = 225;
-			data.height = '225px';
-		} else if (width => 381 && width <= 559) {
-			data.data = 190;
-			data.height = '190px';
-		} else {
-			data.data = 175;
-			data.height = '175px';
-		}
-
-		$gallery.attr('data-height', data.data);
-		$gallery.css('height', data.height);
+function bindPosition(state) {
+	switch (state) {
+		case 'resize' :
+			calculateHeight();
+			break;
+		case 'orientationchange' :
+			calculateHeight();
+			break;
 	}
-};
+}
+function updateLayout() {
+	$.each($('body #skills .brands > li'), function () {
+		var style = $(this).attr('style'),
+			top = style.split('top: '),
+			position = top[1].split('px;'),
+			width = $(window).width();
+
+		$(this).attr('data-hidden', '');
+
+		if (parseInt(position[0]) > 250 && parseInt(position[0]) < 320 && width > 1090) {
+			$(this).attr('data-hidden', true)
+		} else if (parseInt(position[0]) > 190 && parseInt(position[0]) < 340 && width < 1090) {
+			$(this).attr('data-hidden', true)
+		} else if (parseInt(position[0]) > 150 && parseInt(position[0]) < 220 && width < 668) {
+			$(this).attr('data-hidden', true)
+		}
+	});
+}
+function isCollapse() {
+	var $stateBtn = $("body a[data-state]"),
+		$gallery = $('body #skills .container_gallery');
+
+	if ($stateBtn.attr('data-state') === 'expand') {
+		$gallery.css('height', $gallery.data('height') + 'px');
+		$gallery.find('.brands > li[data-hidden="false"]').attr('data-hidden', true);
+	} else if ($stateBtn.attr('data-state') === 'collapse'){
+		$gallery.css('height', '100%');
+		$gallery.find('.brands > li[data-hidden="true"]').attr('data-hidden', false);
+	}
+}
+function calculateHeight() {
+	var $gallery = $('body #skills .container_gallery'),
+		width = $(window).width(),
+		data = {
+			'data' : 0,
+			'height' : 0,
+		};
+
+	if (width > 1155) {
+		data.data = 300;
+		data.height = '300px';
+	} else if (width > 1100 && width < 1156) {
+		data.data = 285;
+		data.height = '285px';
+	} else if (width > 1010 && width < 1101) {
+		data.data = 275;
+		data.height = '275px';
+	} else if (width > 911 && width < 1011) {
+		data.data = 250;
+		data.height = '250px';
+	} else if (width > 768 && width < 912) {
+		data.data = 235;
+		data.height = '235px';
+	} else if (width > 666 && width < 769) {
+		data.data = 230;
+		data.height = '230px';
+	} else if (width > 560 && width < 667) {
+		data.data = 225;
+		data.height = '225px';
+	} else if (width > 381 && width < 561) {
+		data.data = 190;
+		data.height = '190px';
+	} else {
+		data.data = 175;
+		data.height = '175px';
+	}
+
+	$gallery.attr('data-height', data.data);
+	$gallery.css('height', data.height);
+}
