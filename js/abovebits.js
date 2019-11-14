@@ -108,11 +108,7 @@ var MarkersSwitcher = Object.create(function () {
 	}
 }());
 $(window).on('resize', function(){
-	bindPosition('resize');
-});
-
-$(window).on('orientationchange', function(){
-	bindPosition('orientationchange');
+	calculateHeight();
 });
 
 $(document).ready( function() {
@@ -197,69 +193,6 @@ $(document).ready( function() {
 		backgroundColor: 'none',
 		markers: _markers.offices
 	});
-
-	/*See More button*/
-	/*var i=0;
-	function gallery(){
-		var screenWidth = document.documentElement.clientWidth;
-		var galleryCount = Math.floor(screenWidth/376);
-			if (galleryCount == 0) galleryCount = 1;
-			if (screenWidth == 1024 || screenWidth == 1366) galleryCount = Math.floor(screenWidth/316);
-			if (screenWidth <= 1142) galleryCount = Math.floor(screenWidth/338);
-			if (screenWidth <= 340) galleryCount = Math.floor(screenWidth/320);
-		//console.log("width: "+screenWidth+"px");
-		//console.log("count: "+galleryCount);
-		var displayResources = $('#home_gallery');
-
-		 //displayResources.text('Loading data from JSON source...');
-
-		 var d= new Date();
-		 $.ajax({
-			 type: "GET",
-			 url: "images/abovebits_skills/gallery.json?v="+d.getTime(),
-			 success: function(result)
-			 {	var n=0;
-				//console.log(result);
-				for ( n = 0; n < galleryCount*2; n++){
-					var output='<div class="view">';
-					if (i < result.length){
-						if (result[i].mockup != '')output+='<a class="fullblock_fancybox" href="'+result[i].mockup+'" data-fancybox="gallery_full"></a>';
-						output+='<img class="ios_touch"/>';
-						output+='<div class="view-back">';
-						if (result[i].skill1 != '')output+='<span><img src="'+result[i].skill1+'"/></span>';
-						if (result[i].skill2 != '')output+='<span><img src="'+result[i].skill2+'"/></span>';
-						if (result[i].skill3 != '')output+='<span><img src="'+result[i].skill3+'"/></span>';
-						if (result[i].skill4 != '')output+='<span><img src="'+result[i].skill4+'"/></span>';
-						if (result[i].mockup != '')output+='<a href="'+result[i].mockup+'" data-fancybox="gallery">→</a>';
-						output+='</div>';
-						output+='<div class="slice s1" style="background-image: url('+result[i].img+');"><span class="overlay"></span><div class="slice s2" style="background-image: url('+result[i].img+');"><span class="overlay"></span><div class="slice s3" style="background-image: url('+result[i].img+');"><span class="overlay"></span><div class="slice s4" style="background-image: url('+result[i].img+');"><span class="overlay"></span><div class="slice s5" style="background-image: url('+result[i].img+');"><span class="overlay"></span></div></div></div></div></div>';
-						output += '</div>';
-						i++;
-						displayResources.append(output);
-						if ( i+1 >= result.length) $( ".gallery_more" ).remove();
-					 } else $( ".gallery_more" ).remove();
-				}
-				$(".view").slideDown("slow");
-				if ("ontouchstart" in document.documentElement)
-				{
-					//alert("your device is a touch screen device.");
-					$('#works a.fullblock_fancybox').css({'display':'none'});
-				}
-			 },
-			 error: function(data){
-				 //console.log(data);
-			 }
-		 });
-	}*/
-	//gallery();
-
-	/*$('#seemore').click(function (e) {
-        e.preventDefault();
-        gallery();
-
-    });*/
-
-
 	/*End of see more button*/
 	new WOW({
 		mobile : false
@@ -365,7 +298,7 @@ if (isMobile) {
 //end of userAgent = Mobile
 
 $(window).load( function() {
-	bindPosition('resize');
+	calculateHeight();
 
 	// quick search regex
 	var qsRegex;
@@ -458,66 +391,6 @@ $(window).load( function() {
 	});
 
 });
-
-/* Smooth scroll only for IE */
-/*
-Math.easeOut = function (t, b, c, d) { t /= d; return -c * t*(t-2) + b; };
-
-(function() { // do not mess global space
-    var ua = window.navigator.userAgent;
-    var is_ie = /MSIE|Trident/.test(ua);
-
-    if ( is_ie ) {//IE specific code goes here
-        var
-            interval, // scroll is being eased
-            mult = 0, // how fast do we scroll
-            dir = 0, // 1 = scroll down, -1 = scroll up
-            steps = 50, // how many steps in animation
-            length = 60; // how long to animate
-        function MouseWheelHandler(e) {
-            e.preventDefault(); // prevent default browser scroll
-            clearInterval(interval); // cancel previous animation
-            ++mult; // we are going to scroll faster
-            var delta = -Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
-            if(dir!=delta) { // scroll direction changed
-                mult = 1; // start slowly
-                dir = delta;
-            }
-            for(var tgt=e.target; tgt!=document.documentElement; tgt=tgt.parentNode) {
-                var oldScroll = tgt.scrollTop;
-                tgt.scrollTop+= delta;
-                if(oldScroll!=tgt.scrollTop) break;
-            }
-            var start = tgt.scrollTop;
-            var end = start + length*mult*delta; // where to end the scroll
-            var change = end - start; // base change in one step
-            var step = 0; // current step
-            interval = setInterval(function() {
-                var pos = Math.easeOut(step++,start,change,steps);
-                //window.scrollTo(0,pos);
-                tgt.scrollTop = pos;
-                if(step>=steps) { // scroll finished without speed up - stop by easing out
-                    mult = 0;
-                    clearInterval(interval);
-                }
-            },10);
-        }
-        window.addEventListener("mousewheel", MouseWheelHandler, false);
-        window.addEventListener("DOMMouseScroll", MouseWheelHandler, false);
-    }
-})();
-*/
-
-function bindPosition(state) {
-	switch (state) {
-		case 'resize' :
-			calculateHeight();
-			break;
-		case 'orientationchange' :
-			calculateHeight();
-			break;
-	}
-}
 function updateLayout() {
 	$.each($('body #skills .brands > li'), function () {
 		var style = $(this).attr('style'),
@@ -541,7 +414,7 @@ function isCollapse() {
 		$gallery = $('body #skills .container_gallery');
 
 	if ($stateBtn.attr('data-state') === 'expand') {
-		$gallery.css('height', $gallery.data('height') + 'px');
+		$gallery.css('height', $gallery.attr('data-height') + 'px');
 		$gallery.find('.brands > li[data-hidden="false"]').attr('data-hidden', true);
 	} else if ($stateBtn.attr('data-state') === 'collapse'){
 		$gallery.css('height', '100%');
@@ -552,8 +425,8 @@ function calculateHeight() {
 	var $gallery = $('body #skills .container_gallery'),
 		width = $(window).width(),
 		data = {
-			'data' : 0,
-			'height' : 0,
+			data : 0,
+			height : 0,
 		};
 
 	if (width > 1155) {
@@ -586,5 +459,5 @@ function calculateHeight() {
 	}
 
 	$gallery.attr('data-height', data.data);
-	$gallery.css('height', data.height);
+	$gallery.css('height',  data.height);
 }
