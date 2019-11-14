@@ -306,7 +306,6 @@ $(document).ready( function() {
 	});
 
 	$('.skills_toggle').on('click', 'a', function () {
-		console.log('click')
 		updateCollapse();
 
 		if ($(this).attr('data-state') === 'expand') {
@@ -317,13 +316,7 @@ $(document).ready( function() {
 	});
 });
 
-// $(window).on('resize', function(){
-//     updateGallery();
-//     updateCollapse();
-// 	changePosition();
-// });
 $(window).on('orientationchange', function(){
-	console.log('orientationchange')
     updateGallery();
     updateCollapse();
 	changePosition();
@@ -474,7 +467,7 @@ function updateGallery()
 {
     var $gallery = $('body #skills .container_gallery');
     var $win = $(window);
-	console.log($win.width())
+
     if ($win.width() > 1155) {
         $gallery.attr('data-height', '300');
         $gallery.css('height', '300px');
@@ -487,15 +480,15 @@ function updateGallery()
     } else if ($win.width() > 911 && $win.width() < 1009) {
         $gallery.attr('data-height', '250');
         $gallery.css('height', '250px');
-		console.log('250')
     } else if ($win.width() < 910 && $win.width() >= 768) {
         $gallery.attr('data-height', '235');
         $gallery.css('height', '235px');
-		console.log('235')
-    } else if ($win.width() < 767 && $win.width() >= 560) {
-        $gallery.attr('data-height', '220');
-        $gallery.css('height', '220px');
-		console.log('220')
+    } else if ($win.width() < 767 && $win.width() >= 666) {
+        $gallery.attr('data-height', '230');
+        $gallery.css('height', '230px');
+    }  else if ($win.width() < 665 && $win.width() >= 560) {
+        $gallery.attr('data-height', '225');
+        $gallery.css('height', '225px');
     } else if ($win.width() <= 559 && $win.width() > 381) {
         $gallery.attr('data-height', '190');
         $gallery.css('height', '190px');
