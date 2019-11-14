@@ -107,6 +107,13 @@ var MarkersSwitcher = Object.create(function () {
 		}
 	}
 }());
+$(window).on('resize', function(){
+	skillsExtension.bindPosition('resize');
+});
+
+$(window).on('orientationchange', function(){
+	skillsExtension.bindPosition('orientationchange');
+});
 
 $(document).ready( function() {
 
@@ -305,18 +312,33 @@ $(document).ready( function() {
 		}
 	});
 
-	calculateHeight();
+	/** Header Menu - change background color on scroll **/
+	$(window).scroll(function(){
+		var scroll = $(window).scrollTop();
+		if (scroll > 100) {
+			$("#page-top nav.top_navbar").css({"background":"#eeeff3", "box-shadow":"0 1px 5px rgba(0,0,0,.6)"});
+		}
+		else{
+			$("#page-top nav.top_navbar").css({
+				"background":"transparent",
+				"box-shadow":"none",
+				"-webkit-transition":"background-color 300ms linear",
+				"-ms-transition":"background-color 300ms linear",
+				"transition":"background-color 300ms linear"
+			});
+		}
+	});
+	/** End of Header Menu - change background color on scroll **/
 
 	$('.skills_toggle').on('click', 'a[data-state]', function () {
-		updateCollapse();
 		var states = {
-				'expand' : {
-					'text' : 'SEE MORE',
-					'attr' : 'collapse',
-				},
 				'collapse' : {
-					'text' : 'COLLAPSE',
+					'text' : 'SEE MORE',
 					'attr' : 'expand',
+				},
+				'expand' : {
+					'text' : 'COLLAPSE',
+					'attr' : 'collapse',
 				}
 			}, $btn = $('a[data-state]'),
 			state = $btn.attr('data-state');
@@ -324,10 +346,13 @@ $(document).ready( function() {
 		$btn.attr('data-state', states[state]['attr']);
 		$btn.text(states[state]['text']);
 
-		if (state === 'expand') {
+		skillsExtension.updateLayout();
+		skillsExtension.isCollapse();
+
+		if (state === 'collapse') {
 			$('html, body').animate({
 				scrollTop: $("#skills").offset().top
-			}, 1500);
+			}, 800);
 		}
 	});
 });
@@ -340,6 +365,7 @@ if (isMobile) {
 //end of userAgent = Mobile
 
 $(window).load( function() {
+	skillsExtension.bindPosition('resize');
 
 	// quick search regex
 	var qsRegex;
@@ -412,8 +438,8 @@ $(window).load( function() {
 	});
 
 	$grid.on( 'layoutComplete', function( event, laidOutItems ) {
-		updateCollapse();
-		changePosition();
+		skillsExtension.updateLayout();
+		skillsExtension.isCollapse();
 
 		if (laidOutItems.length > 18) {
 			$('.skills_toggle').show();
@@ -432,114 +458,6 @@ $(window).load( function() {
 	});
 
 });
-
-$(window).on('resize', function(){
-	triggerPosition('resize');
-});
-
-$(window).on('orientationchange', function(){
-	triggerPosition('orientationchange');
-});
-
-var triggerPosition = function (state) {
-	console.log(state);
-	switch (state) {
-		case 'resize' :
-			calculateHeight();
-			break;
-		case 'orientationchange' :
-			calculateHeight();
-			break;
-	}
-};
-
-function changePosition()
-{
-    $.each($('body #skills .brands > li'), function () {
-        var style = $(this).attr('style'),
-            top = style.split('top: '),
-            position = top[1].split('px;'),
-			$stateBtn = $("body a[data-state]"),
-            width = $(window).width();
-
-		$(this).attr('data-hidden', '');
-
-		if ($stateBtn.attr('data-state') === 'collapse') {
-			if (parseInt(position[0]) > 250 && parseInt(position[0]) < 320 && width > 1090) {
-				$(this).attr('data-hidden', true)
-			} else if (parseInt(position[0]) > 190 && parseInt(position[0]) < 340 && width < 1090) {
-				$(this).attr('data-hidden', true)
-			} else if (parseInt(position[0]) > 150 && parseInt(position[0]) < 220 && width < 668) {
-				$(this).attr('data-hidden', true)
-			}
-		}
-    });
-}
-
-function updateCollapse()
-{
-	var $stateBtn = $("body a[data-state]"),
-		gallery = $('body #skills .container_gallery');
-
-	if ($stateBtn.attr('data-state') === 'expand') {
-		gallery.css('height', gallery.data('height') + 'px');
-		gallery.find('.brands > li[data-hidden="false"]').attr('data-hidden', true);
-	} else if ($stateBtn.attr('data-state') === 'collapse'){
-		gallery.css('height', '100%');
-		gallery.find('.brands > li[data-hidden="true"]').attr('data-hidden', false);
-	}
-}
-
-var calculateHeight = function () {
-	var $gallery = $('body #skills .container_gallery'),
-		width = $(window).width(),
-		data = {
-			'data' : 0,
-			'height' : 0,
-		};
-
-	switch (true) {
-		case (width > 1155) :
-			data.data = 300;
-			data.height = '300px';
-			break;
-		case(width > 1101 && width <= 1155) :
-			data.data = 285;
-			data.height = '285px';
-			break;
-		case(width => 1010 && width <= 1100) :
-			data.data = 275;
-			data.height = '275px';
-			break;
-		case(width => 911 && width <= 1009) :
-			data.data = 250;
-			data.height = '250px';
-			break;
-		case(width => 768 && width <= 910) :
-			data.data = 235;
-			data.height = '235px';
-			break;
-		case(width => 666 && width <= 767) :
-			data.data = 230;
-			data.height = '230px';
-			break;
-		case(width => 560 && width <= 665) :
-			data.data = 225;
-			data.height = '225px';
-			break;
-		case(width => 381 && width <= 559) :
-			data.data = 190;
-			data.height = '190px';
-			break;
-		case(width <= 380) :
-			data.data = 175;
-			data.height = '175px';
-			break;
-	}
-
-	$gallery.attr('data-height', data.data);
-	$gallery.css('height', data.height);
-};
 
 /* Smooth scroll only for IE */
 /*
@@ -590,22 +508,95 @@ Math.easeOut = function (t, b, c, d) { t /= d; return -c * t*(t-2) + b; };
 })();
 */
 
-/** Header Menu - change background color on scroll **/
-$(document).ready(function(){
-    $(window).scroll(function(){
-        var scroll = $(window).scrollTop();
-        if (scroll > 100) {
-            $("#page-top nav.top_navbar").css({"background":"#eeeff3", "box-shadow":"0 1px 5px rgba(0,0,0,.6)"});
-        }
-        else{
-            $("#page-top nav.top_navbar").css({
-				"background":"transparent",
-				"box-shadow":"none",
-				"-webkit-transition":"background-color 300ms linear",
-				"-ms-transition":"background-color 300ms linear",
-				"transition":"background-color 300ms linear"
-            });
-        }
-    })
-})
-/** End of Header Menu - change background color on scroll **/
+var skillsExtension = {
+	'bindPosition' : function (state) {
+		switch (state) {
+			case 'resize' :
+				this.calculateHeight();
+				break;
+			case 'orientationchange' :
+				this.calculateHeight();
+				break;
+		}
+	},
+	'updateLayout' : function () {
+		$.each($('body #skills .brands > li'), function () {
+			var style = $(this).attr('style'),
+				top = style.split('top: '),
+				position = top[1].split('px;'),
+				width = $(window).width();
+
+			$(this).attr('data-hidden', '');
+
+			if (parseInt(position[0]) > 250 && parseInt(position[0]) < 320 && width > 1090) {
+				$(this).attr('data-hidden', true)
+			} else if (parseInt(position[0]) > 190 && parseInt(position[0]) < 340 && width < 1090) {
+				$(this).attr('data-hidden', true)
+			} else if (parseInt(position[0]) > 150 && parseInt(position[0]) < 220 && width < 668) {
+				$(this).attr('data-hidden', true)
+			}
+		});
+	},
+	'isCollapse' : function () {
+		var $stateBtn = $("body a[data-state]"),
+			$gallery = $('body #skills .container_gallery');
+
+		if ($stateBtn.attr('data-state') === 'expand') {
+			$gallery.css('height', $gallery.data('height') + 'px');
+			$gallery.find('.brands > li[data-hidden="false"]').attr('data-hidden', true);
+		} else if ($stateBtn.attr('data-state') === 'collapse'){
+			$gallery.css('height', '100%');
+			$gallery.find('.brands > li[data-hidden="true"]').attr('data-hidden', false);
+		}
+	},
+	'calculateHeight' : function () {
+		var $gallery = $('body #skills .container_gallery'),
+			width = $(window).width(),
+			data = {
+				'data' : 0,
+				'height' : 0,
+			};
+
+		switch (true) {
+			case (width > 1155) :
+				data.data = 300;
+				data.height = '300px';
+				break;
+			case(width > 1101 && width <= 1155) :
+				data.data = 285;
+				data.height = '285px';
+				break;
+			case(width => 1010 && width <= 1100) :
+				data.data = 275;
+				data.height = '275px';
+				break;
+			case(width => 911 && width <= 1009) :
+				data.data = 250;
+				data.height = '250px';
+				break;
+			case(width => 768 && width <= 910) :
+				data.data = 235;
+				data.height = '235px';
+				break;
+			case(width => 666 && width <= 767) :
+				data.data = 230;
+				data.height = '230px';
+				break;
+			case(width => 560 && width <= 665) :
+				data.data = 225;
+				data.height = '225px';
+				break;
+			case(width => 381 && width <= 559) :
+				data.data = 190;
+				data.height = '190px';
+				break;
+			case(width <= 380) :
+				data.data = 175;
+				data.height = '175px';
+				break;
+		}
+
+		$gallery.attr('data-height', data.data);
+		$gallery.css('height', data.height);
+	}
+};
