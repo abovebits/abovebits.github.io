@@ -217,7 +217,7 @@ PortfolioPresenter.prototype.initSearchField = function () {
     $('body').append("<div class='search_gallery_list' />");
     var self = this;
     this.searchField.on('keyup', function () {
-        self.showTagsList($(this).val());
+        self.showTagsList($(this).val().toLowerCase());
     });
     $(document).on('click', function (e) {
         //console.log($(e.target).closest('.search_gallery_list').length);
@@ -238,7 +238,7 @@ PortfolioPresenter.prototype.initSearchField = function () {
 
 PortfolioPresenter.prototype.showTagsList = function (val) {
     var _tags = this.model.indexedSkills.filter(function (one) {
-        return one.toLowerCase().indexOf(val) !== -1;
+        return one.toLowerCase().indexOf(val) !== -1 && one.length;
     }),
         _output = '';    
     if (_tags.length) {
