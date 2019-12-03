@@ -259,6 +259,7 @@ $(document).ready( function() {
 		e.preventDefault();
 		$gallerySearch.val('');
 		$(this).hide();
+		_gallery.filterItems("*");
 	});
 
 	/** Header Menu - change background color on scroll **/
