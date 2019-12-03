@@ -245,6 +245,22 @@ $(document).ready( function() {
 		}
 	});
 
+	var $clearBtn = $('.clear-gallery-search'),
+		$gallerySearch = $('#gallery_search');
+
+	$gallerySearch.on('input', function () {
+		$clearBtn.hide();
+		if (this.value.length) {
+			$clearBtn.show();
+		}
+	});
+	
+	$clearBtn.on('click', function (e) {
+		e.preventDefault();
+		$gallerySearch.val('');
+		$(this).hide();
+	});
+
 	/** Header Menu - change background color on scroll **/
 	$(window).scroll(function(){
 		var scroll = $(window).scrollTop();
