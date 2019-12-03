@@ -186,8 +186,14 @@ PortfolioPresenter.prototype.hideMoreButton = function () {
 
 PortfolioPresenter.prototype.filterItems = function (state) {
     var _output = '',
+        _clearBtn = $('.clear-gallery-search'),
         _items = this.model.find(state, this.galleryCount*2, 0);
     
+    _clearBtn.hide();    
+    if (state.length > 1) {
+        _clearBtn.show();
+    }
+
     this.searchedSkill = (state === '*') ? null : state;
 
     if (_items.length) {
@@ -197,6 +203,7 @@ PortfolioPresenter.prototype.filterItems = function (state) {
     }    
     if (_items.length >= this.model.dataCount) this.hideMoreButton();
     this.outputContent = _output;
+    this.clearBlock();
     this.render();
 };
 
@@ -222,7 +229,7 @@ PortfolioPresenter.prototype.initSearchField = function () {
     $(document).on('click', '.search_gallery_list ul li', function () {
         var _v = $(this).attr('data-value');
         self.searchField.val(_v);
-        self.clearBlock();
+        //self.clearBlock();
         self.filterItems(_v.toLowerCase());
         self.hideTagsList();
         self.searchedSkill = _v.toLowerCase();
