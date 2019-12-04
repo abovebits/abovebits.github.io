@@ -189,11 +189,11 @@ body{cursor:auto !important;}
 	-webkit-filter: brightness(120%) drop-shadow(8px 8px 10px gray);/* Safari 6.0 - 9.0 */
 	filter: brightness(120%) drop-shadow(8px 8px 10px gray);
 }
-.upwork-logo{right: 465px;border-radius: 24px;padding: 12px;filter:brightness(100%) drop-shadow(1px 1px 5px gray);-webkit-filter:brightness(100%) drop-shadow(1px 1px 5px gray)}
-.freelancer_badget{right: 345px;}
-.templatemonster_partner {right: 210px}
-.magento_logo.m_specialist{right: 122px;}
-img.magento_logo {height: 17% !important;}
+.upwork-logo{right: 350px;border-radius: 24px;padding: 12px;filter:brightness(100%) drop-shadow(1px 1px 5px gray);-webkit-filter:brightness(100%) drop-shadow(1px 1px 5px gray)}
+.freelancer_badget{right: 263px;}
+.templatemonster_partner {right: 160px}
+.magento_logo.m_specialist{right: 90px;}
+img.magento_logo {height: 10% !important;}
 @media (width: 812px){
 	img.magento_logo{height: 140px !important;}
 	.magento_logo.m_specialist{right: 110px;}
