@@ -216,8 +216,8 @@ PortfolioPresenter.prototype.initSearchField = function () {
     this.model.indexSkills();
     $('body').append("<div class='search_gallery_list' />");
     var self = this;
-    this.searchField.on('keyup', function () {
-        self.showTagsList($(this).val().toLowerCase());
+    this.searchField.on('keyup input', function () {
+        self.showTagsList($(this).val());
     });
     $(document).on('click', function (e) {
         //console.log($(e.target).closest('.search_gallery_list').length);
