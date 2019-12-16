@@ -469,7 +469,7 @@ function calculateHeight() {
 		data.height = '225px';
 	} else if (width > 381 && width < 561) {
 		data.data = 190;
-		data.height = '190px';
+		data.height = '180px';
 	} else {
 		data.data = 175;
 		data.height = '175px';
