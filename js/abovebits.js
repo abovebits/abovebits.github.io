@@ -442,17 +442,17 @@ function calculateHeight() {
 		data.data = 250;
 		data.height = '250px';
 	} else if (width > 768 && width < 912) {
-		data.data = 235;
-		data.height = '235px';
+		data.data = 220;
+		data.height = '220px';
 	} else if (width > 666 && width < 769) {
 		data.data = 230;
 		data.height = '230px';
 	} else if (width > 560 && width < 667) {
-		data.data = 225;
-		data.height = '225px';
+		data.data = 205;
+		data.height = '205px';
 	} else if (width > 381 && width < 561) {
-		data.data = 190;
-		data.height = '190px';
+		data.data = 180;
+		data.height = '180px';
 	} else {
 		data.data = 175;
 		data.height = '175px';
