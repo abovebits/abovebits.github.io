@@ -70,6 +70,22 @@ body{cursor:auto !important;}
     display: inline-block;
     float: right;
 }
+
+@media only screen and (min-width : 4095px) and (max-width : 5120px) {
+	.magento_logo.upwork-logo {
+		right: 1030px;
+	}
+	.magento_logo.freelancer_badget {
+	    right: 750px;
+	}
+	.magento_logo.templatemonster_partner {
+	    right: 430px;
+	}
+	.magento_logo.magento_logo.m_specialist {
+	    right: 230px;
+	}	
+}
+
 @media (min-width: 1560px) {
 	.navbar-brand img{
 		width:430px;
