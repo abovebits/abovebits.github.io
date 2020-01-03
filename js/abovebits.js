@@ -108,7 +108,7 @@ var MarkersSwitcher = Object.create(function () {
 	}
 }());
 $(window).on('resize', function(){
-	calculateHeight();
+	//calculateHeight();
 });
 
 $(document).ready( function() {
@@ -428,7 +428,7 @@ function updateLayout() {
 	});
 }
 function isCollapse() {
-	var $stateBtn = $("body a[data-state]"),
+	var $stateBtn = $("body #skills a[data-state]"),
 		$gallery = $('body #skills .container_gallery');
 
 	if ($stateBtn.attr('data-state') === 'expand') {
