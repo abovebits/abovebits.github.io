@@ -280,7 +280,8 @@ $(document).ready( function() {
 	});
 	/** End of Header Menu - change background color on scroll **/
 
-	$('.skills_toggle').on('click', 'a[data-state]', function () {
+	$(document).on('click', '.skills_toggle a[data-state]', function (e) {
+		e.preventDefault();
 		var states = {
 				'collapse' : {
 					'text' : 'SEE MORE',
@@ -290,7 +291,7 @@ $(document).ready( function() {
 					'text' : 'COLLAPSE',
 					'attr' : 'collapse',
 				}
-			}, $btn = $('a[data-state]'),
+			}, $btn = $(this),
 			state = $btn.attr('data-state');
 
 		$btn.attr('data-state', states[state]['attr']);
