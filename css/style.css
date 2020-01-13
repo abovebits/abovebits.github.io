@@ -1313,3 +1313,26 @@ _:-ms-lang(x), .parallax { background-size: auto 130%; }
 @media (max-width: 600px){
 	#page-top #top-parallax .upwork-logo{right: 150px;bottom: 110px; height: 80px !important;}
 }
+
+.mobile-app {
+	background-color: #F1F1F1;
+	padding: 40px 0px;
+}
+.mobile-app p {
+	font-size: 18px;
+	font-weight: 600;
+	margin-bottom: 5px;
+}
+.content-mobile-app div, .image-mobile-app{
+	margin: 35px 0;
+}
+.title-mobile-app {
+	font-size: 30px;
+	font-weight: 700;
+}
+
+@media (max-width: 767px){
+	.mobile-app {
+		text-align: center;
+	}
+}
