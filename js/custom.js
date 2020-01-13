@@ -11,13 +11,20 @@ $contactForm.submit(function(e) {
 			dataType: 'json',
 			beforeSend: function() {
 				$("#mail-status").html("<p class='success'>Sending message…</p>");
+				$('body, html').animate({ scrollTop: $('#mail-status').offset().top-85 }, 1000);
 			},
 			success: function(data) {
 				$("#mail-status").html("<p class='success'>Message sent!</p>");
+				$('body, html').animate({ scrollTop: $('#mail-status').offset().top-85 }, 1000);
+				$('#contact-form')[0].reset();
 			},
 			error: function(err) {
 				$("#mail-status").html("<p class='Error'>Ops, there was an error.</p>");
+				$('body, html').animate({ scrollTop: $('#mail-status').offset().top-85 }, 1000);
 			}
+
+
+
 		});
 
 	};

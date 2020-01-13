@@ -47,8 +47,7 @@ PortfolioModel.prototype.find = function (skill,limit, offset) {
          _end = parseInt(limit) + parseInt(offset);
     if (skill === '*') {
         _items = this.data;
-    }   
-    else{
+    } else{
         _items = this.data.filter(function (one) {
             return ( (one.skill1.toLowerCase().indexOf(skill) !== -1) || 
             (one.skill2.toLowerCase().indexOf(skill) !== -1) || 
@@ -99,6 +98,10 @@ var PortfolioPresenter = function (options, model) {
     this.searchField = options.searchField ? $(options.searchField) : null;
     this.searchFieldCoords = null;
     this.searchFieldList = null;
+    this.itemsShown = null;
+    this.resizeTimestamp = null;
+    this.resizeInterval = null;
+    this.resizeDone = false;
 
     this.init();
 };
@@ -114,6 +117,11 @@ PortfolioPresenter.prototype.init = function () {
         }.bind(this), 3000);
     }
     if ("ontouchstart" in document.documentElement) $('#works a.fullblock_fancybox').css({'display':'none'});
+
+    window.addEventListener('resize', function () {
+        //console.log('resize');
+        this.resizeHandler();
+    }.bind(this));
     
 };
 
@@ -129,6 +137,44 @@ PortfolioPresenter.prototype.getCount = function () {
 PortfolioPresenter.prototype.render = function () {
     this.block.append(this.outputContent);
     this.block.find(".view").slideDown("slow");
+    this.calcShowItems();
+};
+
+PortfolioPresenter.prototype.calcShowItems = function () {
+    this.itemsShown = this.block.find(".view").length;
+};
+
+PortfolioPresenter.prototype.resizeHandler = function () {
+    if (this.resizeTimestamp === null) {
+        this.resizeTimestamp = (new Date()).getTime();
+        //console.log('action interval');
+        this.resizeInterval = setInterval(() => {
+            var now = (new Date()).getTime();
+            if (this.resizeTimestamp && (now - this.resizeTimestamp)/600 > 1) {
+
+                var views = this.block.find(".view"),
+                    now = views.length,
+                    rows = now/this.galleryCount;
+                    this.getCount();
+                if (now !== this.galleryCount*2) {
+                    this.block.find(".view").remove();
+                    console.log(this.galleryCount*2);
+                    console.log(now);
+                    if (this.galleryCount*2 < now) {
+                        var row = Math.ceil(now/this.galleryCount);
+                        this.showNextItems(0, this.galleryCount*row);
+                    } else {
+                        this.buildDefaultPortfolio();
+                    }
+
+                }    
+                this.resizeTimestamp = null;
+                clearInterval(this.resizeInterval);
+            } else {
+                this.resizeTimestamp = now;
+            }
+        }, 800);
+    }
 };
 
 PortfolioPresenter.prototype.buildDefaultPortfolio = function () {
@@ -162,12 +208,13 @@ PortfolioPresenter.prototype.itemHTML = function (item) {
     }
 };
 
-PortfolioPresenter.prototype.showNextItems = function (offset) {
+PortfolioPresenter.prototype.showNextItems = function (offset, forceLimit) {
     var _output = '',
+        _forceLimit = forceLimit || false,
         _offset = (typeof offset === 'undefined') ? this.block.find(".view").length : offset,
-        _items = (this.searchedSkill === null) ? this.model.take(this.galleryCount*2, _offset)
-            : this.model.find(this.searchedSkill, this.galleryCount*2, _offset);
-        
+        _items = (this.searchedSkill === null) ? this.model.take(_forceLimit ? _forceLimit : this.galleryCount*2, _offset)
+            : this.model.find(this.searchedSkill, _forceLimit ? _forceLimit : this.galleryCount*2, _offset);
+
     if (_items.length) {
         
         for (var i = 0; i < _items.length; i++) {
