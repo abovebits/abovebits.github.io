@@ -447,7 +447,10 @@ function calculateHeight() {
 			height : 0,
 		};
 
-	if (width > 1155) {
+	if (width > 2000) {
+		data.data = 350;
+		data.height = '350px';
+	} else if (width > 1155 && width < 2000){	
 		data.data = 300;
 		data.height = '300px';
 	} else if (width > 1100 && width < 1156) {
