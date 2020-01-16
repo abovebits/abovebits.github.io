@@ -1235,6 +1235,8 @@ footer a {line-height: inherit !important;}
 	z-index: 100;
 	padding: 10px;
 	display: none;
+	max-height: 30%;
+	overflow: auto;
 }
 .search_gallery_list ul {
 	list-style: none;
