@@ -1330,4 +1330,9 @@ _:-ms-lang(x), .parallax { background-size: auto 130%; }
 	font-size: 48px;
 	font-weight: 700;
 }
+@media (max-width: 767px){
+	.text-center-justify {
+		text-align: justify;
+	}
+}
 
