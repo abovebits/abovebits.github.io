@@ -1331,8 +1331,3 @@ _:-ms-lang(x), .parallax { background-size: auto 130%; }
 	font-weight: 700;
 }
 
-@media (max-width: 767px){
-	.mobile-app {
-		text-align: center;
-	}
-}
