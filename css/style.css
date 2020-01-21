@@ -1361,19 +1361,20 @@ _:-ms-lang(x), .parallax { background-size: auto 130%; }
 		text-align: center;
 	}
 }
-
-@media (max-width: 600px){
+@media (max-width: 1024px){
 	.clear-gallery-search-li .clear-a {
-		position: unset;
+		right: 140px;
+		top: 14px;
 	}
 }
-
-@media (max-width: 1024px){
-	/* .clear-gallery-search-li .clear-a {
-		position: unset;
+@media (max-width: 768px){
+	.clear-gallery-search-li .clear-a {
+		right: 120px;
 	}
-	.clear-gallery-search-li {
-		float: none;
-	} */
+}
+@media (max-width: 600px){
+	.clear-gallery-search-li .clear-a {
+		right: 25px;
+	}
 }
 
