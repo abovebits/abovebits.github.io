@@ -1356,11 +1356,6 @@ _:-ms-lang(x), .parallax { background-size: auto 130%; }
 	font-size: 48px;
 	font-weight: 700;
 }
-@media (max-width: 767px){
-	.mobile-app {
-		text-align: center;
-	}
-}
 @media (max-width: 1024px){
 	.clear-gallery-search-li .clear-a {
 		right: 140px;
@@ -1377,4 +1372,5 @@ _:-ms-lang(x), .parallax { background-size: auto 130%; }
 		right: 25px;
 	}
 }
+
 
