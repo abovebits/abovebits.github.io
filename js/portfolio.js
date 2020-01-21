@@ -264,11 +264,7 @@ PortfolioPresenter.prototype.initSearchField = function () {
     $('body').append("<div class='search_gallery_list' />");
     var self = this;
     this.searchField.on('keyup input', function () {
-<<<<<<< HEAD
-        self.showTagsList($(this).val());
-=======
         self.showTagsList($(this).val().toLowerCase());
->>>>>>> upworklogo_newfeatures
     });
     $(document).on('click', function (e) {
         //console.log($(e.target).closest('.search_gallery_list').length);
