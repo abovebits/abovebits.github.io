@@ -1306,3 +1306,11 @@ _:-ms-lang(x), .parallax { background-size: auto 130%; }
 		position: unset;
 	}
 }
+@media (max-width: 1024px){
+	/* .clear-gallery-search-li .clear-a {
+		position: unset;
+	}
+	.clear-gallery-search-li {
+		float: none;
+	} */
+}
