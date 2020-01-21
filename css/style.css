@@ -1329,14 +1329,17 @@ _:-ms-lang(x), .parallax { background-size: auto 130%; }
 #skills .brands .element-item{
 	visibility: visible;
 }
-.search-field .clear-gallery-search{
+
+.clear-gallery-search-li .clear-a {
 	position: absolute;
 	right: -45px;
 	top: 22px;
 	display: none;
 	color: #149dd2!important;
+	cursor: pointer;
 	font: 600 15px/19px -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
+
 .mobile-app {
 	background-color: #F1F1F1;
 	padding: 40px 0px;
@@ -1356,6 +1359,12 @@ _:-ms-lang(x), .parallax { background-size: auto 130%; }
 @media (max-width: 767px){
 	.mobile-app {
 		text-align: center;
+	}
+}
+
+@media (max-width: 600px){
+	.clear-gallery-search-li .clear-a {
+		position: unset;
 	}
 }
 

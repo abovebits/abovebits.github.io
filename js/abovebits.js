@@ -245,7 +245,7 @@ $(document).ready( function() {
 		}
 	});
 
-	var $clearBtn = $('.clear-gallery-search'),
+	var $clearBtn = $('.clear-a'),
 		$gallerySearch = $('#gallery_search');
 
 	$gallerySearch.on('input', function () {

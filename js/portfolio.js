@@ -233,7 +233,7 @@ PortfolioPresenter.prototype.hideMoreButton = function () {
 
 PortfolioPresenter.prototype.filterItems = function (state) {
     var _output = '',
-        _clearBtn = $('.clear-gallery-search'),
+        _clearBtn = $('.clear-a'),
         _items = this.model.find(state, this.galleryCount*2, 0);
     
     _clearBtn.hide();    
@@ -299,7 +299,7 @@ PortfolioPresenter.prototype.showTagsList = function (val) {
         $('.search_gallery_list').html(_output).css({
             'left': this.searchFieldCoords.left,
             'top': this.searchFieldCoords.top + this.searchField.height()+15,
-            'width': this.searchField.width()
+            'width': this.searchField.width()+7
         }).show();
     } else {
         $('.search_gallery_list').hide();
