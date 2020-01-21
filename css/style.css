@@ -1310,11 +1310,11 @@ _:-ms-lang(x), .parallax { background-size: auto 130%; }
 }
 @media (max-width: 768px){
 	.clear-gallery-search-li .clear-a {
-		right: 120px;
+		right: 100px;
 	}
 }
 @media (max-width: 600px){
 	.clear-gallery-search-li .clear-a {
-		right: 25px;
+		right: 0px;
 	}
 }
