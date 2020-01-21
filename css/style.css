@@ -1322,6 +1322,7 @@ _:-ms-lang(x), .parallax { background-size: auto 130%; }
 	font-size: 18px;
 	font-weight: 600;
 	margin-bottom: 5px;
+	color: #8a8a8a;
 }
 .content-mobile-app div, .image-mobile-app{
 	margin: 35px 0;
@@ -1333,6 +1334,9 @@ _:-ms-lang(x), .parallax { background-size: auto 130%; }
 @media (max-width: 767px){
 	.text-center-justify {
 		text-align: justify;
+	}
+	.mobile-app p {
+		font-size: 16px;
 	}
 }
 
