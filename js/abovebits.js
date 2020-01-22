@@ -118,18 +118,11 @@ $(document).ready( function() {
 	var ua = window.navigator.userAgent;
 	var is_ie = /MSIE|Trident/.test(ua);
 
-	console.log(ua);
-
 	var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 	var isiOs = /iPhone|iPad|iPod/i.test(navigator.userAgent);
-	var macintosh = /iPhone|iPad|iPod|Macintosh/i.test(navigator.userAgent);
+	var macintosh = /Macintosh/i.test(navigator.userAgent);
 
-	console.log(macintosh);
-	console.log(isMobile);
-	console.log(isiOs);
-
-	if (!isMobile && !is_ie) {
-		//console.log(is_ie);
+	if (!isMobile && !is_ie && !macintosh) {
 		$('#top-parallax').parallax("10%", 0.3);
 		$('#responsive').parallax("10%", 0.2);
 		$('#contact').parallax("10%", 0.1);
