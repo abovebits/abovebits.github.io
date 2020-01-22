@@ -1261,6 +1261,7 @@ footer a {line-height: inherit !important;}
 	background-color: #9dd69c;
 	background-image: url("../images/bg_contacts_more_gray.png");
 }
+
 .parallax {
 	width: 100%;
 	/*background-attachment: fixed;*/ /* bug for ie, fixed via js*/
