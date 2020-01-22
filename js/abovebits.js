@@ -127,13 +127,13 @@ $(document).ready( function() {
 		$('#responsive').parallax("10%", 0.2);
 		$('#contact').parallax("10%", 0.1);
 		$('.parallax').css({'background-attachment' : 'fixed'});
-	}
-	if(isiOs){
+	} 
+	
+	if (isiOs) {
 		$('#top-parallax').css({'background' : 'url( "../video/Working-Space_crop.jpg"  ) no-repeat top center fixed', 'background-size':'auto 100vmax'});
 		$('#responsive').css({'background' : 'url( "../images/responsive/office-space.jpg") 100%'});
 		$('#contact').css({'background' : 'url("../images/bg_contacts_more.png") #21c967'});
-	}
-	if(macintosh){
+	} else if (macintosh) {
 		$('#top-parallax').css({'background' : 'url( "../video/Working-Space_crop.jpg"  ) no-repeat top center fixed', 'background-size':'auto 120vmax'});
 		$('#responsive').css({'background' : 'url( "../images/responsive/office-space.jpg") 100%'});
 		$('#contact').css({'background' : 'url("../images/bg_contacts_more.png") #21c967'});
@@ -252,6 +252,23 @@ $(document).ready( function() {
 		}
 	});
 
+	var $clearBtn = $('.clear-a'),
+		$gallerySearch = $('#gallery_search');
+
+	$gallerySearch.on('input', function () {
+		$clearBtn.hide();
+		if (this.value.length) {
+			$clearBtn.show();
+		}
+	});
+	
+	$clearBtn.on('click', function (e) {
+		e.preventDefault();
+		$gallerySearch.val('');
+		$(this).hide();
+		_gallery.filterItems("*");
+	});
+
 	/** Header Menu - change background color on scroll **/
 	$(window).scroll(function(){
 		var scroll = $(window).scrollTop();
@@ -270,7 +287,8 @@ $(document).ready( function() {
 	});
 	/** End of Header Menu - change background color on scroll **/
 
-	$('.skills_toggle').on('click', 'a[data-state]', function () {
+	$(document).on('click', '.skills_toggle a[data-state]', function (e) {
+		e.preventDefault();
 		var states = {
 				'collapse' : {
 					'text' : 'SEE MORE',
@@ -280,7 +298,7 @@ $(document).ready( function() {
 					'text' : 'COLLAPSE',
 					'attr' : 'collapse',
 				}
-			}, $btn = $('a[data-state]'),
+			}, $btn = $(this),
 			state = $btn.attr('data-state');
 
 		$btn.attr('data-state', states[state]['attr']);
@@ -417,7 +435,7 @@ function updateLayout() {
 	});
 }
 function isCollapse() {
-	var $stateBtn = $("body a[data-state]"),
+	var $stateBtn = $("body #skills a[data-state]"),
 		$gallery = $('body #skills .container_gallery');
 
 	if ($stateBtn.attr('data-state') === 'expand') {
@@ -436,7 +454,10 @@ function calculateHeight() {
 			height : 0,
 		};
 
-	if (width > 1155) {
+	if (width > 2000) {
+		data.data = 350;
+		data.height = '350px';
+	} else if (width > 1155 && width < 2000){	
 		data.data = 300;
 		data.height = '300px';
 	} else if (width > 1100 && width < 1156) {
@@ -449,17 +470,17 @@ function calculateHeight() {
 		data.data = 250;
 		data.height = '250px';
 	} else if (width > 768 && width < 912) {
-		data.data = 235;
-		data.height = '235px';
+		data.data = 220;
+		data.height = '220px';
 	} else if (width > 666 && width < 769) {
 		data.data = 230;
 		data.height = '230px';
 	} else if (width > 560 && width < 667) {
-		data.data = 225;
-		data.height = '225px';
+		data.data = 205;
+		data.height = '205px';
 	} else if (width > 381 && width < 561) {
-		data.data = 190;
-		data.height = '190px';
+		data.data = 180;
+		data.height = '180px';
 	} else {
 		data.data = 175;
 		data.height = '175px';
