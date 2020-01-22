@@ -797,8 +797,9 @@ input:-moz-placeholder { /* Firefox 18- */
 /*END of 3D Effect*/
 
 
-#live_demo {padding: 50px 0; z-index: 1; position: relative;}
+#live_demo {background-color: #f1f1f1; padding: 50px 0; z-index: 1; position: relative;}
 #live_demo h1 {font-size: 48px;font-weight:700; margin-top: 0; margin-bottom: 50px;}
+#live_demo p {color: #8a8a8a;}
 /* display this row with flex and use wrap (= respect columns' widths) */
 #live_demo .owl-carousel{min-height:457px;}
 #live_demo .owl-carousel .owl-stage-outer{padding-top: 40px;}
@@ -1341,21 +1342,27 @@ _:-ms-lang(x), .parallax { background-size: auto 130%; }
 }
 
 .mobile-app {
-	background-color: #F1F1F1;
 	padding: 40px 0px;
 }
 .mobile-app p {
-	font-size: 18px;
-	font-weight: 600;
 	margin-bottom: 5px;
-	color: #8a8a8a;
 }
-.content-mobile-app div, .image-mobile-app{
+.content-mobile-app div{
+	margin: 0px 0 30px 0;
+}
+.image-mobile-app{
 	margin: 35px 0;
 }
+.content-mobile-app .title-mobile-app {
+	margin: 20px 0px;
+}
 .title-mobile-app {
+	font-size: 40px;
+	font-weight: 500;
+}
+.mobile-app h1 {
 	font-size: 48px;
-	font-weight: 700;
+	font-weight: 700;	
 }
 
 @media (max-width: 1024px){
@@ -1374,7 +1381,6 @@ _:-ms-lang(x), .parallax { background-size: auto 130%; }
 		right: 0px;
 	}
 }
-
 @media (max-width: 767px){
 	.text-center-justify {
 		text-align: justify;
