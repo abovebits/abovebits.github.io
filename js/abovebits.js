@@ -120,8 +120,9 @@ $(document).ready( function() {
 
 	var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 	var isiOs = /iPhone|iPad|iPod/i.test(navigator.userAgent);
-	if (!isMobile && !is_ie) {
-		console.log(is_ie);
+	var macintosh = /Macintosh/i.test(navigator.userAgent);
+
+	if (!isMobile && !is_ie && !macintosh) {
 		$('#top-parallax').parallax("10%", 0.3);
 		$('#responsive').parallax("10%", 0.2);
 		$('#contact').parallax("10%", 0.1);
@@ -132,6 +133,12 @@ $(document).ready( function() {
 		$('#responsive').css({'background' : 'url( "../images/responsive/office-space.jpg") 100%'});
 		$('#contact').css({'background' : 'url("../images/bg_contacts_more.png") #21c967'});
 	}
+	if(macintosh){
+		$('#top-parallax').css({'background' : 'url( "../video/Working-Space_crop.jpg"  ) no-repeat top center fixed', 'background-size':'auto 120vmax'});
+		$('#responsive').css({'background' : 'url( "../images/responsive/office-space.jpg") 100%'});
+		$('#contact').css({'background' : 'url("../images/bg_contacts_more.png") #21c967'});
+	}
+
 	// end of parallax effect based on new_parallax.js
 
 	// executes when complete page is fully loaded, including all frames, objects and images
