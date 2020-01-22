@@ -111,6 +111,16 @@ $(window).on('resize', function(){
 	calculateHeight();
 });
 
+$(document).on('click', '.top_navbar .navbar-toggle.collapsed', function (e) {
+	$('body').css('overflow','hidden');
+	$('.top_navbar').addClass('top-mob-menu');
+});
+
+$(document).on('click', '.top-mob-menu', function (e) {
+	$('body').css('overflow','auto');
+	$('.top_navbar').removeClass('top-mob-menu');
+});
+
 $(document).ready( function() {
 
 	// parallax effect based on new_parallax.js
