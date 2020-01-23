@@ -1379,6 +1379,7 @@ _:-ms-lang(x), .parallax { background-size: auto 130%; }
 	}
 }
 @media (max-width: 600px){
+	#page-top #top-parallax .upwork-logo{right: 150px;bottom: 110px; height: 80px !important;}
 	.clear-gallery-search-li .clear-a {
 		right: 0px;
 	}
