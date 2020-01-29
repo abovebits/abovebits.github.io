@@ -154,6 +154,8 @@ $(document).ready( function() {
 			$('#top-parallax').css({'background' : 'url( "../video/Working-Space_crop.jpg"  ) no-repeat top center fixed', 'background-size':'auto 120vmax'});
 		} else {
 			$('#top-parallax').css({'background' : 'url( "../video/Working-Space_crop.jpg"  ) no-repeat top center fixed', 'background-size':'auto 56vmax'});
+			$('img.magento_logo').css({'height':'8% !important'});
+			
 		}
 		$('#responsive').css({
 			'background' : 'url( "../images/responsive/office-space.jpg")',
