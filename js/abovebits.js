@@ -128,6 +128,8 @@ $(document).ready( function() {
 	var ua = window.navigator.userAgent;
 	var is_ie = /MSIE|Trident/.test(ua);
 
+	console.log(ua);
+
 	var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 	var isiOs = /iPhone|iPad|iPod/i.test(navigator.userAgent);
 	var macintosh = /Macintosh/i.test(navigator.userAgent);
