@@ -216,7 +216,7 @@ img.magento_logo {height: 10% !important;}
 
 @media (max-width: 600px){
 	/*.magento_logo{width:20%; height: auto !important;}*/
-	#page-top #top-parallax .upwork-logo{right: 85px;bottom: 110px; height: 80px !important;}
+	#page-top #top-parallax .upwork-logo{right: 85px !important;bottom: 110px; height: 80px !important;}
 	img.magento_logo.freelancer_badget{right: 90px; bottom: 0px; height: 80px !important;}
 	img.magento_logo.templatemonster_partner{right: 10px; bottom: 110px; height: 80px !important;}
 	img.magento_logo{height: 100px !important;}
