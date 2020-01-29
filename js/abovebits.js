@@ -145,13 +145,18 @@ $(document).ready( function() {
 	if (isiOs) {
 		console.log('isiOs  '+isiOs);
 		$('#top-parallax').css({'background' : 'url( "../video/Working-Space_crop.jpg"  ) no-repeat top center fixed', 'background-size':'auto 100vmax'});
-		$('#responsive').css({'background' : 'url( "../images/responsive/office-space.jpg") 100% center space'});
+		$('#responsive').css({'background' : 'url( "../images/responsive/office-space.jpg") 100%'});
 		$('#contact').css({'background' : 'url("../images/bg_contacts_more.png") #21c967'});
 	} else if (macintosh) {
 		console.log('macintosh  '+macintosh);
 		//$('#top-parallax').css({'background' : 'url( "../video/Working-Space_crop.jpg"  ) no-repeat top center fixed', 'background-size':'auto 120vmax'});
 		$('#top-parallax').css({'background' : 'url( "../video/Working-Space_crop.jpg"  ) no-repeat top center fixed', 'background-size':'auto 56vmax'});
-		$('#responsive').css({'background' : 'url( "../images/responsive/office-space.jpg") 100% center space'});
+		$('#responsive').css({
+			'background' : 'url( "../images/responsive/office-space.jpg")',
+			'background-size' : '100%',
+			'background-position' : 'center',
+			'background-repeat' : 'no-repeat'
+		});
 		$('#contact').css({'background' : 'url("../images/bg_contacts_more.png") #21c967'});
 	}
 
