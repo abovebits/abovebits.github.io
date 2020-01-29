@@ -157,6 +157,7 @@ $(document).ready( function() {
 		}
 		$('#responsive').css({
 			'background' : 'url( "../images/responsive/office-space.jpg")',
+			'background-size' : '100%',
 			'background-position' : 'center',
 			'background-repeat' : 'no-repeat'
 		});
