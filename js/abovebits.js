@@ -108,7 +108,7 @@ var MarkersSwitcher = Object.create(function () {
 	}
 }());
 $(window).on('resize', function(){
-	calculateHeight();
+	//calculateHeight();
 });
 
 $(document).on('click', '.top_navbar .navbar-toggle.collapsed', function (e) {
