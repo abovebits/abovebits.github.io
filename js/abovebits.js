@@ -143,7 +143,7 @@ $(document).ready( function() {
 			$('#top-parallax').css({'background' : 'url( "../video/Working-Space_crop.jpg"  ) no-repeat top center fixed', 'background-size':'auto 120vmax'});
 			//$('img.magento_logo').css({'height':'5% !important'});
 		} else {
-			$('#top-parallax').css({'background' : 'url( "../video/Working-Space_crop.jpg"  ) no-repeat top center fixed', 'background-size':'auto 56vmax'});
+			$('#top-parallax').css({'background' : 'url( "../video/Working-Space_crop.jpg"  ) no-repeat top center fixed', 'background-size':'auto 75vmax'});
 			//$('img.magento_logo').css({'height':'8% !important'});
 		}
 		$('#responsive').css({
