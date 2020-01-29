@@ -216,8 +216,9 @@ img.magento_logo {height: 10% !important;}
 
 @media (max-width: 600px){
 	/*.magento_logo{width:20%; height: auto !important;}*/
-	img.magento_logo.freelancer_badget{right: 12px; bottom: 110px; height: 80px !important;}
-	img.magento_logo.templatemonster_partner{right: 80px; bottom: 110px; height: 80px !important;}
+	#page-top #top-parallax .upwork-logo{right: 85px !important;bottom: 110px; height: 80px !important;}
+	img.magento_logo.freelancer_badget{right: 90px; bottom: 0px; height: 80px !important;}
+	img.magento_logo.templatemonster_partner{right: 10px; bottom: 110px; height: 80px !important;}
 	img.magento_logo{height: 100px !important;}
 	.magento_logo.m_specialist{right: 90px;}
 }
@@ -1339,4 +1340,3 @@ _:-ms-lang(x), .parallax { background-size: auto 130%; }
 		font-size: 16px;
 	}
 }
-
