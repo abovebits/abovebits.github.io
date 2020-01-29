@@ -141,10 +141,9 @@ $(document).ready( function() {
 		var supportsTouch = 'ontouchstart' in window || navigator.msMaxTouchPoints;
 		if (supportsTouch) {
 			$('#top-parallax').css({'background' : 'url( "../video/Working-Space_crop.jpg"  ) no-repeat top center fixed', 'background-size':'auto 120vmax'});
-			//$('img.magento_logo').css({'height':'5% !important'});
 		} else {
 			$('#top-parallax').css({'background' : 'url( "../video/Working-Space_crop.jpg"  ) no-repeat top center fixed', 'background-size':'auto 75vmax'});
-			//$('img.magento_logo').css({'height':'8% !important'});
+			$('.magento_logo').css({'height':'8% !important'});
 		}
 		$('#responsive').css({
 			'background' : 'url( "../images/responsive/office-space.jpg")',
