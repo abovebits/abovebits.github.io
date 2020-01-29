@@ -140,7 +140,7 @@ $(document).ready( function() {
 		console.log('macintosh  '+macintosh);
 		//$('#top-parallax').css({'background' : 'url( "../video/Working-Space_crop.jpg"  ) no-repeat top center fixed', 'background-size':'auto 120vmax'});
 		$('#top-parallax').css({'background' : 'url( "../video/Working-Space_crop.jpg"  ) no-repeat top center fixed', 'background-size':'auto 56vmax'});
-		$('#responsive').css({'background' : 'url( "../images/responsive/office-space.jpg") 100%'});
+		$('#responsive').css({'background' : 'url( "../images/responsive/office-space.jpg") 100% center space'});
 		$('#contact').css({'background' : 'url("../images/bg_contacts_more.png") #21c967'});
 	}
 	// end of parallax effect based on new_parallax.js
