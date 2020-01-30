@@ -459,6 +459,7 @@ input:-moz-placeholder { /* Firefox 18- */
 }
 @media (max-width: 768px) {
 	.embed-responsive-16by9{padding-bottom: 100%;}
+	.nav.navbar-nav.navbar-center.text-uppercase {margin-right: 10px;}
 }
 @media (max-width: 767px) {
 	#skills .navbar{padding:0; height: 50px;}
