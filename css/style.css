@@ -1409,7 +1409,6 @@ _:-ms-lang(x), .parallax { background-size: auto 130%; }
 .fixed-header .logo-top-scrol {
 	display: block;
 }
-
 .fixed-header .logo-top {
 	display: none;
 }
@@ -1435,5 +1434,31 @@ _:-ms-lang(x), .parallax { background-size: auto 130%; }
 	.logo-top {
 		display: none;
 	}	
+}
+@media (max-width: 767px) {
+	.fixed-header .logo-top-scrol {
+		display: inline;
+	}
+	.fixed-header .logo-top-scrol img {
+		width: 45%;
+	}	
+	.fixed-header .logo-top {
+		display: none;
+	}
+	.logo-top-scrol {
+		display: none;
+	}
+	.logo-top {
+		display: inline;
+	}
+	.logo-top img {
+		width: 70%;
+		margin-top: -8px;
+	}
+}
+@media (max-width: 320px) {
+	.logo-top img {
+		margin-top: 0px;
+	}
 }
 
