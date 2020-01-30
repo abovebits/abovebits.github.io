@@ -245,6 +245,23 @@ $(document).ready( function() {
 		}
 	});
 
+	var $clearBtn = $('.clear-a'),
+		$gallerySearch = $('#gallery_search');
+
+	$gallerySearch.on('input', function () {
+		$clearBtn.hide();
+		if (this.value.length) {
+			$clearBtn.show();
+		}
+	});
+	
+	$clearBtn.on('click', function (e) {
+		e.preventDefault();
+		$gallerySearch.val('');
+		$(this).hide();
+		_gallery.filterItems("*");
+	});
+
 	/** Header Menu - change background color on scroll **/
 	$(window).scroll(function(){
 		var scroll = $(window).scrollTop();
@@ -430,7 +447,10 @@ function calculateHeight() {
 			height : 0,
 		};
 
-	if (width > 1155) {
+	if (width > 2000) {
+		data.data = 350;
+		data.height = '350px';
+	} else if (width > 1155 && width < 2000){	
 		data.data = 300;
 		data.height = '300px';
 	} else if (width > 1100 && width < 1156) {

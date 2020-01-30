@@ -233,8 +233,14 @@ PortfolioPresenter.prototype.hideMoreButton = function () {
 
 PortfolioPresenter.prototype.filterItems = function (state) {
     var _output = '',
+        _clearBtn = $('.clear-a'),
         _items = this.model.find(state, this.galleryCount*2, 0);
     
+    _clearBtn.hide();    
+    if (state.length > 1) {
+        _clearBtn.show();
+    }
+
     this.searchedSkill = (state === '*') ? null : state;
 
     if (_items.length) {
@@ -244,6 +250,7 @@ PortfolioPresenter.prototype.filterItems = function (state) {
     }    
     if (_items.length >= this.model.dataCount) this.hideMoreButton();
     this.outputContent = _output;
+    this.clearBlock();
     this.render();
 };
 
@@ -256,8 +263,8 @@ PortfolioPresenter.prototype.initSearchField = function () {
     this.model.indexSkills();
     $('body').append("<div class='search_gallery_list' />");
     var self = this;
-    this.searchField.on('keyup', function () {
-        self.showTagsList($(this).val());
+    this.searchField.on('keyup input', function () {
+        self.showTagsList($(this).val().toLowerCase());
     });
     $(document).on('click', function (e) {
         //console.log($(e.target).closest('.search_gallery_list').length);
@@ -269,7 +276,7 @@ PortfolioPresenter.prototype.initSearchField = function () {
     $(document).on('click', '.search_gallery_list ul li', function () {
         var _v = $(this).attr('data-value');
         self.searchField.val(_v);
-        self.clearBlock();
+        //self.clearBlock();
         self.filterItems(_v.toLowerCase());
         self.hideTagsList();
         self.searchedSkill = _v.toLowerCase();
@@ -278,7 +285,7 @@ PortfolioPresenter.prototype.initSearchField = function () {
 
 PortfolioPresenter.prototype.showTagsList = function (val) {
     var _tags = this.model.indexedSkills.filter(function (one) {
-        return one.toLowerCase().indexOf(val) !== -1;
+        return one.toLowerCase().indexOf(val) !== -1 && one.length;
     }),
         _output = '';    
     if (_tags.length) {
@@ -292,7 +299,7 @@ PortfolioPresenter.prototype.showTagsList = function (val) {
         $('.search_gallery_list').html(_output).css({
             'left': this.searchFieldCoords.left,
             'top': this.searchFieldCoords.top + this.searchField.height()+15,
-            'width': this.searchField.width()
+            'width': this.searchField.width()+7
         }).show();
     } else {
         $('.search_gallery_list').hide();
