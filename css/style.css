@@ -1462,3 +1462,11 @@ _:-ms-lang(x), .parallax { background-size: auto 130%; }
 	}
 }
 
+@media (max-width: 1024px){
+	.mobile-app h1 {
+		font-size: 35px;	
+	}	
+	.title-mobile-app {
+		font-size: 35px;
+	}	
+}
