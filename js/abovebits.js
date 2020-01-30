@@ -118,32 +118,34 @@ $(document).ready( function() {
 	var ua = window.navigator.userAgent;
 	var is_ie = /MSIE|Trident/.test(ua);
 
-	console.log(ua);
+	//console.log(ua);
 
 	var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 	var isiOs = /iPhone|iPad|iPod/i.test(navigator.userAgent);
 	var macintosh = /Macintosh/i.test(navigator.userAgent);
 
 	if (!isMobile && !is_ie) {
-		console.log('is_ie  '+is_ie);
+		//console.log('is_ie  '+is_ie);
 		$('#top-parallax').parallax("10%", 0.3);
 		$('#responsive').parallax("10%", 0.2);
 		$('#contact').parallax("10%", 0.1);
 		$('.parallax').css({'background-attachment' : 'fixed'});
 	}
 	if (isiOs) {
-		console.log('isiOs  '+isiOs);
+		//console.log('isiOs  '+isiOs);
 		$('#top-parallax').css({'background' : 'url( "../video/Working-Space_crop.jpg"  ) no-repeat top center fixed', 'background-size':'auto 100vmax'});
 		$('#responsive').css({'background' : 'url( "../images/responsive/office-space.jpg") 100%'});
 		$('#contact').css({'background' : 'url("../images/bg_contacts_more.png") #21c967'});
 	} else if (macintosh) {
-		console.log('macintosh  '+macintosh);
+		//console.log('macintosh  '+macintosh);
 		var supportsTouch = 'ontouchstart' in window || navigator.msMaxTouchPoints;
 		if (supportsTouch) {
 			$('#top-parallax').css({'background' : 'url( "../video/Working-Space_crop.jpg"  ) no-repeat top center fixed', 'background-size':'auto 120vmax'});
+			$('#top-parallax img.magento_logo').css({'height':'30% !important'});
+			//console.log($('#top-parallax .magento_logo'));
 		} else {
 			$('#top-parallax').css({'background' : 'url( "../video/Working-Space_crop.jpg"  ) no-repeat top center fixed', 'background-size':'auto 75vmax'});
-			$('.magento_logo').css({'height':'8% !important'});
+			$('#top-parallax img.magento_logo').css({'height':'8% !important'});
 		}
 		$('#responsive').css({
 			'background' : 'url( "../images/responsive/office-space.jpg")',
