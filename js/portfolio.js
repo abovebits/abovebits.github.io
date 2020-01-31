@@ -148,7 +148,7 @@ PortfolioPresenter.prototype.resizeHandler = function () {
     if (this.resizeTimestamp === null) {
         this.resizeTimestamp = (new Date()).getTime();
         //console.log('action interval');
-        this.resizeInterval = setInterval(() => {
+        this.resizeInterval = setInterval( function() {
             var now = (new Date()).getTime();
             if (this.resizeTimestamp && (now - this.resizeTimestamp)/600 > 1) {
 
@@ -173,7 +173,7 @@ PortfolioPresenter.prototype.resizeHandler = function () {
             } else {
                 this.resizeTimestamp = now;
             }
-        }, 800);
+        }.bind(this), 800);
     }
 };
 
