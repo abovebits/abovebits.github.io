@@ -210,7 +210,13 @@ body{cursor:auto !important;}
 .freelancer_badget{right: 185px;}
 .templatemonster_partner {right: 85px}
 .magento_logo.m_specialist{right: 90px;}
+
 img.magento_logo {height: 10% !important;}
+
+img.magento_logo.huge-desktop-height {
+	height: 8% !important;
+}
+
 @media (width: 812px){
 	img.magento_logo{height: 140px !important;}
 	.magento_logo.m_specialist{right: 110px;}
