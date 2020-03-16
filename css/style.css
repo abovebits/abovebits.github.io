@@ -1365,9 +1365,6 @@ _:-ms-lang(x), .parallax { background-size: auto 130%; }
 	margin-bottom: 5px;
 	color: #8a8a8a;
 }
-.content-mobile-app div, .image-mobile-app{
-	margin: 35px 0;
-}
 .title-mobile-app {
 	font-size: 48px;
 	font-weight: 700;
