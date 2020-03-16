@@ -1329,9 +1329,9 @@ _:-ms-lang(x), .parallax { background-size: auto 130%; }
 
 .image-mobile-app .phone-img-2{ position: absolute; top: 0; right: 0; }
 
-.image-mobile-app .phone-img-b-1{ position: absolute; right: 220px; bottom: -112px;}
+.image-mobile-app .phone-img-b-1{ position: absolute; right: 400px; bottom: -112px;}
 
-.image-mobile-app .phone-img-b-2{ position: absolute; top: 0; right: 0;	}
+.image-mobile-app .phone-img-b-2{ position: absolute; top: -52px; right: 0;	}
 
 .content-mobile-app .title-mobile-app { margin: 20px 0px; }
 
@@ -1406,7 +1406,7 @@ _:-ms-lang(x), .parallax { background-size: auto 130%; }
 
 @media (max-width: 1366px)
 {
-	.image-mobile-app .phone-img-b-1 { right: 130px; bottom: 0px;}
+	.image-mobile-app .phone-img-b-1 { right: 130px; bottom: 0px; top: 188px;}
 	.content-mobile-app { margin: 140px 0px 115px 125px; }
 	.ipad-cl { display: block; }
 	.iphone-cl, .desctop-cl { display: none; }
@@ -1448,7 +1448,7 @@ _:-ms-lang(x), .parallax { background-size: auto 130%; }
 {
 	.image-mobile-app .phone-img-1 { right: 39px; top: 259px; }
 	.image-mobile-app .phone-img-2 { top: 259px; }
-	.image-mobile-app .phone-img-b-1 { right: 147px; bottom: -31px; }
+	.image-mobile-app .phone-img-b-1 { right: 184px; bottom: -33px; top: auto;}
 	.image-mobile-app .phone-img-b-2 { top: 271px; }
 	.block-content-app { width: auto; padding-right: 15px; padding-left: 15px; }
 }
@@ -1457,7 +1457,7 @@ _:-ms-lang(x), .parallax { background-size: auto 130%; }
 {
 	.image-mobile-app .phone-img-1 { right: 36px; top: 259px; }
 	.image-mobile-app .phone-img-2 { top: 259px; }
-	.image-mobile-app .phone-img-b-1 { right: 144px; bottom: -32px;}
+	.image-mobile-app .phone-img-b-1 { right: 181px; bottom: -32px; top: auto;}
 	.image-mobile-app .phone-img-b-2 { top: 271px; }
 }
 
@@ -1465,7 +1465,7 @@ _:-ms-lang(x), .parallax { background-size: auto 130%; }
 {
 	.image-mobile-app .phone-img-1 { right: 0px; top:290px; }
 	.image-mobile-app .phone-img-2 { top: 290px; }
-	.image-mobile-app .phone-img-b-1 { right: 108px; bottom: -63px;}
+	.image-mobile-app .phone-img-b-1 { right: 145px; bottom: -63px;}
 	.image-mobile-app .phone-img-b-2 { top: 302px; }
 }
 
@@ -1473,7 +1473,7 @@ _:-ms-lang(x), .parallax { background-size: auto 130%; }
 {
 	.image-mobile-app .phone-img-1 { right: -15px; top:290px; }
 	.image-mobile-app .phone-img-2 { top: 290px; }
-	.image-mobile-app .phone-img-b-1 { right: 93px; bottom: -64px; }
+	.image-mobile-app .phone-img-b-1 { right: 129px; bottom: -64px; top: auto;}
 	.image-mobile-app .phone-img-b-2 { top: 302px; }
 
 }
@@ -1483,7 +1483,7 @@ _:-ms-lang(x), .parallax { background-size: auto 130%; }
 	.content-mobile-app { margin: 30px 15px 328px 15px; }
 	.image-mobile-app .phone-img-1 { right: -55px; top: 335px; }
 	.image-mobile-app .phone-img-2 { top: 324px; right: -34px; }
-	.image-mobile-app .phone-img-b-1 { right: 53px; }
+	.image-mobile-app .phone-img-b-1 { right: 89px; }
 	.image-mobile-app .phone-img-b-2 { top: 348px; right: -35px; }
 
 	.image-mobile-app .phone-img-1 img { width: 90% !important; }
@@ -1511,8 +1511,8 @@ _:-ms-lang(x), .parallax { background-size: auto 130%; }
 
 	.image-mobile-app .phone-img-b-2 { top: 0px; width: 73%; right: -93px; }
 	.image-mobile-app .phone-img-b-2 img { width: 80% !important; }
-	.image-mobile-app .phone-img-b-1 { top: 104px; width: 100%; right: -295px; left: auto; }
-	.image-mobile-app .phone-img-b-1 img { width: 62% !important;}
+	.image-mobile-app .phone-img-b-1 { top: 173px; width: 100%; right: -275px; left: auto; }
+	.image-mobile-app .phone-img-b-1 img { width: 49% !important;}
 
 	#mobile-app-block .owl-carousel .owl-nav .owl-prev { margin-top: -365px; }
 	#mobile-app-block .owl-carousel .owl-nav .owl-next { margin-top: -365px; }
@@ -1524,7 +1524,7 @@ _:-ms-lang(x), .parallax { background-size: auto 130%; }
 
 
 	.image-mobile-app .phone-img-b-2 { top: 0px; width: 69%; right: -120px;}
-	.image-mobile-app .phone-img-b-1 { top: 104px; width: 75%; right: -167px; left: auto; }
+	.image-mobile-app .phone-img-b-1 { top: 152px; width: 75%; right: -167px; left: auto; }
 
 	#mobile-app-block .owl-carousel .owl-nav .owl-prev { margin-top: -330px; }
 	#mobile-app-block .owl-carousel .owl-nav .owl-next { margin-top: -330px; }
@@ -1536,7 +1536,7 @@ _:-ms-lang(x), .parallax { background-size: auto 130%; }
 	#mobile-app-block .owl-carousel .owl-nav .owl-next { margin-top: -330px; }
 
 	.image-mobile-app .phone-img-b-2 { top: 0px; width: 67%; right: -111px; }
-	.image-mobile-app .phone-img-b-1 { top: 113px; width: 73%; right: -143px; left: auto; }
+	.image-mobile-app .phone-img-b-1 { top: 172px; width: 73%; right: -143px; left: auto; }
 
 }
 
@@ -1546,13 +1546,13 @@ _:-ms-lang(x), .parallax { background-size: auto 130%; }
 	.image-mobile-app .phone-img-b-2 { top: 0px; width: 71%; right: -106px; }
 	#mobile-app-block .owl-carousel .owl-nav .owl-prev { margin-top: -330px; }
 	#mobile-app-block .owl-carousel .owl-nav .owl-next { margin-top: -330px; }
-	.image-mobile-app .phone-img-b-1 { top: 118px; width: 75%; right: -140px; left: auto; }
+	.image-mobile-app .phone-img-b-1 { top: 178px; width: 75%; right: -140px; left: auto; }
 }
 @media (min-width: 667px) and (max-width: 667px)
 {
 	.image-mobile-app .phone-img-2 { top: 0px;width: 60%;right: -80px; }
 	.image-mobile-app .phone-img-b-2 { top: 0px; width: 70%; right: -93px; }
-	.image-mobile-app .phone-img-b-1 { top: 133px; width: 87%; right: -203px; left: auto; }
+	.image-mobile-app .phone-img-b-1 { top: 197px; width: 87%; right: -203px; left: auto; }
 }
 
 @media (min-width: 568px) and (max-width: 568px)
@@ -1574,8 +1574,8 @@ _:-ms-lang(x), .parallax { background-size: auto 130%; }
 
 	.image-mobile-app .phone-img-b-2 { top: 0px; width: 70%; right: -77px;}
 	.image-mobile-app .phone-img-b-2 img { width: 80% !important; }
-	.image-mobile-app .phone-img-b-1 {top: 163px; width: 80%; right: -145px; left: auto;}
-	.image-mobile-app .phone-img-b-1 img { width: 80% !important;}
+	.image-mobile-app .phone-img-b-1 {top: 200px; width: 80%; right: -145px; left: auto;}
+	.image-mobile-app .phone-img-b-1 img { width: 70% !important;}
 
 	#mobile-app-block .owl-carousel .owl-nav .owl-prev { margin-top: -396px; }
 	#mobile-app-block .owl-carousel .owl-nav .owl-next { margin-top: -396px; }
