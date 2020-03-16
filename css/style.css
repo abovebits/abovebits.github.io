@@ -72,9 +72,9 @@ body{cursor:auto !important;}
     float: right;
 }
 @media (min-width: 1560px) {
-	.navbar-brand img{
+	/* .navbar-brand img{
 		width:430px;
-	}
+	} */
 	.navbar {
 		height:105px;
 	}
@@ -84,10 +84,8 @@ body{cursor:auto !important;}
 	.navbar .navbar-nav {
 		margin-top: 10px;
 	}
-	.fixed-header .navbar-brand img{
-		width:100%;
-	}
 }
+
 .navbar .navbar-collapse {
     text-align: center;
 	position: relative;
@@ -459,7 +457,6 @@ input:-moz-placeholder { /* Firefox 18- */
 }
 @media (max-width: 768px) {
 	.embed-responsive-16by9{padding-bottom: 100%;}
-	.nav.navbar-nav.navbar-center.text-uppercase {margin-right: 10px;}
 }
 @media (max-width: 767px) {
 	#skills .navbar{padding:0; height: 50px;}
@@ -997,6 +994,14 @@ footer a {line-height: inherit !important;}
 		font-size:57px;
 	}
 }
+
+@media (max-width: 1550px) {
+	.navbar-nav li a{
+		padding-left: 15px;
+		font-size: 18px;
+	}
+}
+
 @media (max-width: 1500px) {
 	.carousel-caption h1{
 		font-size:55px;
@@ -1010,7 +1015,7 @@ footer a {line-height: inherit !important;}
 
 @media (max-width: 1420px) {
 	.navbar-nav li a{
-		padding-left: 20px;
+		padding-left: 19px;
 	}
 }
 
@@ -1038,7 +1043,7 @@ footer a {line-height: inherit !important;}
 		line-height: 16px;
 		padding-left: 15px;
 		padding-right: 15px;
-		font-size: 19px;
+		font-size: 14px;
 	}
 	.navbar-right li a{
 		padding-left: 5px;
@@ -1055,6 +1060,7 @@ footer a {line-height: inherit !important;}
 	.navbar-nav li a {
 		padding-left: 10px;
 		padding-right: 10px;
+		font-size: 16px;
 	}
 }
 
@@ -1084,6 +1090,13 @@ footer a {line-height: inherit !important;}
 	#myCarousel	.carousel-caption {top: 15%;}
 	#myCarousel	.carousel-caption h1{
 		font-size: 28px !important;
+	}
+}
+@media (max-width: 890px) {
+	.navbar-nav li a {
+		font-size: 10px;
+		padding-left: 5px;
+		padding-right: 5px;
 	}
 }
 @media (max-width: 768px) {
@@ -1237,9 +1250,6 @@ footer a {line-height: inherit !important;}
 	z-index: 100;
 	padding: 10px;
 	display: none;
-	max-height: 30%;
-	overflow: auto;
-	border: 1px solid black;
 }
 .search_gallery_list ul {
 	list-style: none;
@@ -1249,7 +1259,6 @@ footer a {line-height: inherit !important;}
 .search_gallery_list ul li{
 	cursor: pointer;
 }
-
 /**Header progress bar**/
 .KW_progressContainer {
 	left:0;
@@ -1319,6 +1328,7 @@ _:-ms-lang(x), .parallax { background-size: auto 130%; }
 @media (max-width: 600px){
 	#page-top #top-parallax .upwork-logo{right: 150px;bottom: 110px; height: 80px !important;}
 }
+
 .mobile-app {
 	background-color: #F1F1F1;
 	padding: 40px 0px;
@@ -1344,30 +1354,60 @@ _:-ms-lang(x), .parallax { background-size: auto 130%; }
 		font-size: 16px;
 	}
 }
-.clear-gallery-search-li .clear-a {
-	position: absolute;
-	right: -45px;
-	top: 22px;
+
+.fixed-header .logo-top-scrol {
+	display: block;
+}
+.fixed-header .logo-top {
 	display: none;
-	color: #149dd2!important;
-	cursor: pointer;
-	font: 600 15px/19px -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+.logo-top-scrol {
+	display: none;
+}
+.logo-top {
+	display: block;
 }
 
-@media (max-width: 1024px){
-	.clear-gallery-search-li .clear-a {
-		right: 140px;
-		top: 14px;
+@media (max-width: 768px) {
+	.navbar-nav li a {
+		font-size: 13px;
+	}
+	.fixed-header .logo-top {
+		display: none;
+	}
+	.fixed-header .logo-top-scrol {
+		display: block;
+	}
+	.logo-top-scrol {
+		display: block;
+	}
+	.logo-top {
+		display: none;
+	}	
+}
+@media (max-width: 767px) {
+	.fixed-header .logo-top-scrol {
+		display: inline;
+	}
+	.fixed-header .logo-top-scrol img {
+		width: 45%;
+	}	
+	.fixed-header .logo-top {
+		display: none;
+	}
+	.logo-top-scrol {
+		display: none;
+	}
+	.logo-top {
+		display: inline;
+	}
+	.logo-top img {
+		width: 70%;
+		margin-top: -8px;
 	}
 }
-@media (max-width: 768px){
-	.clear-gallery-search-li .clear-a {
-		right: 100px;
+@media (max-width: 320px) {
+	.logo-top img {
+		margin-top: 0px;
 	}
 }
-@media (max-width: 600px){
-	.clear-gallery-search-li .clear-a {
-		right: 0px;
-	}
-}
-
