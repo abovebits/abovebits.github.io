@@ -476,7 +476,6 @@ input:-moz-placeholder { /* Firefox 18- */
 }
 @media (max-width: 768px) {
 	.embed-responsive-16by9{padding-bottom: 100%;}
-	.nav.navbar-nav.navbar-center.text-uppercase {margin-right: 10px;}
 }
 @media (max-width: 767px) {
 	#skills .navbar{padding:0; height: 50px;}
@@ -1271,9 +1270,6 @@ footer a {line-height: inherit !important;}
 	z-index: 100;
 	padding: 10px;
 	display: none;
-	max-height: 30%;
-	overflow: auto;
-	border: 1px solid black;
 }
 .search_gallery_list ul {
 	list-style: none;
@@ -1283,7 +1279,6 @@ footer a {line-height: inherit !important;}
 .search_gallery_list ul li{
 	cursor: pointer;
 }
-
 /**Header progress bar**/
 .KW_progressContainer {
 	left:0;
@@ -1355,10 +1350,7 @@ _:-ms-lang(x), .parallax { background-size: auto 130%; }
 @media (max-width: 600px){
 	#page-top #top-parallax .upwork-logo{right: 150px;bottom: 110px; height: 80px !important;}
 }
-/*.mobile-app {
-	background-color: #F1F1F1;
-	padding: 40px 0px;
-}*/
+
 .mobile-app p {
 	font-size: 18px;
 	font-weight: 600;
@@ -1495,6 +1487,7 @@ _:-ms-lang(x), .parallax { background-size: auto 130%; }
 	right: 0; 
 	bottom: 0; 
 }
+
 .fixed-header .logo-top-scrol {
 	display: block;
 }
@@ -1736,4 +1729,31 @@ _:-ms-lang(x), .parallax { background-size: auto 130%; }
 	#mobile-app-block .owl-prev, #mobile-app-block .owl-next { padding: 15px; }
 }
 /*** end inverted ***/
+
+.clear-gallery-search-li .clear-a {
+	position: absolute;
+	right: -45px;
+	top: 22px;
+	display: none;
+	color: #149dd2!important;
+	cursor: pointer;
+	font: 600 15px/19px -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+@media (max-width: 1024px){
+	.clear-gallery-search-li .clear-a {
+		right: 140px;
+		top: 14px;
+	}
+}
+@media (max-width: 768px){
+	.clear-gallery-search-li .clear-a {
+		right: 100px;
+	}
+}
+@media (max-width: 600px){
+	#page-top #top-parallax .upwork-logo{right: 150px;bottom: 110px; height: 80px !important;}
+	.clear-gallery-search-li .clear-a {
+		right: 0px;
+	}
+}
 
