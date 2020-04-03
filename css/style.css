@@ -1437,3 +1437,13 @@ _:-ms-lang(x), .parallax { background-size: auto 130%; }
 		right: 0px;
 	}
 }
+@media (max-width: 414px){
+	.clear-gallery-search-li .clear-a {
+    	right: 30px;
+	}
+}
+@media (max-width: 375px){
+	.clear-gallery-search-li .clear-a {
+    	right: 20px;
+	}
+}
