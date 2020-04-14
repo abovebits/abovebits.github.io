@@ -2069,5 +2069,14 @@ footer a {line-height: inherit !important;}
 		right: 0px;
 	}
 }
-
+@media (max-width: 414px){
+	.clear-gallery-search-li .clear-a {
+    	right: 20px;
+	}
+}
+@media (max-width: 375px){
+	.clear-gallery-search-li .clear-a {
+    	right: 20px;
+	}
+}
 
