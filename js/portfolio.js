@@ -158,8 +158,6 @@ PortfolioPresenter.prototype.resizeHandler = function () {
                     this.getCount();
                 if (now !== this.galleryCount*2) {
                     this.block.find(".view").remove();
-                    console.log(this.galleryCount*2);
-                    console.log(now);
                     if (this.galleryCount*2 < now) {
                         var row = Math.ceil(now/this.galleryCount);
                         this.showNextItems(0, this.galleryCount*row);
