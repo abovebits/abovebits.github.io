@@ -133,10 +133,12 @@ $(document).ready( function() {
 
 	var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 	var isiOs = /iPhone|iPad|iPod/i.test(navigator.userAgent);
+
 	var macintosh = /Macintosh/i.test(navigator.userAgent);
 
 	if (!isMobile && !is_ie && !macintosh) {
-		console.log('is_ie  '+is_ie);
+		//console.log('is_ie  '+is_ie);
+
 		$('#top-parallax').parallax("10%", 0.3);
 		$('#responsive').parallax("10%", 0.2);
 		$('#contact').parallax("10%", 0.1);
