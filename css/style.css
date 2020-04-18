@@ -1317,9 +1317,9 @@ _:-ms-lang(x), .parallax { background-size: auto 130%; }
 
 .mobile-app p { font-weight: normal; font-size: 18px; line-height: 32px; color: #808691;}
 
-.content-mobile-app { margin: 190px 0px 165px 190px; }
+.content-mobile-app { margin: 87px 0px 165px 190px; }
 
-.content-mobile-app div{ margin: 0px 0 30px 0; }
+.content-mobile-app div{ margin: 0px 0 15px 0; }
 
 /*.content-mobile-app.block-content-app { margin: 190px 0px 165px 15px; }*/
 
@@ -1331,7 +1331,11 @@ _:-ms-lang(x), .parallax { background-size: auto 130%; }
 
 .image-mobile-app .phone-img-b-1{ position: absolute; right: 400px; bottom: -112px;}
 
-.image-mobile-app .phone-img-b-2{ position: absolute; top: -52px; right: 0;	}
+.image-mobile-app .phone-img-b-2{ position: absolute; top: 0px; right: 0;	}
+
+.image-mobile-app .phone-img-c-1{ position: absolute; top: auto; right: 60px; bottom: 0px;	}
+
+.image-mobile-app .phone-img-c-2{ position: absolute; top: 0; right: 45px; }
 
 .content-mobile-app .title-mobile-app { margin: 20px 0px; }
 
@@ -1340,6 +1344,10 @@ _:-ms-lang(x), .parallax { background-size: auto 130%; }
 .mobile-app h1 { font-size: 48px; font-weight: 700;	}
 
 .mobile-app img{ width: auto !important; }
+
+.button-mobile-app { display: flex; }
+
+.button-mobile-app a { margin-right: 10px; }
 
 .button-mobile-app img{ width: 166.67px; height: 50px;}
 
@@ -1404,12 +1412,23 @@ _:-ms-lang(x), .parallax { background-size: auto 130%; }
 
 .block-content-app { width: 30%; }
 
+@media (max-width: 1850px)
+{
+	.content-mobile-app { margin: 87px 0px 137px 190px; }
+}
+
+
 @media (max-width: 1700px)
 {
+	.content-mobile-app { margin: 87px 0px 116px 190px;}
 	.image-mobile-app .phone-img-1 img {width: 90% !important;}
 	.image-mobile-app .phone-img-1 { right: -178px; top: 49px; }
 	.image-mobile-app .phone-img-2 img {width: 90% !important;}
 	.image-mobile-app .phone-img-2 {right: -88px;}
+	.image-mobile-app .phone-img-c-1 img {width: 90% !important;}
+	.image-mobile-app .phone-img-c-1 { right: -178px; top: 145px; }
+	.image-mobile-app .phone-img-c-2 img {width: 90% !important;}
+	.image-mobile-app .phone-img-c-2 {right: -88px;}
 }
 @media (max-width: 1687px)
 {
@@ -1428,57 +1447,79 @@ _:-ms-lang(x), .parallax { background-size: auto 130%; }
 {
 	.image-mobile-app .phone-img-1 img { width: 85% !important; }
 	.image-mobile-app .phone-img-1 { right: -227px; top: 82px; }
+	.image-mobile-app .phone-img-c-1 img { width: 85% !important; }
+	.image-mobile-app .phone-img-c-1 { right: -160px; top: 178px; }	
+	.image-mobile-app .phone-img-b-2 { top: 0px; right: -38px;}
+	.image-mobile-app .phone-img-b-2 img { width: 97% !important; }
 }
 @media (max-width: 1480px)
 {
 	.image-mobile-app .phone-img-1 img { width: 80% !important; }
 	.image-mobile-app .phone-img-1 { right: -318px; top: 118px; }
+	.image-mobile-app .phone-img-c-1 img { width: 80% !important; }
+	.image-mobile-app .phone-img-c-1 { right: -180px; top: 190px; }
 }
 @media (max-width: 1457px)
 {
 	.image-mobile-app .phone-img-b-1 { right: 183px; }
+	.content-mobile-app { margin: 87px 0px 80px 120px; }
 }
 @media (max-width: 1422px)
 {
+	.content-mobile-app { margin: 87px 0px 80px 180px; }
 	.ipad-cl { display: block; }
 	.iphone-cl, .desctop-cl { display: none; }
 	.image-mobile-app .phone-img-1 img { width: 100% !important; }
 	.image-mobile-app .phone-img-2 img {width: 100% !important;}
 	.image-mobile-app .phone-img-2 { right: 0px; }
 	.image-mobile-app .phone-img-1 { right: 25px; top: 45px; }
+	.image-mobile-app .phone-img-c-1 img { width: 100% !important; }
+	.image-mobile-app .phone-img-c-2 img {width: 100% !important;}
+	.image-mobile-app .phone-img-c-2 { right: 0px; }
+	.image-mobile-app .phone-img-c-1 { right: 0px; top: 93px; }
+	.image-mobile-app .phone-img-b-2 { top: 0px; right: -20px;}
+	.image-mobile-app .phone-img-b-1 { right: 90px;}
 }
 
 @media (max-width: 1366px)
 {
-	.image-mobile-app .phone-img-b-1 { right: 130px; bottom: 0px; top: 188px;}
-	.content-mobile-app { margin: 140px 0px 115px 125px; }
+	.image-mobile-app .phone-img-b-1 { right: 130px; bottom: -7px; top: auto; }
+	.content-mobile-app { margin: 80px 0px 80px 125px;}
 	.ipad-cl { display: block; }
 	.iphone-cl, .desctop-cl { display: none; }
 	.image-mobile-app .phone-img-1 { right: 50px; }
+	.image-mobile-app .phone-img-c-1 { right: 0px; }
 	.button-mobile-app .stub { height: 50px; }
 }
 @media (max-width: 1280px)
 {
-	.content-mobile-app { margin: 110px 0px 115px 125px;}
+	.content-mobile-app { margin: 70px 0px 70px 125px;}
 }
 @media (max-width: 1183px)
 {
 	.image-mobile-app .phone-img-1 { right: 5px; }
+	.image-mobile-app .phone-img-c-1 { right: 0px; }
 }
 @media (max-width: 1160px)
 {
+	.content-mobile-app { margin: 30px 0px 15px 125px; }
 	.image-mobile-app .phone-img-1 img { width: 90% !important; }
 	.image-mobile-app .phone-img-2 img { width: 90% !important; }
+	.image-mobile-app .phone-img-c-1 img { width: 90% !important; }
+	.image-mobile-app .phone-img-c-2 img { width: 90% !important; }	
 	.image-mobile-app .phone-img-b-1 img { width: 90% !important; }
 	.image-mobile-app .phone-img-b-2 img { width: 90% !important; }
 	.image-mobile-app .phone-img-2 { right: -58px; }
 	.image-mobile-app .phone-img-1 { right: -70px; top: 74px; }
+	.image-mobile-app .phone-img-c-2 { right: -61px; }
+	.image-mobile-app .phone-img-c-1 { right: -60px; top: 126px; }	
 	.image-mobile-app .phone-img-b-2 { top: 0px; right: -63px; }
 	.image-mobile-app .phone-img-b-1 {right: 50px; top: 262px; }
 }
 @media (max-width: 1065px)
 {
 	.image-mobile-app .phone-img-1 { right: -118px; top: 106px; }
+	.image-mobile-app .phone-img-c-1 { right: -60px; top: 160px; }
 	.image-mobile-app .phone-img-b-1 { right: 20px; top: 295px; }
 }
 @media (max-width: 1024px)
@@ -1487,7 +1528,7 @@ _:-ms-lang(x), .parallax { background-size: auto 130%; }
 	#mobile-app-block .owl-carousel .owl-nav .owl-next { margin-top: -275px; }
 	.block-content-app { width: 40%; }
 	.image-mobile-app .phone-img-b-1 { right: 130px; }
-	.content-mobile-app { margin: 145px 0px 115px 85px; }
+	.content-mobile-app { margin: 30px 0px 15px 85px; }
 	.mobile-app h1 { font-size: 35px;}	
 	.title-mobile-app { font-size: 35px; }
 	.ipad-cl { display: block; }
@@ -1500,6 +1541,10 @@ _:-ms-lang(x), .parallax { background-size: auto 130%; }
 	.image-mobile-app .phone-img-b-1 img { width: 80% !important; }
 	.image-mobile-app .phone-img-b-2 { top: 0px; right: -125px; }
 	.image-mobile-app .phone-img-b-2 img { width: 80% !important; }
+	.image-mobile-app .phone-img-c-1 { right: -121px; top: 83px; }
+	.image-mobile-app .phone-img-c-1 img { width: 80% !important; }
+	.image-mobile-app .phone-img-c-2 { top: 1px; right: -121px; }
+	.image-mobile-app .phone-img-c-2 img { width: 80% !important; }	
 }
 @media (max-width: 1017px)
 {
@@ -1508,31 +1553,46 @@ _:-ms-lang(x), .parallax { background-size: auto 130%; }
 }
 @media (max-width: 955px)
 {
+	.mobile-app h1 { font-size: 33px;}	
+	.title-mobile-app { font-size: 33px; }
 	.image-mobile-app .phone-img-1 img { width: 75% !important; }
 	.image-mobile-app .phone-img-2 img { width: 75% !important; }
+	.image-mobile-app .phone-img-c-1 img { width: 75% !important; }
+	.image-mobile-app .phone-img-c-2 img { width: 75% !important; }	
 	.image-mobile-app .phone-img-b-1 img { width: 75% !important; }
 	.image-mobile-app .phone-img-b-2 img { width: 75% !important; }
 	.image-mobile-app .phone-img-2 { top: 0px; right: -144px; }
 	.image-mobile-app .phone-img-1 { right: -247px; top: 140px; }
 	.image-mobile-app .phone-img-b-2 { top: 0px; right: -156px; }
 	.image-mobile-app .phone-img-b-1 { right: -100px; top: 297px; }
+	.image-mobile-app .phone-img-c-2 { top: 0px; right: -152px; }
+	.image-mobile-app .phone-img-c-1 { right: -150px; top: 144px;}
 }
 @media (max-width: 870px)
 {
+	.mobile-app h1 { font-size: 29px;}	
+	.title-mobile-app { font-size: 29px; }
 	.image-mobile-app .phone-img-1 img { width: 70% !important; }
 	.image-mobile-app .phone-img-2 img { width: 70% !important; }
 	.image-mobile-app .phone-img-b-1 img { width: 70% !important; }
 	.image-mobile-app .phone-img-b-2 img { width: 70% !important; }	
+	.image-mobile-app .phone-img-c-1 img { width: 70% !important; }
+	.image-mobile-app .phone-img-c-2 img { width: 70% !important; }	
 	.image-mobile-app .phone-img-2 { right: -173px; }
 	.image-mobile-app .phone-img-1 { right: -318px; top: 173px; }
 	.image-mobile-app .phone-img-b-2 { right: -188px }
 	.image-mobile-app .phone-img-b-1 { right: -125px; top: 320px; }
+	.image-mobile-app .phone-img-c-2 { right: -181px; }
+	.image-mobile-app .phone-img-c-1 { right: -181px; top: 173px; }	
 }
 @media (max-width: 823px)
 {
-	.content-mobile-app { margin: 30px 15px 372px 15px; }
+	.content-mobile-app .title-mobile-app { margin: 10px 0px;}
+	.content-mobile-app { margin: 30px 15px 372px 15px;}
 	.image-mobile-app .phone-img-1 { right: 0px; top: 291px; }
 	.image-mobile-app .phone-img-2 {position: absolute; top: 291px;right: 0;}
+	.image-mobile-app .phone-img-c-1 { right: 0px; top: 291px; }
+	.image-mobile-app .phone-img-c-2 {position: absolute; top: 291px;right: 0;}	
 	.text-center-justify { text-align: justify; }
 	.mobile-app p { font-size: 16px; }
 	.ipad-cl, .desctop-cl { display: none; }
@@ -1546,63 +1606,78 @@ _:-ms-lang(x), .parallax { background-size: auto 130%; }
 
 @media (max-width: 414px)
 {
-	.image-mobile-app .phone-img-1 { right: 39px; top: 259px; }
-	.image-mobile-app .phone-img-2 { top: 259px; }
+	.content-mobile-app { margin: 30px 15px 373px 15px; }
+	.image-mobile-app .phone-img-1 { right: 39px; top: auto; bottom: -40px;}
+	.image-mobile-app .phone-img-2 { top: auto; bottom: -40px;}
+	.image-mobile-app .phone-img-c-1 { right: 39px; top: auto; bottom: -59px;}
+	.image-mobile-app .phone-img-c-2 { top: auto; bottom: -58px; right: -87px;}	
 	.image-mobile-app .phone-img-b-1 { right: 184px; bottom: -33px; top: auto;}
 	.block-content-app { width: auto; padding-right: 15px; padding-left: 15px; }
 	.image-mobile-app .phone-img-b-2 img { width: auto !important; }
-	.image-mobile-app .phone-img-b-2 { right: 0px; top: 271px;}
+	.image-mobile-app .phone-img-b-2 { right: 0px; top: auto; bottom: -20px;}
 	.image-mobile-app .phone-img-b-1 img {width: auto !important;}
 	.image-mobile-app .phone-img-1 img { width: auto !important; }
 	.image-mobile-app .phone-img-2 img { width: auto !important; }
+	.image-mobile-app .phone-img-c-1 img { width: auto !important; }
+	.image-mobile-app .phone-img-c-2 img { width: 77% !important; }
+	.button-mobile-app a { margin: 10px auto; display: flex;}
+	.button-mobile-app { display: block;}
+	#mobile-app-block .owl-carousel .owl-nav .owl-prev { margin-top: -433px; }
+	#mobile-app-block .owl-carousel .owl-nav .owl-next { margin-top: -433px; }
 }
 
-@media (max-width: 411px)
+@media (min-width: 376px) and (max-width: 405px)
 {
-	.image-mobile-app .phone-img-1 { right: 36px; top: 259px; }
-	.image-mobile-app .phone-img-2 { top: 259px; }
-	.image-mobile-app .phone-img-b-1 { right: 181px; bottom: -32px; top: auto;}
-	.image-mobile-app .phone-img-b-2 { top: 271px; }
-}
-@media (min-width: 376px) and (max-width: 402px)
-{
-	.image-mobile-app .phone-img-1 { right: 30px; top: 290px; }
-	.image-mobile-app .phone-img-2 { top: 290px; }
+	.image-mobile-app .phone-img-1 { right: 30px; top: auto; }
+	.image-mobile-app .phone-img-2 { top: auto; }
 	.image-mobile-app .phone-img-b-1 { right: 170px; bottom: -32px; top: auto;}
-	.image-mobile-app .phone-img-b-2 { top: 305px; }
-
+	.image-mobile-app .phone-img-b-2 { top: auto; }
+	.image-mobile-app .phone-img-c-1 { right: 30px; top: auto; }
+	.image-mobile-app .phone-img-c-2 { top: auto; }	
 }
+
 @media (min-width: 376px) and (max-width: 397px)
 {
 	.image-mobile-app .phone-img-b-1 { right: 166px; }
 	.image-mobile-app .phone-img-1 { right: 22px; }
+	.image-mobile-app .phone-img-c-1 { right: 22px; }
 }
 @media (min-width: 376px) and (max-width: 386px)
 {
-	.image-mobile-app .phone-img-b-1 { right: 166px; }
+	.image-mobile-app .phone-img-b-1 { right: 155px; }
 	.image-mobile-app .phone-img-1 { right: 11px; }
+	.image-mobile-app .phone-img-c-1 { right: 11px; }
 }
 @media (max-width: 375px)
 {
-	.image-mobile-app .phone-img-1 { right: 0px; top:290px; }
-	.image-mobile-app .phone-img-2 { top: 290px; }
+	.image-mobile-app .phone-img-1 { right: 0px; top:auto; }
+	.image-mobile-app .phone-img-2 { top: auto; }
+	.image-mobile-app .phone-img-c-1 { right: 0px; top:auto; }
+	.image-mobile-app .phone-img-c-2 { top: auto; }
 	.image-mobile-app .phone-img-b-1 { right: 145px; bottom: -63px;}
-	.image-mobile-app .phone-img-b-2 { top: 302px; }
+	.image-mobile-app .phone-img-b-2 { top: auto; }
 }
-@media (max-width: 360px)
+@media (max-width: 366px)
 {
-	.image-mobile-app .phone-img-1 { right: -15px; top:290px; }
-	.image-mobile-app .phone-img-2 { top: 290px; }
+	.image-mobile-app .phone-img-1 { right: -15px; top:auto; }
+	.image-mobile-app .phone-img-2 { top: auto; }
+	.image-mobile-app .phone-img-c-1 { right: -15px; top:auto; }
+	.image-mobile-app .phone-img-c-2 { top: auto; }	
 	.image-mobile-app .phone-img-b-1 { right: 129px; bottom: -64px; top: auto;}
-	.image-mobile-app .phone-img-b-2 { top: 302px; }
+	.image-mobile-app .phone-img-b-2 { top: auto; }
 
 }
-
+@media (max-width: 361px)
+{
+	.title-mobile-app { font-size: 28px; }
+}
 /*** start inverted ***/
 @media (min-width: 640px) and (max-width: 823px)
 {
 	.image-mobile-app .phone-img-2 { top: 194px; }
 	.image-mobile-app .phone-img-1 { top: 194px; left: 0; }
+	.image-mobile-app .phone-img-c-2 { top: 194px; }
+	.image-mobile-app .phone-img-c-1 { top: 194px; left: 0; }	
 	.image-mobile-app .phone-img-b-1 { right: auto; }
 	.image-mobile-app .phone-img-b-2 { top: 207px;}
 
@@ -1620,17 +1695,24 @@ _:-ms-lang(x), .parallax { background-size: auto 130%; }
 	.image-mobile-app .phone-img-b-1 { top: 173px; width: 100%; right: -275px; left: auto; }
 	.image-mobile-app .phone-img-b-1 img { width: 49% !important;}
 
+	.image-mobile-app .phone-img-c-2 { top: 0px; width: 60%; right: -77px;}
+	.image-mobile-app .phone-img-c-2 img { width: 80% !important; }
+	.image-mobile-app .phone-img-c-1 { top: 77px; width: 60%; right: -221px; left: auto;}
+	.image-mobile-app .phone-img-c-1 img { width: 80% !important;}
+
 	#mobile-app-block .owl-carousel .owl-nav .owl-prev { margin-top: -365px; }
 	#mobile-app-block .owl-carousel .owl-nav .owl-next { margin-top: -365px; }
 }
 
 @media (min-width: 812px) and (max-width: 823px)
 {
-	.block-content-app { width: 48%; margin: 30px 15px 0px 70px; }
+	.block-content-app { width: 48%; margin: 0px 15px 0px 65px; }
 	.image-mobile-app .phone-img-2 { right: -198px; }
-	.image-mobile-app .phone-img-1 { top: -9px; right: -350px; }
+	.image-mobile-app .phone-img-1 { top: auto; right: -394px; bottom: -38px;}
+	.image-mobile-app .phone-img-c-2 { right: -198px; }
+	.image-mobile-app .phone-img-c-1 { top: auto; right: -199px; bottom: -58px;}
 	.image-mobile-app .phone-img-b-2 { top: 0px; width: 69%; right: -227px;}
-	.image-mobile-app .phone-img-b-1 { top: 151px; width: 75%; right: -264px; left: auto; }
+	.image-mobile-app .phone-img-b-1 { top: auto; width: 75%; right: -315px; left: auto;}
 	#mobile-app-block .owl-carousel .owl-nav .owl-prev { margin-top: -190px; }
 	#mobile-app-block .owl-carousel .owl-nav .owl-next { margin-top: -190px; }
 	.content-mobile-app .title-mobile-app { text-align: left; }
@@ -1638,19 +1720,25 @@ _:-ms-lang(x), .parallax { background-size: auto 130%; }
 	.button-mobile-app img { margin: 0; }
 	.image-mobile-app .phone-img-1 img { width: 60% !important; }
 	.image-mobile-app .phone-img-2 img { width: 60% !important; }
+	.image-mobile-app .phone-img-c-1 img { width: 60% !important; }
+	.image-mobile-app .phone-img-c-2 img { width: 60% !important; }	
 }
 @media (min-width: 415px) and (max-width: 811px)
 {
-	.block-content-app { width: 48%; margin: 30px 15px 0px 70px; }
+	.block-content-app { width: 48%; margin: 10px 15px 0px 65px; }
 	.content-mobile-app .title-mobile-app { text-align: left; }
 	.content-mobile-app div { text-align: left; }
 	.button-mobile-app img { margin: 0; }
-	.image-mobile-app .phone-img-1 { top: 42px; right: -368px;}
+	.image-mobile-app .phone-img-1 { top: auto; right: -384px; bottom: -37px;}
 	.image-mobile-app .phone-img-1 img { width: 60% !important; }
 	.image-mobile-app .phone-img-2 img { width: 60% !important; }
-	.image-mobile-app .phone-img-b-1 { top: 164px; width: 75%; right: -264px; }
+	.image-mobile-app .phone-img-c-1 { top: auto; right: -194px; bottom: -58px;}
+	.image-mobile-app .phone-img-c-1 img { width: 60% !important; }
+	.image-mobile-app .phone-img-c-2 img { width: 60% !important; }	
+	.image-mobile-app .phone-img-b-1 { top: auto; width: 75%; right: -324px;}
 	.image-mobile-app .phone-img-b-1 img { width: 49% !important;  }
 	.image-mobile-app .phone-img-2 {  top: 0px; right: -195px; }
+	.image-mobile-app .phone-img-c-2 {  top: 0px; right: -195px; }
 	.image-mobile-app .phone-img-b-2 { top: 0px; width: 70%; right: -225px; }
 	#mobile-app-block .owl-carousel .owl-nav .owl-prev { margin-top: -190px; }
 	#mobile-app-block .owl-carousel .owl-nav .owl-next { margin-top: -190px; }
@@ -1659,32 +1747,41 @@ _:-ms-lang(x), .parallax { background-size: auto 130%; }
 
 @media (min-width: 768px) and (max-width: 768px)
 {
-	.block-content-app { width: 45%; padding: 0px 15px; margin: 100px 15px 100px 70px;}
+	.mobile-app p {line-height: 26px;}
+	.title-mobile-app { font-size: 28px;}
+	.block-content-app { width: 45%; padding: 0px 15px; margin: 30px 15px 0px 65px;}
 	.content-mobile-app .title-mobile-app { text-align: left; }
 	.content-mobile-app div { text-align: left; }
 	.button-mobile-app img { margin: 0; }
 	.image-mobile-app .phone-img-1 { top: 95px; right: -260px;}
 	.image-mobile-app .phone-img-1 img { width: 75% !important; }
 	.image-mobile-app .phone-img-2 img { width: 80% !important; }
+	.image-mobile-app .phone-img-2 { top: 0px; right: -92px; }
+	.image-mobile-app .phone-img-c-1 { top: auto; right: -115px; bottom: -83px;}
+	.image-mobile-app .phone-img-c-1 img { width: 75% !important; }
+	.image-mobile-app .phone-img-c-2 img { width: 80% !important; }
+	.image-mobile-app .phone-img-c-2 { top: 0px; right: -92px; }	
 	.image-mobile-app .phone-img-b-1 { top: 227px; width: 100%; right: -403px; }
 	.image-mobile-app .phone-img-b-1 img { width: 49% !important;  }
-	.image-mobile-app .phone-img-2 { top: 0px; right: -92px; }
-	.image-mobile-app .phone-img-b-2 { top: 0px; width: 70%; right: -111px; }
+	.image-mobile-app .phone-img-b-2 { top: 0px; width: 70%; right: -160px; }
 	#mobile-app-block .owl-carousel .owl-nav .owl-prev { margin-top: -280px; }
 	#mobile-app-block .owl-carousel .owl-nav .owl-next { margin-top: -280px; }
-	.image-mobile-app .phone-img-b-2 img { width: 80% !important; }
+	.image-mobile-app .phone-img-b-2 img { width: 70% !important; }
 }
 @media (min-width: 415px) and (max-width: 767px)
 {
+	.mobile-app p { line-height: 25px;}
 	.image-mobile-app .phone-img-2 { right: -184px; }
 	.image-mobile-app .phone-img-b-2 { right: -215px; }
-	.image-mobile-app .phone-img-1 { top: 60px; right: -362px; }
-	.image-mobile-app .phone-img-b-1 { top: 178px; right: -278px; }
+	.image-mobile-app .phone-img-1 { top: auto; right: -362px; bottom: -37px;}
+	.image-mobile-app .phone-img-b-1 {top: auto;right: -302px;}
+	.image-mobile-app .phone-img-c-2 { right: -184px; }
+	.image-mobile-app .phone-img-c-1 { top: auto; right: -184px; bottom: -83px;}
 }
 
 @media (min-width: 568px) and (max-width: 736px)
 {
-	.content-mobile-app .title-mobile-app { text-align: left; }
+	.content-mobile-app .title-mobile-app { text-align: left; font-size: 24px;}
 	.content-mobile-app div { text-align: left; }
 	.button-mobile-app img { margin: 0; }
 	.block-content-app { margin: 30px 15px 0px 70px; }
@@ -1692,28 +1789,35 @@ _:-ms-lang(x), .parallax { background-size: auto 130%; }
 	#mobile-app-block .owl-carousel .owl-nav .owl-next { margin-top: -225px; }
 	.image-mobile-app .phone-img-1 img { width: 65% !important; }
 	.image-mobile-app .phone-img-2 img { width: 70% !important; }
-	.image-mobile-app .phone-img-2 { top: 0px; right: -115px; }
-	.image-mobile-app .phone-img-1 { top: 109px; right: -280px; }
-	.image-mobile-app .phone-img-b-2 { right: -140px;}
+	.image-mobile-app .phone-img-2 { top: 0px; right: -130px; }
+	.image-mobile-app .phone-img-1 { top: auto; right: -320px;}
+	.image-mobile-app .phone-img-b-2 { right: -156px;}
 	.image-mobile-app .phone-img-b-2 img { width: 70% !important; }
 	.image-mobile-app .phone-img-b-1 img { width: 45% !important; }
-	.image-mobile-app .phone-img-b-1 { top: 252px; right: -244px; }
+	.image-mobile-app .phone-img-b-1 { top: auto; right: -305px;}
+	.image-mobile-app .phone-img-c-1 img { width: 65% !important; }
+	.image-mobile-app .phone-img-c-2 img { width: 70% !important; }
+	.image-mobile-app .phone-img-c-2 { top: 0px; right: -130px; }
+	.image-mobile-app .phone-img-c-1 { top: auto; right: -154px;}
 }
 
 @media (min-width: 731px) and (max-width: 736px)
 {
+	.image-mobile-app .phone-img-c-1 {top: auto;right: -156px;}
+	.image-mobile-app .phone-img-c-2 {top: 0px; right: -132px;}
 	.image-mobile-app .phone-img-2 {top: 0px;width: 60%;right: -88px; }
 	.image-mobile-app .phone-img-b-2 { top: 0px; width: 71%; right: -156px; }
 	#mobile-app-block .owl-carousel .owl-nav .owl-prev { margin-top: -230px; }
 	#mobile-app-block .owl-carousel .owl-nav .owl-next { margin-top: -230px; }
-	.image-mobile-app .phone-img-b-1 { top: 226px; width: 75%; right: -215px; left: auto; }
-	.image-mobile-app .phone-img-1 { top: 64px; right: -280px;}
+	.image-mobile-app .phone-img-b-1 { top: auto; width: 75%; right: -305px; left: auto;}
+	.image-mobile-app .phone-img-1 { top: auto; right: -322px;}
 	.image-mobile-app .phone-img-2 { top: 0px; right: -132px; }
 	.block-content-app { width: 42%; }
 }
 @media (min-width: 667px) and (max-width: 667px)
 {
 	.image-mobile-app .phone-img-2 { top: 0px;width: 60%;right: -120px; }
+	.image-mobile-app .phone-img-с-2 { top: 0px;width: 60%;right: -120px; }
 	.image-mobile-app .phone-img-b-2 { top: 0px; width: 70%; right: -140px; }
 	.image-mobile-app .phone-img-b-1 { top: 215px; width: 87%; right: -295px; left: auto; }
 }
@@ -1723,6 +1827,8 @@ _:-ms-lang(x), .parallax { background-size: auto 130%; }
 	.content-mobile-app { margin: 30px 15px 340px 50px; }
 	.image-mobile-app .phone-img-2 { top: 194px; }
 	.image-mobile-app .phone-img-1 { top: 194px; left: 0; }
+	.image-mobile-app .phone-img-с-2 { top: 194px; }
+	.image-mobile-app .phone-img-с-1 { top: 194px; left: 0; }
 	.image-mobile-app .phone-img-b-1 { right: auto; }
 	.image-mobile-app .phone-img-b-2 { top: 207px;}
 
@@ -1740,12 +1846,54 @@ _:-ms-lang(x), .parallax { background-size: auto 130%; }
 	.image-mobile-app .phone-img-b-1 {top: 236px; width: 80%; right: -195px; left: auto;}
 	.image-mobile-app .phone-img-b-1 img { width: 60% !important;}
 
+	.image-mobile-app .phone-img-с-2 { top: 0px; width: 60%; right: -77px;}
+	.image-mobile-app .phone-img-с-2 img { width: 80% !important; }
+	.image-mobile-app .phone-img-с-1 { top: 112px; width: 100%; right: -186px; left: auto; }
+	.image-mobile-app .phone-img-с-1 img { width: 80% !important;}
+
 	#mobile-app-block .owl-carousel .owl-nav .owl-prev { margin-top: -255px; }
 	#mobile-app-block .owl-carousel .owl-nav .owl-next { margin-top: -255px; }
 	#mobile-app-block .owl-prev, #mobile-app-block .owl-next { padding: 15px; }
 }
 /*** end inverted ***/
 
+@media (min-width: 415px) and (max-width: 700px)
+{
+	.image-mobile-app .phone-img-1 { top: auto; right: -305px;}
+	.image-mobile-app .phone-img-1 img { width: 60% !important; }
+	.image-mobile-app .phone-img-2 { top: 0px; right: -168px; }
+	.image-mobile-app .phone-img-2 img { width: 60% !important;}
+
+	.image-mobile-app .phone-img-b-2 img { width: 60% !important; }
+	.image-mobile-app .phone-img-b-2 { right: -196px; }	
+	.image-mobile-app .phone-img-b-1 { top: auto; right: -280px; }
+	.image-mobile-app .phone-img-b-1 img { width: 50% !important; }
+
+	.image-mobile-app .phone-img-c-1 img { width: 60% !important; }
+	.image-mobile-app .phone-img-c-1 { top: auto; right: -169px; }
+}
+
+@media (min-width: 415px) and (max-width: 680px)
+{
+	.block-content-app { margin: 0px 15px 0px 70px; }
+	.mobile-app p { line-height: 20px; }
+	.image-mobile-app .phone-img-1 { top: auto; right: -327px;}
+	.image-mobile-app .phone-img-c-1 { top: auto; right: -184px;}
+	.image-mobile-app .phone-img-c-1 img { width: 55% !important;}
+	.image-mobile-app .phone-img-c-2 img { width: 60% !important;}
+	.image-mobile-app .phone-img-c-2 { top: 0px; right: -163px;}	
+}
+@media (min-width: 415px) and (max-width: 660px)
+{
+	.image-mobile-app .phone-img-b-2 { right: -184px;}
+	.image-mobile-app .phone-img-b-1 { top: auto; right: -264px;}
+	.image-mobile-app .phone-img-2 { top: 0px; right: -158px;}
+	.button-mobile-app { display: block;}
+	.button-mobile-app a { margin: 10px 0px; display: block;}
+	.image-mobile-app .phone-img-1 { top: auto; right: -321px;}
+	.image-mobile-app .phone-img-b-1 {top: auto;right: -245px;bottom: -17px;}
+	.image-mobile-app .phone-img-c-1 { top: auto; right: -175px; bottom: 0px;}
+}
 @media (min-width: 415px) and (max-width: 639px)
 {
 	.content-mobile-app { margin: 30px 15px 340px 50px; }
@@ -1754,61 +1902,143 @@ _:-ms-lang(x), .parallax { background-size: auto 130%; }
 	.image-mobile-app .phone-img-b-1 { right: auto; }
 	.image-mobile-app .phone-img-b-2 { top: 207px;}
 
+	.image-mobile-app .phone-img-с-2 { top: 194px; }
+	.image-mobile-app .phone-img-с-1 { top: 194px; left: 0; }	
+
 	.iphone-cl, .desctop-cl { display: none; }
 	.ipad-cl { display: block; }	
 
 	.block-content-app { width: 46%; padding: 0px 15px; margin: 30px 15px 0px 50px;}
 	.image-mobile-app .phone-img-2 { top: 0px; width: 60%; right: -77px;}
 	.image-mobile-app .phone-img-2 img { width: 80% !important; }
-	.image-mobile-app .phone-img-1 { top: 93px; width: 100%; right: -245px; left: auto; }
+	.image-mobile-app .phone-img-1 { top: auto; width: 100%; right: -245px; left: auto; }
 	.image-mobile-app .phone-img-1 img { width: 70% !important;}
 
 	.image-mobile-app .phone-img-b-2 { top: 0px; width: 70%; right: -99px;}
 	.image-mobile-app .phone-img-b-2 img { width: 75% !important; }
-	.image-mobile-app .phone-img-b-1 {top: 236px; width: 80%; right: -195px; left: auto;}
+	.image-mobile-app .phone-img-b-1 {top: auto; width: 80%; right: -195px; left: auto;}
 	.image-mobile-app .phone-img-b-1 img { width: 60% !important;}
+
+	.image-mobile-app .phone-img-c-2 { top: 0px; right: -241px;}
+	.image-mobile-app .phone-img-с-2 img { width: 80% !important; }
+	.image-mobile-app .phone-img-c-1 { top: auto; right: -270px; bottom: -4px;}
+	.image-mobile-app .phone-img-с-1 img { width: 70% !important;}
 
 	#mobile-app-block .owl-carousel .owl-nav .owl-prev { margin-top: -255px; }
 	#mobile-app-block .owl-carousel .owl-nav .owl-next { margin-top: -255px; }
 	#mobile-app-block .owl-prev, #mobile-app-block .owl-next { padding: 15px; }
 }
+
 @media (min-width: 415px) and (max-width: 636px)
 {
-	.image-mobile-app .phone-img-1 {top: 119px; right: -253px;}
+	.image-mobile-app .phone-img-1 { top: auto; right: -260px;}
+	.image-mobile-app .phone-img-с-1 { top: 136px; right: -230px; }
+	.image-mobile-app .phone-img-b-2 { top: 0px; width: 70%; right: -111px;}
 }
-@media (min-width: 415px) and (max-width: 636px)
+
+@media (min-width: 415px) and (max-width: 632px)
 {
-	.image-mobile-app .phone-img-1 { top: 136px; right: -230px; }
+	.content-mobile-app .title-mobile-app { font-size: 23px;}
 }
+
+@media (min-width: 415px) and (max-width: 620px)
+{
+	.image-mobile-app .phone-img-c-2 img { width: 50% !important;}
+	.image-mobile-app .phone-img-c-2 { top: 0px; right: -300px;}
+	.image-mobile-app .phone-img-c-1 img { width: 50% !important;}
+	.image-mobile-app .phone-img-c-1 {top: auto;right: -300px;bottom: -4px;}
+}
+
+@media (min-width: 415px) and (max-width: 607px)
+{
+	.content-mobile-app .title-mobile-app { font-size: 22px;}	
+}
+
 @media (min-width: 415px) and (max-width: 600px)
 {
-	.image-mobile-app .phone-img-1 { top: 152px; right: -221px;}
+	.block-content-app { margin: 0px 15px 0px 50px;}
+	.image-mobile-app .phone-img-1 { top: auto; right: -245px;}
+	.image-mobile-app .phone-img-с-1 { top: auto; right: -221px;}
+	.image-mobile-app .phone-img-b-2 img { width: 70% !important;}
+	.image-mobile-app .phone-img-b-2 { right: -126px;}
 }
-@media (min-width: 415px) and (max-width: 575px)
+
+@media (min-width: 415px) and (max-width: 582px)
 {
-	.image-mobile-app .phone-img-2 {right: -68px; }
-	.image-mobile-app .phone-img-1 { top: 207px; right: -184px; }
-	.image-mobile-app .phone-img-b-1 { top: 284px; width: 80%; right: -186px; left: auto; }
+	.content-mobile-app .title-mobile-app { font-size: 21px;}
+	.image-mobile-app .phone-img-b-1 { right: -212px; }	
+}
+
+@media (min-width: 415px) and (max-width: 580px)
+{
+	.image-mobile-app .phone-img-c-1 img { width: 45% !important;}
+	.image-mobile-app .phone-img-c-1 { top: auto; right: -330px; bottom: -4px;}
+}
+
+@media (min-width: 415px) and (max-width: 557px)
+{
+	.block-content-app { width: 47%;}
+	.image-mobile-app .phone-img-b-1 {right: -203px; bottom: 0px;}
+	.image-mobile-app .phone-img-1 {top: auto; right: -223px;}
+}
+
+@media (min-width: 415px) and (max-width: 550px)
+{
+	.image-mobile-app .phone-img-b-2 { right: -116px;}
+	.image-mobile-app .phone-img-2 { right: -66px;}
+}
+
+@media (min-width: 415px) and (max-width: 550px)
+{
+	.content-mobile-app .title-mobile-app { font-size: 20px;}
+	.image-mobile-app .phone-img-b-1 img { width: 63% !important;}
+	.image-mobile-app .phone-img-b-1 { right: -186px; bottom: 0px;}
 }
 
 @media (min-width: 415px) and (max-width: 530px)
 {
-	.image-mobile-app .phone-img-1 { top: 223px; }
-	.image-mobile-app .phone-img-b-2 { right: -91px;}
-	.image-mobile-app .phone-img-b-1 { top: 295px;right: -175px;}
+	.image-mobile-app .phone-img-c-1 { bottom: -25px; }
+	.image-mobile-app .phone-img-b-1 { right: -167px; bottom: 0px;}
+}
+
+@media (min-width: 415px) and (max-width: 520px)
+{
+	.content-mobile-app .title-mobile-app { font-size: 19px;}
 }
 
 @media (max-width: 320px)
 {
 	.content-mobile-app { margin: 30px 15px 328px 15px; }
-	.image-mobile-app .phone-img-1 { right: -55px; top: 335px; }
-	.image-mobile-app .phone-img-2 { top: 324px; right: -34px; }
+	.image-mobile-app .phone-img-1 { right: -55px; top: auto; }
+	.image-mobile-app .phone-img-2 { top: auto; right: -34px; }
+	.image-mobile-app .phone-img-c-1 { right: -55px; top: auto; }
+	.image-mobile-app .phone-img-c-2 { top: auto; right: -120px;}	
 	.image-mobile-app .phone-img-b-1 { right: 89px; }
-	.image-mobile-app .phone-img-b-2 { top: 348px; right: -35px; }
-
+	.image-mobile-app .phone-img-b-2 { top: auto; right: -35px; bottom: -53px; }
 	.image-mobile-app .phone-img-1 img { width: 90% !important; }
 	.image-mobile-app .phone-img-2 img { width: 90% !important; }
+	.image-mobile-app .phone-img-c-1 img { width: 85% !important; }
+	.image-mobile-app .phone-img-c-2 img { width: 68% !important; }	
 	.image-mobile-app .phone-img-b-1 img { width: 90% !important; }
 	.image-mobile-app .phone-img-b-2 img { width: 90% !important; }	
-
+	.title-mobile-app { font-size: 25px;}
+	#mobile-app-block .owl-carousel .owl-nav .owl-prev { margin-top: -405px; }
+	#mobile-app-block .owl-carousel .owl-nav .owl-next { margin-top: -405px; }
 }
+.information-app p{
+	font-style: normal;
+    font-size: 14px;
+    line-height: 21px;
+    margin: 0;
+}
+.information-app a{
+    color: #196FF3;
+    line-height: 21px;
+}
+.information-app a:hover{
+	text-decoration: none;
+}
+.information-app strong{
+	color: #1C212B;
+}
+.close-app { margin-top: -10px; margin-right: -5px; }
