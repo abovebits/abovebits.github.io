@@ -1529,3 +1529,8 @@ _:-ms-lang(x), .parallax { background-size: auto 130%; }
     	right: 20px;
 	}
 }
+@media (min-width: 1366px) and (max-width: 1366px){
+	img.magento_logo {
+    	height: 13% !important;
+	}
+}
