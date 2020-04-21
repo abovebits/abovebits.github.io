@@ -137,7 +137,6 @@ $(document).ready( function() {
 	var macintosh = /Macintosh/i.test(navigator.userAgent);
 
 	if (!isMobile && !is_ie && !macintosh) {
-		//console.log('is_ie  '+is_ie);
 
 		$('#top-parallax').parallax("10%", 0.3);
 		$('#responsive').parallax("10%", 0.2);
