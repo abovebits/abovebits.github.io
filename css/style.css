@@ -1521,7 +1521,14 @@ footer a {line-height: inherit !important;}
 	box-sizing: border-box; 
 }
 
-#mobile-app-block .owl-nav { display: flex; 
+#mobile-app-block .owl-carousel .owl-nav .owl-next img{
+	margin: -76px 0px 0px -2px;
+}
+#mobile-app-block .owl-carousel .owl-nav .owl-prev img{
+	margin: -76px 0px 0px -5px;
+}
+
+#mobile-app-block .owl-nav { display: block; 
 	justify-content: center; 
 	align-items: center; 
 	font-family: sans-serif; 
@@ -1532,7 +1539,7 @@ footer a {line-height: inherit !important;}
 #mobile-app-block .owl-next  { 
 	padding: 20px; 
 	margin: 5px; 
-	display: flex; 
+	display: block; 
 	justify-content: center; 
 	align-items: center; 
 	border-radius: 50%; 
