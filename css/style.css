@@ -1674,6 +1674,16 @@ footer a {line-height: inherit !important;}
 .logo-top {
 	display: block;
 }
+@media (max-width: 5120px) and (min-width: 5120px) {
+	.navbar-brand.logo-top img {
+    	width: 17vw;
+	}
+
+	.navbar-brand.logo-top-scrol img{
+		width: 12vw;
+	}
+
+}
 @media (max-width: 768px) {
 	.navbar-nav li a {
 		font-size: 13px;
