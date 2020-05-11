@@ -1714,7 +1714,7 @@ _:-ms-lang(x), .parallax { background-size: auto 130%; }
 
 @media (max-width: 1366px)
 {
-	.image-mobile-app .phone-img-b-1 { right: 130px; bottom: -7px; top: auto; }
+	.image-mobile-app .phone-img-b-1 { right: 130px; bottom: -87px; top: auto; }
 	.content-mobile-app { margin: 80px 0px 80px 125px;}
 	.ipad-cl { display: block; }
 	.iphone-cl, .desctop-cl { display: none; }
@@ -1842,10 +1842,10 @@ _:-ms-lang(x), .parallax { background-size: auto 130%; }
 	.image-mobile-app .phone-img-2 { top: auto; bottom: -40px;}
 	.image-mobile-app .phone-img-c-1 { right: 39px; top: auto; bottom: -59px;}
 	.image-mobile-app .phone-img-c-2 { top: auto; bottom: -58px; right: -87px;}	
-	.image-mobile-app .phone-img-b-1 { right: 184px; bottom: -33px; top: auto;}
+	.image-mobile-app .phone-img-b-1 { right: 184px; bottom: -82px; top: auto;}
 	.block-content-app { width: auto; padding-right: 15px; padding-left: 15px; }
 	.image-mobile-app .phone-img-b-2 img { width: auto !important; }
-	.image-mobile-app .phone-img-b-2 { right: 0px; top: auto; bottom: -20px;}
+	.image-mobile-app .phone-img-b-2 { right: 0px; top: auto; bottom: -82px;}
 	.image-mobile-app .phone-img-b-1 img {width: auto !important;}
 	.image-mobile-app .phone-img-1 img { width: auto !important; }
 	.image-mobile-app .phone-img-2 img { width: auto !important; }
