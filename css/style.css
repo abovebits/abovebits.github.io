@@ -1468,8 +1468,8 @@ _:-ms-lang(x), .parallax { background-size: auto 130%; }
     	right: 680px;
 	}
 	.clients-say {
-	    right: 920px;
-	}	
+	    right: 925px;
+	}
 }
 @media (max-width: 768px) {
 	.navbar-nav li a {
