@@ -1458,7 +1458,18 @@ _:-ms-lang(x), .parallax { background-size: auto 130%; }
 	.navbar-brand.logo-top-scrol img{
 		width: 12vw;
 	}
-
+	.templatemonster_partner {
+	    right: 170px;
+	}
+	.freelancer_badget {
+	    right: 433px;
+	}
+	.upwork-logo {
+    	right: 680px;
+	}
+	.clients-say {
+	    right: 920px;
+	}	
 }
 @media (max-width: 768px) {
 	.navbar-nav li a {
