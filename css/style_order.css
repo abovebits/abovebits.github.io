@@ -1,0 +1,50 @@
+.navbar-default {
+	background-color: #fff;
+}
+.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+	background-color: #fff;
+}
+.products-order {
+	margin-top: 115px;
+	background-color: #0092CA;
+}
+.title-order {
+	font-style: normal;
+    font-weight: bold;
+    font-size: 60px;
+    line-height: 72px;
+    color: #FFFFFF;
+    text-align: center;
+    margin-top: 60px;
+}
+.desc-order {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+    color: #FFFFFF;
+    margin-top: 30px;
+}
+footer {
+	background:#fff;
+}
+.block-product {
+	background: #07A1DC;
+	border: 1px solid #18ADE7;
+	box-sizing: border-box;
+	border-radius: 4px;
+
+	font-style: normal;
+	font-weight: bold;
+	font-size: 21px;
+	line-height: 25px;
+	text-align: center;
+	color: #FFFFFF;
+
+}
+.block-product:hover {
+	background: #FFFFFF;
+	cursor: pointer;
+	color: #0092CA;
+}
