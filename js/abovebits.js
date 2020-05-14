@@ -121,7 +121,7 @@ $(document).on('click', '.top-mob-menu', function (e) {
 
 
 $(window).on('resize', function(){
-	if(window.innerHeight > window.innerWidth){
+	if(window.innerWidth > window.innerHeight){
 	   calculateHeight();
 	}	
 });
