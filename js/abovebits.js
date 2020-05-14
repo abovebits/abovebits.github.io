@@ -113,12 +113,13 @@ var MarkersSwitcher = Object.create(function () {
 // 	calculateHeight();
 // });
 
-$(window).resize(function() {
-	calculateHeight();
-});
+
 
 $(document).ready( function() {
-
+	
+	$(window).resize(function() {
+		calculateHeight();
+	});
 	// parallax effect based on new_parallax.js
 
 	var ua = window.navigator.userAgent;
