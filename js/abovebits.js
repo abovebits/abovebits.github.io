@@ -108,9 +108,6 @@ var MarkersSwitcher = Object.create(function () {
 		}
 	}
 }());
-$(window).on('resize', function(){
-	//calculateHeight();
-});
 
 $(document).on('click', '.top_navbar .navbar-toggle.collapsed', function (e) {
 	$('body').css('overflow','hidden');
@@ -121,6 +118,15 @@ $(document).on('click', '.top-mob-menu', function (e) {
 	$('body').css('overflow','auto');
 	$('.top_navbar').removeClass('top-mob-menu');
 });
+
+// $(window).on('resize', function(){
+// 	calculateHeight();
+// });
+
+window.addEventListener("resize", function() {
+    calculateHeight();
+}, false);
+
 
 $(document).ready( function() {
 

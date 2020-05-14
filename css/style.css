@@ -1627,6 +1627,100 @@ footer a {line-height: inherit !important;}
 	max-height: 10px; 
 }
 
+.fixed-header .logo-top-scrol {
+	display: block;
+}
+.fixed-header .logo-top {
+	display: none;
+}
+.logo-top-scrol {
+	display: none;
+}
+.logo-top {
+	display: block;
+}
+@media (max-width: 5120px) and (min-width: 5120px) {
+	.navbar-brand.logo-top img {
+    	width: 17vw;
+	}
+
+	.navbar-brand.logo-top-scrol img{
+		width: 12vw;
+	}
+	.templatemonster_partner {
+	    right: 170px;
+	}
+	.freelancer_badget {
+	    right: 433px;
+	}
+	.upwork-logo {
+    	right: 680px;
+	}
+	.clients-say {
+	    right: 925px;
+	}
+}
+@media (max-width: 768px) {
+	.navbar-nav li a {
+		font-size: 13px;
+	}
+	.fixed-header .logo-top {
+		display: none;
+	}
+	.fixed-header .logo-top-scrol {
+		display: block;
+	}
+	.logo-top-scrol {
+		display: block;
+	}
+	.logo-top {
+		display: none;
+	}	
+}
+@media (max-width: 767px) {
+	.fixed-header .logo-top-scrol {
+		display: inline;
+	}
+	.fixed-header .logo-top-scrol img {
+		width: 100%;
+	}	
+	.fixed-header .logo-top {
+		display: none;
+	}
+	.logo-top-scrol {
+		display: none;
+	}
+	.logo-top {
+		display: inline;
+	}
+	.logo-top img {
+		width: 90%;
+		margin-top: -8px;
+	}
+}
+@media (max-width: 414px) {
+	.fixed-header .logo-top-scrol img {
+		width: 45%;
+	}	
+	.logo-top img {
+		width: 70%;
+		margin-top: -8px;
+	}
+}
+@media (max-width: 320px) {
+	.logo-top img {
+		margin-top: 0px;
+	}
+}
+.clear-gallery-search-li .clear-a {
+	position: absolute;
+	right: -45px;
+	top: 22px;
+	display: none;
+	color: #149dd2!important;
+	cursor: pointer;
+	font: 600 15px/19px -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
 
 @media (max-width: 1024px){
 	.clear-gallery-search-li .clear-a {
@@ -1653,6 +1747,22 @@ footer a {line-height: inherit !important;}
 		font-size: 16px;
 	}
 }
+@media (max-width: 414px){
+	.clear-gallery-search-li .clear-a {
+    	right: 20px;
+	}
+}
+@media (max-width: 375px){
+	.clear-gallery-search-li .clear-a {
+    	right: 20px;
+	}
+}
+@media (min-width: 1366px) and (max-width: 1366px){
+	img.magento_logo {
+    	height: 13% !important;
+	}
+}
+
 #mobile-app-block .owl-dots { 
 	position: absolute; 
 	margin-left: auto; 
@@ -1836,7 +1946,7 @@ footer a {line-height: inherit !important;}
 
 @media (max-width: 1366px)
 {
-	.image-mobile-app .phone-img-b-1 { right: 130px; bottom: -7px; top: auto; }
+	.image-mobile-app .phone-img-b-1 { right: 130px; bottom: -87px; top: auto; }
 	.content-mobile-app { margin: 80px 0px 80px 125px;}
 	.ipad-cl { display: block; }
 	.iphone-cl, .desctop-cl { display: none; }
@@ -1967,7 +2077,7 @@ footer a {line-height: inherit !important;}
 	.image-mobile-app .phone-img-b-1 { right: 184px; bottom: -82px; top: auto;}
 	.block-content-app { width: auto; padding-right: 15px; padding-left: 15px; }
 	.image-mobile-app .phone-img-b-2 img { width: auto !important; }
-	.image-mobile-app .phone-img-b-2 { right: 0px; top: auto; bottom: -85px;}
+	.image-mobile-app .phone-img-b-2 { right: 0px; top: auto; bottom: -82px;}
 	.image-mobile-app .phone-img-b-1 img {width: auto !important;}
 	.image-mobile-app .phone-img-1 img { width: auto !important; }
 	.image-mobile-app .phone-img-2 img { width: auto !important; }
@@ -1983,7 +2093,7 @@ footer a {line-height: inherit !important;}
 {
 	.image-mobile-app .phone-img-1 { right: 30px; top: auto; }
 	.image-mobile-app .phone-img-2 { top: auto; }
-	.image-mobile-app .phone-img-b-1 { right: 170px; bottom: -85px; top: auto;}
+	.image-mobile-app .phone-img-b-1 { right: 170px; bottom: -82px; top: auto;}
 	.image-mobile-app .phone-img-b-2 { top: auto; }
 	.image-mobile-app .phone-img-c-1 { right: 30px; top: auto; }
 	.image-mobile-app .phone-img-c-2 { top: auto; }	
@@ -2440,4 +2550,5 @@ footer a {line-height: inherit !important;}
     	height: 13% !important;
 	}
 }
+
 
