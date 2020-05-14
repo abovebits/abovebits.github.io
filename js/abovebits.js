@@ -108,9 +108,14 @@ var MarkersSwitcher = Object.create(function () {
 		}
 	}
 }());
-$(window).on('resize', function(){
-	calculateHeight();
-});
+
+// $(window).on('resize', function(){
+// 	calculateHeight();
+// });
+
+window.addEventListener("resize", function() {
+    calculateHeight();
+}, false);
 
 $(document).ready( function() {
 
