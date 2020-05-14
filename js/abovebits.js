@@ -113,9 +113,9 @@ var MarkersSwitcher = Object.create(function () {
 // 	calculateHeight();
 // });
 
-window.addEventListener("resize", function() {
-    calculateHeight();
-}, false);
+$(window).resize(function() {
+	calculateHeight();
+});
 
 $(document).ready( function() {
 
