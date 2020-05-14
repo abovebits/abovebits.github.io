@@ -123,9 +123,9 @@ $(document).on('click', '.top-mob-menu', function (e) {
 // 	calculateHeight();
 // });
 
-window.addEventListener("resize", function() {
-    calculateHeight();
-}, false);
+$(window).resize(function() {
+	calculateHeight();
+});
 
 
 $(document).ready( function() {
