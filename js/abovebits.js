@@ -110,7 +110,7 @@ var MarkersSwitcher = Object.create(function () {
 }());
 
 $(window).on('resize', function(){
-	if(window.innerHeight > window.innerWidth){
+	if(window.innerWidth > window.innerHeight){
 	   calculateHeight();
 	}	
 });
