@@ -2551,4 +2551,9 @@ footer a {line-height: inherit !important;}
 	}
 }
 
+@media (max-width: 5120px) and (min-width: 5120px){
+	.image-mobile-app .phone-img-c-1 {
+    	bottom: -25px;
+	}
+}
 
