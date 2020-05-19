@@ -1375,7 +1375,9 @@ footer a {line-height: inherit !important;}
 
 }
 @media (min-width: 1921px) {
-
+	.image-mobile-app .phone-img-c-1 {
+    	bottom: -25px;
+	}
 	body, p, #skills h3, .navbar-nav li a, #contact #frmContact input[type=text], #contact #frmContact textarea, #contact #frmContact input[type=email] {
 		font-size: 1vw;
 	}
@@ -2545,16 +2547,9 @@ footer a {line-height: inherit !important;}
 }
 .close-app { margin-top: -10px; margin-right: -5px; }
 
-
 @media (min-width: 1366px) and (max-width: 1366px){
 	img.magento_logo {
     	height: 13% !important;
-	}
-}
-
-@media (min-width: 5000px){
-	.image-mobile-app .phone-img-c-1 {
-    	bottom: -25px;
 	}
 }
 
