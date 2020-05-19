@@ -2545,13 +2545,14 @@ footer a {line-height: inherit !important;}
 }
 .close-app { margin-top: -10px; margin-right: -5px; }
 
+
 @media (min-width: 1366px) and (max-width: 1366px){
 	img.magento_logo {
     	height: 13% !important;
 	}
 }
 
-@media (max-width: 5120px) and (min-width: 5120px){
+@media (min-width: 5000px){
 	.image-mobile-app .phone-img-c-1 {
     	bottom: -25px;
 	}
