@@ -2049,3 +2049,9 @@ _:-ms-lang(x), .parallax { background-size: auto 130%; }
 	color: #1C212B;
 }
 .close-app { margin-top: -10px; margin-right: -5px; }
+
+@media (max-width: 5120px) and (min-width: 5120px){
+	.image-mobile-app .phone-img-c-1 {
+    	bottom: -25px;
+	}
+}
