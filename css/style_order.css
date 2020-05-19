@@ -39,8 +39,10 @@ a:hover {
     margin-bottom: 50px;
 }
 footer {
-/*	color:#fff;*/
-	background-color: #F9F9F9;
+	background: #eeeff3;
+    color: #777;
+    padding: 15px 0;
+    text-align: center;
 	margin-top: 30px;
 }
 
@@ -188,7 +190,6 @@ footer {
 .page-scroll span {
 	font-family: Montserrat;
 	font-style: normal;
-	font-weight: bold;
 	font-size: 16px;
 	line-height: 20px;
 	text-transform: uppercase;
@@ -794,7 +795,9 @@ input::-webkit-inner-spin-button {
 }
 #page-top nav.top_navbar {
 	padding-bottom: 10px;
-	border-bottom: 1px solid #0092CA;
+    background: rgb(238, 239, 243);
+    box-shadow: rgba(0, 0, 0, 0.6) 0px 1px 5px;
+    transition: background-color 300ms linear 0s;
 }
 
 .text-error {
