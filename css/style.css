@@ -2050,7 +2050,7 @@ _:-ms-lang(x), .parallax { background-size: auto 130%; }
 }
 .close-app { margin-top: -10px; margin-right: -5px; }
 
-@media (max-width: 5120px) and (min-width: 5120px){
+@media (min-width: 5000px){
 	.image-mobile-app .phone-img-c-1 {
     	bottom: -25px;
 	}
