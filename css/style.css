@@ -1375,8 +1375,15 @@ footer a {line-height: inherit !important;}
 
 }
 @media (min-width: 1921px) {
+
 	.image-mobile-app .phone-img-c-1 {
     	bottom: -25px !important;
+	}
+	.navbar-brand.logo-top img {
+    	width: 17vw !important;
+	}
+	.navbar-brand.logo-top-scrol img{
+		width: 12vw !important;
 	}
 	body, p, #skills h3, .navbar-nav li a, #contact #frmContact input[type=text], #contact #frmContact textarea, #contact #frmContact input[type=email] {
 		font-size: 1vw;
@@ -1641,12 +1648,8 @@ footer a {line-height: inherit !important;}
 .logo-top {
 	display: block;
 }
-@media (max-width: 5120px) and (min-width: 5120px) {
-	.navbar-brand.logo-top img {
-    	width: 17vw;
-	}
 
-	.navbar-brand.logo-top-scrol img{
+.navbar-brand.logo-top-scrol img{
 		width: 12vw;
 	}
 	.templatemonster_partner {
@@ -1807,6 +1810,7 @@ footer a {line-height: inherit !important;}
 	    right: 1065px;
 	}
 }
+
 @media (max-width: 768px) {
 	.navbar-nav li a {
 		font-size: 13px;
