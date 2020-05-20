@@ -170,20 +170,16 @@ $(document).ready( function() {
 	    var width_column = $('.right-column').width()+4;
 	    var top = box.offset().top - parseFloat(box.css('marginTop').replace(/auto/, 0)) + 125;
 
-	    //console.log(top);
-
 	    var windowpos = 0;
 		$( window ).resize(function() {
 			top = box.offset().top - parseFloat(box.css('marginTop').replace(/auto/, 0)) + 125;
 			width_column = $('.right-column').width()+4;
-			console.log(top);
 		});
 
 	    $(window).scroll(function(){
 	    	if($(window).width() > 991){
 		        windowpos = $(window).scrollTop();
-		        // console.log('test-2: '+windowpos);
-		        // console.log('top-2: '+top);
+
 		        if(windowpos < top) {
 		            box.css('position', 'static');
 		            box.css('width', '100%');
