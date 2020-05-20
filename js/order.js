@@ -165,23 +165,40 @@ $(document).ready( function() {
 	};
 	
 	//var offset = $('#fixed-right-column').offset();
-    var box = $('.fixed-right-column'); // float-fixed block
-    var width_column = $('.right-column').width()+4;
-    var top = box.offset().top - parseFloat(box.css('marginTop').replace(/auto/, 0)) + 200;
-    
-    $(window).scroll(function(){
-    	if($(window).width() > 991){
-	        var windowpos = $(window).scrollTop();
-	        if(windowpos < top) {
+
+	    var box = $('.fixed-right-column'); // float-fixed block
+	    var width_column = $('.right-column').width()+4;
+	    var top = box.offset().top - parseFloat(box.css('marginTop').replace(/auto/, 0)) + 125;
+
+	    //console.log(top);
+
+	    var windowpos = 0;
+		$( window ).resize(function() {
+			top = box.offset().top - parseFloat(box.css('marginTop').replace(/auto/, 0)) + 125;
+			width_column = $('.right-column').width()+4;
+			console.log(top);
+		});
+
+	    $(window).scroll(function(){
+	    	if($(window).width() > 991){
+		        windowpos = $(window).scrollTop();
+		        // console.log('test-2: '+windowpos);
+		        // console.log('top-2: '+top);
+		        if(windowpos < top) {
+		            box.css('position', 'static');
+		            box.css('width', '100%');
+		        } else {
+		            box.css('position', 'fixed');
+		            box.css('top', 70);
+		            box.css('width', width_column);
+		        }
+	    	}else{
 	            box.css('position', 'static');
-	            box.css('width', '100%');
-	        } else {
-	            box.css('position', 'fixed');
-	            box.css('top', 70);
-	            box.css('width', width_column);
-	        }
-    	}
-    });
+	            box.css('width', '100%'); 		
+	    	}
+	    });
+
+
 
 	/***Back to TOP***/
 	// Show or hide the sticky footer button
@@ -407,7 +424,7 @@ $(document).ready( function() {
 				"Total Price": '$'+total_price,
 			};
 
-			console.log(data);
+			//console.log(data);
 
 			$.ajax({
 				url: 'https://formspree.io/xbjzdaly',
@@ -439,6 +456,7 @@ $(document).ready( function() {
 	function validateForm() {
 		checkedTurnaroundTime();
 		$(".text-success").remove();
+		$(".text-error").remove();
 
 		var input_name = $("input[name='name']");
 		var el_e    = $("input[name='email']");
