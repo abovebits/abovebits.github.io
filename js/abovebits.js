@@ -258,6 +258,8 @@ $(document).ready( function() {
 			searchField: '#gallery_search'
 		}, _portfolio);
 
+	//console.log(_gallery);
+
 	$('#seemore').click(function (e) {
 		e.preventDefault();
 		_gallery.showNextItems();
