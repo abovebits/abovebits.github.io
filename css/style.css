@@ -1648,8 +1648,8 @@ footer a {line-height: inherit !important;}
 .logo-top {
 	display: block;
 }
-
-.navbar-brand.logo-top-scrol img{
+@media (max-width: 5120px) and (min-width: 5120px){
+	.navbar-brand.logo-top-scrol img{
 		width: 12vw;
 	}
 	.templatemonster_partner {
