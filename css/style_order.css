@@ -381,7 +381,7 @@ input::-webkit-inner-spin-button {
 	font-size: 18px;
 	line-height: 21px;
 	color: #000000;
-	margin-top: 50px;	
+	margin-top: 30px;	
 }
 
 .btn-primary-el {
@@ -860,6 +860,13 @@ input::-webkit-inner-spin-button {
 	}						
 }
 @media (max-width: 1024px){
+
+	.top-rc {
+		display: block;
+	}
+	.logo-rc, .title-rc {
+		text-align: center;
+	}
 	.compatibility-class {
 	    margin-right: 20px;
 	}
@@ -881,6 +888,13 @@ input::-webkit-inner-spin-button {
 	}
 }
 @media (max-width: 991px){
+
+	.top-rc {
+		display: flex;
+	}
+	.logo-rc, .title-rc {
+		text-align: left;
+	}
 	.navbar-brand.logo-top img {
 	    width: 200px;
 	    margin-top: 8px;
@@ -968,6 +982,9 @@ input::-webkit-inner-spin-button {
 	}	
 }
 @media (min-width: 768px) and (max-width: 768px){
+	.order-forms input:first-child {
+	    margin-right: 15px;
+	}	
 	.navbar-nav li a {
 	    padding-left: 5px;
 	    padding-right: 5px;
