@@ -686,7 +686,7 @@ input::-webkit-inner-spin-button {
 	border-radius: 100%;
 }
 .radio-turnaround input[type="radio"]:checked + label:after{
-	content: ".";
+	content: url(../images/circle.png);
 	width: 24px;
 	height: 24px;
 	font-style: normal;
@@ -694,13 +694,11 @@ input::-webkit-inner-spin-button {
 	line-height: normal;
 	letter-spacing: normal;
 	color: #0092CA;
-	font-size: 60px;
 	position: absolute;
-	left: -31px;
-    top: -61px;
+	left: -28px;
+    top: -14px;
 	cursor: pointer;
 }
-
 
 .samples-section input[type="checkbox"] {
 	display: none;
