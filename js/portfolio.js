@@ -162,7 +162,9 @@ PortfolioPresenter.prototype.resizeHandler = function () {
                         var row = Math.ceil(now/this.galleryCount);
                         this.showNextItems(0, this.galleryCount*row);
                     } else {
-                        this.buildDefaultPortfolio();
+                        if(window.innerWidth < 1366){
+                            this.buildDefaultPortfolio();
+                        }
                     }
 
                 }    
@@ -212,7 +214,6 @@ PortfolioPresenter.prototype.showNextItems = function (offset, forceLimit) {
         _offset = (typeof offset === 'undefined') ? this.block.find(".view").length : offset,
         _items = (this.searchedSkill === null) ? this.model.take(_forceLimit ? _forceLimit : this.galleryCount*2, _offset)
             : this.model.find(this.searchedSkill, _forceLimit ? _forceLimit : this.galleryCount*2, _offset);
-
     if (_items.length) {
         
         for (var i = 0; i < _items.length; i++) {
