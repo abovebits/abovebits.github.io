@@ -1073,6 +1073,7 @@ canvas{
   height: 100%;
 }
 footer {background:#eeeff3; color: #777; padding: 15px 0; text-align: center;}
+#page-404 footer {background:#ffffff;}
 footer p {margin: 0;}
 footer a {line-height: inherit !important;}
 .demoInputBox{padding:10px; border:#F0F0F0 1px solid; border-radius:4px;}
@@ -2557,3 +2558,98 @@ footer a {line-height: inherit !important;}
 	}
 }
 
+#page-404 > .navbar {
+    background: #eeeff3;
+    box-shadow: rgba(0, 0, 0, 0.6) 0px 1px 5px;
+}
+
+#page-404-main-image {
+    margin-top: 90px;
+    margin-bottom: 30px;
+}
+
+#page-404-heading h1 {
+    font-weight: bold;
+    font-size: 42px;
+    line-height: 50px;
+    text-align: center;
+    color: #2F2F2F;
+    margin-bottom: 20px;
+}
+
+#page-404-text {
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+    color: #7D7D7D;
+    margin-bottom: 40px;
+}
+
+#page-404-button {
+    margin-bottom: 90px;
+}
+
+#page-404-button a {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+    color: #FFFFFF;
+    background: #18ADE7;
+    border-radius: 5px;
+    padding: 16px 45px;
+    text-decoration: none;
+}
+
+@media (max-width: 480px)
+{
+    #page-404-main-image {
+        margin-top: 50px;
+    }
+
+    #page-404-main-image svg {
+        max-width: 100%;
+    }
+
+    #page-404-heading h1 {
+        font-size: 35px;
+    }
+}
+
+@media (max-width: 374px)
+{
+    #page-404-main-image {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    #page-404-heading h1 {
+        line-height: 35px;
+    }
+
+    #page-404-button {
+        margin-bottom: 50px;
+    }
+}
+
+@media (max-width: 320px)
+{
+    #page-404-main-image {
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+
+    #page-404-heading h1 {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    #page-404-text {
+        margin-bottom: 30px;
+    }
+
+    #page-404-button {
+        margin-bottom: 35px;
+    }
+}
