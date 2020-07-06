@@ -1282,7 +1282,13 @@ footer a {line-height: inherit !important;}
 
 }
 @media (min-width: 1921px) {
+	.navbar-brand.logo-top img {
+    	width: 17vw !important;
+	}
 
+	.navbar-brand.logo-top-scrol img{
+		width: 12vw !important;
+	}
 	body, p, #skills h3, .navbar-nav li a, #contact #frmContact input[type=text], #contact #frmContact textarea, #contact #frmContact input[type=email] {
 		font-size: 1vw;
 	}
@@ -1517,25 +1523,18 @@ _:-ms-lang(x), .parallax { background-size: auto 130%; }
 	display: block;
 }
 @media (max-width: 5120px) and (min-width: 5120px) {
-	.navbar-brand.logo-top img {
-    	width: 17vw;
-	}
-
-	.navbar-brand.logo-top-scrol img{
-		width: 12vw;
-	}
-	.templatemonster_partner {
-	    right: 170px;
-	}
-	.freelancer_badget {
-	    right: 433px;
-	}
-	.upwork-logo {
-    	right: 680px;
-	}
-	.clients-say {
-	    right: 925px;
-	}
+    .templatemonster_partner {
+        right: 170px;
+    }
+    .freelancer_badget {
+        right: 433px;
+    }
+    .upwork-logo {
+        right: 680px;
+    }
+    .clients-say {
+        right: 925px;
+    }
 }
 @media (max-width: 768px) {
 	.navbar-nav li a {
