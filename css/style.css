@@ -1652,22 +1652,19 @@ footer a {line-height: inherit !important;}
 .logo-top {
 	display: block;
 }
-@media (max-width: 5120px) and (min-width: 5120px){
-	.navbar-brand.logo-top-scrol img{
-		width: 12vw;
-	}
-	.templatemonster_partner {
-	    right: 170px;
-	}
-	.freelancer_badget {
-	    right: 433px;
-	}
-	.upwork-logo {
-    	right: 680px;
-	}
-	.clients-say {
-	    right: 925px;
-	}
+@media (max-width: 5120px) and (min-width: 5120px) {
+    .templatemonster_partner {
+        right: 170px;
+    }
+    .freelancer_badget {
+        right: 433px;
+    }
+    .upwork-logo {
+        right: 680px;
+    }
+    .clients-say {
+        right: 925px;
+    }
 }
 @media (max-width: 768px) {
 	.navbar-nav li a {
