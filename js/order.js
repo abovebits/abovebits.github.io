@@ -23,7 +23,7 @@ $(document).ready( function() {
 				"page": 3,
 				"integration": 158,
 				"desktop": 48,
-				"table": 28,
+				"tablet": 28,
 				"mobile": 38
 			},
 			"Front-End": {
@@ -32,7 +32,7 @@ $(document).ready( function() {
 				"page": 3,				
 				"integration": 0,
 				"desktop": 48,
-				"table": 28,
+				"tablet": 28,
 				"mobile": 38
 			},
 			"WooCommerce": {
@@ -41,7 +41,7 @@ $(document).ready( function() {
 				"page": 3,				
 				"integration": 374,
 				"desktop": 48,
-				"table": 28,
+				"tablet": 28,
 				"mobile": 38
 			},
 			"Magento": {
@@ -50,7 +50,7 @@ $(document).ready( function() {
                 "page": 3,
 				"integration": 500,
 				"desktop": 48,
-				"table": 28,
+				"tablet": 28,
 				"mobile": 38
 			},	
 			"Email": {
@@ -59,7 +59,7 @@ $(document).ready( function() {
 				"page": 3,				
 				"integration": 0,
 				"desktop": 98,
-				"table": 0,
+				"tablet": 0,
 				"mobile": 38
 			},
 			"Laravel": {
@@ -68,7 +68,7 @@ $(document).ready( function() {
 				"page": 4,				
 				"integration": 0,
 				"desktop": 68,
-				"table": 0,
+				"tablet": 0,
 				"mobile": 48
 			},
 			"Opencart": {
@@ -77,7 +77,7 @@ $(document).ready( function() {
 				"page": 4,				
 				"integration": 0,
 				"desktop": 68,
-				"table": 0,
+				"tablet": 0,
 				"mobile": 48
 			},
 			"Shopify": {
@@ -86,7 +86,7 @@ $(document).ready( function() {
 				"page": 4,				
 				"integration": 0,
 				"desktop": 68,
-				"table": 0,
+				"tablet": 0,
 				"mobile": 48
 			},																					
 		},
@@ -97,7 +97,7 @@ $(document).ready( function() {
 				"page": 4,				
 				"integration": 200,
 				"desktop": 68,
-				"table": 38,
+				"tablet": 38,
 				"mobile": 48
 			},
 			"Front-End": {
@@ -106,7 +106,7 @@ $(document).ready( function() {
 				"page": 4,				
 				"integration": 0,
 				"desktop": 68,
-				"table": 38,
+				"tablet": 38,
 				"mobile": 48
 			},
 			"WooCommerce": {
@@ -115,7 +115,7 @@ $(document).ready( function() {
 				"page": 4,				
 				"integration": 400,
 				"desktop": 68,
-				"table": 38,
+				"tablet": 38,
 				"mobile": 48
 			},
 			"Magento": {
@@ -124,7 +124,7 @@ $(document).ready( function() {
 				"page": 4,				
 				"integration": 600,
 				"desktop": 68,
-				"table": 38,
+				"tablet": 38,
 				"mobile": 48
 			},
 			"Email": {
@@ -133,7 +133,7 @@ $(document).ready( function() {
 				"page": 4,				
 				"integration": 0,
 				"desktop": 138,
-				"table": 0,
+				"tablet": 0,
 				"mobile": 48
 			},	
 			"Laravel": {
@@ -142,7 +142,7 @@ $(document).ready( function() {
 				"page": 4,				
 				"integration": 0,
 				"desktop": 68,
-				"table": 0,
+				"tablet": 0,
 				"mobile": 48
 			},
 			"Opencart": {
@@ -151,7 +151,7 @@ $(document).ready( function() {
 				"page": 4,				
 				"integration": 0,
 				"desktop": 68,
-				"table": 0,
+				"tablet": 0,
 				"mobile": 48
 			},	
 			"Shopify": {
@@ -160,7 +160,7 @@ $(document).ready( function() {
 				"page": 4,				
 				"integration": 0,
 				"desktop": 68,
-				"table": 0,
+				"tablet": 0,
 				"mobile": 48
 			},																						
 		}
