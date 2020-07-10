@@ -34,6 +34,22 @@ $('#mail-status').click(function() {
   $(this).html(" ");
 })
 
+$('#contact-form input[type="text"], #contact-form input[type="email"]').on('input', function() {
+    revalidateField($(this));
+});
+
+$('#works .gallery_more a, .skills_toggle a').mouseover(function() {
+    $(this).addClass('hover');
+});
+
+$('#works .gallery_more a, .skills_toggle a').mouseout(function() {
+    $(this).removeClass('hover');
+});
+
+$('#works .gallery_more a, .skills_toggle a').click(function() {
+    $(this).removeClass('hover');
+});
+
 function validateContact() {
 	var valid = true;	
 	$(".demoInputBox").css('background-color','');
@@ -67,6 +83,13 @@ function validateContact() {
 	
 	return valid;
 }
+
+function revalidateField(fildElement) {
+    if ($.trim(fildElement.val()) != '') {
+        fildElement.parent('div').children('span.info').html('');
+    }
+}
+
 /**Header progress bar**/
 $(window).load(function(){
     $(window).scroll(function() {
@@ -76,6 +99,5 @@ $(window).load(function(){
         //console.log("total scroll" + totalScroll);
         $(".KW_progressBar").css("width",totalScroll+"%");
     });
-
 });
 /**End of Header progress bar**/
