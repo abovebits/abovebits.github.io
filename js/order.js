@@ -46,6 +46,8 @@ $(document).ready( function() {
 			},
 			"Magento": {
 				"homepage_price": 97,
+                "homepage": 4,
+                "page": 3,
 				"integration": 500,
 				"desktop": 48,
 				"table": 28,
