@@ -9,6 +9,8 @@ var _markers = {
 		{latLng: [40.71, -74.00], name: 'New York, USA (Field office)'},
 		{latLng: [34.05, -118.24], name: 'Los Angeles, USA (Head office)', style: {r: 10, /*fill: 'red', image: 'images/favicon/icon_agency64х64.png'*/}},
 		{latLng: [35.22, -80.84], name: 'Charlotte, NC, USA (Field office)'},
+		{latLng: [34.22, -77.94], name: 'Wilmington, NC, USA (Field office)'},
+		{latLng: [32.77, -79.93], name: 'Charleston, SC, USA (Field office)'},
 	],
 	"clients": [
 		{latLng: [41.01, 28.97], name: 'Istanbul, Turkey'},
