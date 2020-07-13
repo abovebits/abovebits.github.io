@@ -90,6 +90,20 @@ function revalidateField(fildElement) {
     }
 }
 
+var maxChars = 50;
+
+$('#contact-form #userName, #contact-form #userEmail, #contact-form #subject').keydown(function(e){
+    if ($(this).val().length >= maxChars) {
+        $(this).val($(this).val().substr(0, maxChars));
+    }
+});
+
+$('#contact-form #userName, #contact-form #userEmail, #contact-form #subject').keyup(function(e){
+    if ($(this).val().length >= maxChars) {
+        $(this).val($(this).val().substr(0, maxChars));
+    }
+});
+
 /**Header progress bar**/
 $(window).load(function(){
     $(window).scroll(function() {
