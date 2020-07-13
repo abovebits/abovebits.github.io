@@ -260,42 +260,48 @@ img.magento_logo {height: 10% !important;}
 
 @media (min-width: 376px) and (max-width: 380px) {
 	.call-to-action-slider { left: 210px; }
-	#page-top #top-parallax .upwork-logo { right: 211px !important; }
+	/*#page-top #top-parallax .upwork-logo { right: 211px !important; }
 	img.magento_logo.freelancer_badget { right: 141px; }
-	img.magento_logo.templatemonster_partner { right: 59px; }
+	img.magento_logo.templatemonster_partner { right: 59px; }*/
 }
 @media (min-width: 381px) and (max-width: 390px) {
 	.call-to-action-slider { left: 212px; }
-	#page-top #top-parallax .upwork-logo { right: 219px !important;}
+	/*#page-top #top-parallax .upwork-logo { right: 219px !important;}
 	img.magento_logo.freelancer_badget { right: 155px; }
-	img.magento_logo.templatemonster_partner { right: 68px; }
+	img.magento_logo.templatemonster_partner { right: 68px; }*/
 }
 @media (min-width: 391px) and (max-width: 401px) {
 	.call-to-action-slider { left: 212px; }
-	#page-top #top-parallax .upwork-logo { right: 233px !important; }
-	img.magento_logo.freelancer_badget { right: 160px; }
+	/*#page-top #top-parallax .upwork-logo { right: 233px !important; }
+	img.magento_logo.freelancer_badget { right: 160px; }*/
 }
 
 @media (max-width: 375px){
 	.call-to-action-slider { left: 210px; }
+    /*
 	img.magento_logo.templatemonster_partner { right: 10px; }
 	img.magento_logo.freelancer_badget { right: 95px; }
 	#page-top #top-parallax .upwork-logo { right: 161px !important; }
     img.magento_logo.clients-say {right: 225px;}
+    */
 }
 
 @media (min-width: 361px) and (max-width: 374px) {
 	.call-to-action-slider { left: 186px; }
+    /*
 	#page-top #top-parallax .upwork-logo { right: 211px !important; }
 	img.magento_logo.freelancer_badget { right: 141px; }
 	img.magento_logo.templatemonster_partner { right: 59px; }
+	*/
 }
 
 @media (max-width: 360px){
 	.call-to-action-slider { left: 182px; }
+    /*
 	img.magento_logo.templatemonster_partner { right: 61px; }
 	img.magento_logo.freelancer_badget { right: 144px; }
 	#page-top #top-parallax .upwork-logo { right: 205px !important; }
+    */
 }
 
 @media (max-width: 320px){
@@ -355,7 +361,7 @@ img.magento_logo {height: 10% !important;}
 #skills h3,
 #works h3 {font-size: 16px; margin-top: 25px; margin-bottom: 25px;}
 #skills .search-field input,
-#works .search-field input{border-radius:0;}
+#works .search-field input{border-radius:0; border: 1px solid black;}
 #skills .search-field input:hover,
 #works .search-field input:hover {outline: -webkit-focus-ring-color auto 5px;}
 #skills .green_body {color: #21c967;}
@@ -398,7 +404,8 @@ img.magento_logo {height: 10% !important;}
 	#skills li h3,
 	#works li h3 { margin-top: 15px;   margin-bottom: 10px;}
 	#skills h3.border-left,
-	#works h3.border-left {padding-left: 4px;}
+	#works h3.border-left {padding-left: 4px; padding-right: 4px;}
+    #skills li:first-child h3, #works li:first-child h3 {padding-right: 4px;}
 	#skills input#quicksearch,
 	#works .search-field input {margin-top: 10px;}
 }
@@ -903,7 +910,7 @@ input:-moz-placeholder { /* Firefox 18- */
 }
 
 table td[class*=col-] {height: auto;}
-#live_demo .owl-carousel  table td[class*=col-] {background: #54545c;}
+/*#live_demo .owl-carousel  table td[class*=col-] {background: #54545c;}*/
 @media (max-width: 767px) {
 	table td[class*=col-] {display: inline-block;}
 }
@@ -1507,6 +1514,8 @@ _:-ms-lang(x), .parallax { background-size: auto 130%; }
 
 .mobile-app p { font-weight: normal; font-size: 18px; line-height: 32px; color: #808691;}
 
+.information-app p {line-height: 28px;}
+
 .content-mobile-app { margin: 87px 0px 165px 190px; }
 
 .content-mobile-app div{ margin: 0px 0 15px 0; }
@@ -1660,6 +1669,7 @@ input:focus, textarea:focus, input:hover, textarea:hover {
 		width: 90%;
 		margin-top: -8px;
 	}
+    .information-app p {line-height: 24px !important;}
 }
 @media (max-width: 414px) {
 	.fixed-header .logo-top-scrol img {
@@ -1669,11 +1679,13 @@ input:focus, textarea:focus, input:hover, textarea:hover {
 		width: 70%;
 		margin-top: -8px;
 	}
+    .information-app p {line-height: 22px !important;}
 }
 @media (max-width: 320px) {
 	.logo-top img {
 		margin-top: 0px;
 	}
+    .information-app p {line-height: 21px !important;}
 }
 .clear-gallery-search-li .clear-a {
 	position: absolute;
@@ -2096,6 +2108,7 @@ input:focus, textarea:focus, input:hover, textarea:hover {
 @media (min-width: 415px) and (max-width: 767px)
 {
 	.mobile-app p { line-height: 25px;}
+    /*.information-app p {line-height: 22px !important;}*/
 	.image-mobile-app .phone-img-2 { right: -184px; }
 	.image-mobile-app .phone-img-b-2 { right: -215px; }
 	.image-mobile-app .phone-img-1 { top: auto; right: -362px; bottom: -37px;}
@@ -2329,11 +2342,13 @@ input:focus, textarea:focus, input:hover, textarea:hover {
 @media (min-width: 415px) and (max-width: 520px)
 {
 	.content-mobile-app .title-mobile-app { font-size: 19px;}
+    /*.information-app p {line-height: 21px !important;}*/
 }
 
 @media (max-width: 320px)
 {
 	.content-mobile-app { margin: 30px 15px 328px 15px; }
+    /*.information-app p {line-height: 21px !important;}*/
 	.image-mobile-app .phone-img-1 { right: -55px; top: auto; }
 	.image-mobile-app .phone-img-2 { top: auto; right: -34px; }
 	.image-mobile-app .phone-img-c-1 { right: -55px; top: auto; }
@@ -2353,7 +2368,7 @@ input:focus, textarea:focus, input:hover, textarea:hover {
 .information-app p{
 	font-style: normal;
     font-size: 14px;
-    line-height: 21px;
+    /*line-height: 28px;*/
     margin: 0;
 }
 .information-app a{
