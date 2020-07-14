@@ -1038,9 +1038,9 @@ table td[class*=col-] {height: auto;}
 #contact #frmContact input[type=text],
 #contact #frmContact textarea,
 #contact #frmContact input[type=email] {padding-left: 10px; background: #9dd69c; border: none; border: 1px solid #228B22; color: white; font-size: 14px; font-weight:600; width: 100%; min-height:40px; line-height: 40px; border-radius: 0;}
-#contact #frmContact input[type=text]:hover,
-#contact #frmContact textarea:hover,
-#contact #frmContact input[type=email]:hover {    outline: -webkit-focus-ring-color auto 5px;}
+#contact #frmContact input[type=text]:hover, #contact #frmContact input[type=text]:focus,
+#contact #frmContact textarea:hover, #contact #frmContact textarea:focus,
+#contact #frmContact input[type=email]:hover, #contact #frmContact input[type=email]:focus {outline: none; border-radius: 5px; border: 1px solid black;}
 #contact #frmContact textarea {line-height: 25px;}
 #contact #frmContact textarea::-webkit-input-placeholder,
 #contact #frmContact input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
@@ -1612,10 +1612,6 @@ _:-ms-lang(x), .parallax { background-size: auto 130%; }
 }
 .logo-top {
 	display: block;
-}
-
-input:focus, textarea:focus, input:hover, textarea:hover {
-    outline: none !important;
 }
 
 @media (max-width: 5120px) and (min-width: 5120px) {
