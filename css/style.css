@@ -195,9 +195,9 @@ body{cursor:auto !important;}
 	-webkit-filter: brightness(120%) drop-shadow(8px 8px 10px gray);/* Safari 6.0 - 9.0 */
 	filter: brightness(120%) drop-shadow(8px 8px 10px gray);
 }
-.upwork-logo{right: 205px;border-radius: 24px;padding: 12px;filter:brightness(100%) drop-shadow(1px 1px 5px gray);-webkit-filter:brightness(75%) drop-shadow(1px 1px 5px gray)}
-.clients-say { right: 290px; }
-.freelancer_badget{right: 120px;}
+.upwork-logo{right: 105px;border-radius: 24px;padding: 12px;filter:brightness(100%) drop-shadow(1px 1px 5px gray);-webkit-filter:brightness(75%) drop-shadow(1px 1px 5px gray)}
+.clients-say { right: 190px; }
+.freelancer_badget{right: 20px;}
 .templatemonster_partner {right: 20px}
 .magento_logo.m_specialist{right: 90px;}
 img.magento_logo {height: 10% !important;}
@@ -212,9 +212,9 @@ img.magento_logo {height: 10% !important;}
 @media (max-width: 1024px){
 	img.magento_logo{height: 110px !important;}
 	.magento_logo.m_specialist{right: 90px;}
-	.freelancer_badget{right: 125px;}
-	.upwork-logo{right: 220px;}
-	.clients-say{right: 310px;}
+	.freelancer_badget{right: 20px;}
+	.upwork-logo{right: 115px;}
+	.clients-say{right: 205px;}
 	.templatemonster_partner {right: 20px}
 }
 
@@ -235,26 +235,26 @@ img.magento_logo {height: 10% !important;}
 @media (max-width: 640px){
 	img.magento_logo { height: 90px !important; }
 	.templatemonster_partner { right: 20px; }
-	.freelancer_badget { right: 117px; }
-	.upwork-logo { right: 199px; }
-	.clients-say { right: 277px; }
+	.freelancer_badget { right: 20px; }
+	.upwork-logo { right: 102px; }
+	.clients-say { right: 180px; }
 }
 
 @media (max-width: 568px) and (min-width: 568px) {
 	.call-to-action-slider { font-size: 14px; }
 	.templatemonster_partner { right: 10px; }
-	.freelancer_badget { right: 108px; }
-	.upwork-logo { right: 181px; }
-	.clients-say { right: 253px; }
+	.freelancer_badget { right: 20px; }
+	.upwork-logo { right: 93px; }
+	.clients-say { right: 165px; }
 }
 
 @media (max-width: 414px){
 	.call-to-action-slider {left: 225px; font-size: 18px; padding: 5px 15px; margin-bottom: 15px; bottom: 80px;}
 	img.magento_logo { height: 80px !important; right: 10px;}
-	img.magento_logo.freelancer_badget { right: 105px; }
+	img.magento_logo.freelancer_badget { right: 20px; }
 	img.magento_logo.templatemonster_partner { right: 10px; bottom: 0px; }
-	img.magento_logo.clients-say {right: 250px; bottom: 0px; height: 75px !important; }
-	#page-top #top-parallax .upwork-logo { right: 180px !important; bottom: 0px;}
+	img.magento_logo.clients-say {right: 165px; bottom: 0px; height: 75px !important; }
+	#page-top #top-parallax .upwork-logo { right: 95px !important; bottom: 0px;}
 }
 
 
@@ -307,10 +307,10 @@ img.magento_logo {height: 10% !important;}
 @media (max-width: 320px){
 	.call-to-action-slider { left: 15px; bottom: 0px; font-size: 14px;}
 	img.magento_logo { height: 90px !important; right: 10px; }
-	img.magento_logo.freelancer_badget { right: 83px; }
+	img.magento_logo.freelancer_badget { right: 0px; }
 	img.magento_logo.templatemonster_partner { right: 0; bottom: 0px; }
-	#page-top #top-parallax .upwork-logo { right: 0px !important; bottom: 105px; }
-	img.magento_logo.clients-say {right: 72px;bottom: 105px; left: auto;}
+	#page-top #top-parallax .upwork-logo { right: 70px !important; bottom: 0px; }
+	img.magento_logo.clients-say {right: -10px;bottom: 105px; left: auto;}
 }
 
 @media (width: 375px){
@@ -1723,9 +1723,9 @@ _:-ms-lang(x), .parallax { background-size: auto 130%; }
     	height: 13% !important;
 	}
     img.magento_logo.templatemonster_partner { right: 20px;}
-    img.magento_logo.freelancer_badget { right: 150px; }
-    #page-top #top-parallax .upwork-logo { right: 265px !important;}
-    img.magento_logo.clients-say {right: 370px;}
+    img.magento_logo.freelancer_badget { right: 20px; }
+    #page-top #top-parallax .upwork-logo { right: 135px !important;}
+    img.magento_logo.clients-say {right: 240px;}
 }
 
 #mobile-app-block .owl-dots { 
