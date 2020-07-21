@@ -1280,8 +1280,10 @@ footer a {line-height: inherit !important;}
 	}
 }
 @media (max-width: 768px) {
+    /*
 	#works h1,
 	#skills h1,
+	*/
 	#contact h1,
 	#about h1 {
 		font-size: 25px;
@@ -1315,13 +1317,20 @@ footer a {line-height: inherit !important;}
 	#skills .blue_body p, #skills .green_body p{font-size: 12px;}
 }
 @media (max-width: 1024px) {
+    /*
 	#works h1,
 	#skills h1,
 	#contact h1,
-	#about h1 {
-		font-size: 35px;
+	#about h1, .title-section {
+		font-size: 35px !important;
 	}
+    .title-mobile-app {
+        font-size: 28px !important;
+    }
 	#about h1 + h2 {font-size: 28px;}
+	*/
+     */
+
 	/*#about{padding-top: 20px;}*/
 }
 @media (max-width: 767px) {
@@ -1518,7 +1527,7 @@ _:-ms-lang(x), .parallax { background-size: auto 130%; }
 
 .content-mobile-app { margin: 87px 0px 165px 190px; }
 
-.content-mobile-app div{ margin: 0px 0 15px 0; }
+.content-mobile-app div{ margin: 20px 0 15px 0; }
 
 /*.content-mobile-app.block-content-app { margin: 190px 0px 165px 15px; }*/
 
@@ -1866,7 +1875,7 @@ _:-ms-lang(x), .parallax { background-size: auto 130%; }
 	.title-mobile-app { font-size: 35px; }
 	.ipad-cl { display: block; }
 	.iphone-cl, .desctop-cl { display: none;}
-	.image-mobile-app .phone-img-1 { right: -175px; top: 77px; }
+	.image-mobile-app .phone-img-1 { right: -275px; top: 77px; }
 	.image-mobile-app .phone-img-1 img { width: 80% !important; }
 	.image-mobile-app .phone-img-2 { top: 1px; right: -116px; }
 	.image-mobile-app .phone-img-2 img { width: 80% !important; }
@@ -1874,7 +1883,7 @@ _:-ms-lang(x), .parallax { background-size: auto 130%; }
 	.image-mobile-app .phone-img-b-1 img { width: 80% !important; }
 	.image-mobile-app .phone-img-b-2 { top: 0px; right: -125px; }
 	.image-mobile-app .phone-img-b-2 img { width: 80% !important; }
-	.image-mobile-app .phone-img-c-1 { right: -121px; top: 83px; }
+	.image-mobile-app .phone-img-c-1 { right: -150px; top: 83px; }
 	.image-mobile-app .phone-img-c-1 img { width: 80% !important; }
 	.image-mobile-app .phone-img-c-2 { top: 1px; right: -121px; }
 	.image-mobile-app .phone-img-c-2 img { width: 80% !important; }	
@@ -1931,7 +1940,7 @@ _:-ms-lang(x), .parallax { background-size: auto 130%; }
 	.ipad-cl, .desctop-cl { display: none; }
 	.iphone-cl { display: block; }	
 	.button-mobile-app img { margin: 0 auto; }
-	.content-mobile-app .title-mobile-app { margin: 0px 0px; text-align: center; }
+	.content-mobile-app .title-mobile-app { /*margin: 0px 0px;*/ text-align: center; }
 	.content-mobile-app div { text-align: center; }
 	.image-mobile-app .phone-img-b-2 { top: 302px; }
 	.image-mobile-app .phone-img-b-1 { right: 108px; }
@@ -2086,7 +2095,7 @@ _:-ms-lang(x), .parallax { background-size: auto 130%; }
 	.content-mobile-app .title-mobile-app { text-align: left; }
 	.content-mobile-app div { text-align: left; }
 	.button-mobile-app img { margin: 0; }
-	.image-mobile-app .phone-img-1 { top: 95px; right: -260px;}
+	.image-mobile-app .phone-img-1 { top: 130px; right: -310px;}
 	.image-mobile-app .phone-img-1 img { width: 75% !important; }
 	.image-mobile-app .phone-img-2 img { width: 80% !important; }
 	.image-mobile-app .phone-img-2 { top: 0px; right: -92px; }
@@ -2115,7 +2124,7 @@ _:-ms-lang(x), .parallax { background-size: auto 130%; }
 
 @media (min-width: 568px) and (max-width: 736px)
 {
-	.content-mobile-app .title-mobile-app { text-align: left; font-size: 24px;}
+	.content-mobile-app .title-mobile-app { text-align: left; /*font-size: 24px;*/}
 	.content-mobile-app div { text-align: left; }
 	.button-mobile-app img { margin: 0; }
 	.block-content-app { margin: 30px 15px 0px 70px; }
@@ -2209,7 +2218,7 @@ _:-ms-lang(x), .parallax { background-size: auto 130%; }
 
 @media (min-width: 415px) and (max-width: 680px)
 {
-	.block-content-app { margin: 0px 15px 0px 70px; }
+	.block-content-app { margin: 20px 15px 0px 70px; }
 	.mobile-app p { line-height: 20px; }
 	.image-mobile-app .phone-img-1 { top: auto; right: -327px;}
 	.image-mobile-app .phone-img-c-1 { top: auto; right: -184px;}
@@ -2272,7 +2281,7 @@ _:-ms-lang(x), .parallax { background-size: auto 130%; }
 
 @media (min-width: 415px) and (max-width: 632px)
 {
-	.content-mobile-app .title-mobile-app { font-size: 23px;}
+	.content-mobile-app .title-mobile-app { /*font-size: 23px;*/}
 }
 
 @media (min-width: 415px) and (max-width: 620px)
@@ -2285,7 +2294,7 @@ _:-ms-lang(x), .parallax { background-size: auto 130%; }
 
 @media (min-width: 415px) and (max-width: 607px)
 {
-	.content-mobile-app .title-mobile-app { font-size: 22px;}	
+	.content-mobile-app .title-mobile-app { /*font-size: 22px;*/}
 }
 
 @media (min-width: 415px) and (max-width: 600px)
@@ -2299,8 +2308,8 @@ _:-ms-lang(x), .parallax { background-size: auto 130%; }
 
 @media (min-width: 415px) and (max-width: 582px)
 {
-	.content-mobile-app .title-mobile-app { font-size: 21px;}
-	.image-mobile-app .phone-img-b-1 { right: -212px; }	
+	.content-mobile-app .title-mobile-app { /*font-size: 21px;*/}
+	.image-mobile-app .phone-img-b-1 { right: -212px; }
 }
 
 @media (min-width: 415px) and (max-width: 580px)
@@ -2324,7 +2333,7 @@ _:-ms-lang(x), .parallax { background-size: auto 130%; }
 
 @media (min-width: 415px) and (max-width: 550px)
 {
-	.content-mobile-app .title-mobile-app { font-size: 20px;}
+	.content-mobile-app .title-mobile-app { /*font-size: 20px;*/}
 	.image-mobile-app .phone-img-b-1 img { width: 63% !important;}
 	.image-mobile-app .phone-img-b-1 { right: -186px; bottom: 0px;}
 }
@@ -2337,7 +2346,7 @@ _:-ms-lang(x), .parallax { background-size: auto 130%; }
 
 @media (min-width: 415px) and (max-width: 520px)
 {
-	.content-mobile-app .title-mobile-app { font-size: 19px;}
+	.content-mobile-app .title-mobile-app { /*font-size: 19px;*/}
     /*.information-app p {line-height: 21px !important;}*/
 }
 
@@ -2423,6 +2432,263 @@ _:-ms-lang(x), .parallax { background-size: auto 130%; }
     text-decoration: none;
 }
 
+/* Contact Form Block - Begin */
+
+#contact-form-container {
+    padding-top: 60px;
+    background-image: url("../images/bg_contact_form.jpg");
+    background-size: cover;
+}
+
+#contact-form-content {
+    margin-bottom: -40px;
+}
+
+#contact-form-container .head_block {
+    font-weight: normal;
+    text-align: center;
+    color: #ffffff;
+}
+
+.head_block .title {
+    margin-bottom: 5px;
+}
+
+#skills .head_block .title h1, #works .head_block .title h1, .head_block .title h1, .title-section {
+    margin-top: 0px;
+    font-size: 60px;
+    line-height: 60px;
+}
+
+.head_block .text {
+    margin-bottom: 45px;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+#contact-form {
+    padding: 50px;
+    background: #FFFFFF;
+    box-shadow: 0px 50px 50px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+#contact-form input, #contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    background: #FFFFFF;
+    border: 1px solid #E8E8E8;
+    box-sizing: border-box;
+    border-radius: 4px;
+    font-size: 16px;
+    line-height: 19px;
+    color: #929292;
+}
+
+#contact-form input[type="submit"] {
+    margin-top: 15px;
+    background: #18ADE7;
+    border-radius: 4px;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+#contact-form input[type="submit"]:hover {
+    box-shadow: unset;
+}
+
+#contact-form textarea::-webkit-input-placeholder,
+#contact-form input::-webkit-input-placeholder {
+    color: #929292; font-size: 16px;
+}
+#contact-form textarea::-moz-placeholder,
+#contact-form input::-moz-placeholder {
+    color: #929292; font-size: 16px;
+}
+#contact-form textarea:-ms-input-placeholder,
+#contact-form input:-ms-input-placeholder {
+    color: #929292; font-size: 16px;
+}
+#contact-form textarea:-moz-placeholder,
+#contact-form input:-moz-placeholder {
+    color: #929292; font-size: 16px;
+}
+
+#contact-form label {
+    margin-bottom: 10px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    color: #2F2F2F;
+}
+
+#contact-form .info {
+    font-size: .7em;
+}
+
+/* Contact Form Block - End */
+
+/* Footer - Begin */
+footer {
+    background: #ffffff;
+    color: #2F2F2F;
+    padding: 80px 0px 50px 0px;
+    text-align: left;
+}
+
+footer p {
+    font-size: 16px;
+    line-height: 19px;
+}
+/* Footer - End */
+
+/* Works & Skills sections - Begin */
+#works .head_block .title h1, #skills .head_block .title h1, .title-section {
+    font-weight: normal;
+    color: #2F2F2F;
+}
+
+#works .head_block .text, #skills .head_block .text {
+    margin-bottom: 15px;
+    color: #2F2F2F;
+}
+
+#works h3.border-left, #skills h3.border-left {
+    border-left: 0px;
+}
+
+#works button, #skills button {
+    color: #2F2F2F;
+}
+
+#works button:hover, #works button.button.is-checked, #skills button:hover, #skills button.button.is-checked {
+    color: #18ADE7;
+}
+
+/*
+#works nav li:first-child h3 button {
+    padding-left: 20px;
+}
+
+#skills nav li:first-child h3 button {
+    padding-left: 45px;
+}
+
+ */
+/* Works & Skills sections - End */
+
+/* Mobile projects section - Begin */
+.content-mobile-app {
+    /*margin: 60px 0px 165px 190px;*/
+}
+
+.title-mobile-app {
+    font-weight: normal;
+    font-size: 32px;
+    line-height: 38px;
+    color: #2F2F2F;
+}
+
+.content-mobile-app .title-mobile-app {
+    margin-top: 40px;
+}
+
+.content-mobile-app .mobile-app-technologies {
+    margin-bottom: 20px;
+}
+
+.mobile-app-technologies ul {
+    padding: 0px;
+}
+
+.mobile-app-technologies ul li {
+    list-style: none;
+    display: inline-block;
+    border: 1px solid #D6D6D6;
+    box-sizing: border-box;
+    border-radius: 1000px;
+    padding: 15px 20px;
+    line-height: 16px;
+    margin-right: 5px;
+}
+
+.mobile-app-technologies ul li span {
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 16px;
+    color: #2F2F2F;
+}
+
+.mobile-app p {
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    color: #2F2F2F;
+}
+
+.information-app a {
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    color: #18ADE7;
+}
+/* Mobile projects section - End */
+
+@media (max-width: 1400px)
+{
+    .block-content-app {
+        width: 50%;
+    }
+}
+
+@media (max-width: 920px)
+{
+    #skills .head_block .title h1, #works .head_block .title h1, .head_block .title h1, .title-section {
+        font-size: 48px;
+        line-height: 48px;
+    }
+
+    .content-mobile-app .title-mobile-app {
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 768px)
+{
+    #skills .head_block .title h1, #works .head_block .title h1, .head_block .title h1, .title-section {
+        font-size: 40px;
+        line-height: 40px;
+    }
+
+    .title-mobile-app {
+        font-size: 28px;
+        line-height: 32px;
+    }
+
+    #contact-form {
+        padding: 25px;
+    }
+
+    .mobile-app-technologies ul li {
+        padding: 10px 15px;
+        line-height: 14px;
+    }
+
+    .mobile-app-technologies ul li span {
+        font-size: 14px;
+        line-height: 14px;
+    }
+}
+
+@media (max-width: 600px)
+{
+    .block-content-app {
+        width: 75%;
+    }
+}
+
 @media (max-width: 480px)
 {
     #page-404-main-image {
@@ -2435,6 +2701,22 @@ _:-ms-lang(x), .parallax { background-size: auto 130%; }
 
     #page-404-heading h1 {
         font-size: 35px;
+    }
+
+    .mobile-app-technologies ul li {
+        margin-bottom: 5px;
+    }
+
+    .block-content-app {
+        width: auto;
+    }
+}
+
+@media (max-width: 375px)
+{
+    .head_block .title h1 {
+        font-size: 40px;
+        line-height: 40px;
     }
 }
 
