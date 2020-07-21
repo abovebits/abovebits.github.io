@@ -360,7 +360,7 @@ $(document).ready( function() {
 			$('.homepage_breakdown .count-breakdown').text('1');
 			if(count_page > 1){
 				var count_inner_page = count_page-1;
-				$('.count-inner-page span').text(count_inner_page);
+				$('.count-inner-page span').html('<span>' + count_inner_page + '</span> Inner Page' + (count_inner_page > 1 ? 's' : ''));
 				$('.count-p').text(count_inner_page);
 				$('.count-price').text(total_sum_device);
 				$('.breakdown-inner').show();
@@ -369,7 +369,7 @@ $(document).ready( function() {
 				$('.total-price span').text(total_price);
 
 			}else{
-				$('.count-inner-page span').text(0);
+                $('.count-inner-page span').html('<span>0</span> Inner Page');
 				$('.count-p').text(0);
 				$('.count-price').text(0);
 				$('.breakdown-inner').hide();
@@ -393,8 +393,6 @@ $(document).ready( function() {
 
 
 	$(document).on("submit","#order-form", function (event) {
-
-
 	    if ( validateForm() ) {
 	    	event.preventDefault();
 	    }else{
@@ -450,6 +448,11 @@ $(document).ready( function() {
 
 
 	});
+
+    $('#order-form-submit-btn').click(function (e) {
+        e.preventDefault();
+        $('#order-form').submit();
+    });
 
 	function validateForm() {
 		checkedTurnaroundTime();
