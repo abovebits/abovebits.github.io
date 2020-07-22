@@ -11,6 +11,7 @@ var _markers = {
 		{latLng: [35.22, -80.84], name: 'Charlotte, NC, USA (Field office)'},
 		{latLng: [34.22, -77.94], name: 'Wilmington, NC, USA (Field office)'},
 		{latLng: [32.77, -79.93], name: 'Charleston, SC, USA (Field office)'},
+		{latLng: [59.33, 18.06], name: 'Stockholm, Sweden (Field office)'},
 	],
 	"clients": [
 		{latLng: [41.01, 28.97], name: 'Istanbul, Turkey'},
