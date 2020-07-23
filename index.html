@@ -115,12 +115,12 @@
 	<div id="skills">
 		<div class="container">
 			<div class="row head_block">
-				<div class="col-md-5 col-sm-12 col-xs-12">
-					<h1>SKILLS</h1>
-				</div>
-				<div class="col-md-7 col-sm-12 col-xs-12">
-					<p>Our talented and diverse team has years of experience in a wide array of technologies and software.</p>
-				</div>
+                <div class="col-xs-12 title">
+                    <h1>Skills</h1>
+                </div>
+                <div class="col-xs-12 text">
+                    Our talented and diverse team has years of experience in a wide array of technologies and software.
+                </div>
 			</div>
 		</div>
 			<nav class="navbar navbar-default page-scroll">
@@ -133,7 +133,7 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				  </button>
-				  <p class="navbar-brand">Skills</p>
+				  <!--<p class="navbar-brand">Skills</p>-->
 				</div>
 
 				<!-- Collect the nav links, forms, and other content for toggling -->
@@ -277,12 +277,11 @@
 	<div id="works">
 		<div class="container">
 			<div class="row head_block">
-				<div class="col-md-5 col-sm-12 col-xs-12">	
-					<h1>PROJECTS</h1>
-				</div>			
-				<div class="col-md-7 col-sm-12 col-xs-12">	
-					<p>A small sample from our portfolio.</p>
-					<p>Hover for more info.</p>
+				<div class="col-xs-12 title">
+					<h1>Web projects</h1>
+				</div>
+				<div class="col-xs-12 text">
+					A small sample from our portfolio. Hover for more info.
 				</div>
 			</div>
 		</div>
@@ -336,18 +335,19 @@
 				<div class="container2">
 					<div class="row block-app">
 						<div class="content-mobile-app block-content-app">
+                            <div class="title-section">Mobile projects</div>
 							<div class="title-mobile-app">Torah Live</div>
+                            <div class="mobile-app-technologies">
+                                <ul>
+                                    <li><span>PHP</span></li>
+                                    <li><span>WordPress</span></li>
+                                    <li><span>SWIFT</span></li>
+                                </ul>
+                            </div>
 							<div class="text-content text-center-justify">
 								<p>Learn Torah like never before with our rich and entertaining video series. Torah Live is dedicated to reaching today's students in the language of our generation - video. Get enthusiastic about learning Torah while improving your retention of the material.</p>
 								<div class="information-app">
-									<p><strong>APP Information</strong></p>
-									<p><strong>Back-end:</strong>  PHP</p>
-									<p><strong>CMS:</strong> WordPress</p>
-									<p><strong>APP Language:</strong> SWIFT</p>
-									<p><strong>IOS Compatibility:</strong> Requires iOS 11.0 or later.</p>
-									<p><strong>Website:</strong> <a href="https://torahlive.com" target="_blank">https://torahlive.com</a></p>
-									<p><strong>Status:</strong> In production</p>
-
+									<p><a href="https://torahlive.com" target="_blank">https://torahlive.com</a></p>
 								</div>
 							</div>
 							<div class="button-mobile-app">
@@ -374,17 +374,18 @@
 				<div class="container2">
 					<div class="row block-app">
 						<div class="content-mobile-app block-content-app">
+                            <div class="title-section">Mobile projects</div>
 							<div class="title-mobile-app">Ink Browser</div>
+                            <div class="mobile-app-technologies">
+                                <ul>
+                                    <li><span>SWIFT</span></li>
+                                </ul>
+                            </div>
 							<div class="text-content text-center-justify">
 								<p>Ink Browser  is an app that allows the user to draw on top of any website.
 It will be used in schools that want to teach a class from any website or Google Docs, and the teacher can project from the tablet and write/draw on top of the website.</p>
 							<div class="information-app">
-								<p><strong>APP Information:</strong></p>
-								<p><strong>APP Language:</strong> SWIFT</p>
-								<p><strong>IOS Compatibility:</strong> Requires iOS 11.0 or later.</p> 
-								<p><strong>Website:</strong> <a href="https://inkbrowser.com" target="_blank">https://inkbrowser.com</a></p>
-								<p><strong>Status:</strong> In progress</p>
-
+								<p><a href="https://inkbrowser.com" target="_blank">https://inkbrowser.com</a></p>
 							</div>
 							</div>
 							<div class="button-mobile-app">
@@ -411,18 +412,20 @@ It will be used in schools that want to teach a class from any website or Google
 				<div class="container2">
 					<div class="row block-app">
 						<div class="content-mobile-app block-content-app">
+                            <div class="title-section">Mobile projects</div>
 							<div class="title-mobile-app">MCM Push Notifications</div>
+                            <div class="mobile-app-technologies">
+                                <ul>
+                                    <li><span>PHP</span></li>
+                                    <li><span>WordPress</span></li>
+                                    <li><span>React Native</span></li>
+                                </ul>
+                            </div>
 							<div class="text-content text-center-justify">
 								<p>The main goal of the "mcm-notifications" application is to allow clients of mcm-ct.com website to get immediate PUSH notifications for stock market changes of a chosen channel within selected timeframes.
 </p>
 							<div class="information-app">
-
-								<p><strong>APP Information</strong></p>
-								<p><strong>Back-end:</strong>  PHP</p>
-								<p><strong>CMS:</strong> WordPress</p>
-								<p><strong>Mobile Application Framework:</strong> React Native</p>
-								<p><strong>Website:</strong> <a href="https://mcm-ct.com" target="_blank">https://mcm-ct.com</a></p>
-								<p><strong>Status:</strong> In production</p>
+								<p><a href="https://mcm-ct.com" target="_blank">https://mcm-ct.com</a></p>
 							</div>
 							</div>
 							<div class="button-mobile-app">
@@ -893,37 +896,56 @@ It will be used in schools that want to teach a class from any website or Google
 			</div>
 
 			<div id="map"></div>
-			<div id="frmContact">
-				<div id="mail-status"></div>
-				<canvas id="canvas"></canvas>
-					<form id="contact-form" action="//formspree.io/service@abovebits.com" method="post">
-						<div class="row">
-							<div class="col-md-6 col-sm-6 col-xs-12">
-								<input type="text" id="userName" name="Name" placeholder="NAME"/>
-								<br/><span id="userName-info" class="info"></span>
-							</div>					
-							<div class="col-md-6 col-sm-6 col-xs-12">
-								<input type="text" id="userEmail" name="Email" placeholder="EMAIL"/>
-								<br/><span id="userEmail-info" class="info"></span>
-							</div>					
-							<div class="col-md-12 col-sm-12 col-xs-12">
-								<input type="text" id="subject" name="_subject"  placeholder="SUBJECT"/>
-								<br/><span id="subject-info" class="info"></span>
-							</div>					
-							<div class="col-md-12 col-sm-12 col-xs-12">
-								<textarea rows="5" id="content" name="Message" placeholder="MESSAGE"></textarea>
-							</div>
-							<div class="col-md-12 col-sm-12 col-xs-12">
-								<input type="submit" class="btnAction" value="SEND"/>
-							</div>
-						</div>
-						<input class="is-hidden" type="text" name="_gotcha" style="display:none;">	
-					</form>
-			</div>
 		</div>
-	</div>		
+	</div>
+      <div id="contact-form-container">
+          <div id="contact-form-content">
+          <div class="container">
+              <div class="row head_block">
+                  <div class="col-sm-12 title">
+                      <h1>Talk to us</h1>
+                  </div>
+              </div>
+              <div class="row">
+                  <div class="col-md-8 col-md-offset-2">
+                      <div id="frmContact">
+                          <div id="mail-status"></div>
+                          <canvas id="canvas"></canvas>
+                          <form id="contact-form" action="//formspree.io/service@abovebits.com" method="post">
+                              <div class="row">
+                                  <div class="col-sm-6">
+                                      <label for="userName">Name</label>
+                                      <input type="text" id="userName" name="Name" placeholder="e.g., John Smith"/>
+                                      <br/><span id="userName-info" class="info"></span>
+                                  </div>
+                                  <div class="col-sm-6">
+                                      <label for="userEmail">Email</label>
+                                      <input type="text" id="userEmail" name="Email" placeholder="name@company.com"/>
+                                      <br/><span id="userEmail-info" class="info"></span>
+                                  </div>
+                                  <div class="col-sm-12">
+                                      <label for="subject">Subject</label>
+                                      <input type="text" id="subject" name="_subject"  placeholder="Enter please"/>
+                                      <br/><span id="subject-info" class="info"></span>
+                                  </div>
+                                  <div class="col-sm-12">
+                                      <label for="subject">Message</label>
+                                      <textarea rows="5" id="content" name="Message" placeholder="Enter please"></textarea>
+                                  </div>
+                                  <div class="col-sm-12">
+                                      <input type="submit" class="btnAction" value="Send"/>
+                                  </div>
+                              </div>
+                              <input class="is-hidden" type="text" name="_gotcha" style="display:none;">
+                          </form>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          </div>
+      </div>
 
-	<footer>
+      <footer>
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
