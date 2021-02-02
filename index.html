@@ -896,7 +896,7 @@ It will be used in schools that want to teach a class from any website or Google
 			<div id="frmContact">
 				<div id="mail-status"></div>
 				<canvas id="canvas"></canvas>
-					<form id="contact-form" action="//formspree.io/service@abovebits.com" method="post">
+					<form id="contact-form" action="https://formspree.io/service@abovebits.com" method="post">
 						<div class="row">
 							<div class="col-md-6 col-sm-6 col-xs-12">
 								<input type="text" id="userName" name="Name" placeholder="NAME"/>
@@ -913,12 +913,14 @@ It will be used in schools that want to teach a class from any website or Google
 							<div class="col-md-12 col-sm-12 col-xs-12">
 								<textarea rows="5" id="content" name="Message" placeholder="MESSAGE"></textarea>
 							</div>
-							<div class="col-md-12 col-sm-12 col-xs-12">
-								<input type="submit" class="btnAction" value="SEND"/>
-							</div>
 						</div>
 						<input class="is-hidden" type="text" name="_gotcha" style="display:none;">	
 					</form>
+					<div class="row">
+					<div class="col-md-12 col-sm-12 col-xs-12">
+						<button class="btnAction g-recaptcha" data-sitekey="6LdWm0YaAAAAAGHtvBy4BbL7EcrPyODU89WBhEbo" data-callback='onSubmitContactForm'>SEND</button>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>		
@@ -968,6 +970,7 @@ It will be used in schools that want to teach a class from any website or Google
 	<script src="js/portfolio.js"></script>
 	<script src="js/abovebits.js"></script>
 	<script src="js/form_script.js"></script>
+	<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 	<!--<script src="js/three.min.js"></script>
 
 	<script src="js/TweenMax.min.js"></script>

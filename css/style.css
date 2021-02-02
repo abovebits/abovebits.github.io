@@ -1058,7 +1058,8 @@ table td[class*=col-] {height: auto;}
 #contact #frmContact input:-moz-placeholder { /* Firefox 18- */
   color: white; font-size: 14px;font-weight:600;
 }
-#contact #frmContact input[type=submit]{border:none;font-size: 14px; line-height: 50px; padding: 0 20px; background: #149dd5; color: white; border-radius: 5px; transition: all 0.3s linear;}
+#contact #frmContact input[type=submit], #contact #frmContact button{border:none;font-size: 14px; line-height: 50px; padding: 0 20px; background: #149dd5; color: white; border-radius: 5px; transition: all 0.3s linear;}
+#contact #frmContact button{margin-top: 25px;}
 canvas{
   position: absolute;
   width: 100%;
@@ -2474,3 +2475,5 @@ _:-ms-lang(x), .parallax { background-size: auto 130%; }
         margin-bottom: 35px;
     }
 }
+
+.grecaptcha-badge{display:none!important;}

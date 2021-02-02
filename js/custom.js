@@ -1,11 +1,14 @@
 var $contactForm = $('#contact-form');
+function onSubmitContactForm(token) {
+	$contactForm.submit();
+}
 $contactForm.submit(function(e) {
 	e.preventDefault();
 	var valid;	
 	valid = validateContact();
 	if(valid) {
 		$.ajax({
-			url: '//formspree.io/service@abovebits.com',
+			url: $(this).attr('action'),
 			method: 'POST',
 			data: $(this).serialize(),
 			dataType: 'json',
@@ -22,11 +25,7 @@ $contactForm.submit(function(e) {
 				$("#mail-status").html("<p class='Error'>Ops, there was an error.</p>");
 				$('body, html').animate({ scrollTop: $('#mail-status').offset().top-85 }, 1000);
 			}
-
-
-
 		});
-
 	};
 });
 
